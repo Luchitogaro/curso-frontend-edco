@@ -21,3 +21,41 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Documentation and Course Materials
+*.md
+!README.md
+
+# Course Materials and Guides
+ANALISIS_COBERTURA_30_SESIONES.md
+ANALISIS_EXCEL_30_CLASES.md
+create_pdf_guide.md
+DEPLOYMENT.md
+INSTRUCCIONES_INSTRUCTOR.md
+MAPEO_VISUAL_30_CLASES.md
+PLAN_DE_CLASES_VIRTUAL.md
+Plan_Curso_Frontend_EDCO.html
+Plan_Curso_Frontend_EDCO.md
+PLAN_DE_CLASES_VIRTUAL.md
+PLAN_DE_CLASES_VIRTUAL.pdf
+Resumen_Ejecutivo_Curso_Frontend.md
+RESUMEN_COBERTURA_VISUAL.md
+RESUMEN_PLAN_CLASES.md
+Tematicas de los cursos EDCO Frontend.xlsx
+/proyecto-final-base/
+
+# PDF Materials
+*.pdf
+
+# Excel Files
+*.xlsx
+*.xls
+
+# Frontend React Material Folder
+/frontend-react-material/
+
+# Generate PDF Script
+generate_pdf.js
+
+# Styles (if not part of the app)
+styles.css
