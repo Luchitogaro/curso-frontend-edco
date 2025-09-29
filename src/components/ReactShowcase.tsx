@@ -115,157 +115,127 @@ function MiComponente() {
 }`
   },
   {
-    id: 'state',
-    name: 'Estado (State)',
-    description: 'Gestión de datos dinámicos',
+    id: 'props',
+    name: 'Props',
+    description: 'Comunicación entre componentes',
     icon: <Settings className="feature-icon" />,
     color: '#9b59b6',
-    concepts: ['useState', 'State Updates', 'Immutable Updates', 'Local State', 'State Lifting'],
-    examples: ['const [count, setCount] = useState(0)', 'setCount(count + 1)', 'useState([])'],
+    concepts: ['Props', 'Data Passing', 'Component Communication', 'Prop Types', 'Default Props'],
+    examples: ['<Component prop="value" />', 'function Component({ prop })', 'Component.defaultProps'],
     benefits: [
-      'Datos reactivos',
-      'Re-renderizado automático',
-      'Estado local y global',
-      'Gestión de formularios'
+      'Reutilización de componentes',
+      'Comunicación padre-hijo',
+      'Componentes configurables',
+      'Código más limpio'
     ],
-    codeExample: `import { useState } from 'react';
+    codeExample: `// Componente con props
+function UserCard({ name, email, role, avatar }) {
+  return (
+    <div className="user-card">
+      <img src={avatar} alt={name} />
+      <h3>{name}</h3>
+      <p>{email}</p>
+      <span className="role">{role}</span>
+    </div>
+  );
+}
 
-function Contador() {
-  const [count, setCount] = useState(0);
-  const [nombre, setNombre] = useState('');
+// Props con valores por defecto
+function Button({ text, color = 'blue', onClick }) {
+  return (
+    <button 
+      style={{ backgroundColor: color }}
+      onClick={onClick}
+    >
+      {text}
+    </button>
+  );
+}
 
-  const incrementar = () => {
-    setCount(count + 1);
-  };
-
-  const decrementar = () => {
-    setCount(count - 1);
-  };
-
-  const resetear = () => {
-    setCount(0);
+// Uso de componentes con props
+function App() {
+  const handleClick = () => {
+    console.log('Botón clickeado');
   };
 
   return (
     <div>
-      <h2>Contador: {count}</h2>
-      <button onClick={incrementar}>+</button>
-      <button onClick={decrementar}>-</button>
-      <button onClick={resetear}>Reset</button>
-      
-      <input
-        type="text"
-        value={nombre}
-        onChange={(e) => setNombre(e.target.value)}
-        placeholder="Ingresa tu nombre"
+      <UserCard 
+        name="Juan Pérez"
+        email="juan@email.com"
+        role="Developer"
+        avatar="/avatar.jpg"
       />
-      <p>Hola, {nombre}</p>
+      <Button 
+        text="Hacer clic"
+        color="green"
+        onClick={handleClick}
+      />
     </div>
-  );
-}
-
-// Estado con objetos
-function FormularioUsuario() {
-  const [usuario, setUsuario] = useState({
-    nombre: '',
-    email: '',
-    edad: 0
-  });
-
-  const actualizarCampo = (campo, valor) => {
-    setUsuario(prev => ({
-      ...prev,
-      [campo]: valor
-    }));
-  };
-
-  return (
-    <form>
-      <input
-        value={usuario.nombre}
-        onChange={(e) => actualizarCampo('nombre', e.target.value)}
-        placeholder="Nombre"
-      />
-      <input
-        value={usuario.email}
-        onChange={(e) => actualizarCampo('email', e.target.value)}
-        placeholder="Email"
-      />
-    </form>
   );
 }`
   },
   {
-    id: 'hooks',
-    name: 'Hooks',
-    description: 'Funciones especiales de React',
+    id: 'structure',
+    name: 'Estructura',
+    description: 'Organización de proyectos React',
     icon: <Zap className="feature-icon" />,
     color: '#f39c12',
-    concepts: ['useState', 'useEffect', 'useContext', 'Custom Hooks', 'Rules of Hooks'],
-    examples: ['useEffect(() => {}, [])', 'const value = useContext(MyContext)', 'useCustomHook()'],
+    concepts: ['Project Structure', 'File Organization', 'Component Folders', 'Import/Export', 'Best Practices'],
+    examples: ['import Component from "./Component"', 'export default Component', 'components/Component.jsx'],
     benefits: [
-      'Lógica reutilizable',
-      'Efectos secundarios',
-      'Contexto global',
-      'Hooks personalizados'
+      'Código organizado',
+      'Fácil mantenimiento',
+      'Escalabilidad',
+      'Colaboración en equipo'
     ],
-    codeExample: `import { useState, useEffect, useContext, createContext } from 'react';
+    codeExample: `// Estructura de proyecto React
+mi-app-react/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/         # Componentes reutilizables
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   └── Button.jsx
+│   ├── pages/             # Páginas/views
+│   │   ├── Home.jsx
+│   │   └── About.jsx
+│   ├── styles/            # Archivos CSS
+│   │   ├── globals.css
+│   │   └── components.css
+│   ├── App.jsx            # Componente principal
+│   └── main.jsx          # Punto de entrada
+├── package.json
+└── vite.config.js
 
-// Contexto
-const ThemeContext = createContext();
-
-// Hook personalizado
-function useLocalStorage(key, initialValue) {
-  const [storedValue, setStoredValue] = useState(() => {
-    try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      return initialValue;
-    }
-  });
-
-  const setValue = (value) => {
-    try {
-      setStoredValue(value);
-      window.localStorage.setItem(key, JSON.stringify(value));
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  return [storedValue, setValue];
-}
-
-// Componente con múltiples hooks
-function MiComponente() {
-  const [count, setCount] = useLocalStorage('count', 0);
-  const [data, setData] = useState(null);
-  const theme = useContext(ThemeContext);
-
-  // useEffect para efectos secundarios
-  useEffect(() => {
-    // Fetch data
-    fetch('/api/datos')
-      .then(response => response.json())
-      .then(data => setData(data));
-  }, []); // Solo se ejecuta una vez
-
-  useEffect(() => {
-    // Actualizar título cuando cambie el count
-    document.title = \`Count: \${count}\`;
-  }, [count]); // Se ejecuta cuando cambie count
-
+// Ejemplo de import/export
+// components/UserCard.jsx
+function UserCard({ name, email }) {
   return (
-    <div style={{ backgroundColor: theme.background }}>
-      <h2>Count: {count}</h2>
-      <button onClick={() => setCount(count + 1)}>
-        Incrementar
-      </button>
-      {data && <p>Datos cargados: {data.length} items</p>}
+    <div className="user-card">
+      <h3>{name}</h3>
+      <p>{email}</p>
     </div>
   );
-}`
+}
+
+export default UserCard;
+
+// pages/Home.jsx
+import UserCard from '../components/UserCard';
+
+function Home() {
+  return (
+    <div>
+      <h1>Mi Equipo</h1>
+      <UserCard name="Juan" email="juan@email.com" />
+    </div>
+  );
+}
+
+export default Home;`
   }
 ];
 

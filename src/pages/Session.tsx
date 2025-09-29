@@ -25,6 +25,7 @@ import HTML5AdvancedShowcase from '../components/HTML5AdvancedShowcase';
 import CSS3Showcase from '../components/CSS3Showcase';
 import HTMLWorkshopShowcase from '../components/HTMLWorkshopShowcase';
 import LayoutShowcase from '../components/LayoutShowcase';
+import AnimationShowcase from '../components/AnimationShowcase';
 import JavaScriptShowcase from '../components/JavaScriptShowcase';
 import JavaScriptFundamentalsShowcase from '../components/JavaScriptFundamentalsShowcase';
 import ReactShowcase from '../components/ReactShowcase';
@@ -556,6 +557,12 @@ const Session: React.FC = () => {
         {sessionId === 6 && (
           <>
             <LayoutShowcase />
+          </>
+        )}
+        
+        {sessionId === 8 && (
+          <>
+            <AnimationShowcase />
           </>
         )}
         

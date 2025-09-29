@@ -4,13 +4,7 @@ import {
   Palette, 
   Layout, 
   Code, 
-  Play, 
-  Eye,
-  Zap,
-  Grid,
-  Smartphone,
-  Monitor,
-  Tablet
+  Grid
 } from 'lucide-react';
 import './CSS3Showcase.css';
 
@@ -29,17 +23,14 @@ interface CSSConcept {
 }
 
 const CSS3Showcase: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'fundamentos' | 'layouts' | 'taller' | 'animaciones'>('fundamentos');
+  const [activeTab, setActiveTab] = useState<'fundamentos'>('fundamentos');
   const [selectedConcept, setSelectedConcept] = useState<CSSConcept | null>(null);
-  const [showLiveDemo, setShowLiveDemo] = useState(false);
 
   // Handle escape key to close modals
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        if (showLiveDemo) {
-          setShowLiveDemo(false);
-        } else if (selectedConcept) {
+        if (selectedConcept) {
           setSelectedConcept(null);
         }
       }
@@ -49,7 +40,7 @@ const CSS3Showcase: React.FC = () => {
     return () => {
       document.removeEventListener('keydown', handleEscapeKey);
     };
-  }, [selectedConcept, showLiveDemo]);
+  }, [selectedConcept]);
 
   const cssConcepts: CSSConcept[] = [
     {
@@ -121,10 +112,17 @@ color: rgba(255, 0, 0, 0.5);
 color: hsl(0, 100%, 50%);
 color: hsla(0, 100%, 50%, 0.8);
 
-/* Gradientes */
-background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-background: radial-gradient(circle, #ff6b6b, #4ecdc4);`,
-          preview: 'Diferentes formas de definir colores y gradientes'
+/* Variables CSS */
+:root {
+  --color-primario: #3498db;
+  --color-secundario: #e74c3c;
+}
+
+.boton {
+  background-color: var(--color-primario);
+  color: white;
+}`,
+          preview: 'Diferentes formas de definir colores y variables CSS'
         },
         {
           title: 'Tipografías',
@@ -146,260 +144,107 @@ text-transform: uppercase;`,
       ]
     },
     {
-      id: 'flexbox',
-      title: 'Flexbox Layout',
-      description: 'Sistema de layout unidimensional moderno',
-      category: 'layouts',
+      id: 'modelo-caja',
+      title: 'Modelo de Caja',
+      description: 'Entender padding, margin, border y dimensiones',
+      category: 'fundamentos',
       icon: <Layout className="concept-icon" />,
       examples: [
         {
-          title: 'Flexbox Container',
-          code: `.container {
-  display: flex;
-  flex-direction: row; /* row, column, row-reverse, column-reverse */
-  flex-wrap: wrap; /* nowrap, wrap, wrap-reverse */
-  justify-content: center; /* flex-start, center, flex-end, space-between, space-around */
-  align-items: center; /* flex-start, center, flex-end, stretch, baseline */
-  gap: 1rem;
+          title: 'Modelo de Caja Básico',
+          code: `/* Modelo de caja completo */
+.caja {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 2px solid #333;
+  margin: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Box-sizing: border-box */
+.caja-border-box {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 20px;
+  border: 2px solid #333;
+  /* El tamaño total será exactamente 200px */
 }`,
-          preview: 'Contenedor flex con distribución y alineación'
+          preview: 'Control del tamaño y espaciado de elementos'
         },
         {
-          title: 'Flexbox Items',
-          code: `.item {
-  flex-grow: 1; /* Factor de crecimiento */
-  flex-shrink: 0; /* Factor de reducción */
-  flex-basis: 200px; /* Tamaño base */
-  flex: 1 0 200px; /* Shorthand: grow shrink basis */
-  align-self: flex-end; /* Alineación individual */
-  order: 2; /* Orden de aparición */
+          title: 'Espaciado Individual',
+          code: `/* Padding individual */
+.elemento {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  /* Equivale a: padding: 10px 20px 15px 25px; */
+}
+
+/* Margin individual */
+.elemento {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+  /* Equivale a: margin: 10px 20px 15px 25px; */
 }`,
-          preview: 'Propiedades de elementos flex individuales'
+          preview: 'Control preciso del espaciado interno y externo'
         }
       ]
     },
     {
-      id: 'grid',
-      title: 'CSS Grid Layout',
-      description: 'Sistema de layout bidimensional avanzado',
-      category: 'layouts',
+      id: 'unidades',
+      title: 'Unidades CSS',
+      description: 'Píxeles, em, rem, porcentajes y sus usos',
+      category: 'fundamentos',
       icon: <Grid className="concept-icon" />,
       examples: [
         {
-          title: 'Grid Container',
-          code: `.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr; /* 3 columnas */
-  grid-template-rows: auto 1fr auto; /* 3 filas */
-  grid-gap: 1rem;
-  
-  /* Grid Template Areas */
-  grid-template-areas: 
-    "header header header"
-    "sidebar main aside"
-    "footer footer footer";
+          title: 'Unidades Básicas',
+          code: `/* Píxeles (absolutos) */
+.fijo {
+  width: 300px;
+  height: 200px;
+  font-size: 16px;
+}
+
+/* Em (relativo al font-size del elemento) */
+.relativo-em {
+  font-size: 16px;
+  padding: 1em; /* 16px */
+  margin: 0.5em; /* 8px */
+}
+
+/* Rem (relativo al font-size del root) */
+html { font-size: 16px; }
+.relativo-rem {
+  font-size: 1.5rem; /* 24px */
+  padding: 1rem; /* 16px */
 }`,
-          preview: 'Contenedor grid con columnas, filas y áreas'
+          preview: 'Diferentes unidades para tamaños y espaciado'
         },
         {
-          title: 'Grid Items',
-          code: `.header { grid-area: header; }
-.sidebar { grid-area: sidebar; }
-.main { grid-area: main; }
-.aside { grid-area: aside; }
-.footer { grid-area: footer; }
+          title: 'Porcentajes',
+          code: `/* Porcentajes del elemento padre */
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+}
 
-/* Posicionamiento manual */
-.item {
-  grid-column: 1 / 3; /* Desde columna 1 hasta 3 */
-  grid-row: 2 / 4; /* Desde fila 2 hasta 4 */
-  justify-self: center; /* Alineación horizontal */
-  align-self: end; /* Alineación vertical */
+.columna {
+  width: 50%;
+  display: inline-block;
+}
+
+/* Centrado horizontal */
+.centrado {
+  width: 80%;
+  margin: 0 auto;
 }`,
-          preview: 'Posicionamiento de elementos en el grid'
-        }
-      ]
-    },
-    {
-      id: 'responsive',
-      title: 'Responsive Design',
-      description: 'Diseño adaptable a diferentes dispositivos',
-      category: 'layouts',
-      icon: <Smartphone className="concept-icon" />,
-      examples: [
-        {
-          title: 'Media Queries',
-          code: `/* Mobile First */
-.container {
-  padding: 1rem;
-  font-size: 14px;
-}
-
-/* Tablet */
-@media (min-width: 768px) {
-  .container {
-    padding: 2rem;
-    font-size: 16px;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .container {
-    padding: 3rem;
-    font-size: 18px;
-  }
-}`,
-          preview: 'Breakpoints para diferentes tamaños de pantalla'
-        },
-        {
-          title: 'Responsive Grid',
-          code: `.responsive-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-/* Grid responsivo con auto-fill */
-.auto-fill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-}`,
-          preview: 'Grids que se adaptan automáticamente'
-        }
-      ]
-    },
-    {
-      id: 'transitions',
-      title: 'Transiciones CSS',
-      description: 'Animaciones suaves entre estados',
-      category: 'animaciones',
-      icon: <Zap className="concept-icon" />,
-      examples: [
-        {
-          title: 'CSS Transitions',
-          code: `.button {
-  background: blue;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  
-  /* Transición */
-  transition: all 0.3s ease;
-  /* transition: background 0.3s ease, transform 0.2s ease; */
-}
-
-.button:hover {
-  background: darkblue;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}`,
-          preview: 'Botón con transiciones suaves al hacer hover'
-        }
-      ]
-    },
-    {
-      id: 'animations',
-      title: 'Animaciones con Keyframes',
-      description: 'Animaciones complejas con @keyframes',
-      category: 'animaciones',
-      icon: <Play className="concept-icon" />,
-      examples: [
-        {
-          title: 'Keyframes Básicos',
-          code: `@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.element {
-  animation: fadeInUp 0.6s ease-out;
-  /* animation: fadeInUp 0.6s ease-out 0.2s 3 alternate; */
-}`,
-          preview: 'Elemento que aparece desde abajo con fade in'
-        },
-        {
-          title: 'Animación Continua',
-          code: `@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-.pulse {
-  animation: pulse 2s infinite;
-}
-
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.spin {
-  animation: rotate 1s linear infinite;
-}`,
-          preview: 'Elementos con animaciones continuas'
-        }
-      ]
-    },
-    {
-      id: 'transforms',
-      title: 'Transformaciones CSS',
-      description: 'Transformar elementos en 2D y 3D',
-      category: 'animaciones',
-      icon: <Eye className="concept-icon" />,
-      examples: [
-        {
-          title: 'Transform 2D',
-          code: `.transform-demo {
-  /* Traslación */
-  transform: translate(50px, 20px);
-  transform: translateX(50px);
-  transform: translateY(20px);
-  
-  /* Rotación */
-  transform: rotate(45deg);
-  
-  /* Escala */
-  transform: scale(1.2);
-  transform: scaleX(1.5);
-  transform: scaleY(0.8);
-  
-  /* Sesgado */
-  transform: skew(10deg, 5deg);
-  
-  /* Combinaciones */
-  transform: translate(50px, 20px) rotate(45deg) scale(1.2);
-}`,
-          preview: 'Diferentes transformaciones 2D aplicadas'
-        },
-        {
-          title: 'Transform 3D',
-          code: `.card-3d {
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.card-3d:hover {
-  transform: rotateY(180deg);
-}
-
-.flip-card {
-  transform: perspective(1000px) rotateX(15deg);
-}
-
-.rotate-3d {
-  transform: rotate3d(1, 1, 0, 45deg);
-}`,
-          preview: 'Efectos 3D y perspectiva'
+          preview: 'Unidades relativas para layouts flexibles'
         }
       ]
     }
@@ -413,7 +258,7 @@ text-transform: uppercase;`,
     setSelectedConcept(null);
   };
 
-  const getConceptsByCategory = (category: 'fundamentos' | 'layouts' | 'animaciones') => {
+  const getConceptsByCategory = (category: 'fundamentos') => {
     return cssConcepts.filter(concept => concept.category === category);
   };
 
@@ -439,253 +284,41 @@ text-transform: uppercase;`,
     return highlighted;
   };
 
-  const renderLiveDemo = () => {
-    if (!showLiveDemo) return null;
-
-    return createPortal(
-      <div className="live-demo-overlay" onClick={() => setShowLiveDemo(false)}>
-        <div className="live-demo-content" onClick={(e) => e.stopPropagation()}>
-          <div className="live-demo-header">
-            <h3>Galería Animada - Demo en Vivo</h3>
-            <button onClick={() => setShowLiveDemo(false)}>×</button>
-          </div>
-          <div className="live-demo-gallery">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="demo-gallery-item">
-                <div className="demo-image">
-                  <div className="demo-placeholder">
-                    Imagen {item}
-                  </div>
-                </div>
-                <div className="demo-overlay">
-                  <h4>Proyecto {item}</h4>
-                  <p>Descripción del proyecto</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>,
-      document.body
-    );
-  };
 
   return (
     <div className="css3-showcase">
       <div className="showcase-header">
-        <h2>CSS3 - Fundamentos, Layouts y Animaciones</h2>
+        <h2>CSS3 - Fundamentos</h2>
         <p>Explora los conceptos fundamentales del CSS3 moderno</p>
       </div>
 
       <div className="showcase-tabs">
         <button 
-          className={activeTab === 'fundamentos' ? 'active' : ''}
-          onClick={() => setActiveTab('fundamentos')}
+          className="active"
         >
           <Code className="tab-icon" />
           CSS3 Fundamentos
         </button>
-        <button 
-          className={activeTab === 'layouts' ? 'active' : ''}
-          onClick={() => setActiveTab('layouts')}
-        >
-          <Layout className="tab-icon" />
-          Layouts en CSS
-        </button>
-        <button 
-          className={activeTab === 'taller' ? 'active' : ''}
-          onClick={() => setActiveTab('taller')}
-        >
-          <Grid className="tab-icon" />
-          Taller CSS Layouts
-        </button>
-        <button 
-          className={activeTab === 'animaciones' ? ' ' : ''}
-          onClick={() => setActiveTab('animaciones')}
-        >
-          <Zap className="tab-icon" />
-          Animaciones
-        </button>
       </div>
 
       <div className="showcase-content">
-        {activeTab === 'fundamentos' && (
-          <div className="concepts-grid">
-            {getConceptsByCategory('fundamentos').map((concept) => (
-              <div key={concept.id} className="concept-card">
-                <div className="concept-header">
-                  {concept.icon}
-                  <h3>{concept.title}</h3>
-                </div>
-                <p>{concept.description}</p>
-                <button 
-                  className="view-details-btn"
-                  onClick={() => openConceptDetails(concept)}
-                >
-                  Ver Detalles
-                </button>
+        <div className="concepts-grid">
+          {getConceptsByCategory('fundamentos').map((concept) => (
+            <div key={concept.id} className="concept-card">
+              <div className="concept-header">
+                {concept.icon}
+                <h3>{concept.title}</h3>
               </div>
-            ))}
-          </div>
-        )}
-
-        {activeTab === 'layouts' && (
-          <div className="concepts-grid">
-            {getConceptsByCategory('layouts').map((concept) => (
-              <div key={concept.id} className="concept-card">
-                <div className="concept-header">
-                  {concept.icon}
-                  <h3>{concept.title}</h3>
-                </div>
-                <p>{concept.description}</p>
-                <button 
-                  className="view-details-btn"
-                  onClick={() => openConceptDetails(concept)}
-                >
-                  Ver Detalles
-                </button>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {activeTab === 'taller' && (
-          <div className="workshop-section">
-            <div className="workshop-header">
-              <h3>Taller CSS Layouts</h3>
-              <p>Maquetar una página con Grid + Flexbox + responsive</p>
-            </div>
-            
-            <div className="workshop-steps">
-              <div className="workshop-step">
-                <div className="step-number">1</div>
-                <div className="step-content">
-                  <h4>Estructura Base</h4>
-                  <p>Crear la estructura HTML semántica con header, nav, main, aside, footer</p>
-                  <div className="step-demo">
-                    <div className="layout-demo">
-                      <div className="demo-header">Header</div>
-                      <div className="demo-nav">Navigation</div>
-                      <div className="demo-main">
-                        <div className="demo-sidebar">Sidebar</div>
-                        <div className="demo-content">Main Content</div>
-                      </div>
-                      <div className="demo-footer">Footer</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="workshop-step">
-                <div className="step-number">2</div>
-                <div className="step-content">
-                  <h4>CSS Grid Layout</h4>
-                  <p>Implementar el layout principal con CSS Grid</p>
-                  <div className="code-preview">
-                    <pre>
-                      <code 
-                        dangerouslySetInnerHTML={{ 
-                          __html: highlightCSS(`.layout {
-  display: grid;
-  grid-template-areas: 
-    "header header"
-    "nav nav"
-    "sidebar main"
-    "footer footer";
-  grid-template-columns: 250px 1fr;
-  grid-template-rows: auto auto 1fr auto;
-  min-height: 100vh;
-  gap: 1rem;
-}`)
-                        }} 
-                      />
-                    </pre>
-                  </div>
-                </div>
-              </div>
-
-              <div className="workshop-step">
-                <div className="step-number">3</div>
-                <div className="step-content">
-                  <h4>Flexbox Components</h4>
-                  <p>Usar Flexbox para componentes internos</p>
-                  <div className="code-preview">
-                    <pre>
-                      <code 
-                        dangerouslySetInnerHTML={{ 
-                          __html: highlightCSS(`.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}`)
-                        }} 
-                      />
-                    </pre>
-                  </div>
-                </div>
-              </div>
-
-              <div className="workshop-step">
-                <div className="step-number">4</div>
-                <div className="step-content">
-                  <h4>Responsive Design</h4>
-                  <p>Hacer el layout responsive con media queries</p>
-                  <div className="responsive-demo">
-                    <div className="device-preview">
-                      <Monitor className="device-icon" />
-                      <span>Desktop</span>
-                    </div>
-                    <div className="device-preview">
-                      <Tablet className="device-icon" />
-                      <span>Tablet</span>
-                    </div>
-                    <div className="device-preview">
-                      <Smartphone className="device-icon" />
-                      <span>Mobile</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="workshop-actions">
+              <p>{concept.description}</p>
               <button 
-                className="demo-btn"
-                onClick={() => setShowLiveDemo(true)}
+                className="view-details-btn"
+                onClick={() => openConceptDetails(concept)}
               >
-                <Play className="btn-icon" />
-                Ver Demo en Vivo
+                Ver Detalles
               </button>
             </div>
-          </div>
-        )}
-
-        {activeTab === 'animaciones' && (
-          <div className="concepts-grid">
-            {getConceptsByCategory('animaciones').map((concept) => (
-              <div key={concept.id} className="concept-card">
-                <div className="concept-header">
-                  {concept.icon}
-                  <h3>{concept.title}</h3>
-                </div>
-                <p>{concept.description}</p>
-                <button 
-                  className="view-details-btn"
-                  onClick={() => openConceptDetails(concept)}
-                >
-                  Ver Detalles
-                </button>
-              </div>
-            ))}
-          </div>
-        )}
+          ))}
+        </div>
       </div>
 
       {/* Modal de detalles del concepto */}
@@ -729,8 +362,6 @@ text-transform: uppercase;`,
         document.body
       )}
 
-      {/* Demo en vivo */}
-      {renderLiveDemo()}
     </div>
   );
 };

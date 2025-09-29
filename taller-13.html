@@ -1,0 +1,1581 @@
+<h1 id="taller-sesi-n-13-lista-de-tareas-din-mica-con-javascript">Taller Sesión 13: Lista de Tareas Dinámica con JavaScript</h1>
+<h2 id="objetivo-del-taller">Objetivo del Taller</h2>
+<p>Crear desde cero una <strong>aplicación de lista de tareas completamente funcional</strong> utilizando HTML, CSS y JavaScript. Este proyecto integra todos los conocimientos de las sesiones anteriores.</p>
+<hr>
+<h2 id="conocimientos-previos-necesarios">Conocimientos Previos Necesarios</h2>
+<ul>
+<li>HTML básico (etiquetas, formularios, inputs)  </li>
+<li>CSS (selectores, estilos, clases)  </li>
+<li>JavaScript básico (variables, funciones, condicionales)  </li>
+<li>Manipulación del DOM (querySelector, addEventListener)  </li>
+<li>Eventos (click, submit, input)  </li>
+<li>Arrays (push, filter, forEach, find)  </li>
+<li>Objetos básicos</li>
+</ul>
+<hr>
+<h2 id="lo-que-vamos-a-construir">Lo que Vamos a Construir</h2>
+<h3 id="caracter-sticas-de-la-aplicaci-n-">Características de la Aplicación:</h3>
+<ol>
+<li>Agregar nuevas tareas con prioridades (Alta, Media, Baja)</li>
+<li>Marcar tareas como completadas</li>
+<li>Eliminar tareas individuales</li>
+<li><strong>EDITAR tareas existentes</strong> (nueva funcionalidad)</li>
+<li>Filtrar tareas (Todas / Activas / Completadas)</li>
+<li>Contador de tareas pendientes</li>
+<li>Limpiar todas las tareas completadas</li>
+<li>Persistencia de datos (LocalStorage)</li>
+<li>Interfaz moderna con etiquetas de prioridad</li>
+<li>Diseño responsive</li>
+</ol>
+<hr>
+<h2 id="estructura-del-proyecto">Estructura del Proyecto</h2>
+<p>Vamos a crear <strong>3 archivos</strong>:</p>
+<pre><code>taller-lista-tareas/
+├── index<span class="hljs-selector-class">.html</span>
+├── styles<span class="hljs-selector-class">.css</span>
+└── app.js
+</code></pre><hr>
+<h1 id="paso-a-paso-construcci-n-en-vivo">Paso a Paso - Construcción en Vivo</h1>
+<h2 id="paso-1-crear-la-estructura-html-base-10-minutos-">PASO 1: Crear la Estructura HTML Base (10 minutos)</h2>
+<h3 id="1-1-crear-el-archivo-index-html-">1.1 - Crear el archivo <code>index.html</code></h3>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"es"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Mi Lista de Tareas<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"styles.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Aquí irá todo el contenido --&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"app.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p><strong>Explicación para los estudiantes:</strong></p>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code> indica que es HTML5</li>
+<li><code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code> permite usar tildes y caracteres especiales</li>
+<li><code>viewport</code> hace que funcione bien en móviles</li>
+<li>El <code>&lt;script&gt;</code> va al final para que cargue después del HTML</li>
+</ul>
+<hr>
+<h3 id="1-2-agregar-el-contenedor-principal">1.2 - Agregar el Contenedor Principal</h3>
+<p>Dentro del <code>&lt;body&gt;</code>, antes del <code>&lt;script&gt;</code>, agregamos:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"contenedor"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"titulo"</span>&gt;</span>📝 Mi Lista de Tareas<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Aquí irá el formulario --&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Aquí irán los filtros --&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Aquí irá la lista de tareas --&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Aquí irá el pie de página --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li>Usamos comentarios HTML <code>&lt;!-- --&gt;</code> para organizar dónde irá cada sección</li>
+<li>La clase <code>contenedor</code> nos ayudará a centrar todo con CSS</li>
+</ul>
+<hr>
+<h3 id="1-3-crear-el-formulario-para-agregar-tareas">1.3 - Crear el Formulario para Agregar Tareas</h3>
+<p>Reemplaza el comentario del formulario con:</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- FORMULARIO --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"formulario-tarea"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"formulario"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> 
+    <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> 
+    <span class="hljs-attr">id</span>=<span class="hljs-string">"input-tarea"</span> 
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"input-tarea"</span> 
+    <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Nueva tarea..."</span>
+    <span class="hljs-attr">required</span>
+  &gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"select-prioridad"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"select-prioridad"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"alta"</span>&gt;</span>Alta<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"media"</span> <span class="hljs-attr">selected</span>&gt;</span>Media<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"baja"</span>&gt;</span>Baja<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-agregar"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-icon"</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    Agregar
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>id=&quot;formulario-tarea&quot;</code> nos permite seleccionarlo desde JavaScript</li>
+<li><code>required</code> hace que el campo sea obligatorio</li>
+<li><code>type=&quot;submit&quot;</code> hace que el botón envíe el formulario</li>
+<li><strong>NUEVO:</strong> <code>&lt;select&gt;</code> para elegir prioridad con opciones Alta, Media, Baja</li>
+<li><code>selected</code> en &quot;Media&quot; hace que sea la opción por defecto</li>
+</ul>
+<hr>
+<h3 id="1-4-crear-los-filtros">1.4 - Crear los Filtros</h3>
+<p>Reemplaza el comentario de filtros con:</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- FILTROS --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"filtros"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-filtro activo"</span> <span class="hljs-attr">data-filtro</span>=<span class="hljs-string">"todas"</span>&gt;</span>
+    Todas
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-filtro"</span> <span class="hljs-attr">data-filtro</span>=<span class="hljs-string">"activas"</span>&gt;</span>
+    Activas
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-filtro"</span> <span class="hljs-attr">data-filtro</span>=<span class="hljs-string">"completadas"</span>&gt;</span>
+    Completadas
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>data-filtro</code> es un atributo personalizado que usaremos en JavaScript</li>
+<li>La clase <code>activo</code> marca el filtro seleccionado</li>
+<li>Usamos 3 botones para los 3 tipos de filtros</li>
+</ul>
+<hr>
+<h3 id="1-5-crear-el-contenedor-de-la-lista">1.5 - Crear el Contenedor de la Lista</h3>
+<p>Reemplaza el comentario de la lista con:</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- LISTA DE TAREAS --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"lista-tareas"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lista-tareas"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Las tareas se agregarán aquí dinámicamente con JavaScript --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>&lt;ul&gt;</code> es una lista desordenada (unordered list)</li>
+<li>El <code>id=&quot;lista-tareas&quot;</code> nos permite manipularla con JavaScript</li>
+<li>Iniciamos vacía porque las tareas se crearán dinámicamente</li>
+</ul>
+<hr>
+<h3 id="1-6-crear-el-pie-de-p-gina-con-contador">1.6 - Crear el Pie de Página con Contador</h3>
+<p>Reemplaza el comentario del pie con:</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- PIE DE PÁGINA --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pie"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contador"</span>&gt;</span>0 tareas pendientes<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn-limpiar"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-limpiar"</span>&gt;</span>
+    Limpiar completadas
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li>El contador mostrará cuántas tareas faltan por hacer</li>
+<li>El botón permite eliminar todas las tareas completadas</li>
+</ul>
+<hr>
+<h3 id="checkpoint-1-html-completo">CHECKPOINT 1: HTML Completo</h3>
+<p><strong>Pausa aquí y verifica:</strong></p>
+<ul>
+<li>Abre <code>index.html</code> en el navegador</li>
+<li>Deberías ver el formulario, los botones y el pie (sin estilos aún)</li>
+<li>Revisa que no haya errores en la consola (F12)</li>
+</ul>
+<p><strong>HTML Completo hasta ahora:</strong></p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"es"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Mi Lista de Tareas<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"styles.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"contenedor"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"titulo"</span>&gt;</span>📝 Mi Lista de Tareas<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- FORMULARIO --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"formulario-tarea"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"formulario"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> 
+        <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> 
+        <span class="hljs-attr">id</span>=<span class="hljs-string">"input-tarea"</span> 
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"input-tarea"</span> 
+        <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"¿Qué necesitas hacer hoy?"</span>
+        <span class="hljs-attr">required</span>
+      &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-agregar"</span>&gt;</span>
+        Agregar Tarea
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- FILTROS --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"filtros"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-filtro activo"</span> <span class="hljs-attr">data-filtro</span>=<span class="hljs-string">"todas"</span>&gt;</span>
+        Todas
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-filtro"</span> <span class="hljs-attr">data-filtro</span>=<span class="hljs-string">"activas"</span>&gt;</span>
+        Activas
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-filtro"</span> <span class="hljs-attr">data-filtro</span>=<span class="hljs-string">"completadas"</span>&gt;</span>
+        Completadas
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- LISTA DE TAREAS --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"lista-tareas"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lista-tareas"</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- Las tareas se agregarán aquí dinámicamente --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- PIE DE PÁGINA --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pie"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contador"</span>&gt;</span>0 tareas pendientes<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn-limpiar"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-limpiar"</span>&gt;</span>
+        Limpiar completadas
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"app.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<hr>
+<h2 id="paso-2-dar-estilo-con-css-15-minutos-">PASO 2: Dar Estilo con CSS (15 minutos)</h2>
+<h3 id="2-1-crear-el-archivo-styles-css-">2.1 - Crear el archivo <code>styles.css</code></h3>
+<p>Empezamos con los estilos generales:</p>
+<pre><code class="lang-css"><span class="hljs-comment">/* ===================================
+   ESTILOS GENERALES
+   =================================== */</span>
+
+* {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+}
+
+<span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'Segoe UI'</span>, Tahoma, Geneva, Verdana, sans-serif;
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(135deg, #667eea 0%, #764ba2 100%);
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100vh</span>;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>;
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>*</code> selecciona todos los elementos</li>
+<li><code>box-sizing: border-box</code> facilita el cálculo de tamaños</li>
+<li><code>linear-gradient</code> crea un fondo degradado bonito</li>
+<li><code>min-height: 100vh</code> asegura que ocupe toda la pantalla</li>
+</ul>
+<hr>
+<h3 id="2-2-estilos-del-contenedor-principal">2.2 - Estilos del Contenedor Principal</h3>
+<pre><code class="lang-css"><span class="hljs-comment">/* ===================================
+   CONTENEDOR PRINCIPAL
+   =================================== */</span>
+
+<span class="hljs-selector-class">.contenedor</span> {
+  <span class="hljs-attribute">background</span>: white;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">20px</span> <span class="hljs-number">60px</span> <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.3);
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">600px</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">40px</span>;
+}
+
+<span class="hljs-selector-class">.titulo</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">32px</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">30px</span>;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">600</span>;
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>max-width: 600px</code> limita el ancho en pantallas grandes</li>
+<li><code>border-radius</code> hace las esquinas redondeadas</li>
+<li><code>box-shadow</code> da profundidad con sombra</li>
+</ul>
+<hr>
+<h3 id="2-3-estilos-del-formulario">2.3 - Estilos del Formulario</h3>
+<pre><code class="lang-css"><span class="hljs-comment">/* ===================================
+   FORMULARIO
+   =================================== */</span>
+
+<span class="hljs-selector-class">.formulario</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">gap</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">30px</span>;
+}
+
+<span class="hljs-selector-class">.input-tarea</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#e0e0e0</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">8px</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span> ease;
+}
+
+<span class="hljs-selector-class">.input-tarea</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">outline</span>: none;
+  <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#667eea</span>;
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-built_in">rgba</span>(102, 126, 234, 0.1);
+}
+
+<span class="hljs-selector-class">.select-prioridad</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#e0e0e0</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">8px</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">background</span>: white;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span> ease;
+  <span class="hljs-attribute">min-width</span>: <span class="hljs-number">120px</span>;
+}
+
+<span class="hljs-selector-class">.select-prioridad</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">outline</span>: none;
+  <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#667eea</span>;
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-built_in">rgba</span>(102, 126, 234, 0.1);
+}
+
+<span class="hljs-selector-class">.btn-agregar</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span> <span class="hljs-number">30px</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#667eea</span>;
+  <span class="hljs-attribute">color</span>: white;
+  <span class="hljs-attribute">border</span>: none;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">8px</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">600</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span> ease;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">gap</span>: <span class="hljs-number">8px</span>;
+}
+
+<span class="hljs-selector-class">.btn-agregar</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#5568d3</span>;
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-2px);
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">15px</span> <span class="hljs-built_in">rgba</span>(102, 126, 234, 0.4);
+}
+
+<span class="hljs-selector-class">.btn-icon</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">font-weight</span>: bold;
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>display: flex</code> alinea el input, select y el botón horizontalmente</li>
+<li><code>gap: 10px</code> crea espacio entre todos los elementos</li>
+<li><code>flex: 1</code> hace que el input ocupe el espacio disponible</li>
+<li><strong>NUEVO:</strong> <code>.select-prioridad</code> para el dropdown de prioridades</li>
+<li><code>min-width: 120px</code> asegura que el select tenga un ancho mínimo</li>
+<li><code>display: flex</code> en el botón para alinear el ícono y texto</li>
+</ul>
+<hr>
+<h3 id="2-4-estilos-de-los-filtros">2.4 - Estilos de los Filtros</h3>
+<pre><code class="lang-css"><span class="hljs-comment">/* ===================================
+   FILTROS
+   =================================== */</span>
+
+<span class="hljs-selector-class">.filtros</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">gap</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">justify-content</span>: center;
+}
+
+<span class="hljs-selector-class">.btn-filtro</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span> <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#f5f5f5</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid transparent;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span> ease;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#666</span>;
+}
+
+<span class="hljs-selector-class">.btn-filtro</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#e8e8e8</span>;
+}
+
+<span class="hljs-selector-class">.btn-filtro</span><span class="hljs-selector-class">.activo</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#667eea</span>;
+  <span class="hljs-attribute">color</span>: white;
+  <span class="hljs-attribute">border-color</span>: <span class="hljs-number">#667eea</span>;
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>border-radius: 20px</code> hace botones redondeados tipo &quot;píldora&quot;</li>
+<li><code>.activo</code> marca el filtro seleccionado</li>
+<li>La transición hace cambios suaves</li>
+</ul>
+<hr>
+<h3 id="2-5-estilos-de-la-lista-de-tareas">2.5 - Estilos de la Lista de Tareas</h3>
+<pre><code class="lang-css"><span class="hljs-comment">/* ===================================
+   LISTA DE TAREAS
+   =================================== */</span>
+
+<span class="hljs-selector-class">.lista-tareas</span> {
+  <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">400px</span>;
+  <span class="hljs-attribute">overflow-y</span>: auto;
+}
+
+<span class="hljs-comment">/* Cada tarea individual */</span>
+<span class="hljs-selector-class">.tarea</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#f8f9fa</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">8px</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span> ease;
+  <span class="hljs-attribute">gap</span>: <span class="hljs-number">10px</span>;
+}
+
+<span class="hljs-selector-class">.tarea</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#e9ecef</span>;
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(5px);
+}
+
+<span class="hljs-comment">/* Checkbox personalizado */</span>
+<span class="hljs-selector-class">.tarea</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type="checkbox"]</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+}
+
+<span class="hljs-comment">/* Texto de la tarea */</span>
+<span class="hljs-selector-class">.tarea-texto</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span> ease;
+}
+
+<span class="hljs-comment">/* Tarea completada */</span>
+<span class="hljs-selector-class">.tarea</span><span class="hljs-selector-class">.completada</span> <span class="hljs-selector-class">.tarea-texto</span> {
+  <span class="hljs-attribute">text-decoration</span>: line-through;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#999</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.6</span>;
+}
+
+<span class="hljs-comment">/* Etiqueta de prioridad */</span>
+<span class="hljs-selector-class">.prioridad</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">4px</span> <span class="hljs-number">12px</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">12px</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">600</span>;
+  <span class="hljs-attribute">text-transform</span>: uppercase;
+  <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">0.5px</span>;
+}
+
+<span class="hljs-selector-class">.prioridad</span><span class="hljs-selector-class">.alta</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#ff4757</span>;
+  <span class="hljs-attribute">color</span>: white;
+}
+
+<span class="hljs-selector-class">.prioridad</span><span class="hljs-selector-class">.media</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#ffa726</span>;
+  <span class="hljs-attribute">color</span>: white;
+}
+
+<span class="hljs-selector-class">.prioridad</span><span class="hljs-selector-class">.baja</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#4caf50</span>;
+  <span class="hljs-attribute">color</span>: white;
+}
+
+<span class="hljs-comment">/* Botones de acción */</span>
+<span class="hljs-selector-class">.btn-accion</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">36px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">36px</span>;
+  <span class="hljs-attribute">border</span>: none;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">6px</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span> ease;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">justify-content</span>: center;
+}
+
+<span class="hljs-selector-class">.btn-editar</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#ffffff</span>;
+  <span class="hljs-attribute">color</span>: white;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid darkgray;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">8px</span>;
+}
+
+<span class="hljs-selector-class">.btn-editar</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background</span>:<span class="hljs-built_in">rgb</span>(219, 212, 212);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(1.05);
+}
+
+<span class="hljs-selector-class">.btn-eliminar</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">color</span>: white;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid darkgray;
+}
+
+<span class="hljs-selector-class">.btn-eliminar</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background</span>:<span class="hljs-built_in">rgb</span>(219, 212, 212);
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(1.05);
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>overflow-y: auto</code> agrega scroll si hay muchas tareas</li>
+<li><code>text-decoration: line-through</code> tacha las tareas completadas</li>
+<li><code>transform: translateX(5px)</code> mueve la tarea al pasar el mouse</li>
+<li><code>opacity: 0.6</code> hace las completadas más tenues</li>
+</ul>
+<hr>
+<h3 id="2-6-estilos-del-pie-de-p-gina">2.6 - Estilos del Pie de Página</h3>
+<pre><code class="lang-css"><span class="hljs-comment">/* ===================================
+   PIE DE PÁGINA
+   =================================== */</span>
+
+<span class="hljs-selector-class">.pie</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: space-between;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#e0e0e0</span>;
+}
+
+<span class="hljs-selector-id">#contador</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#666</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
+}
+
+<span class="hljs-selector-class">.btn-limpiar</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">8px</span> <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#f5f5f5</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#ddd</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#666</span>;
+  <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span> ease;
+}
+
+<span class="hljs-selector-class">.btn-limpiar</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#e0e0e0</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333</span>;
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>justify-content: space-between</code> separa el contador y el botón</li>
+<li><code>border-top</code> crea una línea separadora</li>
+</ul>
+<hr>
+<h3 id="2-7-estilos-responsive">2.7 - Estilos Responsive</h3>
+<pre><code class="lang-css"><span class="hljs-comment">/* ===================================
+   RESPONSIVE - MÓVILES
+   =================================== */</span>
+
+@<span class="hljs-keyword">media</span> (max-width: <span class="hljs-number">600px</span>) {
+  <span class="hljs-selector-class">.contenedor</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>;
+  }
+
+  <span class="hljs-selector-class">.titulo</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
+  }
+
+  <span class="hljs-selector-class">.formulario</span> {
+    <span class="hljs-attribute">flex-direction</span>: column;
+  }
+
+  <span class="hljs-selector-class">.btn-agregar</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  }
+
+  <span class="hljs-selector-class">.filtros</span> {
+    <span class="hljs-attribute">flex-wrap</span>: wrap;
+  }
+
+  <span class="hljs-selector-class">.pie</span> {
+    <span class="hljs-attribute">flex-direction</span>: column;
+    <span class="hljs-attribute">gap</span>: <span class="hljs-number">15px</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+  }
+
+  <span class="hljs-selector-class">.btn-limpiar</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  }
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>@media</code> cambia estilos en pantallas pequeñas</li>
+<li><code>flex-direction: column</code> apila elementos verticalmente</li>
+<li>Hacemos botones de ancho completo en móvil</li>
+</ul>
+<hr>
+<h3 id="checkpoint-2-css-completo">CHECKPOINT 2: CSS Completo</h3>
+<p><strong>Pausa aquí y verifica:</strong></p>
+<ul>
+<li>Recarga <code>index.html</code> en el navegador</li>
+<li>Deberías ver una interfaz bonita y profesional</li>
+<li>Prueba redimensionar la ventana para ver el responsive</li>
+<li>Los botones deben tener efectos hover</li>
+</ul>
+<hr>
+<h2 id="paso-3-funcionalidad-con-javascript-30-minutos-">PASO 3: Funcionalidad con JavaScript (30 minutos)</h2>
+<h3 id="3-1-crear-el-archivo-app-js-estructura-inicial">3.1 - Crear el archivo <code>app.js</code> - Estructura Inicial</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ============================================</span>
+<span class="hljs-comment">// VARIABLES GLOBALES</span>
+<span class="hljs-comment">// ============================================</span>
+
+<span class="hljs-comment">// Array para almacenar todas las tareas</span>
+<span class="hljs-keyword">let</span> tareas = [];
+
+<span class="hljs-comment">// Filtro actual seleccionado</span>
+<span class="hljs-keyword">let</span> filtroActual = <span class="hljs-string">'todas'</span>;
+
+<span class="hljs-comment">// Elementos del DOM</span>
+<span class="hljs-keyword">const</span> formulario = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'formulario-tarea'</span>);
+<span class="hljs-keyword">const</span> inputTarea = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'input-tarea'</span>);
+<span class="hljs-keyword">const</span> selectPrioridad = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'select-prioridad'</span>);
+<span class="hljs-keyword">const</span> listaTareas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'lista-tareas'</span>);
+<span class="hljs-keyword">const</span> contador = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'contador'</span>);
+<span class="hljs-keyword">const</span> btnLimpiar = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'btn-limpiar'</span>);
+<span class="hljs-keyword">const</span> botonesFiltro = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.btn-filtro'</span>);
+</code></pre>
+<p><strong>Explicación para los estudiantes:</strong></p>
+<ul>
+<li>Declaramos variables globales que usaremos en toda la aplicación</li>
+<li><code>let tareas = []</code> crea un array vacío donde guardaremos las tareas</li>
+<li>Guardamos referencias a los elementos del DOM para no buscarlos cada vez</li>
+<li><code>querySelectorAll</code> devuelve todos los botones de filtro</li>
+</ul>
+<p><strong>PAUSA: Explica la diferencia entre <code>const</code> y <code>let</code></strong></p>
+<ul>
+<li><code>const</code>: valor que no cambiará (elementos del DOM)</li>
+<li><code>let</code>: valor que puede cambiar (array de tareas, filtro)</li>
+</ul>
+<hr>
+<h3 id="3-2-funci-n-para-generar-id-nico">3.2 - Función para Generar ID Único</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ============================================</span>
+<span class="hljs-comment">// FUNCIONES AUXILIARES</span>
+<span class="hljs-comment">// ============================================</span>
+
+<span class="hljs-comment">/**
+ * Genera un ID único basado en la fecha actual
+ * @returns {number} - ID único
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generarId</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Date</span>.now();
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>Date.now()</code> devuelve los milisegundos desde 1970</li>
+<li>Es único porque cada llamada es en un momento diferente</li>
+<li>Lo usaremos para identificar cada tarea</li>
+</ul>
+<hr>
+<h3 id="3-3-funci-n-para-crear-una-tarea">3.3 - Función para Crear una Tarea</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">/**
+ * Crea un objeto tarea nueva
+ * <span class="hljs-doctag">@param</span> {string} texto - Texto de la tarea
+ * <span class="hljs-doctag">@param</span> {string} prioridad - Prioridad de la tarea (alta, media, baja)
+ * <span class="hljs-doctag">@returns</span> {object} - Objeto tarea
+ */</span>
+<span class="hljs-function">function <span class="hljs-title">crearTarea</span><span class="hljs-params">(texto, prioridad = <span class="hljs-string">'media'</span>)</span> </span>{
+  <span class="hljs-keyword">return</span> {
+    id: generarId(),
+    texto: texto,
+    prioridad: prioridad,
+    completada: <span class="hljs-keyword">false</span>,
+    fechaCreacion: <span class="hljs-keyword">new</span> Date().toISOString()
+  };
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li>Recibe el texto que el usuario escribió y la prioridad</li>
+<li>Devuelve un objeto con 5 propiedades:<ul>
+<li><code>id</code>: identificador único</li>
+<li><code>texto</code>: lo que hay que hacer</li>
+<li><code>prioridad</code>: nivel de prioridad (alta, media, baja)</li>
+<li><code>completada</code>: si está hecha o no (inicia en false)</li>
+<li><code>fechaCreacion</code>: cuándo se creó la tarea</li>
+</ul>
+</li>
+</ul>
+<p><strong>PAUSA: Muestra en la consola:</strong></p>
+<pre><code class="lang-javascript">console.log(crearTarea(<span class="hljs-string">'Estudiar JavaScript'</span>, <span class="hljs-string">'alta'</span>));
+<span class="hljs-regexp">//</span> { 
+<span class="hljs-regexp">//</span>   id: <span class="hljs-number">1234567890</span>, 
+<span class="hljs-regexp">//</span>   texto: <span class="hljs-string">'Estudiar JavaScript'</span>, 
+<span class="hljs-regexp">//</span>   prioridad: <span class="hljs-string">'alta'</span>,
+<span class="hljs-regexp">//</span>   completada: false,
+<span class="hljs-regexp">//</span>   fechaCreacion: <span class="hljs-string">'2025-01-XX...'</span>
+<span class="hljs-regexp">//</span> }
+</code></pre>
+<hr>
+<h3 id="3-4-funci-n-para-agregar-tarea-al-array">3.4 - Función para Agregar Tarea al Array</h3>
+<pre><code class="lang-javascript">/**
+ * Agrega una tarea al<span class="hljs-built_in"> array </span>de tareas
+ * @param {string} texto - Texto de la tarea
+ * @param {string} prioridad - Prioridad de la tarea
+ */
+function agregarTarea(texto, prioridad) {
+  // Crear la tarea
+ <span class="hljs-built_in"> const </span>nuevaTarea = crearTarea(texto, prioridad);
+
+  // Agregarla al<span class="hljs-built_in"> array
+</span>  tareas.push(nuevaTarea);
+
+  // Guardar en LocalStorage
+  guardarEnLocalStorage();
+
+  // Actualizar la interfaz
+  renderizarTareas();
+  actualizarContador();
+
+  // Limpiar el formulario
+  inputTarea.value = '';
+  selectPrioridad.value = 'media';
+  inputTarea.focus();
+}
+</code></pre>
+<p><strong>Explicación paso a paso:</strong></p>
+<ol>
+<li>Creamos la tarea con <code>crearTarea()</code></li>
+<li>La agregamos al array con <code>push()</code></li>
+<li>Guardamos todo en LocalStorage (para que persista)</li>
+<li>Actualizamos la vista</li>
+<li>Limpiamos el input y le damos foco</li>
+</ol>
+<p><strong>PAUSA: Explica el flujo:</strong></p>
+<ul>
+<li>Usuario escribe → Enter → <code>agregarTarea()</code> → Array actualizado → Vista actualizada</li>
+</ul>
+<hr>
+<h3 id="3-5-funci-n-para-renderizar-mostrar-las-tareas">3.5 - Función para Renderizar (Mostrar) las Tareas</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">/**
+ * Renderiza las tareas en el DOM según el filtro actual
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderizarTareas</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// Limpiar la lista actual</span>
+  listaTareas.innerHTML = <span class="hljs-string">''</span>;
+
+  <span class="hljs-comment">// Filtrar las tareas según el filtro activo</span>
+  <span class="hljs-keyword">const</span> tareasFiltradas = filtrarTareas();
+
+  <span class="hljs-comment">// Si no hay tareas, mostrar mensaje</span>
+  <span class="hljs-keyword">if</span> (tareasFiltradas.length === <span class="hljs-number">0</span>) {
+    listaTareas.innerHTML = <span class="hljs-string">'&lt;li style="text-align: center; padding: 20px; color: #999;"&gt;No hay tareas aquí 😊&lt;/li&gt;'</span>;
+    <span class="hljs-keyword">return</span>;
+  }
+
+  <span class="hljs-comment">// Crear un elemento HTML para cada tarea</span>
+  tareasFiltradas.forEach(<span class="hljs-function"><span class="hljs-params">tarea</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> li = crearElementoTarea(tarea);
+    listaTareas.appendChild(li);
+  });
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>innerHTML = &#39;&#39;</code> borra todo lo que había</li>
+<li><code>filtrarTareas()</code> devuelve solo las tareas que corresponden al filtro</li>
+<li>Si no hay tareas, mostramos un mensaje amigable</li>
+<li><code>forEach</code> recorre cada tarea y crea su HTML</li>
+<li><code>appendChild</code> agrega cada tarea a la lista</li>
+</ul>
+<hr>
+<h3 id="3-6-funci-n-para-crear-el-html-de-una-tarea">3.6 - Función para Crear el HTML de una Tarea</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">/**
+ * Crea el elemento HTML de una tarea
+ * @param {object} tarea - Objeto tarea
+ * @returns {HTMLElement} - Elemento &lt;li&gt;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">crearElementoTarea</span>(<span class="hljs-params">tarea</span>) </span>{
+  <span class="hljs-comment">// Crear el elemento &lt;li&gt;</span>
+  <span class="hljs-keyword">const</span> li = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+  li.className = <span class="hljs-string">'tarea'</span>;
+
+  <span class="hljs-comment">// Si está completada, agregar la clase</span>
+  <span class="hljs-keyword">if</span> (tarea.completada) {
+    li.classList.add(<span class="hljs-string">'completada'</span>);
+  }
+
+  <span class="hljs-comment">// Crear el checkbox</span>
+  <span class="hljs-keyword">const</span> checkbox = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'input'</span>);
+  checkbox.type = <span class="hljs-string">'checkbox'</span>;
+  checkbox.checked = tarea.completada;
+  checkbox.addEventListener(<span class="hljs-string">'change'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    toggleCompletada(tarea.id);
+  });
+
+  <span class="hljs-comment">// Crear el span con el texto</span>
+  <span class="hljs-keyword">const</span> span = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'span'</span>);
+  span.className = <span class="hljs-string">'tarea-texto'</span>;
+  span.textContent = tarea.texto;
+
+  <span class="hljs-comment">// Crear la etiqueta de prioridad</span>
+  <span class="hljs-keyword">const</span> etiquetaPrioridad = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'span'</span>);
+  <span class="hljs-keyword">const</span> prioridad = tarea.prioridad || <span class="hljs-string">'media'</span>; <span class="hljs-comment">// Valor por defecto si no existe</span>
+  etiquetaPrioridad.className = <span class="hljs-string">`prioridad <span class="hljs-subst">${prioridad}</span>`</span>;
+  etiquetaPrioridad.textContent = prioridad.toUpperCase();
+
+  <span class="hljs-comment">// Crear contenedor de botones</span>
+  <span class="hljs-keyword">const</span> contenedorBotones = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
+  contenedorBotones.className = <span class="hljs-string">'contenedor-botones'</span>;
+
+  <span class="hljs-comment">// Crear el botón de editar</span>
+  <span class="hljs-keyword">const</span> btnEditar = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'button'</span>);
+  btnEditar.className = <span class="hljs-string">'btn-accion btn-editar'</span>;
+  btnEditar.innerHTML = <span class="hljs-string">'✏️'</span>;
+  btnEditar.title = <span class="hljs-string">'Editar tarea'</span>;
+  btnEditar.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    editarTarea(tarea.id);
+  });
+
+  <span class="hljs-comment">// Crear el botón de eliminar</span>
+  <span class="hljs-keyword">const</span> btnEliminar = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'button'</span>);
+  btnEliminar.className = <span class="hljs-string">'btn-accion btn-eliminar'</span>;
+  btnEliminar.innerHTML = <span class="hljs-string">'🗑️'</span>;
+  btnEliminar.title = <span class="hljs-string">'Eliminar tarea'</span>;
+  btnEliminar.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    eliminarTarea(tarea.id);
+  });
+
+  <span class="hljs-comment">// Ensamblar contenedor de botones</span>
+  contenedorBotones.appendChild(btnEditar);
+  contenedorBotones.appendChild(btnEliminar);
+
+  <span class="hljs-comment">// Ensamblar todo</span>
+  li.appendChild(checkbox);
+  li.appendChild(span);
+  li.appendChild(etiquetaPrioridad);
+  li.appendChild(contenedorBotones);
+
+  <span class="hljs-keyword">return</span> li;
+}
+</code></pre>
+<p><strong>Explicación detallada:</strong></p>
+<ol>
+<li><code>createElement(&#39;li&#39;)</code> crea un elemento <code>&lt;li&gt;</code> en memoria</li>
+<li>Le asignamos la clase <code>tarea</code></li>
+<li>Si está completada, agregamos la clase <code>completada</code> para los estilos</li>
+<li>Creamos el checkbox y le damos evento para marcar/desmarcar</li>
+<li>Creamos el span con el texto de la tarea</li>
+<li>Creamos el botón eliminar con su evento</li>
+<li>Unimos todo con <code>appendChild</code></li>
+</ol>
+<p><strong>PAUSA: Dibuja en la pizarra:</strong></p>
+<pre><code><span class="hljs-selector-tag">li</span> (tarea)
+├── checkbox
+├── <span class="hljs-selector-tag">span</span> (texto)
+└── <span class="hljs-selector-tag">button</span> (eliminar)
+</code></pre><hr>
+<h3 id="3-7-funci-n-para-marcar-como-completada">3.7 - Función para Marcar como Completada</h3>
+<pre><code class="lang-javascript">/**
+ * Cambia el estado de completada de una tarea
+ * @param {number} id - ID de la tarea
+ */
+function toggleCompletada(id) {
+  // Buscar la tarea en el<span class="hljs-built_in"> array
+</span> <span class="hljs-built_in"> const </span>tarea = tareas.find(t =&gt; t.id === id);
+
+  // Si la encontramos, cambiar su estado
+ <span class="hljs-built_in"> if </span>(tarea) {
+    tarea.completada = !tarea.completada;
+    guardarEnLocalStorage();
+    renderizarTareas();
+    actualizarContador();
+  }
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>find()</code> busca la tarea que tiene ese ID</li>
+<li><code>!tarea.completada</code> invierte el valor (true → false, false → true)</li>
+<li>Guardamos, renderizamos y actualizamos contador</li>
+</ul>
+<p><strong>PAUSA: Explica el operador <code>!</code> (NOT)</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> <span class="hljs-attr">completada</span> = <span class="hljs-literal">false</span>;
+<span class="hljs-attr">completada</span> = !completada; // ahora es <span class="hljs-literal">true</span>
+<span class="hljs-attr">completada</span> = !completada; // ahora es <span class="hljs-literal">false</span> de nuevo
+</code></pre>
+<hr>
+<h3 id="3-8-funci-n-para-eliminar-tarea">3.8 - Función para Eliminar Tarea</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">/**
+ * Elimina una tarea del array
+ * @param {number} id - ID de la tarea
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">eliminarTarea</span>(<span class="hljs-params">id</span>) </span>{
+  <span class="hljs-comment">// Filtrar el array excluyendo la tarea con ese ID</span>
+  tareas = tareas.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.id !== id);
+
+  guardarEnLocalStorage();
+  renderizarTareas();
+  actualizarContador();
+}
+
+<span class="hljs-comment">/**
+ * Edita una tarea existente
+ * @param {number} id - ID de la tarea
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">editarTarea</span>(<span class="hljs-params">id</span>) </span>{
+  <span class="hljs-comment">// Buscar la tarea en el array</span>
+  <span class="hljs-keyword">const</span> tarea = tareas.find(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.id === id);
+
+  <span class="hljs-keyword">if</span> (!tarea) <span class="hljs-keyword">return</span>;
+
+  <span class="hljs-comment">// Pedir nuevo texto</span>
+  <span class="hljs-keyword">const</span> nuevoTexto = prompt(<span class="hljs-string">'Editar tarea:'</span>, tarea.texto);
+
+  <span class="hljs-keyword">if</span> (nuevoTexto === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span>; <span class="hljs-comment">// Usuario canceló</span>
+
+  <span class="hljs-keyword">const</span> textoLimpio = nuevoTexto.trim();
+
+  <span class="hljs-keyword">if</span> (textoLimpio === <span class="hljs-string">''</span>) {
+    alert(<span class="hljs-string">'El texto no puede estar vacío'</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+
+  <span class="hljs-comment">// Pedir nueva prioridad</span>
+  <span class="hljs-keyword">const</span> prioridadActual = tarea.prioridad || <span class="hljs-string">'media'</span>;
+  <span class="hljs-keyword">const</span> nuevaPrioridad = prompt(<span class="hljs-string">'Nueva prioridad (alta/media/baja):'</span>, prioridadActual);
+
+  <span class="hljs-keyword">if</span> (nuevaPrioridad === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span>; <span class="hljs-comment">// Usuario canceló</span>
+
+  <span class="hljs-keyword">const</span> prioridadLimpia = nuevaPrioridad.toLowerCase().trim();
+
+  <span class="hljs-comment">// Validar prioridad</span>
+  <span class="hljs-keyword">if</span> (![<span class="hljs-string">'alta'</span>, <span class="hljs-string">'media'</span>, <span class="hljs-string">'baja'</span>].includes(prioridadLimpia)) {
+    alert(<span class="hljs-string">'Prioridad debe ser: alta, media o baja'</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+
+  <span class="hljs-comment">// Actualizar la tarea</span>
+  tarea.texto = textoLimpio;
+  tarea.prioridad = prioridadLimpia;
+
+  <span class="hljs-comment">// Guardar y actualizar</span>
+  guardarEnLocalStorage();
+  renderizarTareas();
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>filter()</code> crea un nuevo array sin la tarea que tiene ese ID</li>
+<li><code>!==</code> significa &quot;diferente de&quot;</li>
+<li>Guardamos todas las tareas EXCEPTO la que queremos eliminar</li>
+</ul>
+<p><strong>PAUSA: Ejemplo visual:</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Antes: [tarea1, tarea2, tarea3]</span>
+<span class="hljs-comment">// Eliminar tarea2</span>
+<span class="hljs-comment">// Después: [tarea1, tarea3]</span>
+</code></pre>
+<hr>
+<h3 id="3-9-funci-n-para-filtrar-tareas">3.9 - Función para Filtrar Tareas</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">/**
+ * Filtra las tareas según el filtro actual
+ * @returns {array} - Tareas filtradas
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filtrarTareas</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">if</span> (filtroActual === <span class="hljs-string">'activas'</span>) {
+    <span class="hljs-keyword">return</span> tareas.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> !t.completada);
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (filtroActual === <span class="hljs-string">'completadas'</span>) {
+    <span class="hljs-keyword">return</span> tareas.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.completada);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> tareas;
+  }
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li>Si el filtro es &#39;activas&#39;, devuelve solo las NO completadas</li>
+<li>Si es &#39;completadas&#39;, devuelve solo las completadas</li>
+<li>Si es &#39;todas&#39;, devuelve todo el array</li>
+</ul>
+<hr>
+<h3 id="3-10-funci-n-para-actualizar-el-contador">3.10 - Función para Actualizar el Contador</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">/**
+ * Actualiza el contador de tareas pendientes
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">actualizarContador</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> tareasActivas = tareas.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> !t.completada).length;
+
+  <span class="hljs-keyword">if</span> (tareasActivas === <span class="hljs-number">0</span>) {
+    contador.textContent = <span class="hljs-string">'¡Genial! No hay tareas pendientes'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tareasActivas === <span class="hljs-number">1</span>) {
+    contador.textContent = <span class="hljs-string">'1 tarea pendiente'</span>;
+  } <span class="hljs-keyword">else</span> {
+    contador.textContent = <span class="hljs-string">`<span class="hljs-subst">${tareasActivas}</span> tareas pendientes`</span>;
+  }
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li>Cuenta cuántas tareas NO están completadas</li>
+<li>Cambia el texto según la cantidad</li>
+<li>Usa diferentes mensajes para mejor experiencia</li>
+</ul>
+<hr>
+<h3 id="3-11-funci-n-para-limpiar-completadas">3.11 - Función para Limpiar Completadas</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">/**
+ * Elimina todas las tareas completadas
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">limpiarCompletadas</span>(<span class="hljs-params"></span>) </span>{
+  tareas = tareas.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> !t.completada);
+  guardarEnLocalStorage();
+  renderizarTareas();
+  actualizarContador();
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li>Similar a eliminar una tarea, pero elimina TODAS las completadas</li>
+<li>Mantiene solo las tareas activas</li>
+</ul>
+<hr>
+<h3 id="3-12-funciones-de-localstorage">3.12 - Funciones de LocalStorage</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ============================================</span>
+<span class="hljs-comment">// LOCAL STORAGE - PERSISTENCIA DE DATOS</span>
+<span class="hljs-comment">// ============================================</span>
+
+<span class="hljs-comment">/**
+ * Guarda las tareas en LocalStorage
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">guardarEnLocalStorage</span>(<span class="hljs-params"></span>) </span>{
+  localStorage.setItem(<span class="hljs-string">'tareas'</span>, <span class="hljs-built_in">JSON</span>.stringify(tareas));
+}
+
+<span class="hljs-comment">/**
+ * Carga las tareas desde LocalStorage
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cargarDesdeLocalStorage</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> tareasGuardadas = localStorage.getItem(<span class="hljs-string">'tareas'</span>);
+
+  <span class="hljs-keyword">if</span> (tareasGuardadas) {
+    tareas = <span class="hljs-built_in">JSON</span>.parse(tareasGuardadas);
+
+    <span class="hljs-comment">// Migrar tareas antiguas que no tienen prioridad</span>
+    tareas = tareas.map(<span class="hljs-function"><span class="hljs-params">tarea</span> =&gt;</span> {
+      <span class="hljs-keyword">if</span> (!tarea.prioridad) {
+        tarea.prioridad = <span class="hljs-string">'media'</span>;
+      }
+      <span class="hljs-keyword">if</span> (!tarea.fechaCreacion) {
+        tarea.fechaCreacion = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().toISOString();
+      }
+      <span class="hljs-keyword">return</span> tarea;
+    });
+
+    <span class="hljs-comment">// Guardar las tareas migradas</span>
+    guardarEnLocalStorage();
+  }
+}
+</code></pre>
+<p><strong>Explicación:</strong></p>
+<ul>
+<li><code>localStorage</code> es como una base de datos del navegador</li>
+<li><code>JSON.stringify()</code> convierte el array a texto</li>
+<li><code>JSON.parse()</code> convierte el texto de vuelta a array</li>
+<li>Los datos persisten aunque cierres el navegador</li>
+</ul>
+<p><strong>PAUSA: Demuestra en la consola:</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">local</span>Storage.setItem(<span class="hljs-string">'prueba'</span>, <span class="hljs-string">'Hola'</span>);
+<span class="hljs-built_in">local</span>Storage.getItem(<span class="hljs-string">'prueba'</span>); // <span class="hljs-string">'Hola'</span>
+</code></pre>
+<hr>
+<h3 id="3-13-event-listeners-eventos-">3.13 - Event Listeners (Eventos)</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ============================================</span>
+<span class="hljs-comment">// EVENT LISTENERS</span>
+<span class="hljs-comment">// ============================================</span>
+
+<span class="hljs-comment">/**
+ * Evento: Enviar formulario
+ */</span>
+formulario.addEventListener(<span class="hljs-string">'submit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evento</span>) </span>{
+  <span class="hljs-comment">// Prevenir que se recargue la página</span>
+  evento.preventDefault();
+
+  <span class="hljs-comment">// Obtener el texto del input y la prioridad</span>
+  <span class="hljs-keyword">const</span> texto = inputTarea.value.trim();
+  <span class="hljs-keyword">const</span> prioridad = selectPrioridad.value;
+
+  <span class="hljs-comment">// Validar que no esté vacío</span>
+  <span class="hljs-keyword">if</span> (texto === <span class="hljs-string">''</span>) {
+    alert(<span class="hljs-string">'Por favor escribe una tarea'</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+
+  <span class="hljs-comment">// Agregar la tarea</span>
+  agregarTarea(texto, prioridad);
+});
+
+<span class="hljs-comment">/**
+ * Evento: Filtros
+ */</span>
+botonesFiltro.forEach(<span class="hljs-function"><span class="hljs-params">boton</span> =&gt;</span> {
+  boton.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Quitar la clase 'activo' de todos los botones</span>
+    botonesFiltro.forEach(<span class="hljs-function"><span class="hljs-params">b</span> =&gt;</span> b.classList.remove(<span class="hljs-string">'activo'</span>));
+
+    <span class="hljs-comment">// Agregar 'activo' al botón clickeado</span>
+    <span class="hljs-keyword">this</span>.classList.add(<span class="hljs-string">'activo'</span>);
+
+    <span class="hljs-comment">// Cambiar el filtro actual</span>
+    filtroActual = <span class="hljs-keyword">this</span>.dataset.filtro;
+
+    <span class="hljs-comment">// Renderizar con el nuevo filtro</span>
+    renderizarTareas();
+  });
+});
+
+<span class="hljs-comment">/**
+ * Evento: Limpiar completadas
+ */</span>
+btnLimpiar.addEventListener(<span class="hljs-string">'click'</span>, limpiarCompletadas);
+
+<span class="hljs-comment">/**
+ * Evento: Al cargar la página
+ */</span>
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'load'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  cargarDesdeLocalStorage();
+  renderizarTareas();
+  actualizarContador();
+});
+</code></pre>
+<p><strong>Explicación detallada:</strong></p>
+<p><strong>Formulario:</strong></p>
+<ul>
+<li><code>preventDefault()</code> evita que la página se recargue</li>
+<li><code>trim()</code> elimina espacios al inicio y final</li>
+<li>Validamos que no esté vacío</li>
+</ul>
+<p><strong>Filtros:</strong></p>
+<ul>
+<li><code>forEach</code> agrega evento a cada botón</li>
+<li>Removemos &#39;activo&#39; de todos</li>
+<li>Agregamos &#39;activo&#39; al clickeado</li>
+<li><code>dataset.filtro</code> lee el atributo <code>data-filtro</code></li>
+</ul>
+<p><strong>Carga inicial:</strong></p>
+<ul>
+<li><code>load</code> se dispara cuando la página termina de cargar</li>
+<li>Cargamos datos del LocalStorage</li>
+<li>Renderizamos y actualizamos</li>
+</ul>
+<hr>
+<h3 id="checkpoint-3-javascript-completo">CHECKPOINT 3: JavaScript Completo</h3>
+<p><strong>Archivo <code>app.js</code> completo:</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ============================================</span>
+<span class="hljs-comment">// VARIABLES GLOBALES</span>
+<span class="hljs-comment">// ============================================</span>
+
+<span class="hljs-keyword">let</span> tareas = [];
+<span class="hljs-keyword">let</span> filtroActual = <span class="hljs-string">'todas'</span>;
+
+<span class="hljs-keyword">const</span> formulario = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'formulario-tarea'</span>);
+<span class="hljs-keyword">const</span> inputTarea = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'input-tarea'</span>);
+<span class="hljs-keyword">const</span> listaTareas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'lista-tareas'</span>);
+<span class="hljs-keyword">const</span> contador = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'contador'</span>);
+<span class="hljs-keyword">const</span> btnLimpiar = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'btn-limpiar'</span>);
+<span class="hljs-keyword">const</span> botonesFiltro = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.btn-filtro'</span>);
+
+<span class="hljs-comment">// ============================================</span>
+<span class="hljs-comment">// FUNCIONES AUXILIARES</span>
+<span class="hljs-comment">// ============================================</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generarId</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Date</span>.now();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">crearTarea</span>(<span class="hljs-params">texto</span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">id</span>: generarId(),
+    <span class="hljs-attr">texto</span>: texto,
+    <span class="hljs-attr">completada</span>: <span class="hljs-literal">false</span>
+  };
+}
+
+<span class="hljs-comment">// ============================================</span>
+<span class="hljs-comment">// FUNCIONES PRINCIPALES</span>
+<span class="hljs-comment">// ============================================</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">agregarTarea</span>(<span class="hljs-params">texto</span>) </span>{
+  <span class="hljs-keyword">const</span> nuevaTarea = crearTarea(texto);
+  tareas.push(nuevaTarea);
+  guardarEnLocalStorage();
+  renderizarTareas();
+  actualizarContador();
+  inputTarea.value = <span class="hljs-string">''</span>;
+  inputTarea.focus();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderizarTareas</span>(<span class="hljs-params"></span>) </span>{
+  listaTareas.innerHTML = <span class="hljs-string">''</span>;
+  <span class="hljs-keyword">const</span> tareasFiltradas = filtrarTareas();
+
+  <span class="hljs-keyword">if</span> (tareasFiltradas.length === <span class="hljs-number">0</span>) {
+    listaTareas.innerHTML = <span class="hljs-string">'&lt;li style="text-align: center; padding: 20px; color: #999;"&gt;No hay tareas aquí 😊&lt;/li&gt;'</span>;
+    <span class="hljs-keyword">return</span>;
+  }
+
+  tareasFiltradas.forEach(<span class="hljs-function"><span class="hljs-params">tarea</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> li = crearElementoTarea(tarea);
+    listaTareas.appendChild(li);
+  });
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">crearElementoTarea</span>(<span class="hljs-params">tarea</span>) </span>{
+  <span class="hljs-keyword">const</span> li = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'li'</span>);
+  li.className = <span class="hljs-string">'tarea'</span>;
+
+  <span class="hljs-keyword">if</span> (tarea.completada) {
+    li.classList.add(<span class="hljs-string">'completada'</span>);
+  }
+
+  <span class="hljs-keyword">const</span> checkbox = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'input'</span>);
+  checkbox.type = <span class="hljs-string">'checkbox'</span>;
+  checkbox.checked = tarea.completada;
+  checkbox.addEventListener(<span class="hljs-string">'change'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    toggleCompletada(tarea.id);
+  });
+
+  <span class="hljs-keyword">const</span> span = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'span'</span>);
+  span.className = <span class="hljs-string">'tarea-texto'</span>;
+  span.textContent = tarea.texto;
+
+  <span class="hljs-keyword">const</span> btnEliminar = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'button'</span>);
+  btnEliminar.className = <span class="hljs-string">'btn-eliminar'</span>;
+  btnEliminar.textContent = <span class="hljs-string">'Eliminar'</span>;
+  btnEliminar.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    eliminarTarea(tarea.id);
+  });
+
+  li.appendChild(checkbox);
+  li.appendChild(span);
+  li.appendChild(btnEliminar);
+
+  <span class="hljs-keyword">return</span> li;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleCompletada</span>(<span class="hljs-params">id</span>) </span>{
+  <span class="hljs-keyword">const</span> tarea = tareas.find(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.id === id);
+  <span class="hljs-keyword">if</span> (tarea) {
+    tarea.completada = !tarea.completada;
+    guardarEnLocalStorage();
+    renderizarTareas();
+    actualizarContador();
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">eliminarTarea</span>(<span class="hljs-params">id</span>) </span>{
+  tareas = tareas.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.id !== id);
+  guardarEnLocalStorage();
+  renderizarTareas();
+  actualizarContador();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filtrarTareas</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">if</span> (filtroActual === <span class="hljs-string">'activas'</span>) {
+    <span class="hljs-keyword">return</span> tareas.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> !t.completada);
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (filtroActual === <span class="hljs-string">'completadas'</span>) {
+    <span class="hljs-keyword">return</span> tareas.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.completada);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> tareas;
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">actualizarContador</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> tareasActivas = tareas.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> !t.completada).length;
+
+  <span class="hljs-keyword">if</span> (tareasActivas === <span class="hljs-number">0</span>) {
+    contador.textContent = <span class="hljs-string">'¡Genial! No hay tareas pendientes'</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tareasActivas === <span class="hljs-number">1</span>) {
+    contador.textContent = <span class="hljs-string">'1 tarea pendiente'</span>;
+  } <span class="hljs-keyword">else</span> {
+    contador.textContent = <span class="hljs-string">`<span class="hljs-subst">${tareasActivas}</span> tareas pendientes`</span>;
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">limpiarCompletadas</span>(<span class="hljs-params"></span>) </span>{
+  tareas = tareas.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> !t.completada);
+  guardarEnLocalStorage();
+  renderizarTareas();
+  actualizarContador();
+}
+
+<span class="hljs-comment">// ============================================</span>
+<span class="hljs-comment">// LOCAL STORAGE</span>
+<span class="hljs-comment">// ============================================</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">guardarEnLocalStorage</span>(<span class="hljs-params"></span>) </span>{
+  localStorage.setItem(<span class="hljs-string">'tareas'</span>, <span class="hljs-built_in">JSON</span>.stringify(tareas));
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cargarDesdeLocalStorage</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> tareasGuardadas = localStorage.getItem(<span class="hljs-string">'tareas'</span>);
+  <span class="hljs-keyword">if</span> (tareasGuardadas) {
+    tareas = <span class="hljs-built_in">JSON</span>.parse(tareasGuardadas);
+  }
+}
+
+<span class="hljs-comment">// ============================================</span>
+<span class="hljs-comment">// EVENT LISTENERS</span>
+<span class="hljs-comment">// ============================================</span>
+
+formulario.addEventListener(<span class="hljs-string">'submit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evento</span>) </span>{
+  evento.preventDefault();
+  <span class="hljs-keyword">const</span> texto = inputTarea.value.trim();
+
+  <span class="hljs-keyword">if</span> (texto === <span class="hljs-string">''</span>) {
+    alert(<span class="hljs-string">'Por favor escribe una tarea'</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+
+  agregarTarea(texto);
+});
+
+botonesFiltro.forEach(<span class="hljs-function"><span class="hljs-params">boton</span> =&gt;</span> {
+  boton.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    botonesFiltro.forEach(<span class="hljs-function"><span class="hljs-params">b</span> =&gt;</span> b.classList.remove(<span class="hljs-string">'activo'</span>));
+    <span class="hljs-keyword">this</span>.classList.add(<span class="hljs-string">'activo'</span>);
+    filtroActual = <span class="hljs-keyword">this</span>.dataset.filtro;
+    renderizarTareas();
+  });
+});
+
+btnLimpiar.addEventListener(<span class="hljs-string">'click'</span>, limpiarCompletadas);
+
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'load'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  cargarDesdeLocalStorage();
+  renderizarTareas();
+  actualizarContador();
+});
+</code></pre>
+<hr>
+<h2 id="paso-4-pruebas-y-demostraci-n-10-minutos-">PASO 4: Pruebas y Demostración (10 minutos)</h2>
+<h3 id="4-1-lista-de-verificaci-n">4.1 - Lista de Verificación</h3>
+<p>Prueba cada funcionalidad en orden:</p>
+<ol>
+<li><strong>Agregar tarea:</strong> Escribe &quot;Estudiar JavaScript&quot; y presiona Enter</li>
+<li><strong>Agregar varias:</strong> Agrega 5 tareas diferentes</li>
+<li><strong>Marcar completada:</strong> Click en el checkbox de una tarea</li>
+<li><strong>Ver contador:</strong> Verifica que el contador se actualice</li>
+<li><strong>Filtros:</strong><ul>
+<li>Click en &quot;Activas&quot; → solo muestra pendientes</li>
+<li>Click en &quot;Completadas&quot; → solo muestra completadas</li>
+<li>Click en &quot;Todas&quot; → muestra todas</li>
+</ul>
+</li>
+<li><strong>Eliminar:</strong> Click en &quot;Eliminar&quot; de una tarea</li>
+<li><strong>Limpiar completadas:</strong> Click en &quot;Limpiar completadas&quot;</li>
+<li><strong>Persistencia:</strong> Recarga la página → las tareas siguen ahí</li>
+</ol>
+<h3 id="4-2-demostraci-n-en-la-consola">4.2 - Demostración en la Consola</h3>
+<p>Muestra a los estudiantes cómo inspeccionar:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Abre la consola (F12) y escribe:</span>
+console.<span class="hljs-built-in">log</span>(tareas);
+console.<span class="hljs-built-in">log</span>(localStorage.getItem(<span class="hljs-string">'tareas'</span>));
+</code></pre>
+<h3 id="4-3-responsive">4.3 - Responsive</h3>
+<ul>
+<li>Redimensiona la ventana del navegador</li>
+<li>Abre en un móvil o usa el modo responsive de DevTools</li>
+<li>Verifica que todo funcione bien</li>
+</ul>
+<hr>
+<h2 id="conceptos-clave-aprendidos">Conceptos Clave Aprendidos</h2>
+<h3 id="html-">HTML:</h3>
+<ul>
+<li>Estructura semántica</li>
+<li>Formularios y validación</li>
+<li>Atributos <code>data-*</code> personalizados</li>
+<li>IDs y clases para JavaScript</li>
+</ul>
+<h3 id="css-">CSS:</h3>
+<ul>
+<li>Flexbox para layouts</li>
+<li>Transiciones y animaciones</li>
+<li>Pseudo-clases (<code>:hover</code>, <code>:focus</code>)</li>
+<li>Media queries para responsive</li>
+</ul>
+<h3 id="javascript-">JavaScript:</h3>
+<ul>
+<li>Arrays y métodos (<code>push</code>, <code>filter</code>, <code>find</code>, <code>forEach</code>)</li>
+<li>Objetos y propiedades</li>
+<li>Funciones y parámetros</li>
+<li>Manipulación del DOM</li>
+<li>Event listeners</li>
+<li>LocalStorage</li>
+<li>Condicionales y operadores</li>
+</ul>
+<hr>
+<h2 id="mejoras-opcionales-para-casa-">Mejoras Opcionales (Para Casa)</h2>
+<p>Si los estudiantes quieren practicar más, pueden agregar:</p>
+<h3 id="1-editar-tareas">1. Editar Tareas</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Agregar doble-click para editar</span>
+span.addEventListener(<span class="hljs-string">'dblclick'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">const</span> nuevoTexto = prompt(<span class="hljs-string">'Editar tarea:'</span>, tarea.texto);
+  <span class="hljs-keyword">if</span> (nuevoTexto &amp;&amp; nuevoTexto.trim() !== <span class="hljs-string">''</span>) {
+    tarea.texto = nuevoTexto.trim();
+    guardarEnLocalStorage();
+    renderizarTareas();
+  }
+});
+</code></pre>
+<h3 id="2-fechas-de-creaci-n">2. Fechas de Creación</h3>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">crearTarea</span>(<span class="hljs-params">texto</span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attribute">id:</span><span class="hljs-string"> generarId</span>(),
+    <span class="hljs-attribute">texto</span>: texto,
+    <span class="hljs-attribute">completada</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attribute">fecha</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().toLocaleDateString()
+  };
+}
+</code></pre>
+<h3 id="3-prioridades">3. Prioridades</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Agregar un select para prioridad (alta, media, baja)</span>
+<span class="hljs-comment">// Ordenar tareas por prioridad</span>
+</code></pre>
+<h3 id="4-b-squeda">4. Búsqueda</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Agregar un input para buscar tareas</span>
+<span class="hljs-keyword">const</span> inputBuscar = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'input-buscar'</span>);
+inputBuscar.addEventListener(<span class="hljs-string">'input'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> termino = <span class="hljs-keyword">this</span>.value.toLowerCase();
+  <span class="hljs-keyword">const</span> tareasFiltradas = tareas.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> 
+    t.texto.toLowerCase().includes(termino)
+  );
+  renderizarTareas();
+});
+</code></pre>
+<h3 id="5-categor-as">5. Categorías</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Agregar categorías (Personal, Trabajo, Estudios)</span>
+</code></pre>
+<hr>
+<h2 id="soluci-n-de-problemas-comunes">Solución de Problemas Comunes</h2>
+<h3 id="problema-1-error-cannot-read-properties-of-undefined-reading-touppercase-">Problema 1: Error &quot;Cannot read properties of undefined (reading &#39;toUpperCase&#39;)&quot;</h3>
+<p><strong>Causa:</strong> Las tareas antiguas en LocalStorage no tienen la propiedad <code>prioridad</code>
+<strong>Solución:</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// En crearElementoTarea(), usar valor por defecto:</span>
+<span class="hljs-keyword">const</span> prioridad = tarea.prioridad || <span class="hljs-string">'media'</span>;
+
+<span class="hljs-comment">// En cargarDesdeLocalStorage(), migrar tareas antiguas:</span>
+tareas = tareas.map(<span class="hljs-function"><span class="hljs-params">tarea</span> =&gt;</span> {
+  <span class="hljs-keyword">if</span> (!tarea.prioridad) {
+    tarea.prioridad = <span class="hljs-string">'media'</span>;
+  }
+  <span class="hljs-keyword">return</span> tarea;
+});
+</code></pre>
+<h3 id="problema-2-no-se-agregan-tareas">Problema 2: No se agregan tareas</h3>
+<p><strong>Solución:</strong></p>
+<ul>
+<li>Verifica que los IDs en HTML coincidan con JavaScript</li>
+<li>Revisa la consola por errores</li>
+<li>Asegúrate de llamar <code>preventDefault()</code></li>
+</ul>
+<h3 id="problema-3-no-persisten-los-datos">Problema 3: No persisten los datos</h3>
+<p><strong>Solución:</strong></p>
+<ul>
+<li>Verifica que <code>guardarEnLocalStorage()</code> se llame</li>
+<li>Comprueba en DevTools → Application → LocalStorage</li>
+</ul>
+<h3 id="problema-4-los-filtros-no-funcionan">Problema 4: Los filtros no funcionan</h3>
+<p><strong>Solución:</strong></p>
+<ul>
+<li>Verifica el atributo <code>data-filtro</code> en HTML</li>
+<li>Comprueba que <code>filtroActual</code> se actualice</li>
+</ul>
+<h3 id="problema-5-estilos-no-se-aplican">Problema 5: Estilos no se aplican</h3>
+<p><strong>Solución:</strong></p>
+<ul>
+<li>Verifica que <code>styles.css</code> esté linkeado correctamente</li>
+<li>Comprueba las clases CSS en el navegador</li>
+</ul>
+<h3 id="problema-6-tareas-no-se-muestran-en-la-ui">Problema 6: Tareas no se muestran en la UI</h3>
+<p><strong>Causa común:</strong> Error en <code>crearElementoTarea()</code> por propiedades faltantes
+<strong>Solución:</strong> Siempre usar valores por defecto para propiedades opcionales</p>
+<hr>
+<h2 id="recursos-adicionales">Recursos Adicionales</h2>
+<h3 id="documentaci-n-">Documentación:</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array">MDN - Array</a></li>
+<li><a href="https://developer.mozilla.org/es/docs/Web/API/Window/localStorage">MDN - LocalStorage</a></li>
+<li><a href="https://developer.mozilla.org/es/docs/Web/Events">MDN - DOM Events</a></li>
+</ul>
+<h3 id="pr-ctica-">Práctica:</h3>
+<ul>
+<li><a href="https://javascript30.com/">JavaScript30</a> - Proyecto similar</li>
+<li><a href="https://www.freecodecamp.org/">freeCodeCamp</a> - Ejercicios</li>
+</ul>
+<hr>
+<h2 id="checklist-final">Checklist Final</h2>
+<p>Antes de terminar, asegúrate de que los estudiantes puedan:</p>
+<ul>
+<li>[ ] Explicar cómo funcionan los arrays</li>
+<li>[ ] Entender el flujo de datos (usuario → JavaScript → DOM)</li>
+<li>[ ] Manipular el DOM con <code>createElement</code> y <code>appendChild</code></li>
+<li>[ ] Usar event listeners</li>
+<li>[ ] Trabajar con LocalStorage</li>
+<li>[ ] Filtrar arrays con <code>filter()</code></li>
+<li>[ ] Buscar en arrays con <code>find()</code></li>
+<li>[ ] Aplicar estilos dinámicamente</li>
+</ul>
+<hr>
+<h2 id="ejercicio-para-casa">Ejercicio para Casa</h2>
+<p><strong>Crea tu propia variación:</strong></p>
+<ul>
+<li>Cambia los colores y el diseño</li>
+<li>Agrega al menos 2 de las mejoras opcionales</li>
+<li>Personaliza los mensajes</li>
+<li>Comparte tu versión con la clase</li>
+</ul>
+<hr>
+<h2 id="consejos-para-el-instructor">Consejos para el Instructor</h2>
+<h3 id="durante-la-clase-">Durante la clase:</h3>
+<ol>
+<li><strong>No vayas muy rápido</strong> - Pausa después de cada función</li>
+<li><strong>Pide a los estudiantes que escriban</strong> - No copies y pegues</li>
+<li><strong>Usa console.log</strong> frecuentemente para mostrar qué pasa</li>
+<li><strong>Provoca errores</strong> intencionalmente y muestra cómo solucionarlos</li>
+<li><strong>Dibuja diagramas</strong> del flujo de datos</li>
+<li><strong>Haz preguntas</strong> constantemente para verificar comprensión</li>
+</ol>
+<h3 id="timing-sugerido-">Timing sugerido:</h3>
+<ul>
+<li>HTML: 10 minutos</li>
+<li>CSS: 15 minutos</li>
+<li>JavaScript estructura: 10 minutos</li>
+<li>JavaScript funcionalidad: 20 minutos</li>
+<li>Eventos y LocalStorage: 10 minutos</li>
+<li>Pruebas y demo: 10 minutos</li>
+<li>Preguntas y mejoras: 15 minutos</li>
+</ul>
+<h3 id="puntos-de-pausa-obligatorios-">Puntos de pausa obligatorios:</h3>
+<ol>
+<li>Después de HTML completo</li>
+<li>Después de CSS completo</li>
+<li>Después de variables globales</li>
+<li>Después de cada función principal</li>
+<li>Después de event listeners</li>
+<li>Al final para pruebas</li>
+</ol>
+<hr>
+<h2 id="conclusi-n">Conclusión</h2>
+<p>¡Felicidades! Has creado una aplicación web completa desde cero. Este proyecto demuestra que has dominado:</p>
+<ul>
+<li>Diseño con HTML y CSS</li>
+<li>Lógica con JavaScript</li>
+<li>Interactividad con eventos</li>
+<li>Persistencia con LocalStorage</li>
+<li>Diseño responsive</li>
+</ul>
+<p><strong>Siguiente paso:</strong> Proyectos más complejos con APIs, React, etc.</p>
+<hr>
+<p><strong>¡Éxito en tu taller!</strong></p>
+<p><em>Última actualización: Octubre 2025</em></p>

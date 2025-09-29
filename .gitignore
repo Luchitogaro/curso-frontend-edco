@@ -42,7 +42,20 @@ Resumen_Ejecutivo_Curso_Frontend.md
 RESUMEN_COBERTURA_VISUAL.md
 RESUMEN_PLAN_CLASES.md
 Tematicas de los cursos EDCO Frontend.xlsx
+
+# Professor Guides and Session Materials
+guia-profesor-*.md
+resumen-sesion-*.md
+TALLER_*.md
+GUIA_*.md
+INSTRUCCIONES_*.md
+
+# Project Folders
 /proyecto-final-base/
+/proyecto-html-completo/
+/app-peliculas/
+/aplicacion-clima/
+/taller-lista-tareas/
 
 # PDF Materials
 *.pdf

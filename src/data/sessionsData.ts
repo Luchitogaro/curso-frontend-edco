@@ -53,7 +53,7 @@ export const sessionsData: SessionData[] = [
       theoreticalDetails: {
         "Frontend vs Backend: Diferencias y responsabilidades": "El desarrollo web se divide en dos partes principales: Frontend (cliente) y Backend (servidor). El Frontend es todo lo que el usuario ve e interactúa directamente en el navegador, incluyendo la interfaz de usuario, animaciones, y la experiencia del usuario. El Backend maneja la lógica del servidor, bases de datos, autenticación, y APIs. Ambos trabajan juntos para crear aplicaciones web completas y funcionales.\n\n**Ejemplos:**\n```javascript\n// FRONTEND (JavaScript en el navegador)\nfunction mostrarUsuario(usuario) {\n  document.getElementById('nombre').textContent = usuario.nombre;\n  document.getElementById('email').textContent = usuario.email;\n}\n\n// BACKEND (Node.js/Express)\napp.get('/api/usuario/:id', (req, res) => {\n  const usuario = database.findById(req.params.id);\n  res.json(usuario);\n});\n\n// Responsabilidades:\n// Frontend: UI, UX, validación cliente, animaciones\n// Backend: APIs, base de datos, seguridad, lógica de negocio\n```",
         
-        "HTML: Estructura y contenido de las páginas web": "HTML (HyperText Markup Language) es el lenguaje de marcado estándar para crear páginas web. Define la estructura y el contenido de una página usando elementos (tags) que describen diferentes partes del contenido. HTML es la base de toda página web y proporciona la estructura semántica que otros lenguajes como CSS y JavaScript pueden modificar y mejorar.\n\n**Ejemplos:**\n```html\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Mi Página Web</title>\n</head>\n<body>\n  <header>\n    <h1>Mi Sitio Web</h1>\n    <nav>\n      <ul>\n        <li><a href=\"#inicio\">Inicio</a></li>\n        <li><a href=\"#sobre\">Sobre</a></li>\n      </ul>\n    </nav>\n  </header>\n  \n  <main>\n    <section id=\"inicio\">\n      <h2>Bienvenido</h2>\n      <p>Contenido principal de la página.</p>\n    </section>\n  </main>\n  \n  <footer>\n    <p>&copy; 2024 Mi Sitio</p>\n  </footer>\n</body>\n</html>\n```",
+        "HTML: Estructura y contenido de las páginas web": "HTML (HyperText Markup Language) es el lenguaje de marcado estándar para crear páginas web. Define la estructura y el contenido de una página usando elementos (tags) que describen diferentes partes del contenido. HTML es la base de toda página web y proporciona la estructura semántica que otros lenguajes como CSS y JavaScript pueden modificar y mejorar.\n\n**Ejemplos:**\n```html\n<!DOCTYPE html>\n<html lang='es'>\n<head>\n  <meta charset='UTF-8'>\n  <title>Mi Página Web</title>\n</head>\n<body>\n  <header>\n    <h1>Mi Sitio Web</h1>\n    <nav>\n      <ul>\n        <li><a href=\"#inicio\">Inicio</a></li>\n        <li><a href=\"#sobre\">Sobre</a></li>\n      </ul>\n    </nav>\n  </header>\n  \n  <main>\n    <section id=\"inicio\">\n      <h2>Bienvenido</h2>\n      <p>Contenido principal de la página.</p>\n    </section>\n  </main>\n  \n  <footer>\n    <p>&copy; 2024 Mi Sitio</p>\n  </footer>\n</body>\n</html>\n```",
         
         "CSS: Estilos y presentación visual": "CSS (Cascading Style Sheets) es el lenguaje que controla la presentación visual de las páginas HTML. Permite definir colores, fuentes, espaciado, layout, animaciones y otros aspectos visuales. CSS separa el contenido (HTML) de la presentación, haciendo que las páginas sean más mantenibles y flexibles. CSS usa selectores para aplicar estilos a elementos específicos.\n\n**Ejemplos:**\n```css\n/* Selectores básicos */\nh1 {\n  color: #333;\n  font-size: 2rem;\n  text-align: center;\n}\n\n.navbar {\n  background-color: #007bff;\n  padding: 1rem;\n}\n\n#boton-principal {\n  background-color: #28a745;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n}\n\n/* Responsive design */\n@media (max-width: 768px) {\n  .navbar {\n    flex-direction: column;\n  }\n}\n```",
         
@@ -194,7 +194,7 @@ export const sessionsData: SessionData[] = [
         "Git y GitHub: control de versiones para desarrolladores"
       ],
       theoreticalDetails: {
-        "Etiquetas básicas de HTML5: html, head, body, title": "HTML5 introduce una estructura básica mejorada con etiquetas fundamentales que definen la arquitectura de toda página web. La etiqueta <html> es el contenedor raíz que especifica el idioma del documento. <head> contiene metadatos y recursos no visibles. <body> contiene todo el contenido visible. <title> define el título que aparece en la pestaña del navegador.\n\n**Ejemplos:**\n```html\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Mi Página Web</title>\n</head>\n<body>\n  <!-- Contenido visible aquí -->\n</body>\n</html>\n\n<!-- Estructura mínima HTML5:\n- DOCTYPE html: Declara HTML5\n- html lang=\"es\": Idioma español\n- head: Metadatos y recursos\n- body: Contenido visible\n- title: Título de la pestaña\n```",
+        "Etiquetas básicas de HTML5: html, head, body, title": "HTML5 introduce una estructura básica mejorada con etiquetas fundamentales que definen la arquitectura de toda página web. La etiqueta <html> es el contenedor raíz que especifica el idioma del documento. <head> contiene metadatos y recursos no visibles. <body> contiene todo el contenido visible. <title> define el título que aparece en la pestaña del navegador.\n\n**Ejemplos:**\n```html\n<!DOCTYPE html>\n<html lang='es'>\n<head>\n  <meta charset='UTF-8'>\n  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n  <title>Mi Página Web</title>\n</head>\n<body>\n  <!-- Contenido visible aquí -->\n</body>\n</html>\n\n<!-- Estructura mínima HTML5:\n- DOCTYPE html: Declara HTML5\n- html lang=\"es\": Idioma español\n- head: Metadatos y recursos\n- body: Contenido visible\n- title: Título de la pestaña\n```",
         
         "Elementos semánticos: header, nav, main, section, article, aside, footer": "Los elementos semánticos de HTML5 proporcionan significado estructural al contenido, mejorando la accesibilidad y SEO. <header> contiene encabezados y navegación principal. <nav> define áreas de navegación. <main> es el contenido principal único. <section> agrupa contenido relacionado. <article> representa contenido independiente. <aside> contiene información complementaria. <footer> incluye información de pie de página.\n\n**Ejemplos:**\n```html\n<header>\n  <h1>Mi Sitio Web</h1>\n  <nav>\n    <ul>\n      <li><a href=\"#inicio\">Inicio</a></li>\n      <li><a href=\"#sobre\">Sobre</a></li>\n    </ul>\n  </nav>\n</header>\n\n<main>\n  <article>\n    <h2>Título del Artículo</h2>\n    <p>Contenido del artículo...</p>\n  </article>\n  \n  <aside>\n    <h3>Información Adicional</h3>\n    <p>Contenido complementario...</p>\n  </aside>\n</main>\n\n<footer>\n  <p>&copy; 2024 Mi Sitio</p>\n</footer>\n```",
         
@@ -206,9 +206,9 @@ export const sessionsData: SessionData[] = [
         
         "Imágenes: img, src, alt, figure, figcaption": "Las imágenes enriquecen el contenido visual. <img> inserta imágenes con src (fuente) y alt (texto alternativo). <figure> agrupa imágenes con su descripción. <figcaption> proporciona leyenda para la imagen. El atributo alt es crucial para accesibilidad y SEO.\n\n**Ejemplos:**\n```html\n<!-- Imagen básica -->\n<img src=\"imagen.jpg\" alt=\"Descripción de la imagen\" width=\"300\" height=\"200\">\n\n<!-- Imagen con figure -->\n<figure>\n  <img src=\"diagrama.png\" alt=\"Diagrama de arquitectura web\">\n  <figcaption>Arquitectura de una aplicación web moderna</figcaption>\n</figure>\n\n<!-- Imagen responsiva -->\n<img src=\"imagen.jpg\" \n     alt=\"Paisaje montañoso\" \n     srcset=\"imagen-small.jpg 480w, imagen-large.jpg 800w\"\n     sizes=\"(max-width: 600px) 480px, 800px\">\n\n<!-- Atributos importantes:\n- src: Ruta de la imagen\n- alt: Texto alternativo (obligatorio)\n- width/height: Dimensiones\n- srcset: Imágenes responsivas\n```",
         
-        "Metadatos: meta charset, viewport, description": "Los metadatos proporcionan información sobre la página. charset especifica la codificación de caracteres (UTF-8). viewport controla el comportamiento en dispositivos móviles. description es el resumen que aparece en resultados de búsqueda. Estos metadatos son esenciales para SEO y experiencia de usuario.\n\n**Ejemplos:**\n```html\n<head>\n  <!-- Codificación de caracteres -->\n  <meta charset=\"UTF-8\">\n  \n  <!-- Viewport para móviles -->\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  \n  <!-- Descripción para SEO -->\n  <meta name=\"description\" content=\"Aprende desarrollo web frontend con HTML5, CSS3 y JavaScript\">\n  \n  <!-- Palabras clave -->\n  <meta name=\"keywords\" content=\"HTML5, CSS3, JavaScript, desarrollo web\">\n  \n  <!-- Autor -->\n  <meta name=\"author\" content=\"Tu Nombre\">\n  \n  <!-- Open Graph para redes sociales -->\n  <meta property=\"og:title\" content=\"Curso de Desarrollo Web\">\n  <meta property=\"og:description\" content=\"Aprende desarrollo frontend\">\n  <meta property=\"og:image\" content=\"imagen-social.jpg\">\n</head>\n```",
+        "Metadatos: meta charset, viewport, description": "Los metadatos proporcionan información sobre la página. charset especifica la codificación de caracteres (UTF-8). viewport controla el comportamiento en dispositivos móviles. description es el resumen que aparece en resultados de búsqueda. Estos metadatos son esenciales para SEO y experiencia de usuario.\n\n**Ejemplos:**\n```html\n<head>\n  <!-- Codificación de caracteres -->\n  <meta charset='UTF-8'>\n  \n  <!-- Viewport para móviles -->\n  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n  \n  <!-- Descripción para SEO -->\n  <meta name=\"description\" content=\"Aprende desarrollo web frontend con HTML5, CSS3 y JavaScript\">\n  \n  <!-- Palabras clave -->\n  <meta name=\"keywords\" content=\"HTML5, CSS3, JavaScript, desarrollo web\">\n  \n  <!-- Autor -->\n  <meta name=\"author\" content=\"Tu Nombre\">\n  \n  <!-- Open Graph para redes sociales -->\n  <meta property=\"og:title\" content=\"Curso de Desarrollo Web\">\n  <meta property=\"og:description\" content=\"Aprende desarrollo frontend\">\n  <meta property=\"og:image\" content=\"imagen-social.jpg\">\n</head>\n```",
         
-        "Buenas prácticas de estructura HTML5": "Las buenas prácticas de HTML5 mejoran la accesibilidad, SEO y mantenibilidad. Usa elementos semánticos apropiados, mantén una jerarquía correcta de encabezados, incluye atributos alt en imágenes, usa metadatos completos, valida el código HTML, y sigue estándares web. Estas prácticas aseguran que tu código sea profesional y funcional.\n\n**Ejemplos:**\n```html\n<!-- ✅ BUENAS PRÁCTICAS -->\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Título Descriptivo - Sitio Web</title>\n  <meta name=\"description\" content=\"Descripción clara y concisa\">\n</head>\n<body>\n  <header>\n    <h1>Título Principal</h1>\n    <nav aria-label=\"Navegación principal\">\n      <ul>\n        <li><a href=\"#inicio\">Inicio</a></li>\n        <li><a href=\"#sobre\">Sobre</a></li>\n      </ul>\n    </nav>\n  </header>\n  \n  <main>\n    <section>\n      <h2>Sección Principal</h2>\n      <article>\n        <h3>Artículo</h3>\n        <p>Contenido del artículo...</p>\n        <img src=\"imagen.jpg\" alt=\"Descripción detallada de la imagen\">\n      </article>\n    </section>\n  </main>\n  \n  <footer>\n    <p>&copy; 2024 Mi Sitio Web</p>\n  </footer>\n</body>\n</html>\n\n<!-- Principios clave:\n- Elementos semánticos apropiados\n- Jerarquía correcta de encabezados\n- Atributos alt descriptivos\n- Metadatos completos\n- Accesibilidad (aria-label)\n- Validación HTML5\n```",
+        "Buenas prácticas de estructura HTML5": "Las buenas prácticas de HTML5 mejoran la accesibilidad, SEO y mantenibilidad. Usa elementos semánticos apropiados, mantén una jerarquía correcta de encabezados, incluye atributos alt en imágenes, usa metadatos completos, valida el código HTML, y sigue estándares web. Estas prácticas aseguran que tu código sea profesional y funcional.\n\n**Ejemplos:**\n```html\n<!-- ✅ BUENAS PRÁCTICAS -->\n<!DOCTYPE html>\n<html lang='es'>\n<head>\n  <meta charset='UTF-8'>\n  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n  <title>Título Descriptivo - Sitio Web</title>\n  <meta name=\"description\" content=\"Descripción clara y concisa\">\n</head>\n<body>\n  <header>\n    <h1>Título Principal</h1>\n    <nav aria-label=\"Navegación principal\">\n      <ul>\n        <li><a href=\"#inicio\">Inicio</a></li>\n        <li><a href=\"#sobre\">Sobre</a></li>\n      </ul>\n    </nav>\n  </header>\n  \n  <main>\n    <section>\n      <h2>Sección Principal</h2>\n      <article>\n        <h3>Artículo</h3>\n        <p>Contenido del artículo...</p>\n        <img src=\"imagen.jpg\" alt=\"Descripción detallada de la imagen\">\n      </article>\n    </section>\n  </main>\n  \n  <footer>\n    <p>&copy; 2024 Mi Sitio Web</p>\n  </footer>\n</body>\n</html>\n\n<!-- Principios clave:\n- Elementos semánticos apropiados\n- Jerarquía correcta de encabezados\n- Atributos alt descriptivos\n- Metadatos completos\n- Accesibilidad (aria-label)\n- Validación HTML5\n```",
         
         "Git y GitHub: control de versiones para desarrolladores": "Git es un sistema de control de versiones que permite rastrear cambios en archivos y coordinar el trabajo entre múltiples desarrolladores. GitHub es una plataforma web que aloja repositorios Git y facilita la colaboración. Son herramientas esenciales para cualquier desarrollador moderno.\n\n**¿Qué es Git?**\nGit es un sistema de control de versiones distribuido que:\n- Rastrea cambios en archivos a lo largo del tiempo\n- Permite trabajar en equipo de manera coordinada\n- Mantiene un historial completo de todos los cambios\n- Permite volver a versiones anteriores si es necesario\n\n**¿Qué es GitHub?**\nGitHub es una plataforma web que:\n- Aloja repositorios Git en la nube\n- Facilita la colaboración entre desarrolladores\n- Proporciona herramientas para revisión de código\n- Permite alojar sitios web estáticos (GitHub Pages)\n\n**Configuración inicial de Git:**\n```bash\n# Configurar tu nombre y email (solo la primera vez)\ngit config --global user.name \"Tu Nombre\"\ngit config --global user.email \"tu.email@ejemplo.com\"\n\n# Verificar la configuración\ngit config --list\n```\n\n**Crear un repositorio en GitHub:**\n1. Ve a github.com y crea una cuenta\n2. Haz clic en \"New repository\" o el botón \"+\"\n3. Nombra tu repositorio (ej: \"mi-primer-proyecto\")\n4. Agrega una descripción opcional\n5. Elige si será público o privado\n6. NO marques \"Initialize with README\" (lo haremos manualmente)\n7. Haz clic en \"Create repository\"\n\n**Configurar SSH Key para GitHub (Recomendado):**\n\n**En macOS:**\n```bash\n# 1. Verificar si ya tienes SSH keys\nls -la ~/.ssh\n\n# 2. Generar nueva SSH key\nssh-keygen -t ed25519 -C \"tu.email@ejemplo.com\"\n\n# 3. Cuando te pregunte dónde guardar, presiona Enter (usa la ubicación por defecto)\n# 4. Opcionalmente, agrega una frase de contraseña\n\n# 5. Iniciar el agente SSH\neval \"$(ssh-agent -s)\"\n\n# 6. Agregar la clave SSH al agente\nssh-add ~/.ssh/id_ed25519\n\n# 7. Copiar la clave pública al portapapeles\npbcopy < ~/.ssh/id_ed25519.pub\n\n# 8. Ir a GitHub > Settings > SSH and GPG keys > New SSH key\n# 9. Pegar la clave y darle un título descriptivo\n# 10. Hacer clic en \"Add SSH key\"\n\n# 11. Probar la conexión\nssh -T git@github.com\n```\n\n**En Windows (Git Bash o PowerShell):**\n```bash\n# 1. Abrir Git Bash o PowerShell como administrador\n\n# 2. Generar nueva SSH key\nssh-keygen -t ed25519 -C \"tu.email@ejemplo.com\"\n\n# 3. Cuando te pregunte dónde guardar, presiona Enter\n# 4. Opcionalmente, agrega una frase de contraseña\n\n# 5. Iniciar el agente SSH\neval \"$(ssh-agent -s)\"\n\n# 6. Agregar la clave SSH al agente\nssh-add ~/.ssh/id_ed25519\n\n# 7. Copiar la clave pública (en Git Bash)\nclip < ~/.ssh/id_ed25519.pub\n\n# O en PowerShell:\nGet-Content ~/.ssh/id_ed25519.pub | Set-Clipboard\n\n# 8. Ir a GitHub > Settings > SSH and GPG keys > New SSH key\n# 9. Pegar la clave y darle un título descriptivo\n# 10. Hacer clic en \"Add SSH key\"\n\n# 11. Probar la conexión\nssh -T git@github.com\n```\n\n**Ventajas de usar SSH:**\n- No necesitas escribir usuario y contraseña cada vez\n- Más seguro que HTTPS\n- Permite clonar repositorios privados fácilmente\n- Configuración única por computadora\n\n**Comandos básicos de Git:**\n```bash\n# Inicializar un repositorio local\ngit init\n\n# Agregar archivos al área de preparación (staging)\ngit add .                    # Agregar todos los archivos\ngit add archivo.html         # Agregar un archivo específico\ngit add *.html               # Agregar todos los archivos .html\n\n# Hacer commit (guardar cambios)\ngit commit -m \"Mensaje descriptivo del cambio\"\n\n# Conectar con repositorio remoto (HTTPS)\ngit remote add origin https://github.com/tu-usuario/mi-repositorio.git\n\n# Conectar con repositorio remoto (SSH - Recomendado)\ngit remote add origin git@github.com:tu-usuario/mi-repositorio.git\n\n# Subir cambios a GitHub\ngit push -u origin main\n\n# Descargar cambios de GitHub\ngit pull origin main\n\n# Clonar repositorio (HTTPS)\ngit clone https://github.com/usuario/repositorio.git\n\n# Clonar repositorio (SSH - Recomendado)\ngit clone git@github.com:usuario/repositorio.git\n\n# Ver el estado del repositorio\ngit status\n\n# Ver el historial de commits\ngit log --oneline\n```\n\n**Flujo de trabajo típico:**\n```bash\n# 1. Crear o modificar archivos\n# 2. Ver qué archivos han cambiado\ngit status\n\n# 3. Agregar archivos al staging\ngit add .\n\n# 4. Hacer commit con mensaje descriptivo\ngit commit -m \"Agregar página de inicio con HTML5 semántico\"\n\n# 5. Subir cambios a GitHub\ngit push origin main\n```\n\n**Buenas prácticas para escribir mensajes de commit:**\n\n**Estructura del mensaje:**\n- Usa el presente y en imperativo (\"agrega\", no \"agregó\")\n- Primera línea ≤ 50 caracteres: tipo + scope + resumen\n- Deja línea en blanco y explica el porqué en el cuerpo (opcional)\n- Pie (footer) para issues, breaking changes o co-autores\n\n**Tipos de commit:**\n```bash\n# feat: Nueva funcionalidad que el usuario puede ver\ngit commit -m \"feat: envía correo de bienvenida tras el registro\"\n\n# fix: Corrige un error que hacía caer la aplicación\ngit commit -m \"fix: evita crash cuando el carrito está vacío en el checkout\"\n\n# refactor: Mejora interna del código; no cambia comportamiento\ngit commit -m \"refactor(product): simplifica lógica de cálculo de precio\"\n\n# test: Agrega/actualiza pruebas; no toca código de producción\ngit commit -m \"test(cart): cubre caso borde de cantidad cero\"\n\n# chore: Tareas de mantenimiento (dependencias, scripts)\ngit commit -m \"chore: actualiza Next.js a la versión 14.2.3\"\n\n# docs: Cambios únicamente en documentación o comentarios\ngit commit -m \"docs: actualiza tabla de variables de entorno en README\"\n\n# ci: Modifica la configuración del pipeline de CI/CD\ngit commit -m \"ci: incluye Node 22 en la matriz de pruebas\"\n\n# perf: Optimización de rendimiento\ngit commit -m \"perf: debounce en entrada de búsqueda para reducir llamados API\"\n```\n\n**Ejemplos específicos para desarrollo web:**\n```bash\n# ✅ Buenos mensajes para proyectos web\ngit commit -m \"feat(contact): agrega formulario de contacto con validación\"\ngit commit -m \"fix(nav): corrige error en navegación móvil\"\ngit commit -m \"style(header): actualiza estilos CSS para mejor responsividad\"\ngit commit -m \"refactor(api): simplifica lógica de consumo de datos\"\ngit commit -m \"docs(readme): actualiza instrucciones de instalación\"\n\n# ❌ Malos mensajes\ngit commit -m \"cambios\"\ngit commit -m \"fix\"\ngit commit -m \"update\"\ngit commit -m \"mejoras\"\ngit commit -m \"correcciones\"\n```\n\n**Consejos adicionales:**\n- **Sé específico**: Explica qué cambiaste y dónde\n- **Usa inglés o español consistentemente**: Mantén el mismo idioma en todo el proyecto\n- **Incluye contexto**: Si es necesario, agrega más detalles en el cuerpo del mensaje\n- **Referencia issues**: Usa \"Fixes #123\" o \"Closes #456\" cuando corresponda\n\n**Comandos útiles adicionales:**\n```bash\n# Ver diferencias entre archivos\ngit diff\n\n# Deshacer cambios en archivos no agregados\ngit checkout -- archivo.html\n\n# Ver información del repositorio remoto\ngit remote -v\n\n# Clonar un repositorio existente\ngit clone https://github.com/usuario/repositorio.git\n```\n\n**Consejos para principiantes:**\n1. **Haz commits frecuentes**: Es mejor hacer muchos commits pequeños que pocos grandes\n2. **Usa mensajes descriptivos**: Explica qué cambiaste y por qué\n3. **Siempre haz git status**: Antes de hacer commit, verifica qué archivos vas a incluir\n4. **Haz pull antes de push**: Si trabajas en equipo, siempre descarga los últimos cambios\n5. **No tengas miedo de experimentar**: Git te permite deshacer casi cualquier cosa\n\n**Estructura de archivos recomendada:**\n```\nmi-proyecto/\n├── index.html          # Página principal\n├── css/\n│   └── styles.css      # Estilos\n├── js/\n│   └── script.js       # JavaScript\n├── images/             # Imágenes\n├── README.md           # Documentación\n└── .gitignore          # Archivos a ignorar\n```\n\n**Archivo .gitignore básico:**\n```\n# Archivos del sistema\n.DS_Store\nThumbs.db\n\n# Archivos temporales\n*.tmp\n*.log\n\n# Carpetas de dependencias\nnode_modules/\n\n# Archivos de configuración local\n.env\n```\n\nGit y GitHub son herramientas fundamentales que te permitirán:\n- Mantener un historial de todos tus proyectos\n- Colaborar con otros desarrolladores\n- Mostrar tu trabajo a empleadores\n- Aprender de proyectos de código abierto\n- Desplegar sitios web de forma gratuita"
       },
@@ -804,29 +804,31 @@ document.getElementById('satisfaccion').addEventListener('input', function() {
   },
   {
     id: 4,
-    title: "Taller HTML",
+    title: "Taller HTML Guiado - Sitio Web Completo",
     duration: "3 horas",
     level: "Intermedio",
     completed: false,
     objectives: [
-      "Crear un sitio informativo completo con HTML5",
-      "Implementar secciones estructuradas y navegación",
-      "Desarrollar formularios funcionales y tablas de datos",
-      "Aplicar buenas prácticas de estructura y semántica"
+      "Integrar conocimientos de HTML5 de las sesiones anteriores",
+      "Crear un sitio web informativo completo usando solo HTML5 nativo",
+      "Implementar formularios con validación HTML5 nativa",
+      "Desarrollar tablas semánticas y navegación accesible",
+      "Aplicar mejores prácticas de accesibilidad y SEO básico"
     ],
     content: {
       theoretical: [
-        "Planificación de estructura de sitio web",
-        "Organización de contenido en secciones lógicas",
-        "Navegación interna y externa",
-        "Formularios de contacto y sus validaciones",
-        "Tablas de datos y su estructura semántica",
-        "Accesibilidad en formularios y tablas",
-        "Optimización para motores de búsqueda (SEO básico)",
-        "Validación de código HTML"
+        "Integración de conocimientos HTML5 de sesiones anteriores",
+        "Planificación y estructura de sitio web completo",
+        "Navegación semántica y accesible",
+        "Formularios HTML5 con validación nativa del navegador",
+        "Tablas semánticas con estructura accesible",
+        "Elementos semánticos HTML5 avanzados",
+        "Accesibilidad web y atributos ARIA",
+        "SEO básico y metadatos HTML5",
+        "Validación de código HTML con herramientas W3C"
       ],
       theoreticalDetails: {
-        "Planificación de estructura de sitio web": "La planificación de la estructura es fundamental para crear sitios web exitosos. Define la jerarquía de información, identifica las páginas principales, planifica la navegación y considera la experiencia del usuario. Una buena estructura mejora la usabilidad, SEO y mantenibilidad del sitio.\n\n**Ejemplos:**\n```html\n<!-- Estructura típica de sitio web -->\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Mi Empresa - Servicios</title>\n  <meta name=\"description\" content=\"Servicios profesionales de desarrollo web\">\n</head>\n<body>\n  <header>\n    <nav>\n      <ul>\n        <li><a href=\"index.html\">Inicio</a></li>\n        <li><a href=\"servicios.html\">Servicios</a></li>\n        <li><a href=\"contacto.html\">Contacto</a></li>\n      </ul>\n    </nav>\n  </header>\n  \n  <main>\n    <section id=\"hero\">\n      <h1>Nuestros Servicios</h1>\n    </section>\n    \n    <section id=\"servicios\">\n      <h2>Servicios Disponibles</h2>\n      <!-- Contenido de servicios -->\n    </section>\n  </main>\n  \n  <footer>\n    <p>&copy; 2024 Mi Empresa</p>\n  </footer>\n</body>\n</html>\n\n<!-- Principios de estructura:\n- Jerarquía clara de información\n- Navegación intuitiva\n- Contenido organizado\n- SEO optimizado\n```",
+        "Integración de conocimientos HTML5 de sesiones anteriores": "Este taller integra todos los conceptos aprendidos en las sesiones 1-3: estructura básica HTML5, elementos semánticos, formularios avanzados, validaciones nativas, tablas semánticas y accesibilidad. Los estudiantes aplicarán estos conocimientos de manera práctica creando un sitio web completo usando únicamente HTML5 nativo, sin CSS ni JavaScript.\n\n**Conocimientos integrados:**\n- **Sesión 1**: Estructura básica, elementos semánticos básicos, metadatos\n- **Sesión 2**: Elementos semánticos avanzados, listas, enlaces, imágenes\n- **Sesión 3**: Formularios avanzados, validaciones nativas, tablas semánticas, accesibilidad\n\n**Ejemplo de integración:**\n```html\n<!DOCTYPE html>\n<html lang='es'>\n<head>\n  <meta charset='UTF-8'>\n  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n  <title>TechSolutions - Desarrollo Web</title>\n  <meta name='description' content='Servicios de desarrollo web profesional'>\n</head>\n<body>\n  <header role='banner'>\n    <h1>TechSolutions</h1>\n    <nav role='navigation' aria-label='Navegación principal'>\n      <ul>\n        <li><a href='index.html' aria-current='page'>Inicio</a></li>\n        <li><a href='servicios.html'>Servicios</a></li>\n        <li><a href='contacto.html'>Contacto</a></li>\n      </ul>\n    </nav>\n  </header>\n  \n  <main role='main'>\n    <section id='hero'>\n      <h2>Transformamos Ideas en Soluciones Digitales</h2>\n      <p>Especialistas en desarrollo web moderno...</p>\n    </section>\n    \n    <section id='servicios'>\n      <h2>Nuestros Servicios</h2>\n      <article>\n        <h3>Desarrollo Web Frontend</h3>\n        <p>Interfaces modernas y responsivas...</p>\n        <ul>\n          <li>HTML5 semántico</li>\n          <li>CSS3 y frameworks</li>\n          <li>JavaScript ES6+</li>\n        </ul>\n      </article>\n    </section>\n  </main>\n  \n  <footer role='contentinfo'>\n    <p>&copy; 2024 TechSolutions</p>\n  </footer>\n</body>\n</html>\n```",
         
         "Organización de contenido en secciones lógicas": "La organización lógica del contenido mejora la comprensión y navegación. Agrupa información relacionada, usa elementos semánticos apropiados, mantén consistencia en la estructura y considera el flujo de lectura del usuario. Esto facilita la comprensión y mejora la experiencia del usuario.\n\n**Ejemplos:**\n```html\n<main>\n  <!-- Sección de introducción -->\n  <section id=\"introduccion\">\n    <h1>Bienvenido a Nuestra Empresa</h1>\n    <p>Somos especialistas en desarrollo web...</p>\n  </section>\n  \n  <!-- Sección de servicios -->\n  <section id=\"servicios\">\n    <h2>Nuestros Servicios</h2>\n    <article>\n      <h3>Desarrollo Web</h3>\n      <p>Creamos sitios web modernos...</p>\n    </article>\n    <article>\n      <h3>Diseño UX/UI</h3>\n      <p>Diseñamos experiencias de usuario...</p>\n    </article>\n  </section>\n  \n  <!-- Sección de equipo -->\n  <section id=\"equipo\">\n    <h2>Nuestro Equipo</h2>\n    <div class=\"equipo-grid\">\n      <article class=\"miembro\">\n        <h3>Juan Pérez</h3>\n        <p>Desarrollador Frontend</p>\n      </article>\n    </div>\n  </section>\n  \n  <!-- Sección de contacto -->\n  <section id=\"contacto\">\n    <h2>Contacto</h2>\n    <p>¿Tienes un proyecto en mente?</p>\n  </section>\n</main>\n\n<!-- Beneficios de organización lógica:\n- Mejor comprensión del contenido\n- Navegación más intuitiva\n- SEO mejorado\n- Mantenimiento más fácil\n```",
         
@@ -838,63 +840,82 @@ document.getElementById('satisfaccion').addEventListener('input', function() {
         
         "Accesibilidad en formularios y tablas": "La accesibilidad asegura que todos los usuarios puedan usar las aplicaciones. En formularios, usa labels apropiados, proporciona descripciones claras y maneja errores de manera accesible. En tablas, incluye encabezados descriptivos y usa elementos semánticos correctos.\n\n**Ejemplos:**\n```html\n<!-- Formulario accesible -->\n<form>\n  <fieldset>\n    <legend>Información Personal</legend>\n    \n    <div class=\"form-group\">\n      <label for=\"nombre\">Nombre completo *</label>\n      <input type=\"text\" id=\"nombre\" name=\"nombre\" required\n             aria-describedby=\"nombre-error nombre-help\"\n             aria-invalid=\"false\">\n      <div id=\"nombre-help\" class=\"help-text\">Ingresa tu nombre completo</div>\n      <div id=\"nombre-error\" class=\"error-text\" role=\"alert\" aria-live=\"polite\"></div>\n    </div>\n    \n    <div class=\"form-group\">\n      <label for=\"email\">Correo electrónico *</label>\n      <input type=\"email\" id=\"email\" name=\"email\" required\n             aria-describedby=\"email-error email-help\"\n             aria-invalid=\"false\">\n      <div id=\"email-help\" class=\"help-text\">Ingresa un email válido</div>\n      <div id=\"email-error\" class=\"error-text\" role=\"alert\" aria-live=\"polite\"></div>\n    </div>\n  </fieldset>\n</form>\n\n<!-- Tabla accesible -->\n<table>\n  <caption>Lista de Productos Disponibles</caption>\n  <thead>\n    <tr>\n      <th scope=\"col\" id=\"producto\">Producto</th>\n      <th scope=\"col\" id=\"precio\">Precio</th>\n      <th scope=\"col\" id=\"stock\">Stock</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th scope=\"row\" headers=\"producto\">Laptop</th>\n      <td headers=\"precio\">$1,200</td>\n      <td headers=\"stock\">15 unidades</td>\n    </tr>\n  </tbody>\n</table>\n\n<!-- Atributos de accesibilidad:\n- aria-describedby: Descripción adicional\n- aria-invalid: Estado de validación\n- aria-live: Actualizaciones dinámicas\n- role=\"alert\": Mensajes importantes\n- headers: Asociar celdas con encabezados\n```",
         
-        "Optimización para motores de búsqueda (SEO básico)": "El SEO básico mejora la visibilidad en motores de búsqueda. Incluye metadatos apropiados, usa elementos semánticos, optimiza imágenes con alt text, crea URLs descriptivas y estructura el contenido jerárquicamente. Estas prácticas mejoran el ranking y la accesibilidad.\n\n**Ejemplos:**\n```html\n<head>\n  <!-- Metadatos básicos -->\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Desarrollo Web Profesional | Mi Empresa</title>\n  <meta name=\"description\" content=\"Servicios profesionales de desarrollo web, diseño UX/UI y consultoría técnica. Transformamos ideas en soluciones digitales.\">\n  <meta name=\"keywords\" content=\"desarrollo web, diseño UX, programación, sitios web\">\n  <meta name=\"author\" content=\"Mi Empresa\">\n  \n  <!-- Open Graph para redes sociales -->\n  <meta property=\"og:title\" content=\"Desarrollo Web Profesional\">\n  <meta property=\"og:description\" content=\"Servicios profesionales de desarrollo web\">\n  <meta property=\"og:image\" content=\"https://miempresa.com/imagen-social.jpg\">\n  <meta property=\"og:url\" content=\"https://miempresa.com\">\n  <meta property=\"og:type\" content=\"website\">\n  \n  <!-- Twitter Card -->\n  <meta name=\"twitter:card\" content=\"summary_large_image\">\n  <meta name=\"twitter:title\" content=\"Desarrollo Web Profesional\">\n  <meta name=\"twitter:description\" content=\"Servicios profesionales de desarrollo web\">\n  <meta name=\"twitter:image\" content=\"https://miempresa.com/imagen-social.jpg\">\n</head>\n\n<body>\n  <!-- Estructura semántica -->\n  <header>\n    <h1>Mi Empresa - Desarrollo Web</h1>\n    <nav>\n      <ul>\n        <li><a href=\"servicios.html\">Servicios</a></li>\n        <li><a href=\"portafolio.html\">Portafolio</a></li>\n        <li><a href=\"contacto.html\">Contacto</a></li>\n      </ul>\n    </nav>\n  </header>\n  \n  <main>\n    <section>\n      <h2>Servicios de Desarrollo Web</h2>\n      <article>\n        <h3>Desarrollo Frontend</h3>\n        <p>Creamos interfaces de usuario modernas...</p>\n        <img src=\"frontend.jpg\" alt=\"Desarrollador trabajando en interfaz de usuario moderna\">\n      </article>\n    </section>\n  </main>\n</body>\n\n<!-- Mejores prácticas SEO:\n- Títulos descriptivos y únicos\n- Meta descriptions atractivas\n- Estructura jerárquica de encabezados\n- Alt text descriptivo en imágenes\n- URLs semánticas\n- Contenido de calidad\n```",
+        "Optimización para motores de búsqueda (SEO básico)": "El SEO básico mejora la visibilidad en motores de búsqueda. Incluye metadatos apropiados, usa elementos semánticos, optimiza imágenes con alt text, crea URLs descriptivas y estructura el contenido jerárquicamente. Estas prácticas mejoran el ranking y la accesibilidad.\n\n**Ejemplos:**\n```html\n<head>\n  <!-- Metadatos básicos -->\n  <meta charset='UTF-8'>\n  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n  <title>Desarrollo Web Profesional | Mi Empresa</title>\n  <meta name=\"description\" content=\"Servicios profesionales de desarrollo web, diseño UX/UI y consultoría técnica. Transformamos ideas en soluciones digitales.\">\n  <meta name=\"keywords\" content=\"desarrollo web, diseño UX, programación, sitios web\">\n  <meta name=\"author\" content=\"Mi Empresa\">\n  \n  <!-- Open Graph para redes sociales -->\n  <meta property=\"og:title\" content=\"Desarrollo Web Profesional\">\n  <meta property=\"og:description\" content=\"Servicios profesionales de desarrollo web\">\n  <meta property=\"og:image\" content=\"https://miempresa.com/imagen-social.jpg\">\n  <meta property=\"og:url\" content=\"https://miempresa.com\">\n  <meta property=\"og:type\" content=\"website\">\n  \n  <!-- Twitter Card -->\n  <meta name=\"twitter:card\" content=\"summary_large_image\">\n  <meta name=\"twitter:title\" content=\"Desarrollo Web Profesional\">\n  <meta name=\"twitter:description\" content=\"Servicios profesionales de desarrollo web\">\n  <meta name=\"twitter:image\" content=\"https://miempresa.com/imagen-social.jpg\">\n</head>\n\n<body>\n  <!-- Estructura semántica -->\n  <header>\n    <h1>Mi Empresa - Desarrollo Web</h1>\n    <nav>\n      <ul>\n        <li><a href=\"servicios.html\">Servicios</a></li>\n        <li><a href=\"portafolio.html\">Portafolio</a></li>\n        <li><a href=\"contacto.html\">Contacto</a></li>\n      </ul>\n    </nav>\n  </header>\n  \n  <main>\n    <section>\n      <h2>Servicios de Desarrollo Web</h2>\n      <article>\n        <h3>Desarrollo Frontend</h3>\n        <p>Creamos interfaces de usuario modernas...</p>\n        <img src=\"frontend.jpg\" alt=\"Desarrollador trabajando en interfaz de usuario moderna\">\n      </article>\n    </section>\n  </main>\n</body>\n\n<!-- Mejores prácticas SEO:\n- Títulos descriptivos y únicos\n- Meta descriptions atractivas\n- Estructura jerárquica de encabezados\n- Alt text descriptivo en imágenes\n- URLs semánticas\n- Contenido de calidad\n```",
         
-        "Validación de código HTML": "La validación asegura que el código HTML cumple con estándares web. Usa herramientas como W3C Validator, corrige errores de sintaxis, verifica accesibilidad y asegura compatibilidad entre navegadores. El código válido mejora la funcionalidad y mantenibilidad.\n\n**Ejemplos:**\n```html\n<!-- ✅ Código HTML válido -->\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Página Válida</title>\n</head>\n<body>\n  <header>\n    <h1>Título Principal</h1>\n  </header>\n  \n  <main>\n    <section>\n      <h2>Sección Principal</h2>\n      <p>Contenido de la sección...</p>\n      \n      <article>\n        <h3>Artículo</h3>\n        <p>Contenido del artículo...</p>\n        <img src=\"imagen.jpg\" alt=\"Descripción de la imagen\">\n      </article>\n    </section>\n  </main>\n  \n  <footer>\n    <p>&copy; 2024 Mi Sitio</p>\n  </footer>\n</body>\n</html>\n\n<!-- ❌ Errores comunes a evitar:\n- Etiquetas no cerradas\n- Atributos sin comillas\n- Elementos anidados incorrectamente\n- DOCTYPE incorrecto\n- Metadatos faltantes\n\n<!-- Herramientas de validación:\n- W3C Markup Validator\n- WAVE (accesibilidad)\n- Lighthouse (rendimiento)\n- Browser DevTools\n```"
+        "Validación de código HTML": "La validación asegura que el código HTML cumple con estándares web. Usa herramientas como W3C Validator, corrige errores de sintaxis, verifica accesibilidad y asegura compatibilidad entre navegadores. El código válido mejora la funcionalidad y mantenibilidad.\n\n**Ejemplos:**\n```html\n<!-- ✅ Código HTML válido -->\n<!DOCTYPE html>\n<html lang='es'>\n<head>\n  <meta charset='UTF-8'>\n  <meta name='viewport' content='width=device-width, initial-scale=1.0'>\n  <title>Página Válida</title>\n</head>\n<body>\n  <header>\n    <h1>Título Principal</h1>\n  </header>\n  \n  <main>\n    <section>\n      <h2>Sección Principal</h2>\n      <p>Contenido de la sección...</p>\n      \n      <article>\n        <h3>Artículo</h3>\n        <p>Contenido del artículo...</p>\n        <img src=\"imagen.jpg\" alt=\"Descripción de la imagen\">\n      </article>\n    </section>\n  </main>\n  \n  <footer>\n    <p>&copy; 2024 Mi Sitio</p>\n  </footer>\n</body>\n</html>\n\n<!-- ❌ Errores comunes a evitar:\n- Etiquetas no cerradas\n- Atributos sin comillas\n- Elementos anidados incorrectamente\n- DOCTYPE incorrecto\n- Metadatos faltantes\n\n<!-- Herramientas de validación:\n- W3C Markup Validator\n- WAVE (accesibilidad)\n- Lighthouse (rendimiento)\n- Browser DevTools\n```"
       },
       practical: [
-        "Crear sitio informativo con múltiples secciones",
-        "Implementar navegación entre páginas",
-        "Desarrollar formulario de contacto funcional",
-        "Crear tabla de datos con información relevante",
-        "Aplicar estructura semántica en todo el sitio",
-        "Validar código HTML con herramientas W3C"
+        "Taller guiado de 3 horas con cronograma estructurado",
+        "Crear sitio web completo para empresa ficticia TechSolutions",
+        "Implementar 4 páginas: inicio, servicios, contacto, portafolio",
+        "Desarrollar formularios con validación HTML5 nativa",
+        "Crear tablas semánticas con estructura accesible",
+        "Aplicar elementos semánticos HTML5 en todo el sitio",
+        "Implementar navegación accesible con breadcrumbs",
+        "Validar código HTML con W3C Markup Validator"
       ]
     },
     activities: [
       {
-        title: "Planificación y Estructura HTML",
+        title: "Bloque 0: Introducción y Planificación",
+        duration: "15 min",
+        description: "Presentación del proyecto TechSolutions, planificación colaborativa de la estructura del sitio y establecimiento de objetivos del taller guiado"
+      },
+      {
+        title: "Bloque 1: Estructura y Navegación",
         duration: "45 min",
-        description: "Teoría: Planificación de sitios web, estructura semántica, organización de contenido. Ejercicio: Crear wireframe de sitio informativo."
+        description: "Crear estructura base HTML5, implementar sistema de navegación accesible y desarrollar páginas secundarias con breadcrumbs"
       },
       {
-        title: "Formularios HTML Avanzados",
-        duration: "60 min",
-        description: "Teoría: Elementos de formulario, validación HTML5, accesibilidad. Práctica: Crear formulario de contacto completo."
+        title: "Descanso",
+        duration: "15 min",
+        description: "Pausa para descanso y resolución de dudas individuales"
       },
       {
-        title: "Tablas y Datos Estructurados",
+        title: "Bloque 2: Formularios y Validación",
         duration: "45 min",
-        description: "Teoría: Tablas semánticas, accesibilidad, datos estructurados. Práctica: Crear tabla de precios y horarios."
+        description: "Desarrollar formulario de contacto con validación HTML5 nativa, implementar diferentes tipos de input y elementos de formulario avanzados"
       },
       {
-        title: "Taller HTML Completo",
-        duration: "90 min",
-        description: "Taller: Crear sitio web informativo completo con navegación, formularios, tablas y estructura semántica."
+        title: "Descanso",
+        duration: "15 min",
+        description: "Pausa para descanso y revisión del progreso"
+      },
+      {
+        title: "Bloque 3: Tablas y Contenido",
+        duration: "30 min",
+        description: "Crear tablas semánticas de precios, organizar contenido con elementos HTML5 y implementar estructura accesible"
+      },
+      {
+        title: "Bloque 4: Revisión y Validación",
+        duration: "15 min",
+        description: "Validar código HTML con W3C Validator, revisar accesibilidad con WAVE y hacer ajustes finales"
       }
     ],
     homework: [
-      "Completar el sitio web informativo con todas las secciones planificadas",
-      "Implementar formulario de contacto con validación HTML5 completa",
-      "Crear tabla de datos con información relevante de la empresa/servicios",
-      "Aplicar estructura semántica correcta en todas las páginas",
-      "Validar todo el código HTML con W3C Validator",
-      "Optimizar metadatos para SEO básico en todas las páginas",
-      "Probar la accesibilidad con herramientas como WAVE"
+      "Completar el sitio web TechSolutions con todas las páginas implementadas",
+      "Mejorar el formulario de contacto con validaciones adicionales",
+      "Agregar más contenido a las tablas de precios y servicios",
+      "Implementar página de portafolio con galería de proyectos",
+      "Validar todo el código HTML con W3C Markup Validator",
+      "Optimizar metadatos SEO en todas las páginas",
+      "Probar accesibilidad con WAVE Web Accessibility Evaluator",
+      "Documentar el proceso de desarrollo en README.md"
     ],
     materials: [
-      "Editor de código (VS Code recomendado)",
-      "Navegador web con DevTools",
+      "Editor de código (VS Code con Live Server)",
+      "Navegador web con DevTools habilitado",
       "W3C Markup Validator (validator.w3.org)",
-      "WAVE Web Accessibility Evaluator",
-      "Plantilla de wireframe para planificación",
+      "WAVE Web Accessibility Evaluator (wave.webaim.org)",
+      "Guía del taller HTML completo (TALLER_HTML_COMPLETO.md)",
+      "Cronograma del taller con tiempos específicos",
       "Documentación MDN HTML5",
-      "Ejemplos de formularios y tablas accesibles"
+      "Plantilla de estructura para TechSolutions"
     ],
     exercises: [
       {
-        title: "Sitio Web Informativo Completo",
-        description: "Crea un sitio web informativo completo con estructura semántica, formularios, tablas y navegación usando HTML5.",
+        title: "Taller HTML Guiado - Sitio Web TechSolutions",
+        description: "Taller guiado de 3 horas para crear un sitio web completo para la empresa ficticia TechSolutions usando únicamente HTML5 nativo, integrando todos los conocimientos de las sesiones anteriores.",
         code: `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -1114,7 +1135,7 @@ document.getElementById('satisfaccion').addEventListener('input', function() {
         "Colores: nombres, hexadecimal, RGB, RGBA",
         "Tipografías: font-family, font-size, font-weight, line-height",
         "Espaciado: margin, padding, width, height",
-        "Unidades CSS: px, em, rem, %, vw, vh",
+        "Unidades CSS: px, em, rem, %",
         "Cascada y especificidad en CSS"
       ],
       theoreticalDetails: {
@@ -1128,9 +1149,9 @@ document.getElementById('satisfaccion').addEventListener('input', function() {
         
         "Tipografías: font-family, font-size, font-weight, line-height": "Las propiedades de tipografía controlan la apariencia del texto. font-family especifica la fuente, font-size controla el tamaño, font-weight define el grosor, y line-height establece el espaciado entre líneas. Estas propiedades son fundamentales para la legibilidad y el diseño visual.\n\n**Ejemplos:**\n```css\n/* Familia de fuentes */\n.titulo {\n  font-family: 'Arial', 'Helvetica', sans-serif;\n}\n\n/* Tamaño de fuente */\n.texto-grande {\n  font-size: 24px;\n}\n\n.texto-mediano {\n  font-size: 16px;\n}\n\n.texto-pequeno {\n  font-size: 12px;\n}\n\n/* Peso de fuente */\n.normal {\n  font-weight: normal; /* 400 */\n}\n\n.negrita {\n  font-weight: bold; /* 700 */\n}\n\n.extra-negrita {\n  font-weight: 900;\n}\n\n/* Altura de línea */\n.parrafo {\n  line-height: 1.6;\n  font-size: 16px;\n}\n\n/* Propiedades combinadas */\n.encabezado {\n  font-family: 'Georgia', serif;\n  font-size: 28px;\n  font-weight: bold;\n  line-height: 1.2;\n  color: #2c3e50;\n}\n\n/* Fuentes web (Google Fonts) */\n@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');\n\n.moderno {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n}\n\n/* Estilos de texto adicionales */\n.texto-estilizado {\n  font-style: italic;\n  text-decoration: underline;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n\n/* Mejores prácticas:\n- Usar fuentes web para mejor rendimiento\n- Mantener legibilidad con line-height adecuado\n- Usar fallbacks para fuentes\n- Considerar accesibilidad\n```",
         
-        "Espaciado: margin, padding, width, height": "Las propiedades de espaciado controlan el tamaño y la distribución de elementos. margin crea espacio fuera del elemento, padding crea espacio dentro, width establece el ancho, y height define la altura. Estas propiedades son esenciales para el layout y la composición visual.\n\n**Ejemplos:**\n```css\n/* Espaciado básico */\n.contenedor {\n  width: 100%;\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 20px;\n}\n\n/* Margin individual */\n.elemento {\n  margin-top: 10px;\n  margin-right: 20px;\n  margin-bottom: 15px;\n  margin-left: 25px;\n  /* Equivale a: margin: 10px 20px 15px 25px; */\n}\n\n/* Padding uniforme */\n.caja {\n  padding: 20px;\n  /* padding: 20px en todos los lados */\n}\n\n/* Dimensiones específicas */\n.imagen {\n  width: 300px;\n  height: 200px;\n  object-fit: cover;\n}\n\n/* Espaciado responsivo */\n.seccion {\n  padding: 20px;\n  margin-bottom: 30px;\n}\n\n@media (max-width: 768px) {\n  .seccion {\n    padding: 10px;\n    margin-bottom: 20px;\n  }\n}\n\n/* Centrado horizontal */\n.centrado {\n  width: 50%;\n  margin: 0 auto;\n}\n\n/* Espaciado negativo */\n.superpuesto {\n  margin-top: -10px;\n  position: relative;\n  z-index: 1;\n}\n\n/* Box-sizing para control preciso */\n.caja-precisa {\n  width: 200px;\n  height: 100px;\n  padding: 20px;\n  border: 2px solid #333;\n  box-sizing: border-box;\n  /* El tamaño total será exactamente 200x100px */\n}\n\n/* Unidades de espaciado:\n- px: Píxeles fijos\n- em: Relativo al font-size del elemento\n- rem: Relativo al font-size del root\n- %: Porcentaje del elemento padre\n- vw/vh: Viewport width/height\n```",
+        "Espaciado: margin, padding, width, height": "Las propiedades de espaciado controlan el tamaño y la distribución de elementos. margin crea espacio fuera del elemento, padding crea espacio dentro, width establece el ancho, y height define la altura. Estas propiedades son esenciales para el layout y la composición visual.\n\n**Ejemplos:**\n```css\n/* Espaciado básico */\n.contenedor {\n  width: 100%;\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 20px;\n}\n\n/* Margin individual */\n.elemento {\n  margin-top: 10px;\n  margin-right: 20px;\n  margin-bottom: 15px;\n  margin-left: 25px;\n  /* Equivale a: margin: 10px 20px 15px 25px; */\n}\n\n/* Padding uniforme */\n.caja {\n  padding: 20px;\n  /* padding: 20px en todos los lados */\n}\n\n/* Dimensiones específicas */\n.imagen {\n  width: 300px;\n  height: 200px;\n  object-fit: cover;\n}\n\n/* Espaciado uniforme */\n.seccion {\n  padding: 20px;\n  margin-bottom: 30px;\n}\n\n/* Centrado horizontal */\n.centrado {\n  width: 50%;\n  margin: 0 auto;\n}\n\n/* Espaciado negativo */\n.superpuesto {\n  margin-top: -10px;\n  position: relative;\n  z-index: 1;\n}\n\n/* Box-sizing para control preciso */\n.caja-precisa {\n  width: 200px;\n  height: 100px;\n  padding: 20px;\n  border: 2px solid #333;\n  box-sizing: border-box;\n  /* El tamaño total será exactamente 200x100px */\n}\n\n/* Unidades de espaciado:\n- px: Píxeles fijos\n- em: Relativo al font-size del elemento\n- rem: Relativo al font-size del root\n- %: Porcentaje del elemento padre\n```",
         
-        "Unidades CSS: px, em, rem, %, vw, vh": "CSS ofrece diferentes unidades para especificar tamaños y distancias. px son píxeles absolutos, em es relativo al font-size del elemento, rem es relativo al font-size del root, % es porcentaje del elemento padre, y vw/vh son relativos al viewport. Cada unidad tiene casos de uso específicos y ventajas.\n\n**Ejemplos:**\n```css\n/* Píxeles (absolutos) */\n.fijo {\n  width: 300px;\n  height: 200px;\n  font-size: 16px;\n}\n\n/* Em (relativo al font-size del elemento) */\n.relativo-em {\n  font-size: 16px;\n  padding: 1em; /* 16px */\n  margin: 0.5em; /* 8px */\n}\n\n/* Rem (relativo al font-size del root) */\nhtml {\n  font-size: 16px;\n}\n\n.relativo-rem {\n  font-size: 1.5rem; /* 24px */\n  padding: 1rem; /* 16px */\n  margin: 0.5rem; /* 8px */\n}\n\n/* Porcentajes */\n.contenedor {\n  width: 100%;\n  max-width: 1200px;\n}\n\n.columna {\n  width: 50%;\n  float: left;\n}\n\n/* Viewport units */\n.pantalla-completa {\n  width: 100vw;\n  height: 100vh;\n}\n\n.seccion-altura {\n  height: 50vh; /* 50% de la altura del viewport */\n}\n\n/* Unidades modernas */\n.moderno {\n  width: clamp(300px, 50%, 800px);\n  font-size: clamp(14px, 2vw, 24px);\n}\n\n/* Responsive con unidades */\n.responsive {\n  font-size: 1rem;\n  padding: 1rem;\n  margin: 0.5rem;\n}\n\n@media (max-width: 768px) {\n  .responsive {\n    font-size: 0.9rem;\n    padding: 0.5rem;\n  }\n}\n\n/* Comparación de unidades:\n- px: Fijo, no escalable\n- em: Escalable con el elemento\n- rem: Escalable con el root\n- %: Relativo al padre\n- vw/vh: Relativo al viewport\n```",
+        "Unidades CSS: px, em, rem, %": "CSS ofrece diferentes unidades para especificar tamaños y distancias. px son píxeles absolutos, em es relativo al font-size del elemento, rem es relativo al font-size del root, y % es porcentaje del elemento padre. Cada unidad tiene casos de uso específicos y ventajas.\n\n**Ejemplos:**\n```css\n/* Píxeles (absolutos) */\n.fijo {\n  width: 300px;\n  height: 200px;\n  font-size: 16px;\n}\n\n/* Em (relativo al font-size del elemento) */\n.relativo-em {\n  font-size: 16px;\n  padding: 1em; /* 16px */\n  margin: 0.5em; /* 8px */\n}\n\n/* Rem (relativo al font-size del root) */\nhtml {\n  font-size: 16px;\n}\n\n.relativo-rem {\n  font-size: 1.5rem; /* 24px */\n  padding: 1rem; /* 16px */\n  margin: 0.5rem; /* 8px */\n}\n\n/* Porcentajes */\n.contenedor {\n  width: 100%;\n  max-width: 1200px;\n}\n\n.columna {\n  width: 50%;\n  display: inline-block;\n}\n\n/* Unidades combinadas */\n.elemento {\n  width: 80%;\n  max-width: 600px;\n  padding: 1rem;\n  margin: 0 auto;\n}\n\n/* Tamaños de fuente con diferentes unidades */\n.titulo {\n  font-size: 2rem; /* 32px si root es 16px */\n}\n\n.subtitulo {\n  font-size: 1.5em; /* 1.5 veces el font-size del elemento padre */\n}\n\n.texto {\n  font-size: 16px; /* Tamaño fijo */\n}\n\n/* Comparación de unidades:\n- px: Fijo, no escalable\n- em: Escalable con el elemento\n- rem: Escalable con el root\n- %: Relativo al padre\n```",
         
         "Cascada y especificidad en CSS": "La cascada determina qué reglas CSS se aplican cuando hay conflictos. La especificidad calcula qué selector tiene más peso. Las reglas se aplican en orden: especificidad, orden de aparición, y !important. Comprender estos conceptos es crucial para escribir CSS predecible y mantenible.\n\n**Ejemplos:**\n```css\n/* Especificidad básica */\np {\n  color: black; /* Especificidad: 1 */\n}\n\n.destacado {\n  color: blue; /* Especificidad: 10 */\n}\n\n#titulo {\n  color: red; /* Especificidad: 100 */\n}\n\n/* Combinación de selectores */\np.destacado {\n  color: green; /* Especificidad: 11 (1 + 10) */\n}\n\n#contenedor p.destacado {\n  color: purple; /* Especificidad: 111 (100 + 1 + 10) */\n}\n\n/* Orden de cascada */\n.primero {\n  color: blue;\n}\n\n.segundo {\n  color: red; /* Este se aplica por aparecer después */\n}\n\n/* !important (usar con precaución) */\n.critico {\n  color: orange !important; /* Sobrescribe todo */\n}\n\n/* Herencia */\n.padre {\n  color: #333;\n  font-size: 16px;\n}\n\n.hijo {\n  /* Hereda color y font-size del padre */\n  font-weight: bold;\n}\n\n/* Reset de herencia */\n.no-hereda {\n  color: initial; /* Valor inicial */\n  font-size: inherit; /* Hereda del padre */\n  margin: unset; /* Valor no establecido */\n}\n\n/* Cálculo de especificidad:\n- Inline styles: 1000\n- IDs: 100\n- Clases, atributos, pseudo-clases: 10\n- Elementos, pseudo-elementos: 1\n- Universal selector: 0\n\n/* Mejores prácticas:\n- Evitar !important\n- Usar clases en lugar de IDs\n- Mantener especificidad baja\n- Organizar CSS por especificidad\n```"
       },
@@ -1144,114 +1165,379 @@ document.getElementById('satisfaccion').addEventListener('input', function() {
     },
     activities: [
       {
-        title: "Variables y operadores",
+        title: "Sintaxis CSS y selectores básicos",
+        duration: "45 min",
+        description: "Aplicar estilos básicos a elementos HTML usando selectores de elemento, clase e ID"
+      },
+      {
+        title: "Modelo de caja y espaciado",
+        duration: "45 min",
+        description: "Implementar padding, margin, border y dimensiones en elementos HTML"
+      },
+      {
+        title: "Colores y tipografías",
         duration: "30 min",
-        description: "Declarar variables, realizar operaciones matemáticas y concatenar strings"
-      },
-      {
-        title: "Condicionales y bucles",
-        duration: "45 min",
-        description: "Crear calculadora básica, juego de adivinanza y contador con bucle"
-      },
-      {
-        title: "Funciones",
-        duration: "45 min",
-        description: "Crear funciones de declaración, expresión y con parámetros"
+        description: "Aplicar colores, fuentes y propiedades de texto a elementos HTML"
       }
     ],
     homework: [
-      "Crear 5 ejercicios de JavaScript básico",
-      "Implementar calculadora avanzada",
-      "Juego de piedra, papel o tijera"
+      "Estilizar la página web TechSolutions desarrollada en la sesión 4",
+      "Crear esquema de colores consistente para todo el sitio",
+      "Implementar tipografías y espaciado uniforme",
+      "Aplicar modelo de caja a todos los elementos del sitio"
     ],
     materials: [
-      "Editor de código",
-      "Consola del navegador",
-      "Ejercicios de práctica"
+      "Editor de código (VS Code con Live Server)",
+      "Navegador web con DevTools habilitado",
+      "Sitio web TechSolutions de la sesión 4",
+      "Documentación MDN CSS3",
+      "Herramientas de validación CSS (W3C CSS Validator)"
     ],
     exercises: [
       {
-        title: "Calculadora Básica",
-        description: "Crea una calculadora que realice operaciones básicas.",
-        code: `// Calculadora básica
-function calculadora(operacion, a, b) {
-    // Tu código aquí
+        title: "Estilizar página TechSolutions",
+        description: "Aplica estilos CSS3 básicos a la página principal de TechSolutions desarrollada en la sesión 4.",
+        code: `/* Ejercicio 1: Estilos básicos para TechSolutions
+Aplica los siguientes estilos a la página index.html:
+
+1. Estilizar el header con fondo azul y texto blanco
+2. Centrar la navegación
+3. Aplicar espaciado uniforme a las secciones
+4. Estilizar los títulos con diferentes tamaños
+5. Crear esquema de colores consistente
+*/
+
+/* Tu código CSS aquí */`,
+        solution: `/* Solución: Estilos básicos para TechSolutions */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-// Ejemplos de uso:
-console.log(calculadora('suma', 5, 3)); // Debe mostrar 8
-console.log(calculadora('resta', 10, 4)); // Debe mostrar 6
-console.log(calculadora('multiplicacion', 3, 7)); // Debe mostrar 21
-console.log(calculadora('division', 15, 3)); // Debe mostrar 5`,
-        solution: `// Calculadora básica - Solución
-function calculadora(operacion, a, b) {
-    switch(operacion) {
-        case 'suma':
-            return a + b;
-        case 'resta':
-            return a - b;
-        case 'multiplicacion':
-            return a * b;
-        case 'division':
-            if (b === 0) {
-                return 'Error: División por cero';
-            }
-            return a / b;
-        default:
-            return 'Operación no válida';
-    }
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
 }
 
-// Ejemplos de uso:
-console.log(calculadora('suma', 5, 3)); // 8
-console.log(calculadora('resta', 10, 4)); // 6
-console.log(calculadora('multiplicacion', 3, 7)); // 21
-console.log(calculadora('division', 15, 3)); // 5
-console.log(calculadora('division', 10, 0)); // Error: División por cero`
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #34495e;
+}
+
+/* Contenido principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Párrafos */
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Listas */
+ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}`
       },
       {
-        title: "Juego de Adivinanza",
-        description: "Crea un juego donde el usuario debe adivinar un número.",
-        code: `// Juego de adivinanza
-function juegoAdivinanza() {
-    const numeroSecreto = Math.floor(Math.random() * 100) + 1;
-    let intentos = 0;
-    const maxIntentos = 7;
-    
-    // Tu código aquí
+        title: "Modelo de caja y espaciado",
+        description: "Implementa el modelo de caja CSS en elementos específicos del sitio TechSolutions.",
+        code: `/* Ejercicio 2: Modelo de caja
+Aplica el modelo de caja a los siguientes elementos:
+
+1. Crear cajas con padding, margin y border
+2. Usar diferentes unidades (px, em, rem)
+3. Implementar box-sizing: border-box
+4. Crear espaciado uniforme entre elementos
+*/
+
+/* Tu código CSS aquí */`,
+        solution: `/* Solución: Modelo de caja */
+
+/* Configuración global del modelo de caja */
+* {
+    box-sizing: border-box;
 }
 
-// Ejecutar el juego
-juegoAdivinanza();`,
-        solution: `// Juego de adivinanza - Solución
-function juegoAdivinanza() {
-    const numeroSecreto = Math.floor(Math.random() * 100) + 1;
-    let intentos = 0;
-    const maxIntentos = 7;
-    
-    console.log('¡Bienvenido al juego de adivinanza!');
-    console.log('He pensado en un número entre 1 y 100.');
-    console.log('Tienes 7 intentos para adivinarlo.');
-    
-    while (intentos < maxIntentos) {
-        const numeroUsuario = parseInt(prompt('Ingresa tu número:'));
-        intentos++;
-        
-        if (numeroUsuario === numeroSecreto) {
-            console.log(\`¡Felicitaciones! Adivinaste el número \${numeroSecreto} en \${intentos} intentos.\`);
-            return;
-        } else if (numeroUsuario < numeroSecreto) {
-            console.log('El número es mayor. Te quedan ' + (maxIntentos - intentos) + ' intentos.');
-        } else {
-            console.log('El número es menor. Te quedan ' + (maxIntentos - intentos) + ' intentos.');
-        }
-    }
-    
-    console.log(\`¡Se acabaron los intentos! El número era \${numeroSecreto}.\`);
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-// Ejecutar el juego
-juegoAdivinanza();`
+/* Cajas con modelo de caja completo */
+.caja {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    margin: 20px;
+    border: 3px solid #3498db;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+}
+
+/* Ejemplo con diferentes unidades */
+.caja-em {
+    width: 20em;
+    padding: 1em;
+    margin: 0.5em;
+    border: 0.2em solid #e74c3c;
+}
+
+.caja-rem {
+    width: 20rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 0.2rem solid #27ae60;
+}
+
+/* Espaciado uniforme */
+.seccion {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+/* Padding individual */
+.elemento {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    /* Equivale a: padding: 10px 20px 15px 25px; */
+}
+
+/* Margin colapsado */
+.parrafo {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+}`
+      },
+      {
+        title: "Colores y tipografías",
+        description: "Crea un esquema de colores y tipografías consistente para el sitio TechSolutions.",
+        code: `/* Ejercicio 3: Colores y tipografías
+Crea un esquema de colores y tipografías que incluya:
+
+1. Paleta de colores consistente (primario, secundario, acentos)
+2. Tipografías para diferentes elementos (títulos, párrafos, enlaces)
+3. Uso de diferentes formatos de color (hex, rgb, rgba)
+4. Jerarquía tipográfica clara
+*/
+
+/* Tu código CSS aquí */`,
+        solution: `/* Solución: Colores y tipografías */
+
+/* Paleta de colores */
+:root {
+    /* Colores primarios */
+    --color-primario: #2c3e50;
+    --color-secundario: #3498db;
+    --color-acento: #e74c3c;
+    
+    /* Colores neutros */
+    --color-fondo: #f8f9fa;
+    --color-texto: #2c3e50;
+    --color-texto-claro: #7f8c8d;
+    --color-borde: #bdc3c7;
+    
+    /* Colores de estado */
+    --color-exito: #27ae60;
+    --color-advertencia: #f39c12;
+    --color-error: #e74c3c;
+}
+
+/* Tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+/* Jerarquía tipográfica */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-primario);
+    margin-bottom: 0.8rem;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-secundario);
+    margin-bottom: 0.6rem;
+}
+
+/* Párrafos */
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Enlaces */
+a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-acento);
+    text-decoration: underline;
+}
+
+/* Botones */
+.boton {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: var(--color-primario);
+}
+
+/* Elementos destacados */
+.destacado {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid var(--color-secundario);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Texto en diferentes colores */
+.texto-primario {
+    color: var(--color-primario);
+}
+
+.texto-secundario {
+    color: var(--color-secundario);
+}
+
+.texto-acento {
+    color: var(--color-acento);
+}
+
+.texto-claro {
+    color: var(--color-texto-claro);
+}`
       }
     ]
   },
@@ -1305,73 +1591,623 @@ juegoAdivinanza();`
     },
     activities: [
       {
-        title: "Manipulación del DOM",
-        duration: "45 min",
-        description: "Seleccionar elementos, modificar contenido y estilos dinámicamente"
+        title: "Layout principal con CSS Grid",
+        duration: "60 min",
+        description: "Crear la estructura principal de una página web usando CSS Grid con header, main, sidebar y footer"
       },
       {
-        title: "Eventos básicos",
-        duration: "45 min",
-        description: "Implementar clicks, hover, focus y eventos de teclado"
+        title: "Componentes con Flexbox",
+        duration: "60 min",
+        description: "Implementar navegación, tarjetas y formularios usando Flexbox para distribución interna"
       },
       {
-        title: "Formulario interactivo",
-        duration: "30 min",
-        description: "Crear validación en tiempo real y feedback visual"
+        title: "Diseño responsive",
+        duration: "60 min",
+        description: "Hacer el layout adaptable a diferentes dispositivos usando media queries y breakpoints"
       }
     ],
     homework: [
-      "Crear galería de imágenes interactiva",
-      "Implementar calculadora con interfaz",
-      "Formulario de contacto con validación"
+      "Crear un sitio web completo con layout responsive usando Grid y Flexbox",
+      "Implementar navegación adaptable con menú hamburguesa para móviles",
+      "Desarrollar un sistema de tarjetas de productos con layout flexible",
+      "Optimizar imágenes y contenido para diferentes dispositivos"
     ],
     materials: [
-      "Página HTML con formularios",
-      "Imágenes para la galería",
-      "Consola del navegador"
+      "Editor de código (VS Code con Live Server)",
+      "Navegador web con DevTools habilitado",
+      "Plantilla HTML base para el proyecto",
+      "Imágenes de ejemplo para el layout",
+      "Documentación MDN CSS Grid y Flexbox",
+      "Herramientas de validación CSS (W3C CSS Validator)"
     ],
     exercises: [
       {
-        title: "Galería Interactiva",
-        description: "Crea una galería de imágenes con navegación y zoom.",
-        code: `// Galería interactiva
-const galeria = document.getElementById('galeria');
-const imagenPrincipal = document.getElementById('imagen-principal');
-const thumbnails = document.querySelectorAll('.thumbnail');
+        title: "Layout Principal con CSS Grid",
+        description: "Crea la estructura principal de una página web usando CSS Grid con header, main, sidebar y footer.",
+        code: `/* Ejercicio 1: Layout Principal con CSS Grid
+Crea un layout completo usando CSS Grid que incluya:
 
-// Tu código aquí para manejar los clicks en las miniaturas`,
-        solution: `// Galería interactiva - Solución
-const galeria = document.getElementById('galeria');
-const imagenPrincipal = document.getElementById('imagen-principal');
-const thumbnails = document.querySelectorAll('.thumbnail');
+1. Header que ocupe todo el ancho
+2. Sidebar de 250px de ancho
+3. Main content que ocupe el resto del espacio
+4. Footer que ocupe todo el ancho
+5. Gap de 1rem entre elementos
+6. Altura mínima de 100vh
+*/
 
-// Agregar event listeners a las miniaturas
-thumbnails.forEach(thumbnail => {
-    thumbnail.addEventListener('click', function() {
-        // Remover clase activa de todas las miniaturas
-        thumbnails.forEach(t => t.classList.remove('active'));
-        
-        // Agregar clase activa a la miniatura clickeada
-        this.classList.add('active');
-        
-        // Cambiar la imagen principal
-        const nuevaImagen = this.getAttribute('data-imagen');
-        imagenPrincipal.src = nuevaImagen;
-        imagenPrincipal.alt = this.alt;
-    });
-});
+/* Tu código CSS aquí */`,
+        solution: `/* Solución: Layout Principal con CSS Grid */
 
-// Efecto hover en las miniaturas
-thumbnails.forEach(thumbnail => {
-    thumbnail.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.1)';
-        this.style.transition = 'transform 0.3s ease';
-    });
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Layout principal con CSS Grid */
+.layout-principal {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    min-height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navegacion {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navegacion a:hover {
+    color: #3498db;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background: #34495e;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #3498db;
+}
+
+/* Main content */
+.main {
+    grid-area: main;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.main h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.main h2 {
+    color: #34495e;
+    margin: 2rem 0 1rem 0;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}`
+      },
+      {
+        title: "Componentes con Flexbox",
+        description: "Implementa navegación, tarjetas y formularios usando Flexbox para distribución interna.",
+        code: `/* Ejercicio 2: Componentes con Flexbox
+Crea los siguientes componentes usando Flexbox:
+
+1. Navegación horizontal con logo a la izquierda y menú a la derecha
+2. Tarjetas de productos en fila con información centrada
+3. Formulario con campos en columna y botones alineados
+4. Botón con icono y texto centrados
+*/
+
+/* Tu código CSS aquí */`,
+        solution: `/* Solución: Componentes con Flexbox */
+
+/* Navegación con Flexbox */
+.navegacion-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #3498db;
+    color: white;
+}
+
+.logo-flex {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-flex {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu-flex a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.menu-flex a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Tarjetas con Flexbox */
+.contenedor-tarjetas {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-imagen {
+    width: 100%;
+    height: 200px;
+    background: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7f8c8d;
+}
+
+.tarjeta-contenido {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tarjeta-titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.tarjeta-descripcion {
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.tarjeta-precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-boton {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tarjeta-boton:hover {
+    background: #2980b9;
+}
+
+/* Formulario con Flexbox */
+.formulario {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.grupo-formulario label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea {
+    padding: 0.75rem;
+    border: 2px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.botones-formulario {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.boton-primario {
+    background: #3498db;
+    color: white;
+}
+
+.boton-primario:hover {
+    background: #2980b9;
+}
+
+.boton-secundario {
+    background: #95a5a6;
+    color: white;
+}
+
+.boton-secundario:hover {
+    background: #7f8c8d;
+}`
+      },
+      {
+        title: "Diseño Responsive",
+        description: "Hacer el layout adaptable a diferentes dispositivos usando media queries y breakpoints.",
+        code: `/* Ejercicio 3: Diseño Responsive
+Haz el layout responsive con los siguientes breakpoints:
+
+1. Mobile (hasta 767px): Layout en columna, menú hamburguesa
+2. Tablet (768px a 1023px): Layout en 2 columnas
+3. Desktop (1024px+): Layout completo con sidebar
+
+Usa el layout del ejercicio 1 como base
+*/
+
+/* Tu código CSS aquí */`,
+        solution: `/* Solución: Diseño Responsive */
+
+/* Layout base (desktop) */
+.layout-responsive {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    min-height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.header-responsive {
+    grid-area: header;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.logo-responsive {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navegacion-responsive {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navegacion-responsive a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navegacion-responsive a:hover {
+    color: #3498db;
+}
+
+/* Menú hamburguesa (oculto por defecto) */
+.menu-hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.linea-hamburguesa {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.sidebar-responsive {
+    grid-area: sidebar;
+    background: #34495e;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.main-responsive {
+    grid-area: main;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.footer-responsive {
+    grid-area: footer;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tablet: 768px a 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .layout-responsive {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        gap: 1rem;
+    }
     
-    thumbnail.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1)';
-    });
-});`
+    .sidebar-responsive {
+        display: none;
+    }
+    
+    .main-responsive {
+        padding: 1.5rem;
+    }
+    
+    .navegacion-responsive {
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile: hasta 767px */
+@media (max-width: 767px) {
+    .layout-responsive {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .header-responsive {
+        padding: 1rem;
+    }
+    
+    .logo-responsive {
+        font-size: 1.2rem;
+    }
+    
+    /* Mostrar menú hamburguesa */
+    .menu-hamburguesa {
+        display: flex;
+    }
+    
+    /* Ocultar navegación desktop */
+    .navegacion-responsive {
+        display: none;
+    }
+    
+    .sidebar-responsive {
+        display: none;
+    }
+    
+    .main-responsive {
+        padding: 1rem;
+    }
+    
+    .footer-responsive {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Navegación móvil expandible */
+.navegacion-movil {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #2c3e50;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navegacion-movil.activo {
+    display: flex;
+}
+
+.navegacion-movil a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: color 0.3s;
+}
+
+.navegacion-movil a:hover {
+    color: #3498db;
+}
+
+.navegacion-movil a:last-child {
+    border-bottom: none;
+}
+
+/* Contenedor de tarjetas responsive */
+.contenedor-tarjetas-responsive {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Desktop: 3 columnas */
+@media (min-width: 1024px) {
+    .contenedor-tarjetas-responsive {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contenedor-tarjetas-responsive {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 columna */
+@media (max-width: 767px) {
+    .contenedor-tarjetas-responsive {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}`
       }
     ]
   },
@@ -1425,105 +2261,623 @@ thumbnails.forEach(thumbnail => {
     },
     activities: [
       {
-        title: "Manipulación de arrays",
-        duration: "45 min",
-        description: "Crear, modificar y transformar arrays con diferentes métodos"
+        title: "Estructura base con CSS Grid",
+        duration: "60 min",
+        description: "Crear la estructura principal de una página web usando CSS Grid con header, main, sidebar y footer"
       },
       {
-        title: "Trabajo con objetos",
-        duration: "45 min",
-        description: "Crear objetos, acceder a propiedades y métodos"
+        title: "Componentes con Flexbox",
+        duration: "60 min",
+        description: "Implementar navegación, tarjetas y formularios usando Flexbox para distribución interna"
       },
       {
-        title: "Proyecto: Lista de tareas",
-        duration: "30 min",
-        description: "Implementar CRUD básico con arrays y objetos"
+        title: "Diseño responsive",
+        duration: "60 min",
+        description: "Hacer el layout adaptable a diferentes dispositivos usando media queries y breakpoints"
       }
     ],
     homework: [
-      "Crear sistema de gestión de contactos",
-      "Implementar carrito de compras básico",
-      "Filtros y búsqueda en lista de productos"
+      "Crear un sitio web completo con layout responsive usando Grid y Flexbox",
+      "Implementar navegación adaptable con menú hamburguesa para móviles",
+      "Desarrollar un sistema de tarjetas de productos con layout flexible",
+      "Optimizar imágenes y contenido para diferentes dispositivos"
     ],
     materials: [
-      "Editor de código",
-      "Consola del navegador",
-      "Datos de ejemplo (JSON)"
+      "Editor de código (VS Code con Live Server)",
+      "Navegador web con DevTools habilitado",
+      "Plantilla HTML base para el proyecto",
+      "Imágenes de ejemplo para el layout",
+      "Documentación MDN CSS Grid y Flexbox",
+      "Herramientas de validación CSS (W3C CSS Validator)"
     ],
     exercises: [
       {
-        title: "Sistema de Gestión de Contactos",
-        description: "Crea un sistema para agregar, editar y eliminar contactos.",
-        code: `// Sistema de gestión de contactos
-let contactos = [];
+        title: "Layout Principal con CSS Grid",
+        description: "Crea la estructura principal de una página web usando CSS Grid con header, main, sidebar y footer.",
+        code: `/* Ejercicio 1: Layout Principal con CSS Grid
+Crea un layout completo usando CSS Grid que incluya:
 
-function agregarContacto(nombre, telefono, email) {
-    // Tu código aquí
+1. Header que ocupe todo el ancho
+2. Sidebar de 250px de ancho
+3. Main content que ocupe el resto del espacio
+4. Footer que ocupe todo el ancho
+5. Gap de 1rem entre elementos
+6. Altura mínima de 100vh
+*/
+
+/* Tu código CSS aquí */`,
+        solution: `/* Solución: Layout Principal con CSS Grid */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-function buscarContacto(nombre) {
-    // Tu código aquí
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-function eliminarContacto(nombre) {
-    // Tu código aquí
+/* Layout principal con CSS Grid */
+.layout-principal {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    min-height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-// Ejemplos de uso:
-agregarContacto('Juan Pérez', '123-456-7890', 'juan@email.com');
-agregarContacto('María García', '098-765-4321', 'maria@email.com');`,
-        solution: `// Sistema de gestión de contactos - Solución
-let contactos = [];
+/* Header */
+.header {
+    grid-area: header;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
 
-function agregarContacto(nombre, telefono, email) {
-    const nuevoContacto = {
-        id: Date.now(), // ID único basado en timestamp
-        nombre: nombre,
-        telefono: telefono,
-        email: email,
-        fechaCreacion: new Date().toISOString()
-    };
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navegacion {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navegacion a:hover {
+    color: #3498db;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background: #34495e;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #3498db;
+}
+
+/* Main content */
+.main {
+    grid-area: main;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.main h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.main h2 {
+    color: #34495e;
+    margin: 2rem 0 1rem 0;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}`
+      },
+      {
+        title: "Componentes con Flexbox",
+        description: "Implementa navegación, tarjetas y formularios usando Flexbox para distribución interna.",
+        code: `/* Ejercicio 2: Componentes con Flexbox
+Crea los siguientes componentes usando Flexbox:
+
+1. Navegación horizontal con logo a la izquierda y menú a la derecha
+2. Tarjetas de productos en fila con información centrada
+3. Formulario con campos en columna y botones alineados
+4. Botón con icono y texto centrados
+*/
+
+/* Tu código CSS aquí */`,
+        solution: `/* Solución: Componentes con Flexbox */
+
+/* Navegación con Flexbox */
+.navegacion-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #3498db;
+    color: white;
+}
+
+.logo-flex {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-flex {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu-flex a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.menu-flex a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Tarjetas con Flexbox */
+.contenedor-tarjetas {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-imagen {
+    width: 100%;
+    height: 200px;
+    background: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7f8c8d;
+}
+
+.tarjeta-contenido {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tarjeta-titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.tarjeta-descripcion {
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.tarjeta-precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-boton {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tarjeta-boton:hover {
+    background: #2980b9;
+}
+
+/* Formulario con Flexbox */
+.formulario {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.grupo-formulario label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea {
+    padding: 0.75rem;
+    border: 2px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.botones-formulario {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.boton-primario {
+    background: #3498db;
+    color: white;
+}
+
+.boton-primario:hover {
+    background: #2980b9;
+}
+
+.boton-secundario {
+    background: #95a5a6;
+    color: white;
+}
+
+.boton-secundario:hover {
+    background: #7f8c8d;
+}`
+      },
+      {
+        title: "Diseño Responsive",
+        description: "Hacer el layout adaptable a diferentes dispositivos usando media queries y breakpoints.",
+        code: `/* Ejercicio 3: Diseño Responsive
+Haz el layout responsive con los siguientes breakpoints:
+
+1. Mobile (hasta 767px): Layout en columna, menú hamburguesa
+2. Tablet (768px a 1023px): Layout en 2 columnas
+3. Desktop (1024px+): Layout completo con sidebar
+
+Usa el layout del ejercicio 1 como base
+*/
+
+/* Tu código CSS aquí */`,
+        solution: `/* Solución: Diseño Responsive */
+
+/* Layout base (desktop) */
+.layout-responsive {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    min-height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.header-responsive {
+    grid-area: header;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.logo-responsive {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navegacion-responsive {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navegacion-responsive a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navegacion-responsive a:hover {
+    color: #3498db;
+}
+
+/* Menú hamburguesa (oculto por defecto) */
+.menu-hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.linea-hamburguesa {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.sidebar-responsive {
+    grid-area: sidebar;
+    background: #34495e;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.main-responsive {
+    grid-area: main;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.footer-responsive {
+    grid-area: footer;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tablet: 768px a 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .layout-responsive {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        gap: 1rem;
+    }
     
-    contactos.push(nuevoContacto);
-    console.log('Contacto agregado:', nuevoContacto);
-    return nuevoContacto;
-}
-
-function buscarContacto(nombre) {
-    return contactos.find(contacto => 
-        contacto.nombre.toLowerCase().includes(nombre.toLowerCase())
-    );
-}
-
-function eliminarContacto(nombre) {
-    const indice = contactos.findIndex(contacto => 
-        contacto.nombre.toLowerCase() === nombre.toLowerCase()
-    );
+    .sidebar-responsive {
+        display: none;
+    }
     
-    if (indice !== -1) {
-        const contactoEliminado = contactos.splice(indice, 1)[0];
-        console.log('Contacto eliminado:', contactoEliminado);
-        return contactoEliminado;
-    } else {
-        console.log('Contacto no encontrado');
-        return null;
+    .main-responsive {
+        padding: 1.5rem;
+    }
+    
+    .navegacion-responsive {
+        gap: 1.5rem;
     }
 }
 
-function listarContactos() {
-    console.log('Lista de contactos:');
-    contactos.forEach((contacto, index) => {
-        console.log(\`\${index + 1}. \${contacto.nombre} - \${contacto.telefono} - \${contacto.email}\`);
-    });
+/* Mobile: hasta 767px */
+@media (max-width: 767px) {
+    .layout-responsive {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .header-responsive {
+        padding: 1rem;
+    }
+    
+    .logo-responsive {
+        font-size: 1.2rem;
+    }
+    
+    /* Mostrar menú hamburguesa */
+    .menu-hamburguesa {
+        display: flex;
+    }
+    
+    /* Ocultar navegación desktop */
+    .navegacion-responsive {
+        display: none;
+    }
+    
+    .sidebar-responsive {
+        display: none;
+    }
+    
+    .main-responsive {
+        padding: 1rem;
+    }
+    
+    .footer-responsive {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
 }
 
-// Ejemplos de uso:
-agregarContacto('Juan Pérez', '123-456-7890', 'juan@email.com');
-agregarContacto('María García', '098-765-4321', 'maria@email.com');
-listarContactos();
-console.log(buscarContacto('Juan'));
-eliminarContacto('María García');
-listarContactos();`
+/* Navegación móvil expandible */
+.navegacion-movil {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #2c3e50;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navegacion-movil.activo {
+    display: flex;
+}
+
+.navegacion-movil a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: color 0.3s;
+}
+
+.navegacion-movil a:hover {
+    color: #3498db;
+}
+
+.navegacion-movil a:last-child {
+    border-bottom: none;
+}
+
+/* Contenedor de tarjetas responsive */
+.contenedor-tarjetas-responsive {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Desktop: 3 columnas */
+@media (min-width: 1024px) {
+    .contenedor-tarjetas-responsive {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contenedor-tarjetas-responsive {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 columna */
+@media (max-width: 767px) {
+    .contenedor-tarjetas-responsive {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}`
       }
     ]
   },
@@ -1577,117 +2931,201 @@ listarContactos();`
     },
     activities: [
       {
-        title: "Promises y async/await",
-        duration: "45 min",
-        description: "Crear funciones asíncronas y manejar Promises"
+        title: "Transiciones CSS y efectos hover",
+        duration: "60 min",
+        description: "Crear transiciones suaves y efectos hover en botones, enlaces y tarjetas"
       },
       {
-        title: "Consumo de APIs",
-        duration: "45 min",
-        description: "Consumir APIs públicas y mostrar datos en la interfaz"
+        title: "Animaciones con keyframes",
+        duration: "60 min",
+        description: "Implementar animaciones complejas usando @keyframes para efectos visuales"
       },
       {
-        title: "Proyecto: Clima App",
-        duration: "30 min",
-        description: "Crear aplicación que muestre el clima usando API externa"
+        title: "Galería animada interactiva",
+        duration: "60 min",
+        description: "Desarrollar una galería de imágenes con efectos de hover, transiciones y animaciones"
       }
     ],
     homework: [
-      "Crear aplicación de noticias",
-      "Implementar búsqueda de películas",
-      "Sistema de posts con API simulada"
+      "Crear una galería de imágenes con efectos de hover y transiciones suaves",
+      "Implementar un menú de navegación con animaciones de entrada y salida",
+      "Desarrollar tarjetas de productos con efectos de transformación 3D",
+      "Crear un carrusel de imágenes con animaciones automáticas y controles"
     ],
     materials: [
-      "APIs públicas (OpenWeather, NewsAPI)",
-      "Editor de código",
-      "Navegador con DevTools"
+      "Editor de código (VS Code con Live Server)",
+      "Navegador web con DevTools habilitado",
+      "Imágenes de ejemplo para la galería",
+      "Documentación MDN CSS Animations",
+      "Herramientas de validación CSS (W3C CSS Validator)",
+      "Recursos de iconos (Font Awesome, Feather Icons)"
     ],
     exercises: [
       {
-        title: "Aplicación del Clima",
-        description: "Crea una aplicación que muestre el clima de una ciudad usando una API.",
-        code: `// Aplicación del clima
-async function obtenerClima(ciudad) {
-    const API_KEY = 'tu_api_key_aqui';
-    const url = \`https://api.openweathermap.org/data/2.5/weather?q=\${ciudad}&appid=\${API_KEY}&units=metric&lang=es\`;
-    
-    // Tu código aquí
+        title: "Galería de Imágenes con Efectos Hover",
+        description: "Crea una galería de imágenes con efectos de hover, transiciones suaves y animaciones.",
+        code: `/* Ejercicio 1: Galería de Imágenes con Efectos Hover
+Crea una galería de imágenes que incluya:
+
+1. Grid de imágenes con espaciado uniforme
+2. Efectos hover con transformaciones (scale, rotate)
+3. Transiciones suaves en todas las interacciones
+4. Overlay con información que aparece al hacer hover
+5. Animación de entrada para las imágenes
+*/
+
+/* Tu código CSS aquí */`,
+        solution: `/* Solución: Galería de Imágenes con Efectos Hover */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-// Función para mostrar el clima en la interfaz
-function mostrarClima(datos) {
-    // Tu código aquí
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+    padding: 2rem;
 }
 
-// Ejemplo de uso:
-obtenerClima('Bogotá');`,
-        solution: `// Aplicación del clima - Solución
-async function obtenerClima(ciudad) {
-    const API_KEY = 'tu_api_key_aqui'; // Reemplaza con tu API key real
-    const url = \`https://api.openweathermap.org/data/2.5/weather?q=\${ciudad}&appid=\${API_KEY}&units=metric&lang=es\`;
-    
-    try {
-        // Mostrar loading
-        mostrarLoading(true);
-        
-        const response = await fetch(url);
-        
-        if (!response.ok) {
-            throw new Error(\`Error \${response.status}: \${response.statusText}\`);
-        }
-        
-        const datos = await response.json();
-        mostrarClima(datos);
-        
-    } catch (error) {
-        console.error('Error al obtener el clima:', error);
-        mostrarError('No se pudo obtener la información del clima');
-    } finally {
-        mostrarLoading(false);
+/* Contenedor de la galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de imagen */
+.imagen-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-function mostrarClima(datos) {
-    const { name, main, weather, wind } = datos;
-    
-    const html = \`
-        <div class="clima-card">
-            <h2>\${name}</h2>
-            <div class="temperatura">\${Math.round(main.temp)}°C</div>
-            <div class="descripcion">\${weather[0].description}</div>
-            <div class="detalles">
-                <p>Sensación térmica: \${Math.round(main.feels_like)}°C</p>
-                <p>Humedad: \${main.humidity}%</p>
-                <p>Viento: \${wind.speed} m/s</p>
-            </div>
-        </div>
-    \`;
-    
-    document.getElementById('clima-container').innerHTML = html;
+/* Imagen */
+.imagen-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-function mostrarLoading(mostrar) {
-    const loading = document.getElementById('loading');
-    if (mostrar) {
-        loading.style.display = 'block';
-        loading.textContent = 'Cargando...';
-    } else {
-        loading.style.display = 'none';
+/* Overlay */
+.imagen-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.9), rgba(155, 89, 182, 0.9));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(20px);
+}
+
+/* Contenido del overlay */
+.overlay-content {
+    text-align: center;
+    color: white;
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.overlay-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+/* Botón del overlay */
+.overlay-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.overlay-btn:hover {
+    background: white;
+    color: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Efectos hover */
+.imagen-card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-card:hover img {
+    transform: scale(1.1);
+}
+
+.imagen-card:hover .imagen-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imagen-card:hover .overlay-content {
+    transform: translateY(0);
+}
+
+/* Efecto de rotación alternada */
+.imagen-card:nth-child(even):hover {
+    transform: translateY(-10px) rotate(-2deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
     }
-}
-
-function mostrarError(mensaje) {
-    const container = document.getElementById('clima-container');
-    container.innerHTML = \`<div class="error">\${mensaje}</div>\`;
-}
-
-// Ejemplo de uso:
-document.getElementById('buscar-btn').addEventListener('click', () => {
-    const ciudad = document.getElementById('ciudad-input').value;
-    if (ciudad.trim()) {
-        obtenerClima(ciudad);
+    
+    .imagen-card:hover {
+        transform: translateY(-5px);
     }
-});`
+    
+    .imagen-card:nth-child(even):hover {
+        transform: translateY(-5px);
+    }
+}`
       }
     ]
   },
@@ -1705,6 +3143,8 @@ document.getElementById('buscar-btn').addEventListener('click', () => {
     ],
     content: {
       theoretical: [
+        "¿Qué es JavaScript y cómo funciona?",
+        "Formas de ejecutar JavaScript: navegador, Node.js, editores online",
         "Variables: let, const, var y sus diferencias",
         "Tipos de datos: string, number, boolean, undefined, null",
         "Operadores: aritméticos, lógicos, de comparación",
@@ -1712,9 +3152,14 @@ document.getElementById('buscar-btn').addEventListener('click', () => {
         "Bucles: for, while, do-while",
         "Funciones: declaración, expresión, arrow functions",
         "Scope y hoisting en JavaScript",
-        "Coerción de tipos y comparaciones"
+        "Coerción de tipos y comparaciones",
+        "Mejores prácticas y errores comunes"
       ],
       theoreticalDetails: {
+        "¿Qué es JavaScript y cómo funciona?": "JavaScript es un lenguaje de programación **interpretado**, **dinámico** y **multiparadigma** que se ejecuta principalmente en navegadores web. Es el lenguaje que da vida a las páginas web, permitiendo interactividad, animaciones, validaciones y comunicación con servidores.\n\n**¿Cómo funciona JavaScript?**\n```javascript\n// 1. El navegador lee el código JavaScript\n// 2. El motor JavaScript (V8, SpiderMonkey, etc.) interpreta el código\n// 3. Se ejecuta línea por línea (single-threaded)\n// 4. Puede modificar el DOM, manejar eventos, hacer peticiones HTTP\n\nconsole.log(\"¡Hola desde JavaScript!\"); // Se ejecuta inmediatamente\n```\n\n**¿Para qué sirve JavaScript?**\n- **Interactividad web**: Botones, formularios, menús\n- **Manipulación del DOM**: Cambiar contenido dinámicamente\n- **Validación de datos**: Verificar formularios antes de enviar\n- **Animaciones**: Efectos visuales y transiciones\n- **Comunicación con servidores**: APIs, AJAX, fetch\n- **Aplicaciones web**: SPAs, PWAs, aplicaciones completas",
+
+        "Formas de ejecutar JavaScript: navegador, Node.js, editores online": "JavaScript se puede ejecutar en múltiples entornos, cada uno con sus ventajas específicas.\n\n**1. En el Navegador - Consola de Desarrollador**\n```javascript\n// Abrir DevTools (F12) → Console\n// Escribir código directamente:\n\nlet nombre = \"Juan\";\nconsole.log(\"Hola \" + nombre);\n// Resultado: Hola Juan\n```\n\n**2. En HTML - Etiqueta `<script>`**\n```html\n<!DOCTYPE html>\n<html>\n<body>\n    <h1>Hola Mundo</h1>\n    <script>\n        console.log(\"JavaScript ejecutándose en HTML\");\n        document.querySelector('h1').style.color = 'blue';\n    </script>\n</body>\n</html>\n```\n\n**3. Node.js - Consola de Terminal**\n```bash\n# Instalar Node.js desde nodejs.org\n# Abrir terminal y ejecutar:\n\nnode\n# Entrar al REPL (Read-Eval-Print Loop)\n\n> let x = 10;\n> let y = 20;\n> console.log(x + y);\n30\n> .exit\n```\n\n**4. Editores Online**\n- **CodePen**: codepen.io\n- **JSFiddle**: jsfiddle.net\n- **Repl.it**: repl.it\n- **CodeSandbox**: codesandbox.io",
+
         "Variables: let, const, var y sus diferencias": "JavaScript tiene tres formas de declarar variables: var (ES5), let y const (ES6). var tiene function scope y puede ser redeclarada, mientras que let y const tienen block scope. let puede ser reasignada pero no redeclarada en el mismo scope. const no puede ser reasignada ni redeclarada, pero si contiene un objeto, las propiedades del objeto sí pueden modificarse. Es recomendable usar const por defecto y let solo cuando necesites reasignar la variable.\n\n**Ejemplos:**\n```javascript\n// var - function scope, puede ser redeclarada\nvar nombre = 'Juan';\nvar nombre = 'Pedro'; // ✅ Permitido\n\n// let - block scope, no puede ser redeclarada\nlet edad = 25;\nlet edad = 30; // ❌ Error: redeclaración\n\n// const - no puede ser reasignada\nconst PI = 3.14159;\nPI = 3.14; // ❌ Error: reasignación\n\n// Pero las propiedades de objetos const sí pueden modificarse\nconst persona = { nombre: 'Ana' };\npersona.edad = 25; // ✅ Permitido\n```",
         
         "Tipos de datos: string, number, boolean, undefined, null": "JavaScript es un lenguaje de tipado dinámico con tipos primitivos: string (texto), number (números enteros y decimales), boolean (true/false), undefined (variable declarada sin valor), null (valor nulo intencional), symbol (ES6), y bigint (ES2020). También tiene tipos de referencia como object, array, function. Los tipos primitivos se pasan por valor, mientras que los objetos se pasan por referencia. typeof puede ayudar a identificar el tipo de una variable.\n\n**Ejemplos:**\n```javascript\n// Tipos primitivos\nlet texto = 'Hola mundo';        // string\nlet numero = 42;                 // number\nlet decimal = 3.14;              // number\nlet activo = true;              // boolean\nlet sinValor;                    // undefined\nlet nulo = null;                 // null\n\n// Tipos de referencia\nlet objeto = { nombre: 'Juan' }; // object\nlet lista = [1, 2, 3];          // object (array)\nlet funcion = () => {};         // function\n\n// Verificar tipos\nconsole.log(typeof texto);       // 'string'\nconsole.log(typeof numero);      // 'number'\nconsole.log(typeof activo);      // 'boolean'\nconsole.log(typeof objeto);      // 'object'\n```",
@@ -1729,42 +3174,55 @@ document.getElementById('buscar-btn').addEventListener('click', () => {
         
         "Scope y hoisting en JavaScript": "Scope determina la accesibilidad de variables. JavaScript tiene function scope (var) y block scope (let/const). Hoisting es el comportamiento donde las declaraciones se mueven al inicio de su scope. var se inicializa como undefined, mientras que let/const permanecen en 'temporal dead zone' hasta su declaración. Las funciones declaradas se hoistean completamente, mientras que las expresiones de función no. Entender scope y hoisting es crucial para evitar bugs comunes.",
         
-        "Coerción de tipos y comparaciones": "JavaScript convierte automáticamente tipos cuando es necesario (coerción). Esto puede causar comportamientos inesperados, especialmente con == vs ===. == permite coerción (1 == '1' es true), mientras que === es estricto (1 === '1' es false). Es recomendable usar siempre === para comparaciones. La coerción puede ser útil en algunos casos, como convertir strings a números con + o Number(), pero debe usarse conscientemente para evitar bugs."
+        "Coerción de tipos y comparaciones": "JavaScript convierte automáticamente tipos cuando es necesario (coerción). Esto puede causar comportamientos inesperados, especialmente con == vs ===. == permite coerción (1 == '1' es true), mientras que === es estricto (1 === '1' es false). Es recomendable usar siempre === para comparaciones. La coerción puede ser útil en algunos casos, como convertir strings a números con + o Number(), pero debe usarse conscientemente para evitar bugs.",
+
+        "Mejores prácticas y errores comunes": "**Mejores Prácticas:**\n\n1. **Nomenclatura de Variables**\n```javascript\n// ✅ Bueno - camelCase, descriptivo\nlet nombreUsuario = \"Juan\";\nlet edadUsuario = 25;\nlet esUsuarioActivo = true;\n\n// ❌ Malo - confuso, no descriptivo\nlet n = \"Juan\";\nlet e = 25;\nlet a = true;\n```\n\n2. **Uso de Constantes**\n```javascript\n// ✅ Usar const por defecto\nconst PI = 3.14159;\nconst NOMBRE_APLICACION = \"Mi App\";\n\n// ✅ Usar let solo cuando necesites cambiar\nlet contador = 0;\ncontador++; // Necesario cambiar el valor\n```\n\n3. **Comparaciones Estrictas**\n```javascript\n// ✅ Usar === (estricto)\nif (edad === 18) { }\n\n// ❌ Evitar == (con coerción)\nif (edad == \"18\") { } // Puede causar bugs\n```\n\n**Errores Comunes:**\n\n1. **Olvidar Declarar Variables**\n```javascript\n// ❌ Error - variable no declarada\nnombre = \"Juan\"; // ReferenceError\n\n// ✅ Correcto\nlet nombre = \"Juan\";\n```\n\n2. **Bucles Infinitos**\n```javascript\n// ❌ Bucle infinito\nlet i = 0;\nwhile (i < 10) {\n    console.log(i);\n    // Falta i++\n}\n\n// ✅ Correcto\nlet i = 0;\nwhile (i < 10) {\n    console.log(i);\n    i++; // Incrementar contador\n}\n```\n\n3. **No Manejar Errores**\n```javascript\n// ❌ Sin validación\nfunction dividir(a, b) {\n    return a / b; // Error si b = 0\n}\n\n// ✅ Con validación\nfunction dividir(a, b) {\n    if (b === 0) {\n        return \"Error: División por cero\";\n    }\n    return a / b;\n}\n```"
       },
       practical: [
+        "Configurar entorno de desarrollo JavaScript",
+        "Usar consola del navegador para probar código",
         "Declarar y usar variables correctamente",
         "Implementar condicionales y bucles",
         "Crear funciones para resolver problemas",
         "Ejercicios de lógica de programación",
-        "Desarrollar mini-proyectos básicos"
+        "Desarrollar mini-proyectos básicos",
+        "Practicar debugging y solución de errores"
       ]
     },
     activities: [
       {
+        title: "Configuración del entorno y primeras líneas de código",
+        duration: "30 min",
+        description: "Configurar entorno de desarrollo, usar consola del navegador y escribir primeras líneas de JavaScript"
+      },
+      {
         title: "Variables y tipos de datos",
         duration: "45 min",
-        description: "Declarar variables, trabajar con diferentes tipos de datos y operadores"
+        description: "Declarar variables con let, const, var, trabajar con diferentes tipos de datos y operadores"
       },
       {
         title: "Estructuras de control",
         duration: "60 min",
-        description: "Implementar condicionales y bucles para resolver problemas"
+        description: "Implementar condicionales (if/else, switch) y bucles (for, while) para resolver problemas"
       },
       {
         title: "Funciones básicas",
         duration: "45 min",
-        description: "Crear funciones, usar parámetros y valores de retorno"
+        description: "Crear funciones con diferentes sintaxis, usar parámetros y valores de retorno"
       }
     ],
     homework: [
       "Crear calculadora básica con JavaScript",
       "Implementar validación de formularios",
-      "Desarrollar juego de adivinanza de números"
+      "Desarrollar juego de adivinanza de números",
+      "Practicar en la consola del navegador diariamente"
     ],
     materials: [
-      "Editor de código (VS Code)",
-      "Navegador web",
-      "Consola de desarrollador"
+      "Editor de código (VS Code) con extensiones JavaScript",
+      "Navegador web (Chrome, Firefox, Safari)",
+      "Consola de desarrollador (DevTools)",
+      "Node.js (opcional para práctica avanzada)",
+      "Editores online: CodePen, JSFiddle, Repl.it"
     ],
     exercises: [
       {
@@ -1923,6 +3381,121 @@ function crearCalculadoraInteractiva() {
 
 // Ejecutar la calculadora
 crearCalculadoraInteractiva();`
+      },
+      {
+        title: "Validación de Edad",
+        description: "Crea una función que valide la edad y determine la categoría de la persona.",
+        code: `// Función para validar edad y categorizar persona
+function validarEdad(edad) {
+  // Tu código aquí
+  // Categorías:
+  // - 0-12: Niño
+  // - 13-17: Adolescente  
+  // - 18-64: Adulto
+  // - 65+: Adulto mayor
+  // - Edad negativa: Inválida
+}
+
+// Pruebas
+console.log(validarEdad(8));    // "Niño"
+console.log(validarEdad(15));   // "Adolescente"
+console.log(validarEdad(25));   // "Adulto"
+console.log(validarEdad(70));   // "Adulto mayor"
+console.log(validarEdad(-5));   // "Edad inválida"`,
+        solution: `// Solución completa de validación de edad
+
+function validarEdad(edad) {
+  // Validar que la edad sea un número
+  if (typeof edad !== 'number') {
+    return 'Error: La edad debe ser un número';
+  }
+  
+  // Validar que la edad no sea negativa
+  if (edad < 0) {
+    return 'Edad inválida';
+  }
+  
+  // Categorizar por edad
+  if (edad >= 0 && edad <= 12) {
+    return 'Niño';
+  } else if (edad >= 13 && edad <= 17) {
+    return 'Adolescente';
+  } else if (edad >= 18 && edad <= 64) {
+    return 'Adulto';
+  } else {
+    return 'Adulto mayor';
+  }
+}
+
+// Función para probar la validación
+function probarValidacionEdad() {
+  console.log('=== PRUEBAS DE VALIDACIÓN DE EDAD ===');
+  console.log('8 años:', validarEdad(8));      // Niño
+  console.log('15 años:', validarEdad(15));    // Adolescente
+  console.log('25 años:', validarEdad(25));    // Adulto
+  console.log('70 años:', validarEdad(70));    // Adulto mayor
+  console.log('-5 años:', validarEdad(-5));    // Edad inválida
+  console.log('Texto:', validarEdad('abc'));   // Error
+}
+
+// Ejecutar pruebas
+probarValidacionEdad();`
+      },
+      {
+        title: "Contador de Vocales",
+        description: "Crea una función que cuente las vocales en un texto dado.",
+        code: `// Función para contar vocales en un texto
+function contarVocales(texto) {
+  // Tu código aquí
+  // Debe contar: a, e, i, o, u (mayúsculas y minúsculas)
+  // Retornar el número total de vocales
+}
+
+// Pruebas
+console.log(contarVocales("Hola mundo"));        // 4 vocales
+console.log(contarVocales("JavaScript"));        // 3 vocales
+console.log(contarVocales("AEIOU"));             // 5 vocales
+console.log(contarVocales("123456"));            // 0 vocales`,
+        solution: `// Solución completa del contador de vocales
+
+function contarVocales(texto) {
+  // Validar que el texto sea un string
+  if (typeof texto !== 'string') {
+    return 'Error: El parámetro debe ser un texto';
+  }
+  
+  let contador = 0;
+  const vocales = ['a', 'e', 'i', 'o', 'u'];
+  
+  // Convertir texto a minúsculas para comparar
+  const textoMinusculas = texto.toLowerCase();
+  
+  // Iterar por cada carácter del texto
+  for (let i = 0; i < textoMinusculas.length; i++) {
+    const caracter = textoMinusculas[i];
+    
+    // Verificar si el carácter es una vocal
+    if (vocales.includes(caracter)) {
+      contador++;
+    }
+  }
+  
+  return contador;
+}
+
+// Función para probar el contador
+function probarContadorVocales() {
+  console.log('=== PRUEBAS DEL CONTADOR DE VOCALES ===');
+  console.log('"Hola mundo":', contarVocales("Hola mundo"));        // 4
+  console.log('"JavaScript":', contarVocales("JavaScript"));        // 3
+  console.log('"AEIOU":', contarVocales("AEIOU"));                  // 5
+  console.log('"123456":', contarVocales("123456"));                // 0
+  console.log('"":', contarVocales(""));                            // 0
+  console.log('Número:', contarVocales(123));                       // Error
+}
+
+// Ejecutar pruebas
+probarContadorVocales();`
       }
     ]
   },
@@ -1933,68 +3506,68 @@ crearCalculadoraInteractiva();`
     level: "Intermedio",
     completed: false,
     objectives: [
-      "Dominar arrays y objetos en JavaScript",
-      "Implementar métodos de arrays avanzados",
-      "Trabajar con funciones de orden superior",
-      "Desarrollar aplicaciones interactivas"
+      "Dominar conceptos avanzados de JavaScript",
+      "Implementar funciones de orden superior y callbacks",
+      "Trabajar con closures y scope avanzado",
+      "Desarrollar aplicaciones con manejo de errores"
     ],
     content: {
       theoretical: [
-        "Arrays: métodos map, filter, reduce, forEach",
-        "Objetos: propiedades, métodos, destructuring",
         "Funciones de orden superior y callbacks",
         "Closures y scope avanzado",
-        "Template literals y string methods",
+        "Template literals y string methods avanzados",
         "Date, Math y otros objetos nativos",
-        "Error handling: try-catch, throw",
-        "Programación funcional básica"
+        "Error handling: try-catch, throw, finally",
+        "Programación funcional básica",
+        "Async/Await y Promises básicas",
+        "Módulos ES6: import/export"
       ],
       theoreticalDetails: {
-        "Arrays: métodos map, filter, reduce, forEach": "Los métodos de arrays son funciones que permiten manipular y transformar arrays de manera funcional. map transforma cada elemento, filter selecciona elementos que cumplen una condición, reduce acumula valores, y forEach ejecuta una función para cada elemento. Son fundamentales para la programación funcional.\n\n**Ejemplos:**\n```javascript\n// Array de números\nconst numeros = [1, 2, 3, 4, 5];\n\n// map: Transformar cada elemento\nconst cuadrados = numeros.map(n => n * n);\nconsole.log(cuadrados); // [1, 4, 9, 16, 25]\n\n// filter: Filtrar elementos\nconst pares = numeros.filter(n => n % 2 === 0);\nconsole.log(pares); // [2, 4]\n\n// reduce: Acumular valores\nconst suma = numeros.reduce((acc, n) => acc + n, 0);\nconsole.log(suma); // 15\n\n// forEach: Ejecutar función para cada elemento\nnumeros.forEach(n => console.log(n));\n\n// Array de objetos\nconst personas = [\n  { nombre: 'Juan', edad: 25 },\n  { nombre: 'María', edad: 30 },\n  { nombre: 'Pedro', edad: 20 }\n];\n\n// map con objetos\nconst nombres = personas.map(p => p.nombre);\nconsole.log(nombres); // ['Juan', 'María', 'Pedro']\n\n// filter con objetos\nconst mayores = personas.filter(p => p.edad >= 25);\nconsole.log(mayores); // [{ nombre: 'Juan', edad: 25 }, { nombre: 'María', edad: 30 }]\n\n// reduce con objetos\nconst edadPromedio = personas.reduce((acc, p) => acc + p.edad, 0) / personas.length;\nconsole.log(edadPromedio); // 25\n```",
-        
-        "Objetos: propiedades, métodos, destructuring": "Los objetos en JavaScript son colecciones de propiedades clave-valor. Se pueden acceder a propiedades con notación de punto o corchetes, agregar métodos, y usar destructuring para extraer valores. Los objetos son fundamentales para organizar datos y comportamiento.\n\n**Ejemplos:**\n```javascript\n// Crear objeto\nconst persona = {\n  nombre: 'Juan',\n  edad: 25,\n  ciudad: 'Madrid',\n  saludar: function() {\n    return `Hola, soy ${this.nombre}`;\n  }\n};\n\n// Acceder a propiedades\nconsole.log(persona.nombre); // Juan\nconsole.log(persona['edad']); // 25\n\n// Agregar propiedades\npersona.profesion = 'Desarrollador';\npersona.cumpleanos = function() {\n  this.edad++;\n};\n\n// Destructuring\nconst { nombre, edad } = persona;\nconsole.log(nombre, edad); // Juan 25\n\n// Destructuring con renombrado\nconst { nombre: nombreCompleto } = persona;\nconsole.log(nombreCompleto); // Juan\n\n// Destructuring con valores por defecto\nconst { nombre, edad, telefono = 'No disponible' } = persona;\nconsole.log(telefono); // No disponible\n\n// Destructuring de arrays\nconst colores = ['rojo', 'verde', 'azul'];\nconst [primero, segundo] = colores;\nconsole.log(primero, segundo); // rojo verde\n\n// Destructuring de objetos anidados\nconst usuario = {\n  nombre: 'Ana',\n  direccion: {\n    calle: 'Calle Mayor',\n    numero: 123\n  }\n};\n\nconst { direccion: { calle } } = usuario;\nconsole.log(calle); // Calle Mayor\n```",
-        
         "Funciones de orden superior y callbacks": "Las funciones de orden superior son funciones que toman otras funciones como parámetros o devuelven funciones. Los callbacks son funciones que se pasan como argumentos y se ejecutan en un momento específico. Son fundamentales para la programación asíncrona y funcional.\n\n**Ejemplos:**\n```javascript\n// Función de orden superior\nfunction procesarDatos(datos, callback) {\n  const resultado = datos.map(callback);\n  return resultado;\n}\n\n// Usar callback\nconst numeros = [1, 2, 3, 4, 5];\nconst cuadrados = procesarDatos(numeros, n => n * n);\nconsole.log(cuadrados); // [1, 4, 9, 16, 25]\n\n// Callback con setTimeout\nsetTimeout(() => {\n  console.log('Hola después de 1 segundo');\n}, 1000);\n\n// Callback con addEventListener\ndocument.addEventListener('click', function(event) {\n  console.log('Click en:', event.target);\n});\n\n// Función que devuelve función\nfunction crearMultiplicador(factor) {\n  return function(numero) {\n    return numero * factor;\n  };\n}\n\nconst multiplicarPor2 = crearMultiplicador(2);\nconsole.log(multiplicarPor2(5)); // 10\n\n// Callback con fetch\nfetch('https://api.ejemplo.com/datos')\n  .then(response => response.json())\n  .then(data => {\n    console.log('Datos recibidos:', data);\n  })\n  .catch(error => {\n    console.error('Error:', error);\n  });\n\n// Función de orden superior personalizada\nfunction filtrarYTransformar(array, filtro, transformacion) {\n  return array\n    .filter(filtro)\n    .map(transformacion);\n}\n\nconst resultado = filtrarYTransformar(\n  [1, 2, 3, 4, 5],\n  n => n % 2 === 0,\n  n => n * 2\n);\nconsole.log(resultado); // [4, 8]\n```",
         
         "Closures y scope avanzado": "Un closure es una función que tiene acceso a variables de su scope externo incluso después de que la función externa haya terminado. El scope determina dónde se puede acceder a una variable. Los closures son fundamentales para crear funciones privadas y mantener estado.\n\n**Ejemplos:**\n```javascript\n// Closure básico\nfunction crearContador() {\n  let contador = 0;\n  return function() {\n    contador++;\n    return contador;\n  };\n}\n\nconst miContador = crearContador();\nconsole.log(miContador()); // 1\nconsole.log(miContador()); // 2\nconsole.log(miContador()); // 3\n\n// Closure con parámetros\nfunction crearMultiplicador(factor) {\n  return function(numero) {\n    return numero * factor;\n  };\n}\n\nconst multiplicarPor3 = crearMultiplicador(3);\nconsole.log(multiplicarPor3(4)); // 12\n\n// Closure para crear funciones privadas\nfunction crearPersona(nombre) {\n  let edad = 0;\n  \n  return {\n    obtenerNombre: () => nombre,\n    obtenerEdad: () => edad,\n    cumplirAnos: () => {\n      edad++;\n      return edad;\n    }\n  };\n}\n\nconst persona = crearPersona('Juan');\nconsole.log(persona.obtenerNombre()); // Juan\nconsole.log(persona.cumplirAnos()); // 1\n\n// Scope con var, let, const\nfunction demostrarScope() {\n  var varVariable = 'var';\n  let letVariable = 'let';\n  const constVariable = 'const';\n  \n  if (true) {\n    var varVariable2 = 'var2';\n    let letVariable2 = 'let2';\n    const constVariable2 = 'const2';\n  }\n  \n  console.log(varVariable); // var\n  console.log(varVariable2); // var2 (hoisting)\n  // console.log(letVariable2); // Error: no definida\n  // console.log(constVariable2); // Error: no definida\n}\n\n// Closure con bucle\nfunction crearFunciones() {\n  const funciones = [];\n  \n  for (let i = 0; i < 3; i++) {\n    funciones.push(function() {\n      return i;\n    });\n  }\n  \n  return funciones;\n}\n\nconst funciones = crearFunciones();\nconsole.log(funciones[0]()); // 0\nconsole.log(funciones[1]()); // 1\nconsole.log(funciones[2]()); // 2\n```",
         
-        "Template literals y string methods": "Los template literals permiten crear strings con interpolación de variables y expresiones. Los métodos de string proporcionan funcionalidades para manipular texto. Son herramientas esenciales para trabajar con texto en JavaScript.\n\n**Ejemplos:**\n```javascript\n// Template literals básicos\nconst nombre = 'Juan';\nconst edad = 25;\nconst mensaje = `Hola, soy ${nombre} y tengo ${edad} años`;\nconsole.log(mensaje); // Hola, soy Juan y tengo 25 años\n\n// Template literals con expresiones\nconst precio = 100;\nconst descuento = 0.1;\nconst total = `Precio: $${precio}, Descuento: ${descuento * 100}%, Total: $${precio * (1 - descuento)}`;\nconsole.log(total); // Precio: $100, Descuento: 10%, Total: $90\n\n// Template literals multilinea\nconst html = `\n  <div class=\"usuario\">\n    <h2>${nombre}</h2>\n    <p>Edad: ${edad}</p>\n  </div>\n`;\nconsole.log(html);\n\n// Métodos de string\nconst texto = 'Hola Mundo JavaScript';\n\nconsole.log(texto.length); // 22\nconsole.log(texto.toUpperCase()); // HOLA MUNDO JAVASCRIPT\nconsole.log(texto.toLowerCase()); // hola mundo javascript\nconsole.log(texto.indexOf('Mundo')); // 5\nconsole.log(texto.includes('JavaScript')); // true\nconsole.log(texto.startsWith('Hola')); // true\nconsole.log(texto.endsWith('Script')); // true\n\n// Métodos de manipulación\nconsole.log(texto.replace('Mundo', 'Universo')); // Hola Universo JavaScript\nconsole.log(texto.substring(5, 10)); // Mundo\nconsole.log(texto.slice(-10)); // JavaScript\nconsole.log(texto.split(' ')); // ['Hola', 'Mundo', 'JavaScript']\n\n// Trim y padding\nconst textoConEspacios = '  Hola  ';\nconsole.log(textoConEspacios.trim()); // Hola\nconsole.log(texto.padStart(30, '*')); // ********Hola Mundo JavaScript\nconsole.log(texto.padEnd(30, '*')); // Hola Mundo JavaScript********\n\n// Template literals con funciones\nfunction formatearFecha(fecha) {\n  return `Fecha: ${fecha.getDate()}/${fecha.getMonth() + 1}/${fecha.getFullYear()}`;\n}\n\nconst hoy = new Date();\nconsole.log(formatearFecha(hoy)); // Fecha: 15/12/2024\n```",
+        "Template literals y string methods avanzados": "Los template literals permiten crear strings con interpolación de variables y expresiones. Los métodos de string proporcionan funcionalidades avanzadas para manipular texto. Son herramientas esenciales para trabajar con texto en JavaScript de manera eficiente.\n\n**Ejemplos:**\n```javascript\n// Template literals con funciones\nfunction formatearUsuario(usuario) {\n  return `\n    <div class=\"usuario-card\">\n      <h3>${usuario.nombre.toUpperCase()}</h3>\n      <p>Email: ${usuario.email}</p>\n      <p>Edad: ${usuario.edad} años</p>\n      <p>Estado: ${usuario.activo ? 'Activo' : 'Inactivo'}</p>\n    </div>\n  `;\n}\n\nconst usuario = { nombre: 'Juan', email: 'juan@ejemplo.com', edad: 25, activo: true };\nconsole.log(formatearUsuario(usuario));\n\n// Template literals con expresiones complejas\nconst productos = [\n  { nombre: 'Laptop', precio: 1000, descuento: 0.1 },\n  { nombre: 'Mouse', precio: 25, descuento: 0.05 }\n];\n\nconst resumen = productos.map(producto => \n  `${producto.nombre}: $${producto.precio} (Descuento: ${producto.descuento * 100}%) = $${producto.precio * (1 - producto.descuento)}`\n).join('\\n');\n\nconsole.log(resumen);\n\n// Métodos de string avanzados\nconst texto = 'JavaScript es genial para desarrollo web';\n\n// Métodos de búsqueda y validación\nconsole.log(texto.includes('JavaScript')); // true\nconsole.log(texto.startsWith('JavaScript')); // true\nconsole.log(texto.endsWith('web')); // true\nconsole.log(texto.indexOf('genial')); // 15\nconsole.log(texto.lastIndexOf('a')); // 25\n\n// Métodos de manipulación avanzada\nconst email = '  USUARIO@EJEMPLO.COM  ';\nconst emailLimpio = email.trim().toLowerCase();\nconsole.log(emailLimpio); // usuario@ejemplo.com\n\n// Validación de email simple\nfunction validarEmail(email) {\n  const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n  return emailRegex.test(email.trim());\n}\n\nconsole.log(validarEmail('usuario@ejemplo.com')); // true\nconsole.log(validarEmail('email-invalido')); // false\n\n// Formateo de texto\nconst numero = 1234.5678;\nconst numeroFormateado = numero.toLocaleString('es-ES', {\n  style: 'currency',\n  currency: 'EUR'\n});\nconsole.log(numeroFormateado); // 1.234,57 €\n\n// Template literals con tagged templates\nfunction etiquetar(strings, ...valores) {\n  return strings.reduce((resultado, string, i) => {\n    const valor = valores[i] ? `[${valores[i]}]` : '';\n    return resultado + string + valor;\n  }, '');\n}\n\nconst nombre = 'Juan';\nconst edad = 25;\nconst mensaje = etiquetar`Hola ${nombre}, tienes ${edad} años`;\nconsole.log(mensaje); // Hola [Juan], tienes [25] años\n\n// Métodos de string para procesamiento de datos\nconst csvData = 'nombre,edad,ciudad\\nJuan,25,Madrid\\nMaría,30,Barcelona';\nconst lineas = csvData.split('\\n');\nconst headers = lineas[0].split(',');\nconst datos = lineas.slice(1).map(linea => {\n  const valores = linea.split(',');\n  return headers.reduce((obj, header, i) => {\n    obj[header] = valores[i];\n    return obj;\n  }, {});\n});\n\nconsole.log(datos); // [{ nombre: 'Juan', edad: '25', ciudad: 'Madrid' }, ...]\n```",
         
         "Date, Math y otros objetos nativos": "JavaScript proporciona objetos nativos para trabajar con fechas, matemáticas y otras funcionalidades comunes. Date maneja fechas y horas, Math proporciona funciones matemáticas, y otros objetos como JSON, RegExp ofrecen utilidades adicionales.\n\n**Ejemplos:**\n```javascript\n// Objeto Date\nconst ahora = new Date();\nconsole.log(ahora); // Fecha actual\n\nconst fechaEspecifica = new Date('2024-12-25');\nconsole.log(fechaEspecifica); // 25 de diciembre de 2024\n\n// Métodos de Date\nconsole.log(ahora.getFullYear()); // 2024\nconsole.log(ahora.getMonth()); // 11 (diciembre, 0-indexado)\nconsole.log(ahora.getDate()); // 15\nconsole.log(ahora.getDay()); // 0 (domingo)\nconsole.log(ahora.getHours()); // 14\nconsole.log(ahora.getMinutes()); // 30\n\n// Formatear fecha\nconst fechaFormateada = ahora.toLocaleDateString('es-ES');\nconsole.log(fechaFormateada); // 15/12/2024\n\n// Objeto Math\nconsole.log(Math.PI); // 3.141592653589793\nconsole.log(Math.E); // 2.718281828459045\nconsole.log(Math.abs(-5)); // 5\nconsole.log(Math.ceil(4.1)); // 5\nconsole.log(Math.floor(4.9)); // 4\nconsole.log(Math.round(4.5)); // 5\nconsole.log(Math.max(1, 5, 3)); // 5\nconsole.log(Math.min(1, 5, 3)); // 1\nconsole.log(Math.random()); // Número aleatorio entre 0 y 1\nconsole.log(Math.sqrt(16)); // 4\nconsole.log(Math.pow(2, 3)); // 8\n\n// Generar número aleatorio en rango\nfunction numeroAleatorio(min, max) {\n  return Math.floor(Math.random() * (max - min + 1)) + min;\n}\nconsole.log(numeroAleatorio(1, 10)); // Número entre 1 y 10\n\n// Objeto JSON\nconst objeto = { nombre: 'Juan', edad: 25 };\nconst jsonString = JSON.stringify(objeto);\nconsole.log(jsonString); // '{\"nombre\":\"Juan\",\"edad\":25}'\n\nconst objetoParseado = JSON.parse(jsonString);\nconsole.log(objetoParseado); // { nombre: 'Juan', edad: 25 }\n\n// Objeto RegExp\nconst patron = /\\d+/g;\nconst texto = 'Tengo 25 años y 3 hermanos';\nconst numeros = texto.match(patron);\nconsole.log(numeros); // ['25', '3']\n\n// Validar email\nconst emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\nconst email = 'usuario@ejemplo.com';\nconsole.log(emailPattern.test(email)); // true\n```",
         
-        "Error handling: try-catch, throw": "El manejo de errores permite controlar situaciones excepcionales en el código. try-catch captura errores, throw lanza errores personalizados, y finally ejecuta código independientemente del resultado. Es fundamental para crear aplicaciones robustas.\n\n**Ejemplos:**\n```javascript\n// Try-catch básico\ntry {\n  const resultado = 10 / 0;\n  console.log(resultado);\n} catch (error) {\n  console.error('Error:', error.message);\n}\n\n// Try-catch con finally\ntry {\n  console.log('Ejecutando código...');\n  throw new Error('Error personalizado');\n} catch (error) {\n  console.error('Error capturado:', error.message);\n} finally {\n  console.log('Siempre se ejecuta');\n}\n\n// Lanzar errores personalizados\nfunction dividir(a, b) {\n  if (b === 0) {\n    throw new Error('División por cero no permitida');\n  }\n  return a / b;\n}\n\ntry {\n  const resultado = dividir(10, 0);\n  console.log(resultado);\n} catch (error) {\n  console.error('Error:', error.message);\n}\n\n// Manejo de errores con fetch\nasync function obtenerDatos(url) {\n  try {\n    const response = await fetch(url);\n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n    const data = await response.json();\n    return data;\n  } catch (error) {\n    console.error('Error al obtener datos:', error.message);\n    return null;\n  }\n}\n\n// Validación con errores personalizados\nfunction validarEmail(email) {\n  if (!email) {\n    throw new Error('Email es requerido');\n  }\n  if (!email.includes('@')) {\n    throw new Error('Email debe contener @');\n  }\n  return true;\n}\n\ntry {\n  validarEmail('usuario@ejemplo.com');\n  console.log('Email válido');\n} catch (error) {\n  console.error('Error de validación:', error.message);\n}\n\n// Manejo de errores en arrays\ntry {\n  const numeros = [1, 2, 3];\n  const resultado = numeros.map(n => {\n    if (n === 2) {\n      throw new Error('Número 2 no permitido');\n    }\n    return n * 2;\n  });\n  console.log(resultado);\n} catch (error) {\n  console.error('Error en procesamiento:', error.message);\n}\n```",
+        "Error handling: try-catch, throw, finally": "El manejo de errores permite controlar situaciones excepcionales en el código. try-catch captura errores, throw lanza errores personalizados, y finally ejecuta código independientemente del resultado. Es fundamental para crear aplicaciones robustas.\n\n**Ejemplos:**\n```javascript\n// Try-catch básico\ntry {\n  const resultado = 10 / 0;\n  console.log(resultado);\n} catch (error) {\n  console.error('Error:', error.message);\n}\n\n// Try-catch con finally\ntry {\n  console.log('Ejecutando código...');\n  throw new Error('Error personalizado');\n} catch (error) {\n  console.error('Error capturado:', error.message);\n} finally {\n  console.log('Siempre se ejecuta');\n}\n\n// Lanzar errores personalizados\nfunction dividir(a, b) {\n  if (b === 0) {\n    throw new Error('División por cero no permitida');\n  }\n  return a / b;\n}\n\ntry {\n  const resultado = dividir(10, 0);\n  console.log(resultado);\n} catch (error) {\n  console.error('Error:', error.message);\n}\n\n// Manejo de errores con fetch\nasync function obtenerDatos(url) {\n  try {\n    const response = await fetch(url);\n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n    const data = await response.json();\n    return data;\n  } catch (error) {\n    console.error('Error al obtener datos:', error.message);\n    return null;\n  }\n}\n\n// Validación con errores personalizados\nfunction validarEmail(email) {\n  if (!email) {\n    throw new Error('Email es requerido');\n  }\n  if (!email.includes('@')) {\n    throw new Error('Email debe contener @');\n  }\n  return true;\n}\n\ntry {\n  validarEmail('usuario@ejemplo.com');\n  console.log('Email válido');\n} catch (error) {\n  console.error('Error de validación:', error.message);\n}\n\n// Manejo de errores en arrays\ntry {\n  const numeros = [1, 2, 3];\n  const resultado = numeros.map(n => {\n    if (n === 2) {\n      throw new Error('Número 2 no permitido');\n    }\n    return n * 2;\n  });\n  console.log(resultado);\n} catch (error) {\n  console.error('Error en procesamiento:', error.message);\n}\n```",
+        
+        "Async/Await y Promises básicas": "Las Promises y async/await permiten manejar operaciones asíncronas de manera más elegante. Las Promises representan un valor que puede estar disponible ahora, en el futuro, o nunca. async/await es una sintaxis más limpia para trabajar con Promises.\n\n**Ejemplos:**\n```javascript\n// Promise básica\nconst miPromise = new Promise((resolve, reject) => {\n  const exito = true;\n  \n  if (exito) {\n    resolve('Operación exitosa');\n  } else {\n    reject('Operación falló');\n  }\n});\n\nmiPromise\n  .then(resultado => console.log(resultado))\n  .catch(error => console.error(error));\n\n// Promise con setTimeout\nfunction esperar(ms) {\n  return new Promise(resolve => {\n    setTimeout(resolve, ms);\n  });\n}\n\nconsole.log('Inicio');\nesperar(1000)\n  .then(() => console.log('Después de 1 segundo'));\n\n// Async/Await\nasync function procesoAsincrono() {\n  try {\n    console.log('Iniciando proceso...');\n    await esperar(1000);\n    console.log('Paso 1 completado');\n    \n    await esperar(1000);\n    console.log('Paso 2 completado');\n    \n    return 'Proceso completado';\n  } catch (error) {\n    console.error('Error en proceso:', error);\n  }\n}\n\nprocesoAsincrono();\n\n// Fetch con async/await\nasync function obtenerUsuario(id) {\n  try {\n    const response = await fetch(`https://api.ejemplo.com/usuarios/${id}`);\n    if (!response.ok) {\n      throw new Error(`Error HTTP: ${response.status}`);\n    }\n    const usuario = await response.json();\n    return usuario;\n  } catch (error) {\n    console.error('Error al obtener usuario:', error.message);\n    return null;\n  }\n}\n\n// Usar la función\nobtenerUsuario(1).then(usuario => {\n  if (usuario) {\n    console.log('Usuario obtenido:', usuario);\n  }\n});\n\n// Múltiples Promises\nasync function obtenerDatosMultiples() {\n  try {\n    const [usuarios, posts, comentarios] = await Promise.all([\n      fetch('https://api.ejemplo.com/usuarios').then(r => r.json()),\n      fetch('https://api.ejemplo.com/posts').then(r => r.json()),\n      fetch('https://api.ejemplo.com/comentarios').then(r => r.json())\n    ]);\n    \n    return { usuarios, posts, comentarios };\n  } catch (error) {\n    console.error('Error al obtener datos:', error);\n    return null;\n  }\n}\n\n// Promise.race - la primera que se resuelve\nasync function obtenerDatosRapido() {\n  const promise1 = fetch('https://api.lenta.com/datos');\n  const promise2 = fetch('https://api.rapida.com/datos');\n  \n  try {\n    const response = await Promise.race([promise1, promise2]);\n    return await response.json();\n  } catch (error) {\n    console.error('Error:', error);\n  }\n}\n```",
+        
+        "Módulos ES6: import/export": "Los módulos ES6 permiten dividir el código en archivos separados y reutilizar código entre diferentes partes de la aplicación. export permite exportar funciones, variables o clases, e import permite importarlas en otros archivos.\n\n**Ejemplos:**\n```javascript\n// archivo: utils.js\n// Exportación nombrada\nexport function sumar(a, b) {\n  return a + b;\n}\n\nexport function restar(a, b) {\n  return a - b;\n}\n\nexport const PI = 3.14159;\n\n// Exportación por defecto\nexport default function multiplicar(a, b) {\n  return a * b;\n}\n\n// archivo: math.js\n// Exportación de múltiples elementos\nconst sumar = (a, b) => a + b;\nconst restar = (a, b) => a - b;\nconst multiplicar = (a, b) => a * b;\nconst dividir = (a, b) => a / b;\n\n// Exportar todo junto\nexport { sumar, restar, multiplicar, dividir };\n\n// Exportar con nombres diferentes\nexport { sumar as add, restar as subtract };\n\n// archivo: main.js\n// Importación nombrada\nimport { sumar, restar, PI } from './utils.js';\nimport { multiplicar, dividir } from './math.js';\n\n// Importación por defecto\nimport multiplicarDefault from './utils.js';\n\n// Importación con alias\nimport { sumar as add, restar as subtract } from './utils.js';\n\n// Importación de todo\nimport * as utils from './utils.js';\nconsole.log(utils.sumar(2, 3)); // 5\n\n// Importación mixta\nimport multiplicarDefault, { sumar, restar } from './utils.js';\n\n// Uso de las funciones importadas\nconsole.log(sumar(5, 3)); // 8\nconsole.log(restar(5, 3)); // 2\nconsole.log(multiplicar(5, 3)); // 15\nconsole.log(PI); // 3.14159\n\n// archivo: user.js\n// Clase exportada\nexport class Usuario {\n  constructor(nombre, email) {\n    this.nombre = nombre;\n    this.email = email;\n  }\n  \n  saludar() {\n    return `Hola, soy ${this.nombre}`;\n  }\n}\n\n// Función exportada\nexport function crearUsuario(nombre, email) {\n  return new Usuario(nombre, email);\n}\n\n// archivo: app.js\n// Importar clase y función\nimport { Usuario, crearUsuario } from './user.js';\n\nconst usuario1 = new Usuario('Juan', 'juan@ejemplo.com');\nconst usuario2 = crearUsuario('María', 'maria@ejemplo.com');\n\nconsole.log(usuario1.saludar()); // Hola, soy Juan\nconsole.log(usuario2.saludar()); // Hola, soy María\n\n// Re-exportación\n// archivo: index.js\nexport { sumar, restar } from './math.js';\nexport { Usuario } from './user.js';\nexport { default as multiplicar } from './utils.js';\n\n// archivo: main.js\n// Importar desde el archivo índice\nimport { sumar, Usuario, multiplicar } from './index.js';\n```",
         
         "Programación funcional básica": "La programación funcional es un paradigma que trata la computación como la evaluación de funciones matemáticas. Se enfoca en funciones puras, inmutabilidad, y composición de funciones. JavaScript soporta este paradigma con características como funciones de orden superior y métodos de arrays.\n\n**Ejemplos:**\n```javascript\n// Función pura (sin efectos secundarios)\nfunction sumar(a, b) {\n  return a + b;\n}\n\n// Función impura (con efectos secundarios)\nlet contador = 0;\nfunction incrementar() {\n  contador++;\n  return contador;\n}\n\n// Inmutabilidad\nconst numeros = [1, 2, 3, 4, 5];\nconst numerosDuplicados = numeros.map(n => n * 2);\nconsole.log(numeros); // [1, 2, 3, 4, 5] (sin cambios)\nconsole.log(numerosDuplicados); // [2, 4, 6, 8, 10]\n\n// Composición de funciones\nfunction sumar(a, b) {\n  return a + b;\n}\n\nfunction multiplicar(a, b) {\n  return a * b;\n}\n\nfunction componer(f, g) {\n  return function(x) {\n    return f(g(x));\n  };\n}\n\nconst sumarYMultiplicar = componer(x => x * 2, x => x + 1);\nconsole.log(sumarYMultiplicar(3)); // 8 ((3 + 1) * 2)\n\n// Funciones de orden superior\nfunction crearFiltro(condicion) {\n  return function(array) {\n    return array.filter(condicion);\n  };\n}\n\nconst filtrarPares = crearFiltro(n => n % 2 === 0);\nconst filtrarImpares = crearFiltro(n => n % 2 !== 0);\n\nconsole.log(filtrarPares([1, 2, 3, 4, 5])); // [2, 4]\nconsole.log(filtrarImpares([1, 2, 3, 4, 5])); // [1, 3, 5]\n\n// Currying\nfunction curriedSum(a) {\n  return function(b) {\n    return function(c) {\n      return a + b + c;\n    };\n  };\n}\n\nconst sumar3 = curriedSum(1)(2)(3);\nconsole.log(sumar3); // 6\n\n// Pipeline de funciones\nfunction pipe(...funciones) {\n  return function(valor) {\n    return funciones.reduce((acc, fn) => fn(acc), valor);\n  };\n}\n\nconst procesarTexto = pipe(\n  texto => texto.toUpperCase(),\n  texto => texto.replace(/\\s/g, '-'),\n  texto => `Resultado: ${texto}`\n);\n\nconsole.log(procesarTexto('hola mundo')); // Resultado: HOLA-MUNDO\n\n// Función de orden superior para crear validadores\nfunction crearValidador(regla) {\n  return function(valor) {\n    return regla(valor);\n  };\n}\n\nconst esPositivo = crearValidador(n => n > 0);\nconst esPar = crearValidador(n => n % 2 === 0);\n\nconsole.log(esPositivo(5)); // true\nconsole.log(esPar(4)); // true\n```"
       },
       practical: [
-        "Manipular arrays con métodos avanzados",
-        "Trabajar con objetos y destructuring",
-        "Crear funciones reutilizables",
-        "Implementar manejo de errores",
-        "Desarrollar calculadora interactiva"
+        "Implementar funciones de orden superior",
+        "Trabajar con closures y scope",
+        "Crear funciones con manejo de errores",
+        "Desarrollar aplicaciones con async/await",
+        "Organizar código con módulos ES6"
       ]
     },
     activities: [
       {
-        title: "Métodos de arrays",
+        title: "Funciones de orden superior",
         duration: "60 min",
-        description: "Trabajar con map, filter, reduce y otros métodos de arrays"
+        description: "Crear y usar funciones que toman otras funciones como parámetros"
       },
       {
-        title: "Objetos y destructuring",
+        title: "Closures y scope",
         duration: "45 min",
-        description: "Manipular objetos y usar destructuring assignment"
+        description: "Implementar closures y entender el scope avanzado"
       },
       {
-        title: "Funciones avanzadas",
+        title: "Manejo de errores y async/await",
         duration: "45 min",
-        description: "Crear funciones de orden superior y manejar errores"
+        description: "Implementar try-catch y trabajar con Promises"
       }
     ],
     homework: [
-      "Crear lista de tareas con métodos de arrays",
-      "Implementar calculadora científica",
-      "Desarrollar juego de memoria con objetos"
+      "Crear calculadora con funciones de orden superior",
+      "Implementar sistema de validación con manejo de errores",
+      "Desarrollar aplicación con módulos ES6"
     ],
     materials: [
       "Editor de código (VS Code)",
@@ -2003,138 +3576,220 @@ crearCalculadoraInteractiva();`
     ],
     exercises: [
       {
-        title: "Lista de Tareas con Arrays",
-        description: "Crea una aplicación de lista de tareas usando métodos de arrays avanzados.",
-        code: `// Lista de tareas con métodos de arrays
-class ListaTareas {
+        title: "Sistema de Validación con Funciones de Orden Superior",
+        description: "Crea un sistema de validación usando funciones de orden superior, closures y manejo de errores.",
+        code: `// Sistema de validación con funciones de orden superior
+class Validador {
   constructor() {
-    this.tareas = [];
+    this.reglas = [];
   }
   
-  // Agregar nueva tarea
-  agregarTarea(titulo, descripcion, prioridad = 'media') {
+  // Agregar regla de validación
+  agregarRegla(campo, regla) {
     // Tu código aquí
   }
   
-  // Marcar tarea como completada
-  completarTarea(id) {
+  // Validar un objeto completo
+  validar(objeto) {
     // Tu código aquí
   }
   
-  // Filtrar tareas por prioridad
-  filtrarPorPrioridad(prioridad) {
+  // Crear validador personalizado
+  crearValidadorPersonalizado(regla) {
     // Tu código aquí
+  }
   }
   
-  // Obtener estadísticas
-  obtenerEstadisticas() {
+// Funciones de validación
+function esEmail(email) {
     // Tu código aquí
   }
+
+function esRequerido(valor) {
+  // Tu código aquí
+}
+
+function longitudMinima(min) {
+  // Tu código aquí
 }
 
 // Ejemplo de uso
-const lista = new ListaTareas();`,
-        solution: `// Lista de tareas con métodos de arrays - Solución
-class ListaTareas {
+const validador = new Validador();`,
+        solution: `// Sistema de validación con funciones de orden superior - Solución
+class Validador {
   constructor() {
-    this.tareas = [];
-    this.contadorId = 1;
+    this.reglas = new Map();
   }
   
-  // Agregar nueva tarea
-  agregarTarea(titulo, descripcion, prioridad = 'media') {
-    const nuevaTarea = {
-      id: this.contadorId++,
-      titulo,
-      descripcion,
-      prioridad,
-      completada: false,
-      fechaCreacion: new Date()
-    };
-    
-    this.tareas.push(nuevaTarea);
-    return nuevaTarea;
-  }
-  
-  // Marcar tarea como completada
-  completarTarea(id) {
-    const tarea = this.tareas.find(t => t.id === id);
-    if (tarea) {
-      tarea.completada = true;
-      tarea.fechaCompletada = new Date();
-      return true;
+  // Agregar regla de validación
+  agregarRegla(campo, regla) {
+    if (!this.reglas.has(campo)) {
+      this.reglas.set(campo, []);
     }
-    return false;
+    this.reglas.get(campo).push(regla);
   }
   
-  // Filtrar tareas por prioridad
-  filtrarPorPrioridad(prioridad) {
-    return this.tareas.filter(tarea => tarea.prioridad === prioridad);
-  }
-  
-  // Obtener estadísticas
-  obtenerEstadisticas() {
-    const total = this.tareas.length;
-    const completadas = this.tareas.filter(t => t.completada).length;
-    const pendientes = total - completadas;
+  // Validar un objeto completo
+  validar(objeto) {
+    const errores = {};
     
-    const porPrioridad = this.tareas.reduce((acc, tarea) => {
-      acc[tarea.prioridad] = (acc[tarea.prioridad] || 0) + 1;
-      return acc;
-    }, {});
+    for (const [campo, reglas] of this.reglas) {
+      const valor = objeto[campo];
+      const erroresCampo = [];
+      
+      for (const regla of reglas) {
+        try {
+          const resultado = regla(valor);
+          if (resultado !== true) {
+            erroresCampo.push(resultado);
+          }
+        } catch (error) {
+          erroresCampo.push(error.message);
+        }
+      }
+      
+      if (erroresCampo.length > 0) {
+        errores[campo] = erroresCampo;
+      }
+    }
     
     return {
-      total,
-      completadas,
-      pendientes,
-      porcentajeCompletadas: total > 0 ? Math.round((completadas / total) * 100) : 0,
-      porPrioridad
+      esValido: Object.keys(errores).length === 0,
+      errores
     };
   }
   
-  // Métodos adicionales usando arrays
-  obtenerTareasPendientes() {
-    return this.tareas.filter(tarea => !tarea.completada);
-  }
-  
-  obtenerTareasCompletadas() {
-    return this.tareas.filter(tarea => tarea.completada);
-  }
-  
-  buscarTareas(termino) {
-    return this.tareas.filter(tarea => 
-      tarea.titulo.toLowerCase().includes(termino.toLowerCase()) ||
-      tarea.descripcion.toLowerCase().includes(termino.toLowerCase())
-    );
-  }
-  
-  ordenarPorPrioridad() {
-    const ordenPrioridad = { alta: 3, media: 2, baja: 1 };
-    return [...this.tareas].sort((a, b) => 
-      ordenPrioridad[b.prioridad] - ordenPrioridad[a.prioridad]
-    );
+  // Crear validador personalizado
+  crearValidadorPersonalizado(regla) {
+    return function(valor) {
+      return regla(valor);
+    };
   }
 }
 
+// Funciones de validación usando closures
+function esEmail(email) {
+  return function(valor) {
+    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+    if (!emailRegex.test(valor)) {
+      return 'Debe ser un email válido';
+    }
+    return true;
+  };
+}
+
+function esRequerido(valor) {
+  return function(valor) {
+    if (!valor || valor.toString().trim() === '') {
+      return 'Este campo es requerido';
+    }
+    return true;
+  };
+}
+
+function longitudMinima(min) {
+  return function(valor) {
+    if (valor && valor.toString().length < min) {
+      return \`Debe tener al menos \${min} caracteres\`;
+    }
+    return true;
+  };
+}
+
+// Función de orden superior para crear validadores
+function crearValidador(reglas) {
+  return function(valor) {
+    for (const regla of reglas) {
+      const resultado = regla(valor);
+      if (resultado !== true) {
+        return resultado;
+      }
+    }
+    return true;
+  };
+}
+
+// Función de orden superior para validar múltiples campos
+function validarFormulario(validadores) {
+  return function(objeto) {
+    const errores = {};
+    
+    for (const [campo, validador] of Object.entries(validadores)) {
+      const resultado = validador(objeto[campo]);
+      if (resultado !== true) {
+        errores[campo] = resultado;
+      }
+    }
+    
+    return {
+      esValido: Object.keys(errores).length === 0,
+      errores
+    };
+  };
+}
+
 // Ejemplo de uso completo
-const lista = new ListaTareas();
+const validador = new Validador();
 
-// Agregar tareas
-lista.agregarTarea('Estudiar JavaScript', 'Repasar métodos de arrays', 'alta');
-lista.agregarTarea('Hacer ejercicio', 'Caminar 30 minutos', 'media');
-lista.agregarTarea('Leer libro', 'Leer capítulo 5', 'baja');
+// Configurar reglas de validación
+validador.agregarRegla('nombre', esRequerido());
+validador.agregarRegla('nombre', longitudMinima(2));
+validador.agregarRegla('email', esRequerido());
+validador.agregarRegla('email', esEmail());
+validador.agregarRegla('edad', esRequerido());
+validador.agregarRegla('edad', validador.crearValidadorPersonalizado(valor => {
+  const edad = parseInt(valor);
+  if (isNaN(edad) || edad < 18) {
+    return 'Debe ser mayor de 18 años';
+  }
+  return true;
+}));
 
-// Completar una tarea
-lista.completarTarea(1);
+// Datos a validar
+const usuario = {
+  nombre: 'Juan',
+  email: 'juan@ejemplo.com',
+  edad: '25'
+};
 
-// Ver estadísticas
-console.log('Estadísticas:', lista.obtenerEstadisticas());
+// Validar
+const resultado = validador.validar(usuario);
+console.log('Resultado de validación:', resultado);
 
-// Filtrar por prioridad
-console.log('Tareas de alta prioridad:', lista.filtrarPorPrioridad('alta'));
+// Usar función de orden superior
+const validarUsuario = validarFormulario({
+  nombre: crearValidador([esRequerido(), longitudMinima(2)]),
+  email: crearValidador([esRequerido(), esEmail()]),
+  telefono: validador.crearValidadorPersonalizado(valor => {
+    if (valor && !/^\\d{10}$/.test(valor)) {
+      return 'El teléfono debe tener 10 dígitos';
+    }
+    return true;
+  })
+});
 
-// Buscar tareas
-console.log('Buscar "JavaScript":', lista.buscarTareas('JavaScript'));`
+const usuario2 = {
+  nombre: 'María',
+  email: 'maria@ejemplo.com',
+  telefono: '1234567890'
+};
+
+const resultado2 = validarUsuario(usuario2);
+console.log('Resultado de validación 2:', resultado2);
+
+// Ejemplo con manejo de errores
+try {
+  const usuarioInvalido = {
+    nombre: '',
+    email: 'email-invalido',
+    edad: '15'
+  };
+  
+  const resultado3 = validador.validar(usuarioInvalido);
+  console.log('Resultado de validación 3:', resultado3);
+} catch (error) {
+  console.error('Error en validación:', error.message);
+}`
       }
     ]
   },
@@ -2160,17 +3815,17 @@ console.log('Buscar "JavaScript":', lista.buscarTareas('JavaScript'));`
         "Validación de formularios con JavaScript"
       ],
       theoreticalDetails: {
-        "¿Qué es el DOM?": "El DOM (Document Object Model) es una representación en memoria de la estructura HTML de una página web. Es un árbol de nodos donde cada elemento HTML es un nodo que puede ser manipulado con JavaScript. El DOM permite acceder, modificar y crear elementos dinámicamente.\n\n**Ejemplos:**\n```javascript\n// Estructura del DOM\n// <html>\n//   <head>\n//     <title>Mi Página</title>\n//   </head>\n//   <body>\n//     <div id=\"contenedor\">\n//       <h1>Título</h1>\n//       <p>Párrafo</p>\n//     </div>\n//   </body>\n// </html>\n\n// Acceder al documento\nconsole.log(document); // Objeto document\nconsole.log(document.documentElement); // Elemento <html>\nconsole.log(document.body); // Elemento <body>\nconsole.log(document.head); // Elemento <head>\n\n// Navegar por el DOM\nconst contenedor = document.getElementById('contenedor');\nconsole.log(contenedor.parentNode); // Elemento padre\nconsole.log(contenedor.childNodes); // Nodos hijos\nconsole.log(contenedor.firstChild); // Primer hijo\nconsole.log(contenedor.lastChild); // Último hijo\nconsole.log(contenedor.nextSibling); // Hermano siguiente\nconsole.log(contenedor.previousSibling); // Hermano anterior\n\n// Tipos de nodos\nconsole.log(document.nodeType); // 9 (DOCUMENT_NODE)\nconsole.log(document.body.nodeType); // 1 (ELEMENT_NODE)\nconsole.log(document.body.firstChild.nodeType); // 3 (TEXT_NODE)\n\n// Propiedades del nodo\nconst elemento = document.getElementById('contenedor');\nconsole.log(elemento.nodeName); // DIV\nconsole.log(elemento.nodeValue); // null (para elementos)\nconsole.log(elemento.tagName); // DIV\nconsole.log(elemento.id); // contenedor\nconsole.log(elemento.className); // clases CSS\nconsole.log(elemento.innerHTML); // contenido HTML\nconsole.log(elemento.textContent); // texto sin HTML\n```",
+        "¿Qué es el DOM?": "El DOM (Document Object Model) es una representación en memoria de la estructura HTML de una página web. Es un árbol de nodos donde cada elemento HTML es un nodo que puede ser manipulado con JavaScript. El DOM permite acceder, modificar y crear elementos dinámicamente.\n\n**HTML necesario:**\n```html\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Mi Página - DOM</title>\n  <style>\n    .contenedor {\n      padding: 20px;\n      border: 2px solid #333;\n      margin: 20px;\n    }\n    .info {\n      background: #f0f0f0;\n      padding: 10px;\n      margin: 10px 0;\n    }\n  </style>\n</head>\n<body>\n  <div id=\"contenedor\" class=\"contenedor destacado\">\n    <h1>Título Principal</h1>\n    <p class=\"descripcion\">Este es un párrafo de ejemplo</p>\n    <ul id=\"lista\">\n      <li>Item 1</li>\n      <li>Item 2</li>\n    </ul>\n  </div>\n  \n  <div id=\"info\" class=\"info\"></div>\n  \n  <script src=\"script.js\"></script>\n</body>\n</html>\n```\n\n**JavaScript (script.js):**\n```javascript\n// Acceder al documento\nconsole.log('Objeto document:', document);\nconsole.log('Elemento <html>:', document.documentElement);\nconsole.log('Elemento <body>:', document.body);\nconsole.log('Elemento <head>:', document.head);\n\n// Navegar por el DOM\nconst contenedor = document.getElementById('contenedor');\nconsole.log('Elemento padre:', contenedor.parentNode);\nconsole.log('Nodos hijos:', contenedor.childNodes);\nconsole.log('Primer hijo:', contenedor.firstChild);\nconsole.log('Último hijo:', contenedor.lastChild);\nconsole.log('Hermano siguiente:', contenedor.nextSibling);\nconsole.log('Hermano anterior:', contenedor.previousSibling);\n\n// Tipos de nodos\nconsole.log('Tipo de document:', document.nodeType); // 9 (DOCUMENT_NODE)\nconsole.log('Tipo de body:', document.body.nodeType); // 1 (ELEMENT_NODE)\n\n// Propiedades del nodo\nconst elemento = document.getElementById('contenedor');\nconsole.log('Nombre del nodo:', elemento.nodeName); // DIV\nconsole.log('Valor del nodo:', elemento.nodeValue); // null (para elementos)\nconsole.log('Tag name:', elemento.tagName); // DIV\nconsole.log('ID:', elemento.id); // contenedor\nconsole.log('Clases:', elemento.className); // contenedor destacado\nconsole.log('HTML interno:', elemento.innerHTML);\nconsole.log('Texto:', elemento.textContent);\n\n// Mostrar info en la página\nconst infoDiv = document.getElementById('info');\ninfoDiv.innerHTML = '<h3>Información del DOM</h3>' +\n  '<p>Número de elementos hijos: ' + contenedor.children.length + '</p>' +\n  '<p>Clases del contenedor: ' + elemento.className + '</p>' +\n  '<p>ID del contenedor: ' + elemento.id + '</p>';\n```",
         
-        "Selección de elementos: getElementById, querySelector": "JavaScript proporciona varios métodos para seleccionar elementos del DOM. getElementById selecciona por ID, querySelector usa selectores CSS, y otros métodos permiten seleccionar múltiples elementos. Cada método tiene sus ventajas y casos de uso específicos.\n\n**Ejemplos:**\n```javascript\n// getElementById - Seleccionar por ID\nconst elemento = document.getElementById('mi-elemento');\nconsole.log(elemento); // Elemento con id=\"mi-elemento\"\n\n// querySelector - Selector CSS\nconst primerParrafo = document.querySelector('p');\nconst elementoConClase = document.querySelector('.mi-clase');\nconst elementoConAtributo = document.querySelector('[data-id=\"123\"]');\nconst elementoAnidado = document.querySelector('#contenedor .destacado');\n\n// querySelectorAll - Múltiples elementos\nconst todosLosParrafos = document.querySelectorAll('p');\nconst elementosConClase = document.querySelectorAll('.mi-clase');\nconst elementosAnidados = document.querySelectorAll('#contenedor .destacado');\n\n// getElementsByClassName\nconst elementosPorClase = document.getElementsByClassName('mi-clase');\nconsole.log(elementosPorClase); // HTMLCollection\n\n// getElementsByTagName\nconst elementosPorTag = document.getElementsByTagName('div');\nconsole.log(elementosPorTag); // HTMLCollection\n\n// getElementsByName\nconst elementosPorNombre = document.getElementsByName('mi-input');\nconsole.log(elementosPorNombre); // NodeList\n\n// Selección dentro de un elemento\nconst contenedor = document.getElementById('contenedor');\nconst elementoInterno = contenedor.querySelector('.interno');\nconst elementosInternos = contenedor.querySelectorAll('.interno');\n\n// Verificar si existe elemento\nconst elemento = document.getElementById('no-existe');\nif (elemento) {\n  console.log('Elemento encontrado');\n} else {\n  console.log('Elemento no encontrado');\n}\n\n// Selección con múltiples criterios\nconst elementos = document.querySelectorAll('div.mi-clase, p.destacado, #especial');\nconsole.log(elementos); // NodeList con todos los elementos que coincidan\n\n// Selección de formularios\nconst formulario = document.querySelector('form');\nconst inputs = formulario.querySelectorAll('input');\nconst boton = formulario.querySelector('button[type=\"submit\"]');\n```",
+        "Selección de elementos: getElementById, querySelector": "JavaScript proporciona varios métodos para seleccionar elementos del DOM. getElementById selecciona por ID, querySelector usa selectores CSS, y otros métodos permiten seleccionar múltiples elementos. Cada método tiene sus ventajas y casos de uso específicos.\n\n**HTML necesario:**\n```html\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Selección de Elementos</title>\n  <style>\n    .mi-clase { color: blue; }\n    .destacado { font-weight: bold; }\n    .interno { padding: 5px; background: #f0f0f0; }\n    #resultados { margin: 20px; padding: 10px; border: 1px solid #ccc; }\n  </style>\n</head>\n<body>\n  <h1>Ejemplos de Selección de Elementos</h1>\n  \n  <div id=\"contenedor\" class=\"mi-clase\">\n    <p class=\"destacado\">Primer párrafo destacado</p>\n    <p class=\"interno\">Segundo párrafo interno</p>\n    <p data-id=\"123\">Párrafo con atributo data</p>\n  </div>\n  \n  <div class=\"mi-clase\">\n    <span class=\"interno\">Elemento interno 1</span>\n    <span class=\"interno\">Elemento interno 2</span>\n  </div>\n  \n  <form id=\"mi-formulario\">\n    <input type=\"text\" name=\"nombre\" placeholder=\"Nombre\">\n    <input type=\"email\" name=\"email\" placeholder=\"Email\">\n    <button type=\"submit\">Enviar</button>\n  </form>\n  \n  <div id=\"resultados\"></div>\n  \n  <script src=\"seleccion.js\"></script>\n</body>\n</html>\n```\n\n**JavaScript (seleccion.js):**\n```javascript\n// getElementById - Seleccionar por ID\nconst miElemento = document.getElementById('contenedor');\nconsole.log('Elemento por ID:', miElemento);\n\n// querySelector - Selector CSS (devuelve el primero)\nconst primerParrafo = document.querySelector('p');\nconst elementoConClase = document.querySelector('.mi-clase');\nconst elementoConAtributo = document.querySelector('[data-id=\"123\"]');\nconst elementoAnidado = document.querySelector('#contenedor .destacado');\n\nconsole.log('Primer párrafo:', primerParrafo.textContent);\nconsole.log('Elemento con clase:', elementoConClase.tagName);\n\n// querySelectorAll - Múltiples elementos (devuelve NodeList)\nconst todosLosParrafos = document.querySelectorAll('p');\nconst elementosConClase = document.querySelectorAll('.mi-clase');\nconst elementosAnidados = document.querySelectorAll('#contenedor .interno');\n\nconsole.log('Total de párrafos:', todosLosParrafos.length);\n\n// Iterar sobre NodeList\ntodosLosParrafos.forEach((parrafo, index) => {\n  console.log('Párrafo ' + (index + 1) + ':', parrafo.textContent);\n});\n\n// getElementsByClassName - Devuelve HTMLCollection (en vivo)\nconst elementosPorClase = document.getElementsByClassName('mi-clase');\nconsole.log('Elementos por clase:', elementosPorClase.length);\n\n// getElementsByTagName - Devuelve HTMLCollection (en vivo)\nconst elementosPorTag = document.getElementsByTagName('p');\nconsole.log('Elementos por tag:', elementosPorTag.length);\n\n// Selección dentro de un elemento específico\nconst contenedor = document.getElementById('contenedor');\nconst elementoInterno = contenedor.querySelector('.interno');\nconst elementosInternos = contenedor.querySelectorAll('.interno');\n\nconsole.log('Elementos internos del contenedor:', elementosInternos.length);\n\n// Verificar si existe elemento\nconst elementoExiste = document.getElementById('contenedor');\nconst elementoNoExiste = document.getElementById('no-existe');\n\nif (elementoExiste) {\n  console.log('Contenedor encontrado');\n}\n\nif (!elementoNoExiste) {\n  console.log('Elemento no encontrado');\n}\n\n// Selección con múltiples criterios\nconst elementos = document.querySelectorAll('div.mi-clase, p.destacado');\nconsole.log('Elementos con múltiples criterios:', elementos.length);\n\n// Selección de formularios y sus elementos\nconst formulario = document.querySelector('form');\nconst inputs = formulario.querySelectorAll('input');\nconst boton = formulario.querySelector('button[type=\"submit\"]');\n\nconsole.log('Formulario encontrado:', formulario.id);\nconsole.log('Inputs en formulario:', inputs.length);\n\n// Mostrar resultados en la página\nconst resultados = document.getElementById('resultados');\nresultados.innerHTML = '<h3>Resultados de Selección</h3>' +\n  '<p>Total de párrafos: ' + todosLosParrafos.length + '</p>' +\n  '<p>Elementos con clase \"mi-clase\": ' + elementosConClase.length + '</p>' +\n  '<p>Inputs en formulario: ' + inputs.length + '</p>';\n```",
         
-        "Manipulación de contenido: innerHTML, textContent": "La manipulación del contenido permite cambiar el texto, HTML y atributos de los elementos. innerHTML permite insertar HTML, textContent solo texto, y otros métodos permiten manipular atributos y clases. Es fundamental para crear contenido dinámico.\n\n**Ejemplos:**\n```javascript\n// Seleccionar elemento\nconst elemento = document.getElementById('mi-elemento');\n\n// innerHTML - Contenido HTML\nconst contenidoHTML = elemento.innerHTML;\nconsole.log(contenidoHTML); // HTML interno\n\nelemento.innerHTML = '<h2>Nuevo título</h2><p>Nuevo párrafo</p>';\nelemento.innerHTML += '<span>Texto adicional</span>';\n\n// textContent - Solo texto\nelemento.textContent = 'Solo texto sin HTML';\nelemento.textContent += ' - Texto adicional';\n\n// innerText - Texto visible (considera CSS)\nelemento.innerText = 'Texto visible';\n\n// Manipular atributos\nelemento.setAttribute('data-id', '123');\nelemento.setAttribute('class', 'nueva-clase');\nelemento.setAttribute('title', 'Nuevo título');\n\nconst valorAtributo = elemento.getAttribute('data-id');\nconsole.log(valorAtributo); // 123\n\nconst tieneAtributo = elemento.hasAttribute('data-id');\nconsole.log(tieneAtributo); // true\n\nelemento.removeAttribute('data-id');\n\n// Manipular clases CSS\nconst elementoConClase = document.querySelector('.mi-elemento');\nelementoConClase.classList.add('nueva-clase');\nelementoConClase.classList.add('otra-clase');\nelementoConClase.classList.remove('clase-antigua');\nelementoConClase.classList.toggle('clase-activa');\n\nconst tieneClase = elementoConClase.classList.contains('nueva-clase');\nconsole.log(tieneClase); // true\n\n// className - Manipular todas las clases\nelementoConClase.className = 'clase1 clase2 clase3';\nelementoConClase.className += ' clase4';\n\n// Manipular estilos\nelemento.style.color = 'red';\nelemento.style.backgroundColor = 'blue';\nelemento.style.fontSize = '16px';\nelemento.style.display = 'none';\nelemento.style.display = 'block';\n\n// Obtener estilos computados\nconst estilos = window.getComputedStyle(elemento);\nconsole.log(estilos.color); // Valor computado\nconsole.log(estilos.fontSize); // Valor computado\n\n// Manipular formularios\nconst input = document.querySelector('input[name=\"email\"]');\ninput.value = 'usuario@ejemplo.com';\ninput.placeholder = 'Ingresa tu email';\ninput.disabled = true;\ninput.required = true;\n\nconst valorInput = input.value;\nconsole.log(valorInput); // usuario@ejemplo.com\n\n// Manipular imágenes\nconst imagen = document.querySelector('img');\nimagen.src = 'nueva-imagen.jpg';\nimagen.alt = 'Nueva imagen';\nimagen.width = 300;\nimagen.height = 200;\n```",
+        "Manipulación de contenido: innerHTML, textContent": "La manipulación del contenido permite cambiar el texto, HTML y atributos de los elementos. innerHTML permite insertar HTML, textContent solo texto, y otros métodos permiten manipular atributos y clases. Es fundamental para crear contenido dinámico.\n\n**HTML necesario:**\n```html\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Manipulación de Contenido</title>\n  <style>\n    .mi-elemento { padding: 15px; margin: 10px; border: 2px solid #333; }\n    .nueva-clase { background: #e3f2fd; }\n    .clase-activa { box-shadow: 0 0 10px rgba(0,0,0,0.3); }\n    .error { border-color: red; }\n    button { margin: 5px; padding: 10px 20px; cursor: pointer; }\n  </style>\n</head>\n<body>\n  <h1>Manipulación de Contenido</h1>\n  \n  <div id=\"mi-elemento\" class=\"mi-elemento clase-antigua\">\n    <h2>Título Original</h2>\n    <p>Contenido original del elemento</p>\n  </div>\n  \n  <div class=\"controles\">\n    <button id=\"btn-html\">Cambiar HTML</button>\n    <button id=\"btn-texto\">Cambiar Texto</button>\n    <button id=\"btn-clase\">Toggle Clase</button>\n    <button id=\"btn-estilo\">Cambiar Estilo</button>\n  </div>\n  \n  <form>\n    <input type=\"email\" name=\"email\" placeholder=\"Tu email\">\n    <img src=\"imagen.jpg\" alt=\"Imagen original\" width=\"200\">\n  </form>\n  \n  <script src=\"manipulacion.js\"></script>\n</body>\n</html>\n```\n\n**JavaScript (manipulacion.js):**\n```javascript\n// Seleccionar elemento\nconst elemento = document.getElementById('mi-elemento');\n\n// innerHTML - Contenido HTML\nconst btnHtml = document.getElementById('btn-html');\nbtnHtml.addEventListener('click', function() {\n  elemento.innerHTML = '<h2>Nuevo título</h2><p>Nuevo párrafo</p><span>Texto adicional</span>';\n});\n\n// textContent - Solo texto (sin HTML)\nconst btnTexto = document.getElementById('btn-texto');\nbtnTexto.addEventListener('click', function() {\n  elemento.textContent = 'Solo texto sin HTML - Texto adicional';\n});\n\n// Manipular atributos\nelemento.setAttribute('data-id', '123');\nelemento.setAttribute('title', 'Nuevo título');\n\nconst valorAtributo = elemento.getAttribute('data-id');\nconsole.log('Atributo data-id:', valorAtributo); // 123\n\nconst tieneAtributo = elemento.hasAttribute('data-id');\nconsole.log('Tiene atributo:', tieneAtributo); // true\n\n// Manipular clases CSS\nconst btnClase = document.getElementById('btn-clase');\nbtnClase.addEventListener('click', function() {\n  elemento.classList.add('nueva-clase');\n  elemento.classList.remove('clase-antigua');\n  elemento.classList.toggle('clase-activa');\n  \n  const tieneClase = elemento.classList.contains('nueva-clase');\n  console.log('Tiene clase nueva-clase:', tieneClase);\n});\n\n// Manipular estilos\nconst btnEstilo = document.getElementById('btn-estilo');\nbtnEstilo.addEventListener('click', function() {\n  elemento.style.color = 'white';\n  elemento.style.backgroundColor = 'blue';\n  elemento.style.fontSize = '18px';\n  elemento.style.padding = '20px';\n  \n  // Obtener estilos computados\n  const estilos = window.getComputedStyle(elemento);\n  console.log('Color:', estilos.color);\n  console.log('Tamaño de fuente:', estilos.fontSize);\n});\n\n// Manipular formularios\nconst input = document.querySelector('input[name=\"email\"]');\ninput.value = 'usuario@ejemplo.com';\ninput.placeholder = 'Ingresa tu email';\n\n// Agregar validación visual\ninput.addEventListener('input', function() {\n  if (!this.value.includes('@')) {\n    this.classList.add('error');\n  } else {\n    this.classList.remove('error');\n  }\n});\n\nconst valorInput = input.value;\nconsole.log('Valor del input:', valorInput);\n\n// Manipular imágenes\nconst imagen = document.querySelector('img');\nsetTimeout(function() {\n  imagen.src = 'nueva-imagen.jpg';\n  imagen.alt = 'Nueva imagen cargada';\n  imagen.width = 300;\n  imagen.height = 200;\n}, 2000);\n```",
         
-        "Eventos del navegador: click, submit, change": "Los eventos son acciones que ocurren en el navegador y pueden ser detectadas por JavaScript. Los eventos comunes incluyen click, submit, change, input, focus, blur, y muchos otros. Cada evento proporciona información sobre la acción que lo desencadenó.\n\n**Ejemplos:**\n```javascript\n// Evento click\nconst boton = document.querySelector('button');\nboton.addEventListener('click', function(event) {\n  console.log('Botón clickeado');\n  console.log('Evento:', event);\n  console.log('Target:', event.target);\n  console.log('Current target:', event.currentTarget);\n});\n\n// Evento submit (formulario)\nconst formulario = document.querySelector('form');\nformulario.addEventListener('submit', function(event) {\n  event.preventDefault(); // Prevenir envío por defecto\n  console.log('Formulario enviado');\n  \n  const formData = new FormData(formulario);\n  const datos = Object.fromEntries(formData);\n  console.log('Datos del formulario:', datos);\n});\n\n// Evento change (input)\nconst input = document.querySelector('input[type=\"text\"]');\ninput.addEventListener('change', function(event) {\n  console.log('Valor cambiado:', event.target.value);\n});\n\n// Evento input (tiempo real)\ninput.addEventListener('input', function(event) {\n  console.log('Valor actual:', event.target.value);\n});\n\n// Eventos de teclado\ninput.addEventListener('keydown', function(event) {\n  console.log('Tecla presionada:', event.key);\n  console.log('Código de tecla:', event.code);\n  \n  if (event.key === 'Enter') {\n    console.log('Enter presionado');\n  }\n});\n\ninput.addEventListener('keyup', function(event) {\n  console.log('Tecla liberada:', event.key);\n});\n\n// Eventos de mouse\nconst elemento = document.querySelector('.mi-elemento');\nelemento.addEventListener('mouseenter', function(event) {\n  console.log('Mouse entró al elemento');\n});\nelemento.addEventListener('mouseleave', function(event) {\n  console.log('Mouse salió del elemento');\n});\nelemento.addEventListener('mousemove', function(event) {\n  console.log('Mouse se movió:', event.clientX, event.clientY);\n});\n\n// Eventos de focus y blur\ninput.addEventListener('focus', function(event) {\n  console.log('Input recibió foco');\n});\ninput.addEventListener('blur', function(event) {\n  console.log('Input perdió foco');\n});\n\n// Evento de scroll\nwindow.addEventListener('scroll', function(event) {\n  console.log('Scroll:', window.scrollY);\n});\n\n// Evento de resize\nwindow.addEventListener('resize', function(event) {\n  console.log('Ventana redimensionada:', window.innerWidth, window.innerHeight);\n});\n\n// Evento de carga\nwindow.addEventListener('load', function(event) {\n  console.log('Página completamente cargada');\n});\ndocument.addEventListener('DOMContentLoaded', function(event) {\n  console.log('DOM completamente cargado');\n});\n```",
+        "Eventos del navegador: click, submit, change": "Los eventos son acciones que ocurren en el navegador y pueden ser detectadas por JavaScript. Los eventos comunes incluyen click, submit, change, input, focus, blur, y muchos otros. Cada evento proporciona información sobre la acción que lo desencadenó.\n\n**HTML necesario:**\n```html\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Eventos del Navegador</title>\n  <style>\n    body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }\n    .caja { width: 200px; height: 200px; background: #3f51b5; color: white; display: flex; align-items: center; justify-content: center; margin: 20px; border-radius: 10px; cursor: pointer; transition: all 0.3s; }\n    .caja:hover { background: #303f9f; transform: scale(1.05); }\n    .formulario { background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0; }\n    input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 2px solid #ddd; border-radius: 4px; font-size: 14px; }\n    input:focus, textarea:focus { outline: none; border-color: #3f51b5; box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.1); }\n    button { background: #4caf50; color: white; padding: 12px 30px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }\n    button:hover { background: #45a049; }\n    #log { background: #263238; color: #00ff00; padding: 15px; border-radius: 4px; font-family: 'Courier New', monospace; max-height: 300px; overflow-y: auto; }\n    .log-item { margin: 5px 0; padding: 3px 0; border-bottom: 1px solid #37474f; }\n  </style>\n</head>\n<body>\n  <h1>⚡ Demostración de Eventos</h1>\n  \n  <!-- Eventos de Mouse -->\n  <section>\n    <h2>1. Eventos de Mouse</h2>\n    <div class=\"caja\" id=\"caja-mouse\">\n      Pasa el mouse aquí\n    </div>\n    <p id=\"info-mouse\">Posición: -</p>\n  </section>\n  \n  <!-- Eventos de Teclado -->\n  <section>\n    <h2>2. Eventos de Teclado</h2>\n    <div class=\"formulario\">\n      <label>Escribe algo (presiona Enter para ver el mensaje):</label>\n      <input type=\"text\" id=\"input-teclado\" placeholder=\"Escribe aquí...\">\n      <p id=\"info-teclado\"></p>\n    </div>\n  </section>\n  \n  <!-- Eventos de Formulario -->\n  <section>\n    <h2>3. Eventos de Formulario</h2>\n    <form id=\"mi-formulario\" class=\"formulario\">\n      <label>Nombre:</label>\n      <input type=\"text\" id=\"nombre\" required>\n      \n      <label>Email:</label>\n      <input type=\"email\" id=\"email-form\" required>\n      \n      <label>Mensaje:</label>\n      <textarea id=\"mensaje\" rows=\"4\" required></textarea>\n      \n      <button type=\"submit\">Enviar Formulario</button>\n    </form>\n    <div id=\"resultado-form\"></div>\n  </section>\n  \n  <!-- Log de Eventos -->\n  <section>\n    <h2>4. Registro de Eventos</h2>\n    <div id=\"log\"></div>\n    <button id=\"btn-limpiar\">Limpiar Log</button>\n  </section>\n  \n  <script src=\"eventos.js\"></script>\n</body>\n</html>\n```\n\n**JavaScript (eventos.js):**\n```javascript\nconst log = document.getElementById('log');\n\n// Función para registrar eventos\nfunction registrarEvento(mensaje) {\n  const timestamp = new Date().toLocaleTimeString();\n  const logItem = document.createElement('div');\n  logItem.className = 'log-item';\n  logItem.textContent = `[${timestamp}] ${mensaje}`;\n  log.insertBefore(logItem, log.firstChild);\n}\n\n// 1. EVENTOS DE MOUSE\nconst cajaMouse = document.getElementById('caja-mouse');\nconst infoMouse = document.getElementById('info-mouse');\n\ncajaMouse.addEventListener('click', function(event) {\n  registrarEvento('🖱️ Click en la caja');\n  this.style.background = '#' + Math.floor(Math.random()*16777215).toString(16);\n});\n\ncajaMouse.addEventListener('mouseenter', function() {\n  registrarEvento('➡️ Mouse entró a la caja');\n  this.textContent = '¡Haz click!';\n});\n\ncajaMouse.addEventListener('mouseleave', function() {\n  registrarEvento('⬅️ Mouse salió de la caja');\n  this.textContent = 'Pasa el mouse aquí';\n});\n\ncajaMouse.addEventListener('mousemove', function(event) {\n  infoMouse.textContent = `Posición: X=${event.clientX}, Y=${event.clientY}`;\n});\n\n// 2. EVENTOS DE TECLADO\nconst inputTeclado = document.getElementById('input-teclado');\nconst infoTeclado = document.getElementById('info-teclado');\n\ninputTeclado.addEventListener('keydown', function(event) {\n  registrarEvento(`⌨️ Tecla presionada: ${event.key}`);\n  \n  if (event.key === 'Enter') {\n    infoTeclado.textContent = `Mensaje: \"${this.value}\"`;\n    infoTeclado.style.color = '#4caf50';\n    infoTeclado.style.fontWeight = 'bold';\n  }\n});\n\ninputTeclado.addEventListener('input', function(event) {\n  if (this.value.length > 0) {\n    infoTeclado.textContent = `Caracteres: ${this.value.length}`;\n    infoTeclado.style.color = '#666';\n    infoTeclado.style.fontWeight = 'normal';\n  }\n});\n\ninputTeclado.addEventListener('focus', function() {\n  registrarEvento('🔍 Input recibió foco');\n  this.style.background = '#fff9c4';\n});\n\ninputTeclado.addEventListener('blur', function() {\n  registrarEvento('👁️ Input perdió foco');\n  this.style.background = 'white';\n});\n\n// 3. EVENTOS DE FORMULARIO\nconst formulario = document.getElementById('mi-formulario');\nconst resultadoForm = document.getElementById('resultado-form');\n\nformulario.addEventListener('submit', function(event) {\n  event.preventDefault(); // ¡IMPORTANTE! Prevenir envío\n  \n  registrarEvento('📮 Formulario enviado');\n  \n  const datos = {\n    nombre: document.getElementById('nombre').value,\n    email: document.getElementById('email-form').value,\n    mensaje: document.getElementById('mensaje').value\n  };\n  \n  resultadoForm.innerHTML = `\n    <div style=\"background: #e8f5e9; padding: 20px; border-radius: 8px; margin-top: 20px;\">\n      <h3>✅ Datos Recibidos:</h3>\n      <p><strong>Nombre:</strong> ${datos.nombre}</p>\n      <p><strong>Email:</strong> ${datos.email}</p>\n      <p><strong>Mensaje:</strong> ${datos.mensaje}</p>\n    </div>\n  `;\n  \n  formulario.reset();\n});\n\n// Validación en tiempo real\ndocument.getElementById('email-form').addEventListener('input', function() {\n  if (this.value.includes('@')) {\n    this.style.borderColor = '#4caf50';\n  } else if (this.value.length > 0) {\n    this.style.borderColor = '#f44336';\n  } else {\n    this.style.borderColor = '#ddd';\n  }\n});\n\n// 4. LIMPIAR LOG\ndocument.getElementById('btn-limpiar').addEventListener('click', function() {\n  log.innerHTML = '';\n  registrarEvento('🗑️ Log limpiado');\n});\n\n// Evento de carga\nwindow.addEventListener('load', function() {\n  registrarEvento('🚀 Página completamente cargada');\n});\n\n// Registrar evento inicial\nregistrarEvento('✨ Sistema de eventos iniciado');\n```",
         
-        "Event listeners: addEventListener, removeEventListener": "Los event listeners permiten escuchar eventos específicos en elementos del DOM. addEventListener agrega un listener, removeEventListener lo elimina, y se pueden usar diferentes opciones para controlar el comportamiento. Es la forma moderna y recomendada de manejar eventos.\n\n**Ejemplos:**\n```javascript\n// addEventListener básico\nconst boton = document.querySelector('button');\n\nfunction manejarClick(event) {\n  console.log('Botón clickeado');\n  console.log('Evento:', event);\n}\n\nboton.addEventListener('click', manejarClick);\n\n// removeEventListener\nboton.removeEventListener('click', manejarClick);\n\n// addEventListener con opciones\nboton.addEventListener('click', manejarClick, {\n  once: true, // Solo se ejecuta una vez\n  passive: true, // No llama a preventDefault()\n  capture: false // Fase de burbuja (por defecto)\n});\n\n// Event listener con arrow function\nboton.addEventListener('click', (event) => {\n  console.log('Click con arrow function');\n  console.log('This:', this); // undefined en arrow function\n});\n\n// Event listener con función anónima\nboton.addEventListener('click', function(event) {\n  console.log('Click con función anónima');\n  console.log('This:', this); // Referencia al elemento\n});\n\n// Múltiples event listeners\nboton.addEventListener('click', function(event) {\n  console.log('Primer listener');\n});\nboton.addEventListener('click', function(event) {\n  console.log('Segundo listener');\n});\n\n// Event listener con parámetros\nfunction crearManejador(mensaje) {\n  return function(event) {\n    console.log(mensaje, event.target);\n  };\n}\n\nboton.addEventListener('click', crearManejador('Botón clickeado:'));\n\n// Event delegation\nconst contenedor = document.querySelector('.contenedor');\ncontenedor.addEventListener('click', function(event) {\n  if (event.target.classList.contains('boton')) {\n    console.log('Botón clickeado:', event.target.textContent);\n  }\n});\n\n// Event listener con preventDefault\nelemento.addEventListener('click', function(event) {\n  event.preventDefault(); // Prevenir comportamiento por defecto\n  console.log('Click prevenido');\n});\n\n// Event listener con stopPropagation\nelemento.addEventListener('click', function(event) {\n  event.stopPropagation(); // Detener propagación\n  console.log('Propagación detenida');\n});\n\n// Event listener con stopImmediatePropagation\nelemento.addEventListener('click', function(event) {\n  event.stopImmediatePropagation(); // Detener otros listeners\n  console.log('Otros listeners detenidos');\n});\n\n// Event listener con timeout\nboton.addEventListener('click', function(event) {\n  setTimeout(() => {\n    console.log('Ejecutado después de 1 segundo');\n  }, 1000);\n});\n\n// Event listener con debounce\nfunction debounce(func, wait) {\n  let timeout;\n  return function executedFunction(...args) {\n    const later = () => {\n      clearTimeout(timeout);\n      func(...args);\n    };\n    clearTimeout(timeout);\n    timeout = setTimeout(later, wait);\n  };\n}\n\nconst input = document.querySelector('input');\nconst debouncedSearch = debounce(function(event) {\n  console.log('Búsqueda:', event.target.value);\n}, 300);\n\ninput.addEventListener('input', debouncedSearch);\n```",
+        "Event listeners: addEventListener, removeEventListener": "Los event listeners permiten escuchar eventos específicos en elementos del DOM. addEventListener agrega un listener, removeEventListener lo elimina, y se pueden usar diferentes opciones para controlar el comportamiento. Es la forma moderna y recomendada de manejar eventos.\n\n**HTML necesario:**\n```html\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Event Listeners</title>\n  <style>\n    body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }\n    .demo-section { margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }\n    button { padding: 10px 20px; margin: 5px; cursor: pointer; border: none; border-radius: 4px; }\n    .btn-primary { background: #007bff; color: white; }\n    .btn-success { background: #28a745; color: white; }\n    .btn-danger { background: #dc3545; color: white; }\n    .btn-warning { background: #ffc107; color: black; }\n    .contenedor { padding: 20px; background: #f8f9fa; border-radius: 4px; margin: 10px 0; }\n    .log { background: #343a40; color: #28a745; padding: 15px; border-radius: 4px; font-family: monospace; max-height: 200px; overflow-y: auto; }\n    .log-item { margin: 3px 0; }\n    input { padding: 8px; margin: 5px; border: 1px solid #ddd; border-radius: 4px; }\n    .highlight { background: #fff3cd; padding: 5px; border-radius: 3px; }\n  </style>\n</head>\n<body>\n  <h1>🎧 Event Listeners - addEventListener & removeEventListener</h1>\n  \n  <!-- Básicos -->\n  <div class=\"demo-section\">\n    <h2>1. Event Listeners Básicos</h2>\n    <button id=\"btn-basico\" class=\"btn-primary\">Click Me (Básico)</button>\n    <button id=\"btn-remover\" class=\"btn-danger\">Remover Listener</button>\n    <div id=\"log-basico\" class=\"log\"></div>\n  </div>\n  \n  <!-- Opciones -->\n  <div class=\"demo-section\">\n    <h2>2. Event Listeners con Opciones</h2>\n    <button id=\"btn-once\" class=\"btn-success\">Solo Una Vez (once: true)</button>\n    <button id=\"btn-passive\" class=\"btn-warning\">Passive (passive: true)</button>\n    <button id=\"btn-capture\" class=\"btn-primary\">Capture (capture: true)</button>\n    <div id=\"log-opciones\" class=\"log\"></div>\n  </div>\n  \n  <!-- Múltiples Listeners -->\n  <div class=\"demo-section\">\n    <h2>3. Múltiples Event Listeners</h2>\n    <button id=\"btn-multi\" class=\"btn-primary\">Múltiples Listeners</button>\n    <div id=\"log-multi\" class=\"log\"></div>\n  </div>\n  \n  <!-- Event Delegation -->\n  <div class=\"demo-section\">\n    <h2>4. Event Delegation</h2>\n    <div id=\"contenedor\" class=\"contenedor\">\n      <button class=\"btn-dinamico btn-primary\">Botón Dinámico 1</button>\n      <button class=\"btn-dinamico btn-success\">Botón Dinámico 2</button>\n      <button class=\"btn-dinamico btn-warning\">Botón Dinámico 3</button>\n    </div>\n    <button id=\"btn-agregar\" class=\"btn-primary\">Agregar Botón</button>\n    <div id=\"log-delegation\" class=\"log\"></div>\n  </div>\n  \n  <!-- Debounce -->\n  <div class=\"demo-section\">\n    <h2>5. Debounce en Input</h2>\n    <input type=\"text\" id=\"input-debounce\" placeholder=\"Escribe aquí (debounce 500ms)\">\n    <div id=\"log-debounce\" class=\"log\"></div>\n  </div>\n  \n  <!-- Stop Propagation -->\n  <div class=\"demo-section\">\n    <h2>6. Stop Propagation</h2>\n    <div id=\"padre\" style=\"padding: 20px; background: #e3f2fd; border-radius: 8px;\">\n      <p>Padre (click aquí)</p>\n      <button id=\"btn-hijo\" class=\"btn-danger\">Hijo (stopPropagation)</button>\n      <button id=\"btn-hijo-normal\" class=\"btn-primary\">Hijo (normal)</button>\n    </div>\n    <div id=\"log-propagation\" class=\"log\"></div>\n  </div>\n  \n  <script src=\"event-listeners.js\"></script>\n</body>\n</html>\n```\n\n**JavaScript (event-listeners.js):**\n```javascript\n// Función helper para logging\nfunction log(message, logElement) {\n  const timestamp = new Date().toLocaleTimeString();\n  const logItem = document.createElement('div');\n  logItem.className = 'log-item';\n  logItem.textContent = `[${timestamp}] ${message}`;\n  logElement.insertBefore(logItem, logElement.firstChild);\n}\n\n// 1. EVENT LISTENERS BÁSICOS\nconst btnBasico = document.getElementById('btn-basico');\nconst btnRemover = document.getElementById('btn-remover');\nconst logBasico = document.getElementById('log-basico');\n\n// Función para manejar click\nfunction manejarClick(event) {\n  log('🖱️ Botón clickeado', logBasico);\n  log(`Target: ${event.target.id}`, logBasico);\n  log(`TimeStamp: ${event.timeStamp}`, logBasico);\n}\n\n// Agregar listener\nbtnBasico.addEventListener('click', manejarClick);\nlog('✅ Event listener agregado', logBasico);\n\n// Remover listener\nbtnRemover.addEventListener('click', function() {\n  btnBasico.removeEventListener('click', manejarClick);\n  log('❌ Event listener removido', logBasico);\n});\n\n// 2. EVENT LISTENERS CON OPCIONES\nconst btnOnce = document.getElementById('btn-once');\nconst btnPassive = document.getElementById('btn-passive');\nconst btnCapture = document.getElementById('btn-capture');\nconst logOpciones = document.getElementById('log-opciones');\n\n// once: true - Solo se ejecuta una vez\nbtnOnce.addEventListener('click', function(event) {\n  log('🎯 Listener ejecutado (una sola vez)', logOpciones);\n}, { once: true });\n\n// passive: true - Optimización de rendimiento\nbtnPassive.addEventListener('click', function(event) {\n  log('⚡ Listener pasivo ejecutado', logOpciones);\n}, { passive: true });\n\n// capture: true - Se ejecuta en fase de captura\nbtnCapture.addEventListener('click', function(event) {\n  log('🔍 Listener de captura ejecutado', logOpciones);\n}, { capture: true });\n\n// 3. MÚLTIPLES EVENT LISTENERS\nconst btnMulti = document.getElementById('btn-multi');\nconst logMulti = document.getElementById('log-multi');\n\n// Primer listener\nbtnMulti.addEventListener('click', function(event) {\n  log('📢 Primer listener ejecutado', logMulti);\n});\n\n// Segundo listener\nbtnMulti.addEventListener('click', function(event) {\n  log('📢 Segundo listener ejecutado', logMulti);\n});\n\n// Tercer listener con arrow function\nbtnMulti.addEventListener('click', (event) => {\n  log('📢 Tercer listener (arrow function)', logMulti);\n});\n\n// 4. EVENT DELEGATION\nconst contenedor = document.getElementById('contenedor');\nconst btnAgregar = document.getElementById('btn-agregar');\nconst logDelegation = document.getElementById('log-delegation');\nlet contador = 3;\n\n// Event delegation - Un listener para múltiples elementos\ncontenedor.addEventListener('click', function(event) {\n  if (event.target.classList.contains('btn-dinamico')) {\n    log(`🎯 Botón clickeado: ${event.target.textContent}`, logDelegation);\n    log(`Clase: ${event.target.className}`, logDelegation);\n  }\n});\n\n// Agregar botones dinámicamente\nbtnAgregar.addEventListener('click', function() {\n  contador++;\n  const nuevoBoton = document.createElement('button');\n  nuevoBoton.className = 'btn-dinamico btn-primary';\n  nuevoBoton.textContent = `Botón Dinámico ${contador}`;\n  contenedor.appendChild(nuevoBoton);\n  log(`➕ Nuevo botón agregado: ${nuevoBoton.textContent}`, logDelegation);\n});\n\n// 5. DEBOUNCE\nconst inputDebounce = document.getElementById('input-debounce');\nconst logDebounce = document.getElementById('log-debounce');\n\n// Función debounce\nfunction debounce(func, wait) {\n  let timeout;\n  return function executedFunction(...args) {\n    const later = () => {\n      clearTimeout(timeout);\n      func(...args);\n    };\n    clearTimeout(timeout);\n    timeout = setTimeout(later, wait);\n  };\n}\n\n// Búsqueda con debounce\nconst debouncedSearch = debounce(function(event) {\n  log(`🔍 Búsqueda: \"${event.target.value}\"`, logDebounce);\n}, 500);\n\ninputDebounce.addEventListener('input', debouncedSearch);\n\n// 6. STOP PROPAGATION\nconst padre = document.getElementById('padre');\nconst btnHijo = document.getElementById('btn-hijo');\nconst btnHijoNormal = document.getElementById('btn-hijo-normal');\nconst logPropagation = document.getElementById('log-propagation');\n\n// Listener del padre\npadre.addEventListener('click', function(event) {\n  log('👨‍👩‍👧‍👦 Click en PADRE', logPropagation);\n});\n\n// Hijo con stopPropagation\nbtnHijo.addEventListener('click', function(event) {\n  event.stopPropagation();\n  log('🚫 Hijo con stopPropagation', logPropagation);\n});\n\n// Hijo normal\nbtnHijoNormal.addEventListener('click', function(event) {\n  log('👶 Hijo normal', logPropagation);\n});\n\n// Evento inicial\nlog('🚀 Sistema de Event Listeners iniciado', logBasico);\n```",
         
-        "Validación de formularios con JavaScript": "La validación de formularios permite verificar que los datos ingresados cumplan con los requisitos antes de enviarlos. Se puede hacer validación en tiempo real, al enviar el formulario, o ambos. Es fundamental para mejorar la experiencia del usuario y la seguridad.\n\n**Ejemplos:**\n```javascript\n// Validación básica\nconst formulario = document.querySelector('form');\nconst email = document.querySelector('input[type=\"email\"]');\nconst password = document.querySelector('input[type=\"password\"]');\nconst confirmPassword = document.querySelector('input[name=\"confirmPassword\"]');\n\n// Validación al enviar\nformulario.addEventListener('submit', function(event) {\n  event.preventDefault();\n  \n  if (validarFormulario()) {\n    console.log('Formulario válido, enviando...');\n    // Enviar formulario\n  } else {\n    console.log('Formulario inválido');\n  }\n});\n\nfunction validarFormulario() {\n  let esValido = true;\n  \n  // Limpiar errores anteriores\n  limpiarErrores();\n  \n  // Validar email\n  if (!validarEmail(email.value)) {\n    mostrarError(email, 'Email inválido');\n    esValido = false;\n  }\n  \n  // Validar password\n  if (!validarPassword(password.value)) {\n    mostrarError(password, 'Password debe tener al menos 8 caracteres');\n    esValido = false;\n  }\n  \n  // Validar confirmación de password\n  if (password.value !== confirmPassword.value) {\n    mostrarError(confirmPassword, 'Passwords no coinciden');\n    esValido = false;\n  }\n  \n  return esValido;\n}\n\n// Validación en tiempo real\nemail.addEventListener('blur', function() {\n  if (!validarEmail(this.value)) {\n    mostrarError(this, 'Email inválido');\n  } else {\n    limpiarError(this);\n  }\n});\n\npassword.addEventListener('input', function() {\n  if (this.value.length < 8) {\n    mostrarError(this, 'Password debe tener al menos 8 caracteres');\n  } else {\n    limpiarError(this);\n  }\n});\n\n// Funciones de validación\nfunction validarEmail(email) {\n  const patron = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n  return patron.test(email);\n}\n\nfunction validarPassword(password) {\n  return password.length >= 8;\n}\n\nfunction validarTelefono(telefono) {\n  const patron = /^\\d{10}$/;\n  return patron.test(telefono);\n}\n\nfunction validarURL(url) {\n  try {\n    new URL(url);\n    return true;\n  } catch {\n    return false;\n  }\n}\n\n// Funciones de manejo de errores\nfunction mostrarError(campo, mensaje) {\n  campo.classList.add('error');\n  \n  let errorElement = campo.parentNode.querySelector('.error-message');\n  if (!errorElement) {\n    errorElement = document.createElement('div');\n    errorElement.className = 'error-message';\n    campo.parentNode.appendChild(errorElement);\n  }\n  \n  errorElement.textContent = mensaje;\n}\n\nfunction limpiarError(campo) {\n  campo.classList.remove('error');\n  const errorElement = campo.parentNode.querySelector('.error-message');\n  if (errorElement) {\n    errorElement.remove();\n  }\n}\n\nfunction limpiarErrores() {\n  const errores = document.querySelectorAll('.error-message');\n  errores.forEach(error => error.remove());\n  \n  const campos = document.querySelectorAll('.error');\n  campos.forEach(campo => campo.classList.remove('error'));\n}\n\n// Validación con HTML5\nconst input = document.querySelector('input[required]');\ninput.addEventListener('invalid', function(event) {\n  event.preventDefault();\n  mostrarError(this, 'Este campo es requerido');\n});\n\n// Validación de archivos\nconst fileInput = document.querySelector('input[type=\"file\"]');\nfileInput.addEventListener('change', function(event) {\n  const archivo = event.target.files[0];\n  \n  if (archivo) {\n    if (archivo.size > 5 * 1024 * 1024) { // 5MB\n      mostrarError(this, 'El archivo es demasiado grande');\n    } else if (!archivo.type.startsWith('image/')) {\n      mostrarError(this, 'Solo se permiten imágenes');\n    } else {\n      limpiarError(this);\n    }\n  }\n});\n```"
+        "Validación de formularios con JavaScript": "La validación de formularios permite verificar que los datos ingresados cumplan con los requisitos antes de enviarlos. Se puede hacer validación en tiempo real, al enviar el formulario, o ambos. Es fundamental para mejorar la experiencia del usuario y la seguridad.\n\n**HTML necesario:**\n```html\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Validación de Formularios</title>\n  <style>\n    body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; background: #f5f5f5; }\n    .formulario { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }\n    h1 { text-align: center; color: #333; margin-bottom: 30px; }\n    .form-group { margin-bottom: 20px; }\n    label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }\n    input, textarea, select { width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 14px; box-sizing: border-box; transition: border-color 0.3s; }\n    input:focus, textarea:focus, select:focus { outline: none; border-color: #4caf50; box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1); }\n    .error { border-color: #f44336; }\n    .success { border-color: #4caf50; }\n    .error-message { color: #f44336; font-size: 12px; margin-top: 5px; display: none; }\n    .error-message.active { display: block; }\n    .success-message { color: #4caf50; font-size: 12px; margin-top: 5px; display: none; }\n    .success-message.active { display: block; }\n    button { background: #4caf50; color: white; padding: 12px 30px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; width: 100%; transition: background 0.3s; }\n    button:hover { background: #45a049; }\n    button:disabled { background: #ccc; cursor: not-allowed; }\n    .password-strength { margin-top: 5px; height: 4px; background: #eee; border-radius: 2px; overflow: hidden; }\n    .password-strength-bar { height: 100%; transition: width 0.3s; }\n    .strength-weak { background: #f44336; width: 25%; }\n    .strength-medium { background: #ff9800; width: 50%; }\n    .strength-strong { background: #4caf50; width: 100%; }\n    .summary { margin-top: 20px; padding: 15px; border-radius: 6px; display: none; }\n    .summary.success { background: #e8f5e9; border: 1px solid #4caf50; color: #2e7d32; }\n    .summary.error { background: #ffebee; border: 1px solid #f44336; color: #c62828; }\n  </style>\n</head>\n<body>\n  <div class=\"formulario\">\n    <h1>📝 Validación de Formularios</h1>\n    \n    <form id=\"mi-formulario\" novalidate>\n      <!-- Nombre -->\n      <div class=\"form-group\">\n        <label for=\"nombre\">Nombre completo *</label>\n        <input type=\"text\" id=\"nombre\" name=\"nombre\" placeholder=\"Ingresa tu nombre completo\" required>\n        <div class=\"error-message\" id=\"error-nombre\"></div>\n        <div class=\"success-message\" id=\"success-nombre\">✓ Nombre válido</div>\n      </div>\n      \n      <!-- Email -->\n      <div class=\"form-group\">\n        <label for=\"email\">Email *</label>\n        <input type=\"email\" id=\"email\" name=\"email\" placeholder=\"ejemplo@correo.com\" required>\n        <div class=\"error-message\" id=\"error-email\"></div>\n        <div class=\"success-message\" id=\"success-email\">✓ Email válido</div>\n      </div>\n      \n      <!-- Teléfono -->\n      <div class=\"form-group\">\n        <label for=\"telefono\">Teléfono *</label>\n        <input type=\"tel\" id=\"telefono\" name=\"telefono\" placeholder=\"1234567890\" required>\n        <div class=\"error-message\" id=\"error-telefono\"></div>\n        <div class=\"success-message\" id=\"success-telefono\">✓ Teléfono válido</div>\n      </div>\n      \n      <!-- Password -->\n      <div class=\"form-group\">\n        <label for=\"password\">Contraseña *</label>\n        <input type=\"password\" id=\"password\" name=\"password\" placeholder=\"Mínimo 8 caracteres\" required>\n        <div class=\"password-strength\">\n          <div class=\"password-strength-bar\" id=\"strength-bar\"></div>\n        </div>\n        <div class=\"error-message\" id=\"error-password\"></div>\n        <div class=\"success-message\" id=\"success-password\">✓ Contraseña válida</div>\n      </div>\n      \n      <!-- Confirmar Password -->\n      <div class=\"form-group\">\n        <label for=\"confirmPassword\">Confirmar contraseña *</label>\n        <input type=\"password\" id=\"confirmPassword\" name=\"confirmPassword\" placeholder=\"Repite tu contraseña\" required>\n        <div class=\"error-message\" id=\"error-confirmPassword\"></div>\n        <div class=\"success-message\" id=\"success-confirmPassword\">✓ Contraseñas coinciden</div>\n      </div>\n      \n      <!-- Edad -->\n      <div class=\"form-group\">\n        <label for=\"edad\">Edad *</label>\n        <input type=\"number\" id=\"edad\" name=\"edad\" placeholder=\"18\" min=\"18\" max=\"120\" required>\n        <div class=\"error-message\" id=\"error-edad\"></div>\n        <div class=\"success-message\" id=\"success-edad\">✓ Edad válida</div>\n      </div>\n      \n      <!-- País -->\n      <div class=\"form-group\">\n        <label for=\"pais\">País *</label>\n        <select id=\"pais\" name=\"pais\" required>\n          <option value=\"\">Selecciona tu país</option>\n          <option value=\"es\">España</option>\n          <option value=\"mx\">México</option>\n          <option value=\"co\">Colombia</option>\n          <option value=\"ar\">Argentina</option>\n          <option value=\"pe\">Perú</option>\n          <option value=\"cl\">Chile</option>\n          <option value=\"ve\">Venezuela</option>\n        </select>\n        <div class=\"error-message\" id=\"error-pais\"></div>\n        <div class=\"success-message\" id=\"success-pais\">✓ País seleccionado</div>\n      </div>\n      \n      <!-- Comentarios -->\n      <div class=\"form-group\">\n        <label for=\"comentarios\">Comentarios</label>\n        <textarea id=\"comentarios\" name=\"comentarios\" rows=\"4\" placeholder=\"Cuéntanos algo sobre ti...\"></textarea>\n        <div class=\"error-message\" id=\"error-comentarios\"></div>\n      </div>\n      \n      <!-- Archivo -->\n      <div class=\"form-group\">\n        <label for=\"archivo\">Foto de perfil (opcional)</label>\n        <input type=\"file\" id=\"archivo\" name=\"archivo\" accept=\"image/*\">\n        <div class=\"error-message\" id=\"error-archivo\"></div>\n      </div>\n      \n      <!-- Botón de envío -->\n      <button type=\"submit\" id=\"btn-enviar\">Crear Cuenta</button>\n    </form>\n    \n    <!-- Resumen -->\n    <div id=\"summary\" class=\"summary\"></div>\n  </div>\n  \n  <script src=\"validacion.js\"></script>\n</body>\n</html>\n```\n\n**JavaScript (validacion.js):**\n```javascript\n// Elementos del formulario\nconst formulario = document.getElementById('mi-formulario');\nconst btnEnviar = document.getElementById('btn-enviar');\nconst summary = document.getElementById('summary');\n\n// Campos del formulario\nconst campos = {\n  nombre: document.getElementById('nombre'),\n  email: document.getElementById('email'),\n  telefono: document.getElementById('telefono'),\n  password: document.getElementById('password'),\n  confirmPassword: document.getElementById('confirmPassword'),\n  edad: document.getElementById('edad'),\n  pais: document.getElementById('pais'),\n  comentarios: document.getElementById('comentarios'),\n  archivo: document.getElementById('archivo')\n};\n\n// Estado de validación\nlet validacionEstado = {\n  nombre: false,\n  email: false,\n  telefono: false,\n  password: false,\n  confirmPassword: false,\n  edad: false,\n  pais: false,\n  comentarios: true, // Opcional\n  archivo: true // Opcional\n};\n\n// FUNCIONES DE VALIDACIÓN\nfunction validarNombre(valor) {\n  if (!valor || valor.trim().length < 2) {\n    return 'El nombre debe tener al menos 2 caracteres';\n  }\n  if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$/.test(valor)) {\n    return 'El nombre solo puede contener letras y espacios';\n  }\n  return null;\n}\n\nfunction validarEmail(valor) {\n  if (!valor) {\n    return 'El email es requerido';\n  }\n  const patron = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n  if (!patron.test(valor)) {\n    return 'Formato de email inválido';\n  }\n  return null;\n}\n\nfunction validarTelefono(valor) {\n  if (!valor) {\n    return 'El teléfono es requerido';\n  }\n  const patron = /^\\d{10}$/;\n  if (!patron.test(valor)) {\n    return 'El teléfono debe tener exactamente 10 dígitos';\n  }\n  return null;\n}\n\nfunction validarPassword(valor) {\n  if (!valor) {\n    return 'La contraseña es requerida';\n  }\n  if (valor.length < 8) {\n    return 'La contraseña debe tener al menos 8 caracteres';\n  }\n  if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)/.test(valor)) {\n    return 'La contraseña debe contener al menos una mayúscula, una minúscula y un número';\n  }\n  return null;\n}\n\nfunction validarConfirmPassword(valor, password) {\n  if (!valor) {\n    return 'Debes confirmar tu contraseña';\n  }\n  if (valor !== password) {\n    return 'Las contraseñas no coinciden';\n  }\n  return null;\n}\n\nfunction validarEdad(valor) {\n  const edad = parseInt(valor);\n  if (!valor || isNaN(edad)) {\n    return 'La edad es requerida';\n  }\n  if (edad < 18) {\n    return 'Debes ser mayor de 18 años';\n  }\n  if (edad > 120) {\n    return 'Edad inválida';\n  }\n  return null;\n}\n\nfunction validarPais(valor) {\n  if (!valor) {\n    return 'Debes seleccionar un país';\n  }\n  return null;\n}\n\nfunction validarArchivo(archivo) {\n  if (!archivo || archivo.files.length === 0) {\n    return null; // Opcional\n  }\n  const file = archivo.files[0];\n  if (file.size > 5 * 1024 * 1024) { // 5MB\n    return 'El archivo no puede ser mayor a 5MB';\n  }\n  if (!file.type.startsWith('image/')) {\n    return 'Solo se permiten archivos de imagen';\n  }\n  return null;\n}\n\n// FUNCIONES DE UI\nfunction mostrarError(campoId, mensaje) {\n  const campo = campos[campoId];\n  const errorElement = document.getElementById(`error-${campoId}`);\n  const successElement = document.getElementById(`success-${campoId}`);\n  \n  campo.classList.remove('success');\n  campo.classList.add('error');\n  \n  if (errorElement) {\n    errorElement.textContent = mensaje;\n    errorElement.classList.add('active');\n  }\n  \n  if (successElement) {\n    successElement.classList.remove('active');\n  }\n  \n  validacionEstado[campoId] = false;\n}\n\nfunction mostrarExito(campoId) {\n  const campo = campos[campoId];\n  const errorElement = document.getElementById(`error-${campoId}`);\n  const successElement = document.getElementById(`success-${campoId}`);\n  \n  campo.classList.remove('error');\n  campo.classList.add('success');\n  \n  if (errorElement) {\n    errorElement.classList.remove('active');\n  }\n  \n  if (successElement) {\n    successElement.classList.add('active');\n  }\n  \n  validacionEstado[campoId] = true;\n}\n\nfunction actualizarPasswordStrength(password) {\n  const strengthBar = document.getElementById('strength-bar');\n  let strength = 0;\n  \n  if (password.length >= 8) strength++;\n  if (/[a-z]/.test(password)) strength++;\n  if (/[A-Z]/.test(password)) strength++;\n  if (/\\d/.test(password)) strength++;\n  if (/[^a-zA-Z\\d]/.test(password)) strength++;\n  \n  strengthBar.className = 'password-strength-bar';\n  if (strength <= 2) {\n    strengthBar.classList.add('strength-weak');\n  } else if (strength <= 4) {\n    strengthBar.classList.add('strength-medium');\n  } else {\n    strengthBar.classList.add('strength-strong');\n  }\n}\n\nfunction actualizarBotonEnviar() {\n  const todosValidos = Object.values(validacionEstado).every(valido => valido);\n  btnEnviar.disabled = !todosValidos;\n  \n  if (todosValidos) {\n    btnEnviar.textContent = 'Crear Cuenta ✓';\n  } else {\n    btnEnviar.textContent = 'Completa todos los campos requeridos';\n  }\n}\n\nfunction mostrarSummary(datos, esValido) {\n  if (esValido) {\n    summary.className = 'summary success';\n    summary.innerHTML = `\n      <h3>✅ ¡Formulario Enviado Exitosamente!</h3>\n      <p><strong>Nombre:</strong> ${datos.nombre}</p>\n      <p><strong>Email:</strong> ${datos.email}</p>\n      <p><strong>Teléfono:</strong> ${datos.telefono}</p>\n      <p><strong>Edad:</strong> ${datos.edad} años</p>\n      <p><strong>País:</strong> ${datos.pais}</p>\n      ${datos.comentarios ? `<p><strong>Comentarios:</strong> ${datos.comentarios}</p>` : ''}\n      ${datos.archivo ? `<p><strong>Archivo:</strong> ${datos.archivo}</p>` : ''}\n    `;\n  } else {\n    summary.className = 'summary error';\n    summary.innerHTML = `\n      <h3>❌ Errores en el formulario</h3>\n      <p>Por favor corrige los errores antes de enviar.</p>\n    `;\n  }\n  \n  summary.style.display = 'block';\n}\n\n// EVENT LISTENERS\n// Validación en tiempo real\ncampos.nombre.addEventListener('blur', function() {\n  const error = validarNombre(this.value);\n  if (error) {\n    mostrarError('nombre', error);\n  } else {\n    mostrarExito('nombre');\n  }\n  actualizarBotonEnviar();\n});\n\ncampos.email.addEventListener('blur', function() {\n  const error = validarEmail(this.value);\n  if (error) {\n    mostrarError('email', error);\n  } else {\n    mostrarExito('email');\n  }\n  actualizarBotonEnviar();\n});\n\ncampos.telefono.addEventListener('blur', function() {\n  const error = validarTelefono(this.value);\n  if (error) {\n    mostrarError('telefono', error);\n  } else {\n    mostrarExito('telefono');\n  }\n  actualizarBotonEnviar();\n});\n\ncampos.password.addEventListener('input', function() {\n  actualizarPasswordStrength(this.value);\n});\n\ncampos.password.addEventListener('blur', function() {\n  const error = validarPassword(this.value);\n  if (error) {\n    mostrarError('password', error);\n  } else {\n    mostrarExito('password');\n  }\n  actualizarBotonEnviar();\n});\n\ncampos.confirmPassword.addEventListener('blur', function() {\n  const error = validarConfirmPassword(this.value, campos.password.value);\n  if (error) {\n    mostrarError('confirmPassword', error);\n  } else {\n    mostrarExito('confirmPassword');\n  }\n  actualizarBotonEnviar();\n});\n\ncampos.edad.addEventListener('blur', function() {\n  const error = validarEdad(this.value);\n  if (error) {\n    mostrarError('edad', error);\n  } else {\n    mostrarExito('edad');\n  }\n  actualizarBotonEnviar();\n});\n\ncampos.pais.addEventListener('change', function() {\n  const error = validarPais(this.value);\n  if (error) {\n    mostrarError('pais', error);\n  } else {\n    mostrarExito('pais');\n  }\n  actualizarBotonEnviar();\n});\n\ncampos.archivo.addEventListener('change', function() {\n  const error = validarArchivo(this);\n  if (error) {\n    mostrarError('archivo', error);\n  } else {\n    mostrarExito('archivo');\n  }\n  actualizarBotonEnviar();\n});\n\n// Envío del formulario\nformulario.addEventListener('submit', function(event) {\n  event.preventDefault();\n  \n  // Validar todos los campos\n  let esValido = true;\n  const datos = {};\n  \n  // Validar campos requeridos\n  Object.keys(campos).forEach(campoId => {\n    if (campoId === 'comentarios' || campoId === 'archivo') return;\n    \n    const campo = campos[campoId];\n    let error = null;\n    \n    switch (campoId) {\n      case 'nombre':\n        error = validarNombre(campo.value);\n        break;\n      case 'email':\n        error = validarEmail(campo.value);\n        break;\n      case 'telefono':\n        error = validarTelefono(campo.value);\n        break;\n      case 'password':\n        error = validarPassword(campo.value);\n        break;\n      case 'confirmPassword':\n        error = validarConfirmPassword(campo.value, campos.password.value);\n        break;\n      case 'edad':\n        error = validarEdad(campo.value);\n        break;\n      case 'pais':\n        error = validarPais(campo.value);\n        break;\n    }\n    \n    if (error) {\n      mostrarError(campoId, error);\n      esValido = false;\n    } else {\n      mostrarExito(campoId);\n      datos[campoId] = campo.value;\n    }\n  });\n  \n  // Campos opcionales\n  datos.comentarios = campos.comentarios.value;\n  if (campos.archivo.files.length > 0) {\n    datos.archivo = campos.archivo.files[0].name;\n  }\n  \n  // Mostrar resultado\n  mostrarSummary(datos, esValido);\n  \n  if (esValido) {\n    console.log('Datos del formulario:', datos);\n    // Aquí enviarías los datos al servidor\n    // formulario.reset();\n  }\n});\n\n// Inicializar\nactualizarBotonEnviar();\n```"
       },
       practical: [
         "Seleccionar y manipular elementos del DOM",
@@ -2209,320 +3864,392 @@ console.log('Buscar "JavaScript":', lista.buscarTareas('JavaScript'));`
     ],
     exercises: [
       {
-        title: "Lista de Tareas con Hooks",
-        description: "Crea una aplicación de lista de tareas usando useState y useEffect.",
-        code: `// Componente de lista de tareas
-import React, { useState, useEffect } from 'react';
-
-function TodoList() {
-    const [todos, setTodos] = useState([]);
-    const [nuevaTarea, setNuevaTarea] = useState('');
-    
-    // Tu código aquí
-    
-    return (
-        <div className="todo-list">
-            <h2>Lista de Tareas</h2>
-            {/* Tu JSX aquí */}
-        </div>
-    );
-}
-
-export default TodoList;`,
-        solution: `// Lista de tareas con hooks - Solución
-import React, { useState, useEffect } from 'react';
-import './TodoList.css';
-
-function TodoList() {
-    const [todos, setTodos] = useState([]);
-    const [nuevaTarea, setNuevaTarea] = useState('');
-    const [filtro, setFiltro] = useState('todas');
-    
-    // Cargar tareas del localStorage al montar el componente
-    useEffect(() => {
-        const tareasGuardadas = localStorage.getItem('todos');
-        if (tareasGuardadas) {
-            setTodos(JSON.parse(tareasGuardadas));
-        }
-    }, []);
-    
-    // Guardar tareas en localStorage cuando cambien
-    useEffect(() => {
-        localStorage.setItem('todos', JSON.stringify(todos));
-    }, [todos]);
-    
-    const agregarTarea = () => {
-        if (nuevaTarea.trim()) {
-            const nuevaTareaObj = {
-                id: Date.now(),
-                texto: nuevaTarea,
-                completada: false,
-                fecha: new Date().toISOString()
-            };
-            setTodos([...todos, nuevaTareaObj]);
-            setNuevaTarea('');
-        }
-    };
-    
-    const toggleTarea = (id) => {
-        setTodos(todos.map(todo => 
-            todo.id === id ? { ...todo, completada: !todo.completada } : todo
-        ));
-    };
-    
-    const eliminarTarea = (id) => {
-        setTodos(todos.filter(todo => todo.id !== id));
-    };
-    
-    const tareasFiltradas = todos.filter(todo => {
-        if (filtro === 'completadas') return todo.completada;
-        if (filtro === 'pendientes') return !todo.completada;
-        return true;
-    });
-    
-    return (
-        <div className="todo-list">
-            <h2>Lista de Tareas</h2>
-            
-            <div className="todo-form">
-                <input
-                    type="text"
-                    value={nuevaTarea}
-                    onChange={(e) => setNuevaTarea(e.target.value)}
-                    placeholder="Nueva tarea..."
-                    onKeyPress={(e) => e.key === 'Enter' && agregarTarea()}
-                />
-                <button onClick={agregarTarea}>Agregar</button>
-            </div>
-            
-            <div className="filtros">
-                <button 
-                    className={filtro === 'todas' ? 'active' : ''}
-                    onClick={() => setFiltro('todas')}
-                >
-                    Todas ({todos.length})
-                </button>
-                <button 
-                    className={filtro === 'pendientes' ? 'active' : ''}
-                    onClick={() => setFiltro('pendientes')}
-                >
-                    Pendientes ({todos.filter(t => !t.completada).length})
-                </button>
-                <button 
-                    className={filtro === 'completadas' ? 'active' : ''}
-                    onClick={() => setFiltro('completadas')}
-                >
-                    Completadas ({todos.filter(t => t.completada).length})
-                </button>
-            </div>
-            
-            <ul className="todos">
-                {tareasFiltradas.map(todo => (
-                    <li key={todo.id} className={\`todo-item \${todo.completada ? 'completada' : ''}\`}>
-                        <input
-                            type="checkbox"
-                            checked={todo.completada}
-                            onChange={() => toggleTarea(todo.id)}
-                        />
-                        <span className="todo-text">{todo.texto}</span>
-                        <button 
-                            className="delete-btn"
-                            onClick={() => eliminarTarea(todo.id)}
-                        >
-                            Eliminar
-                        </button>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-}
-
-export default TodoList;`
+        title: "Interactividad de DOM y Eventos",
+        description: "Crea una mini app que manipule el DOM y maneje eventos: añadir ítems, alternar estilos y validar input en tiempo real.",
+        code: `<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>DOM y Eventos</title>\n  <style>\n    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; padding: 24px; }\n    .app { max-width: 680px; margin: 0 auto; }\n    .toolbar { display: flex; gap: 8px; margin: 12px 0; }\n    .list { margin-top: 12px; padding: 0; list-style: none; }\n    .item { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 8px; }\n    .item.highlight { background: #fffde7; border-color: #fdd835; }\n    .item .remove { margin-left: auto; background: #ef5350; color: white; border: 0; padding: 6px 10px; border-radius: 4px; cursor: pointer; }\n    .error { color: #d32f2f; font-size: 12px; margin-top: 4px; display: none; }\n    .error.active { display: block; }\n  </style>\n</head>\n<body>\n  <div class=\"app\">\n    <h1>DOM y Eventos</h1>\n    <label>Nuevo ítem</label>\n    <input id=\"input-texto\" type=\"text\" placeholder=\"Escribe y presiona Agregar\" />\n    <div id=\"error\" class=\"error\">Debes escribir al menos 3 caracteres</div>\n    <div class=\"toolbar\">\n      <button id=\"btn-agregar\">Agregar</button>\n      <button id=\"btn-toggle\">Alternar resaltado</button>\n      <button id=\"btn-limpiar\">Limpiar lista</button>\n    </div>\n    <ul id=\"lista\" class=\"list\"></ul>\n  </div>\n  <script>\n    const input = document.getElementById('input-texto');\n    const error = document.getElementById('error');\n    const lista = document.getElementById('lista');\n    const btnAgregar = document.getElementById('btn-agregar');\n    const btnToggle = document.getElementById('btn-toggle');\n    const btnLimpiar = document.getElementById('btn-limpiar');\n    input.addEventListener('input', function () {\n      const ok = this.value.trim().length >= 3;\n      error.classList.toggle('active', !ok && this.value.length > 0);\n    });\n    function agregar() {\n      const texto = input.value.trim();\n      if (texto.length < 3) {\n        error.classList.add('active');\n        return;\n      }\n      const li = document.createElement('li');\n      li.className = 'item';\n      li.innerHTML = '<input type=\\"checkbox\\" /> <span>' + texto + '</span> <button class=\\"remove\\">Eliminar</button>';\n      lista.appendChild(li);\n      input.value = '';\n      error.classList.remove('active');\n    }\n    btnAgregar.addEventListener('click', agregar);\n    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') agregar(); });\n    lista.addEventListener('click', function (e) {\n      if (e.target.classList.contains('remove')) {\n        e.target.closest('.item').remove();\n      }\n    });\n    btnToggle.addEventListener('click', function () {\n      document.querySelectorAll('.item').forEach(el => el.classList.toggle('highlight'));\n    });\n    btnLimpiar.addEventListener('click', function () { lista.innerHTML = ''; });\n  </script>\n</body>\n</html>`,
+        solution: `<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>DOM y Eventos - Solución</title>\n  <style>\n    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; padding: 24px; }\n    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }\n    .app { max-width: 720px; margin: 0 auto; }\n    .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }\n    .list { margin-top: 12px; padding: 0; list-style: none; }\n    .item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 8px; background: #fff; }\n    .item.highlight { background: #fffde7; border-color: #fdd835; }\n    .item .remove { margin-left: auto; background: #e53935; color: white; border: 0; padding: 6px 12px; border-radius: 6px; cursor: pointer; }\n    .item .remove:hover { background: #c62828; }\n    .error { color: #d32f2f; font-size: 12px; margin-top: 6px; display: none; }\n    .error.active { display: block; }\n  </style>\n</head>\n<body>\n  <div class=\"app\">\n    <h1>Interactividad con DOM y Eventos</h1>\n    <label for=\"input-texto\">Nuevo ítem</label>\n    <input id=\"input-texto\" type=\"text\" aria-describedby=\"error\" placeholder=\"Ej: Estudiar DOM\" />\n    <div id=\"error\" class=\"error\" role=\"alert\" aria-live=\"polite\">Debes escribir al menos 3 caracteres</div>\n    <div class=\"toolbar\">\n      <button id=\"btn-agregar\">Agregar</button>\n      <button id=\"btn-toggle\">Alternar resaltado</button>\n      <button id=\"btn-limpiar\">Limpiar lista</button>\n    </div>\n    <ul id=\"lista\" class=\"list\"></ul>\n  </div>\n  <script>\n    const qs = (s, r=document) => r.querySelector(s);\n    const qsa = (s, r=document) => Array.from(r.querySelectorAll(s));\n    const input = qs('#input-texto');\n    const error = qs('#error');\n    const lista = qs('#lista');\n    function validar(valor) { return valor.trim().length >= 3; }\n    input.addEventListener('input', (e) => {\n      const ok = validar(e.target.value);\n      error.classList.toggle('active', !ok && e.target.value.length>0);\n      e.target.setAttribute('aria-invalid', String(!ok));\n    });\n    function crearItem(texto) {\n      const li = document.createElement('li');\n      li.className = 'item';\n      li.innerHTML = '<input aria-label=\\"Marcar\\" type=\\"checkbox\\" /> <span></span> <button class=\\"remove\\" aria-label=\\"Eliminar\\">Eliminar</button>';\n      li.querySelector('span').textContent = texto;\n      return li;\n    }\n    function agregar() {\n      const texto = input.value.trim();\n      if (!validar(texto)) { error.classList.add('active'); input.focus(); return; }\n      lista.appendChild(crearItem(texto));\n      input.value='';\n      error.classList.remove('active');\n    }\n    qs('#btn-agregar').addEventListener('click', agregar);\n    input.addEventListener('keydown', (e)=>{ if(e.key==='Enter') agregar(); });\n    lista.addEventListener('click', (e)=>{ const item = e.target.closest('.item'); if (!item) return; if (e.target.classList.contains('remove')) { item.remove(); } });\n    qs('#btn-toggle').addEventListener('click', ()=>{ qsa('.item').forEach(el=> el.classList.toggle('highlight')); });\n    qs('#btn-limpiar').addEventListener('click', ()=>{ lista.innerHTML=''; });\n  </script>\n</body>\n</html>`
       }
     ]
   },
   {
     id: 12,
-    title: "JavaScript - Arrays y Objetos",
+    title: "JavaScript - Arrays y Objetos Avanzados",
     duration: "3 horas",
     level: "Intermedio",
     completed: false,
     objectives: [
-      "Trabajar con arrays y sus métodos",
-      "Manipular objetos JavaScript",
-      "Usar JSON para intercambio de datos",
-      "Implementar Local Storage"
+      "Dominar métodos avanzados de arrays",
+      "Trabajar con estructuras de datos complejas",
+      "Implementar algoritmos de búsqueda y ordenamiento",
+      "Crear aplicaciones con persistencia de datos"
     ],
     content: {
       theoretical: [
-        "Arrays: métodos map, filter, reduce",
-        "Objetos: propiedades y métodos",
-        "JSON: parse y stringify",
-        "Local Storage: persistencia de datos",
-        "Session Storage: datos temporales",
-        "Estructuras de datos complejas"
+        "Fundamentos: arrays, objetos y clases básicas",
+        "Métodos avanzados de arrays: sort, splice, slice, concat",
+        "Destructuring avanzado: arrays y objetos anidados",
+        "Spread operator y rest parameters",
+        "Map, Set y WeakMap/WeakSet",
+        "Algoritmos de búsqueda y ordenamiento",
+        "Estructuras de datos complejas y recursión"
       ],
       theoreticalDetails: {
-        "Arrays: métodos map, filter, reduce": "Los métodos map, filter y reduce son fundamentales para la programación funcional en JavaScript. map transforma cada elemento, filter selecciona elementos que cumplen una condición, y reduce acumula valores en un solo resultado. Son métodos inmutables que no modifican el array original.\n\n**Ejemplos:**\n```javascript\n// Array de números\nconst numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\n\n// map: Transformar cada elemento\nconst cuadrados = numeros.map(n => n * n);\nconsole.log(cuadrados); // [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n\nconst dobles = numeros.map(n => n * 2);\nconsole.log(dobles); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]\n\n// filter: Seleccionar elementos\nconst pares = numeros.filter(n => n % 2 === 0);\nconsole.log(pares); // [2, 4, 6, 8, 10]\n\nconst mayoresA5 = numeros.filter(n => n > 5);\nconsole.log(mayoresA5); // [6, 7, 8, 9, 10]\n\n// reduce: Acumular valores\nconst suma = numeros.reduce((acc, n) => acc + n, 0);\nconsole.log(suma); // 55\n\nconst producto = numeros.reduce((acc, n) => acc * n, 1);\nconsole.log(producto); // 3628800\n\n// Array de objetos\nconst personas = [\n  { nombre: 'Juan', edad: 25, ciudad: 'Madrid' },\n  { nombre: 'María', edad: 30, ciudad: 'Barcelona' },\n  { nombre: 'Pedro', edad: 20, ciudad: 'Madrid' },\n  { nombre: 'Ana', edad: 35, ciudad: 'Valencia' }\n];\n\n// map con objetos\nconst nombres = personas.map(p => p.nombre);\nconsole.log(nombres); // ['Juan', 'María', 'Pedro', 'Ana']\n\nconst edades = personas.map(p => p.edad);\nconsole.log(edades); // [25, 30, 20, 35]\n\n// filter con objetos\nconst deMadrid = personas.filter(p => p.ciudad === 'Madrid');\nconsole.log(deMadrid); // [{ nombre: 'Juan', edad: 25, ciudad: 'Madrid' }, { nombre: 'Pedro', edad: 20, ciudad: 'Madrid' }]\n\nconst mayoresDe25 = personas.filter(p => p.edad > 25);\nconsole.log(mayoresDe25); // [{ nombre: 'María', edad: 30, ciudad: 'Barcelona' }, { nombre: 'Ana', edad: 35, ciudad: 'Valencia' }]\n\n// reduce con objetos\nconst edadPromedio = personas.reduce((acc, p) => acc + p.edad, 0) / personas.length;\nconsole.log(edadPromedio); // 27.5\n\nconst agrupadoPorCiudad = personas.reduce((acc, p) => {\n  if (!acc[p.ciudad]) {\n    acc[p.ciudad] = [];\n  }\n  acc[p.ciudad].push(p);\n  return acc;\n}, {});\nconsole.log(agrupadoPorCiudad); // { Madrid: [...], Barcelona: [...], Valencia: [...] }\n\n// Combinando métodos\nconst nombresMayoresDe25 = personas\n  .filter(p => p.edad > 25)\n  .map(p => p.nombre);\nconsole.log(nombresMayoresDe25); // ['María', 'Ana']\n\nconst sumaEdadesMadrid = personas\n  .filter(p => p.ciudad === 'Madrid')\n  .reduce((acc, p) => acc + p.edad, 0);\nconsole.log(sumaEdadesMadrid); // 45\n\n// Métodos adicionales\nconst numeros2 = [1, 2, 3, 4, 5];\n\n// forEach: Ejecutar función para cada elemento\nnumeros2.forEach((n, index) => {\n  console.log(`Elemento ${index}: ${n}`);\n});\n\n// find: Encontrar primer elemento que cumple condición\nconst primerPar = numeros2.find(n => n % 2 === 0);\nconsole.log(primerPar); // 2\n\n// findIndex: Encontrar índice del primer elemento que cumple condición\nconst indicePrimerPar = numeros2.findIndex(n => n % 2 === 0);\nconsole.log(indicePrimerPar); // 1\n\n// some: Verificar si algún elemento cumple condición\nconst hayPares = numeros2.some(n => n % 2 === 0);\nconsole.log(hayPares); // true\n\n// every: Verificar si todos los elementos cumplen condición\nconst todosPares = numeros2.every(n => n % 2 === 0);\nconsole.log(todosPares); // false\n```",
+        "Fundamentos: arrays, objetos y clases básicas": "Los arrays, objetos y clases son estructuras fundamentales en JavaScript. Los arrays almacenan listas de elementos, los objetos representan entidades con propiedades y métodos, y las clases son plantillas para crear objetos con comportamiento específico. Dominar estos conceptos es esencial para el desarrollo avanzado.\n\n**CASO REAL: Sistema de Gestión de Biblioteca**\n\n## 1. ARRAYS - Listas de Datos\n```javascript\n// Array de libros en la biblioteca\nconst libros = [\n  'El Quijote',\n  '1984',\n  'Cien años de soledad',\n  'Rayuela',\n  'Don Juan Tenorio'\n];\n\n// Sintaxis básica de arrays\nconsole.log(libros[0]); // 'El Quijote' (primer elemento)\nconsole.log(libros.length); // 5 (cantidad de elementos)\n\n// Agregar elementos\nlibros.push('La Odisea'); // Al final\nlibros.unshift('La Ilíada'); // Al inicio\n\n// Eliminar elementos\nconst ultimoLibro = libros.pop(); // Elimina y retorna el último\nconst primerLibro = libros.shift(); // Elimina y retorna el primero\n\n// Buscar elementos\nconst indice = libros.indexOf('1984'); // 2\nconst existe = libros.includes('Rayuela'); // true\n\n// Iterar sobre arrays\nlibros.forEach(libro => {\n  console.log(`Libro: ${libro}`);\n});\n\n// Transformar arrays\nconst librosEnMayusculas = libros.map(libro => libro.toUpperCase());\nconst librosLargos = libros.filter(libro => libro.length > 10);\n```\n\n## 2. OBJETOS - Entidades con Propiedades\n```javascript\n// Objeto representando un libro\nconst libro = {\n  titulo: 'El Quijote',\n  autor: 'Miguel de Cervantes',\n  año: 1605,\n  genero: 'Novela',\n  disponible: true,\n  prestadoPor: null\n};\n\n// Sintaxis básica de objetos\nconsole.log(libro.titulo); // Acceso con punto\nconsole.log(libro['autor']); // Acceso con corchetes\n\n// Modificar propiedades\nlibro.disponible = false;\nlibro.prestadoPor = 'Juan Pérez';\n\n// Agregar nuevas propiedades\nlibro.isbn = '978-84-376-0494-7';\nlibro.editorial = 'Cátedra';\n\n// Eliminar propiedades\ndelete libro.prestadoPor;\n\n// Verificar si existe una propiedad\nif ('isbn' in libro) {\n  console.log('ISBN disponible:', libro.isbn);\n}\n\n// Iterar sobre propiedades\nfor (const clave in libro) {\n  console.log(`${clave}: ${libro[clave]}`);\n}\n\n// Obtener claves y valores\nconst claves = Object.keys(libro); // ['titulo', 'autor', 'año', ...]\nconst valores = Object.values(libro); // ['El Quijote', 'Miguel de Cervantes', ...]\nconst entradas = Object.entries(libro); // [['titulo', 'El Quijote'], ...]\n```\n\n## 3. CLASES - Plantillas para Objetos\n```javascript\n// Clase para representar un libro en la biblioteca\nclass Libro {\n  // Constructor - se ejecuta al crear una instancia\n  constructor(titulo, autor, año, genero) {\n    this.titulo = titulo;\n    this.autor = autor;\n    this.año = año;\n    this.genero = genero;\n    this.disponible = true;\n    this.prestadoPor = null;\n    this.fechaPrestamo = null;\n  }\n  \n  // Métodos - funciones que pertenecen a la clase\n  prestar(usuario) {\n    if (this.disponible) {\n      this.disponible = false;\n      this.prestadoPor = usuario;\n      this.fechaPrestamo = new Date();\n      return `Libro prestado a ${usuario}`;\n    } else {\n      return 'El libro no está disponible';\n    }\n  }\n  \n  devolver() {\n    if (!this.disponible) {\n      const usuario = this.prestadoPor;\n      this.disponible = true;\n      this.prestadoPor = null;\n      this.fechaPrestamo = null;\n      return `Libro devuelto por ${usuario}`;\n    } else {\n      return 'El libro ya está disponible';\n    }\n  }\n  \n  // Método para obtener información\n  obtenerInfo() {\n    return `${this.titulo} por ${this.autor} (${this.año})`;\n  }\n  \n  // Método estático - pertenece a la clase, no a las instancias\n  static esAntiguo(libro) {\n    return (new Date().getFullYear() - libro.año) > 100;\n  }\n}\n\n// Crear instancias (objetos) de la clase\nconst quijote = new Libro('El Quijote', 'Miguel de Cervantes', 1605, 'Novela');\nconst libro1984 = new Libro('1984', 'George Orwell', 1949, 'Ficción distópica');\nconst rayuela = new Libro('Rayuela', 'Julio Cortázar', 1963, 'Novela experimental');\n\n// Usar los métodos\nconsole.log(quijote.obtenerInfo()); // 'El Quijote por Miguel de Cervantes (1605)'\nconsole.log(quijote.prestar('María García')); // 'Libro prestado a María García'\nconsole.log(quijote.disponible); // false\nconsole.log(quijote.devolver()); // 'Libro devuelto por María García'\n\n// Usar método estático\nconsole.log(Libro.esAntiguo(quijote)); // true\nconsole.log(Libro.esAntiguo(libro1984)); // false\n```\n\n## 4. ARRAYS DE OBJETOS - Colecciones Complejas\n```javascript\n// Array de objetos Libro\nconst biblioteca = [\n  new Libro('El Quijote', 'Miguel de Cervantes', 1605, 'Novela'),\n  new Libro('1984', 'George Orwell', 1949, 'Ficción distópica'),\n  new Libro('Rayuela', 'Julio Cortázar', 1963, 'Novela experimental'),\n  new Libro('Cien años de soledad', 'Gabriel García Márquez', 1967, 'Realismo mágico'),\n  new Libro('Don Juan Tenorio', 'José Zorrilla', 1844, 'Drama romántico')\n];\n\n// Buscar libros por criterios\nconst librosAntiguos = biblioteca.filter(libro => libro.año < 1900);\nconst librosPorAutor = biblioteca.filter(libro => libro.autor.includes('Cervantes'));\nconst primerLibro = biblioteca.find(libro => libro.disponible);\n\n// Transformar arrays\nconst titulos = biblioteca.map(libro => libro.titulo);\nconst infoLibros = biblioteca.map(libro => libro.obtenerInfo());\n\n// Ordenar libros\nconst librosPorAño = biblioteca.sort((a, b) => a.año - b.año);\nconst librosPorTitulo = biblioteca.sort((a, b) => a.titulo.localeCompare(b.titulo));\n\n// Calcular estadísticas\nconst totalLibros = biblioteca.length;\nconst librosDisponibles = biblioteca.filter(libro => libro.disponible).length;\nconst añoPromedio = biblioteca.reduce((suma, libro) => suma + libro.año, 0) / totalLibros;\n\nconsole.log(`Total de libros: ${totalLibros}`);\nconsole.log(`Libros disponibles: ${librosDisponibles}`);\nconsole.log(`Año promedio: ${Math.round(añoPromedio)}`);\n```\n\n## 5. HERENCIA - Clases que Extienden Otras\n```javascript\n// Clase base para todos los materiales\nclass Material {\n  constructor(titulo, autor, año) {\n    this.titulo = titulo;\n    this.autor = autor;\n    this.año = año;\n    this.disponible = true;\n  }\n  \n  prestar() {\n    this.disponible = false;\n    return `${this.titulo} prestado`;\n  }\n  \n  devolver() {\n    this.disponible = true;\n    return `${this.titulo} devuelto`;\n  }\n}\n\n// Clase que extiende Material\nclass Libro extends Material {\n  constructor(titulo, autor, año, paginas, genero) {\n    super(titulo, autor, año); // Llama al constructor de la clase padre\n    this.paginas = paginas;\n    this.genero = genero;\n  }\n  \n  // Método específico de libros\n  obtenerDensidad() {\n    return this.paginas / (new Date().getFullYear() - this.año);\n  }\n}\n\n// Clase para revistas\nclass Revista extends Material {\n  constructor(titulo, editor, año, numero, tema) {\n    super(titulo, editor, año);\n    this.numero = numero;\n    this.tema = tema;\n  }\n  \n  // Método específico de revistas\n  esActual() {\n    const añoActual = new Date().getFullYear();\n    return (añoActual - this.año) <= 1;\n  }\n}\n\n// Crear instancias\nconst libro = new Libro('El Quijote', 'Cervantes', 1605, 863, 'Novela');\nconst revista = new Revista('National Geographic', 'NG Society', 2023, 245, 'Naturaleza');\n\n// Usar métodos heredados y propios\nconsole.log(libro.prestar()); // Método heredado\nconsole.log(libro.obtenerDensidad()); // Método propio\nconsole.log(revista.esActual()); // Método propio\n```",
         
-        "Objetos: propiedades y métodos": "Los objetos en JavaScript son colecciones de propiedades clave-valor que pueden contener datos y funciones (métodos). Se pueden crear de diferentes maneras, acceder a propiedades, agregar métodos, y usar características avanzadas como getters, setters y métodos estáticos.\n\n**Ejemplos:**\n```javascript\n// Crear objeto literal\nconst persona = {\n  nombre: 'Juan',\n  edad: 25,\n  ciudad: 'Madrid',\n  saludar: function() {\n    return `Hola, soy ${this.nombre}`;\n  },\n  cumplirAnos: function() {\n    this.edad++;\n    return this.edad;\n  }\n};\n\nconsole.log(persona.nombre); // Juan\nconsole.log(persona.saludar()); // Hola, soy Juan\nconsole.log(persona.cumplirAnos()); // 26\n\n// Crear objeto con constructor\nfunction Persona(nombre, edad, ciudad) {\n  this.nombre = nombre;\n  this.edad = edad;\n  this.ciudad = ciudad;\n  this.saludar = function() {\n    return `Hola, soy ${this.nombre}`;\n  };\n}\n\nconst persona2 = new Persona('María', 30, 'Barcelona');\nconsole.log(persona2.saludar()); // Hola, soy María\n\n// Crear objeto con clase\nclass PersonaClase {\n  constructor(nombre, edad, ciudad) {\n    this.nombre = nombre;\n    this.edad = edad;\n    this.ciudad = ciudad;\n  }\n  \n  saludar() {\n    return `Hola, soy ${this.nombre}`;\n  }\n  \n  cumplirAnos() {\n    this.edad++;\n    return this.edad;\n  }\n  \n  // Método estático\n  static crearPersona(nombre, edad, ciudad) {\n    return new PersonaClase(nombre, edad, ciudad);\n  }\n}\n\nconst persona3 = new PersonaClase('Pedro', 20, 'Valencia');\nconsole.log(persona3.saludar()); // Hola, soy Pedro\n\nconst persona4 = PersonaClase.crearPersona('Ana', 35, 'Sevilla');\nconsole.log(persona4.saludar()); // Hola, soy Ana\n\n// Getters y setters\nclass CuentaBancaria {\n  constructor(titular, saldo) {\n    this.titular = titular;\n    this._saldo = saldo;\n  }\n  \n  get saldo() {\n    return this._saldo;\n  }\n  \n  set saldo(nuevoSaldo) {\n    if (nuevoSaldo < 0) {\n      throw new Error('El saldo no puede ser negativo');\n    }\n    this._saldo = nuevoSaldo;\n  }\n  \n  depositar(cantidad) {\n    this.saldo += cantidad;\n    return this.saldo;\n  }\n  \n  retirar(cantidad) {\n    if (cantidad > this.saldo) {\n      throw new Error('Saldo insuficiente');\n    }\n    this.saldo -= cantidad;\n    return this.saldo;\n  }\n}\n\nconst cuenta = new CuentaBancaria('Juan', 1000);\nconsole.log(cuenta.saldo); // 1000\ncuenta.depositar(500);\nconsole.log(cuenta.saldo); // 1500\ncuenta.retirar(200);\nconsole.log(cuenta.saldo); // 1300\n\n// Métodos de objeto\nconst objeto = {\n  propiedad1: 'valor1',\n  propiedad2: 'valor2',\n  propiedad3: 'valor3'\n};\n\n// Object.keys: Obtener claves\nconst claves = Object.keys(objeto);\nconsole.log(claves); // ['propiedad1', 'propiedad2', 'propiedad3']\n\n// Object.values: Obtener valores\nconst valores = Object.values(objeto);\nconsole.log(valores); // ['valor1', 'valor2', 'valor3']\n\n// Object.entries: Obtener pares clave-valor\nconst entradas = Object.entries(objeto);\nconsole.log(entradas); // [['propiedad1', 'valor1'], ['propiedad2', 'valor2'], ['propiedad3', 'valor3']]\n\n// Object.assign: Copiar propiedades\nconst objeto2 = { propiedad4: 'valor4' };\nconst objetoCombinado = Object.assign({}, objeto, objeto2);\nconsole.log(objetoCombinado); // { propiedad1: 'valor1', propiedad2: 'valor2', propiedad3: 'valor3', propiedad4: 'valor4' }\n\n// Spread operator\nconst objetoCombinado2 = { ...objeto, ...objeto2 };\nconsole.log(objetoCombinado2); // { propiedad1: 'valor1', propiedad2: 'valor2', propiedad3: 'valor3', propiedad4: 'valor4' }\n\n// Object.freeze: Hacer objeto inmutable\nconst objetoInmutable = Object.freeze({ nombre: 'Juan', edad: 25 });\n// objetoInmutable.edad = 30; // Error en modo estricto\nconsole.log(objetoInmutable); // { nombre: 'Juan', edad: 25 }\n\n// Object.seal: Prevenir agregar/eliminar propiedades\nconst objetoSellado = Object.seal({ nombre: 'María', edad: 30 });\nobjetoSellado.edad = 31; // Permitido\n// objetoSellado.ciudad = 'Madrid'; // Error en modo estricto\nconsole.log(objetoSellado); // { nombre: 'María', edad: 31 }\n```",
+        "Métodos avanzados de arrays: sort, splice, slice, concat": "Los métodos avanzados de arrays permiten manipular, ordenar y combinar arrays de manera eficiente. sort ordena elementos, splice modifica arrays in-place, slice extrae secciones, y concat combina arrays. Son fundamentales para el manejo avanzado de datos.\n\n**Ejemplos:**\n```javascript\n// sort: Ordenar arrays\nconst numeros = [3, 1, 4, 1, 5, 9, 2, 6];\nconst numerosOrdenados = [...numeros].sort((a, b) => a - b);\nconsole.log(numerosOrdenados); // [1, 1, 2, 3, 4, 5, 6, 9]\n\nconst personas = [\n  { nombre: 'Juan', edad: 25 },\n  { nombre: 'María', edad: 30 },\n  { nombre: 'Pedro', edad: 20 }\n];\n\n// Ordenar por edad\nconst personasPorEdad = [...personas].sort((a, b) => a.edad - b.edad);\nconsole.log(personasPorEdad); // [{ nombre: 'Pedro', edad: 20 }, ...]\n\n// Ordenar por nombre\nconst personasPorNombre = [...personas].sort((a, b) => a.nombre.localeCompare(b.nombre));\nconsole.log(personasPorNombre); // [{ nombre: 'Juan', edad: 25 }, ...]\n\n// splice: Modificar array in-place\nconst frutas = ['manzana', 'banana', 'naranja', 'uva'];\nconst eliminadas = frutas.splice(1, 2, 'kiwi', 'mango');\nconsole.log(frutas); // ['manzana', 'kiwi', 'mango', 'uva']\nconsole.log(eliminadas); // ['banana', 'naranja']\n\n// Agregar elementos\nfrutas.splice(2, 0, 'pera', 'durazno');\nconsole.log(frutas); // ['manzana', 'kiwi', 'pera', 'durazno', 'mango', 'uva']\n\n// slice: Extraer sección sin modificar original\nconst numeros2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\nconst primeros3 = numeros2.slice(0, 3);\nconsole.log(primeros3); // [1, 2, 3]\n\nconst ultimos3 = numeros2.slice(-3);\nconsole.log(ultimos3); // [8, 9, 10]\n\nconst delMedio = numeros2.slice(3, 7);\nconsole.log(delMedio); // [4, 5, 6, 7]\n\n// concat: Combinar arrays\nconst array1 = [1, 2, 3];\nconst array2 = [4, 5, 6];\nconst array3 = [7, 8, 9];\n\nconst combinado = array1.concat(array2, array3);\nconsole.log(combinado); // [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n// Con spread operator\nconst combinado2 = [...array1, ...array2, ...array3];\nconsole.log(combinado2); // [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n// Métodos de búsqueda avanzados\nconst productos = [\n  { id: 1, nombre: 'Laptop', precio: 1000, categoria: 'electronica' },\n  { id: 2, nombre: 'Mouse', precio: 25, categoria: 'electronica' },\n  { id: 3, nombre: 'Libro', precio: 15, categoria: 'libros' },\n  { id: 4, nombre: 'Silla', precio: 200, categoria: 'muebles' }\n];\n\n// findLast: Encontrar último elemento (ES2023)\nconst ultimoElectronico = productos.findLast(p => p.categoria === 'electronica');\nconsole.log(ultimoElectronico); // { id: 2, nombre: 'Mouse', ... }\n\n// findLastIndex: Índice del último elemento\nconst indiceUltimo = productos.findLastIndex(p => p.precio < 100);\nconsole.log(indiceUltimo); // 2\n\n// flat: Aplanar arrays anidados\nconst arraysAnidados = [1, [2, 3], [4, [5, 6]]];\nconst aplanado = arraysAnidados.flat();\nconsole.log(aplanado); // [1, 2, 3, 4, [5, 6]]\n\nconst completamenteAplanado = arraysAnidados.flat(2);\nconsole.log(completamenteAplanado); // [1, 2, 3, 4, 5, 6]\n\n// flatMap: Mapear y aplanar en una operación\nconst frases = ['Hola mundo', 'JavaScript es genial'];\nconst palabras = frases.flatMap(frase => frase.split(' '));\nconsole.log(palabras); // ['Hola', 'mundo', 'JavaScript', 'es', 'genial']\n\n// Métodos de verificación\nconst numeros3 = [1, 2, 3, 4, 5];\nconsole.log(numeros3.includes(3)); // true\nconsole.log(numeros3.includes(6)); // false\n\n// Con objetos\nconst tieneProducto = productos.some(p => p.precio > 500);\nconsole.log(tieneProducto); // true\n\nconst todosBaratos = productos.every(p => p.precio < 1000);\nconsole.log(todosBaratos); // false\n```",
         
-        "JSON: parse y stringify": "JSON (JavaScript Object Notation) es un formato de intercambio de datos ligero y fácil de leer. JavaScript proporciona métodos para convertir objetos a JSON (stringify) y viceversa (parse). Es fundamental para la comunicación con APIs y el almacenamiento de datos.\n\n**Ejemplos:**\n```javascript\n// Objeto JavaScript\nconst persona = {\n  nombre: 'Juan',\n  edad: 25,\n  ciudad: 'Madrid',\n  hobbies: ['leer', 'cocinar', 'viajar'],\n  direccion: {\n    calle: 'Calle Mayor',\n    numero: 123,\n    codigoPostal: '28001'\n  },\n  activo: true,\n  fechaNacimiento: new Date('1999-01-15')\n};\n\n// JSON.stringify: Convertir objeto a JSON\nconst jsonString = JSON.stringify(persona);\nconsole.log(jsonString);\n// '{\"nombre\":\"Juan\",\"edad\":25,\"ciudad\":\"Madrid\",\"hobbies\":[\"leer\",\"cocinar\",\"viajar\"],\"direccion\":{\"calle\":\"Calle Mayor\",\"numero\":123,\"codigoPostal\":\"28001\"},\"activo\":true,\"fechaNacimiento\":\"1999-01-15T00:00:00.000Z\"}'\n\n// JSON.stringify con parámetros\nconst jsonFormateado = JSON.stringify(persona, null, 2);\nconsole.log(jsonFormateado);\n// {\n//   \"nombre\": \"Juan\",\n//   \"edad\": 25,\n//   \"ciudad\": \"Madrid\",\n//   \"hobbies\": [\n//     \"leer\",\n//     \"cocinar\",\n//     \"viajar\"\n//   ],\n//   \"direccion\": {\n//     \"calle\": \"Calle Mayor\",\n//     \"numero\": 123,\n//     \"codigoPostal\": \"28001\"\n//   },\n//   \"activo\": true,\n//   \"fechaNacimiento\": \"1999-01-15T00:00:00.000Z\"\n// }\n\n// JSON.stringify con replacer\nconst jsonConReplacer = JSON.stringify(persona, ['nombre', 'edad', 'ciudad']);\nconsole.log(jsonConReplacer); // '{\"nombre\":\"Juan\",\"edad\":25,\"ciudad\":\"Madrid\"}'\n\n// JSON.stringify con función replacer\nconst jsonConFuncionReplacer = JSON.stringify(persona, function(key, value) {\n  if (key === 'fechaNacimiento') {\n    return value.toISOString().split('T')[0]; // Solo la fecha\n  }\n  return value;\n});\nconsole.log(jsonConFuncionReplacer);\n\n// JSON.parse: Convertir JSON a objeto\nconst jsonString2 = '{\"nombre\":\"María\",\"edad\":30,\"ciudad\":\"Barcelona\"}';\nconst objeto = JSON.parse(jsonString2);\nconsole.log(objeto); // { nombre: 'María', edad: 30, ciudad: 'Barcelona' }\nconsole.log(objeto.nombre); // María\n\n// JSON.parse con reviver\nconst jsonConFecha = '{\"nombre\":\"Pedro\",\"fechaNacimiento\":\"1990-05-20\"}';\nconst objetoConFecha = JSON.parse(jsonConFecha, function(key, value) {\n  if (key === 'fechaNacimiento') {\n    return new Date(value);\n  }\n  return value;\n});\nconsole.log(objetoConFecha); // { nombre: 'Pedro', fechaNacimiento: Date object }\n\n// Manejo de errores\nfunction parsearJSON(jsonString) {\n  try {\n    return JSON.parse(jsonString);\n  } catch (error) {\n    console.error('Error al parsear JSON:', error.message);\n    return null;\n  }\n}\n\nconst jsonInvalido = '{\"nombre\":\"Juan\",\"edad\":25}'; // JSON válido\nconst jsonInvalido2 = '{\"nombre\":\"Juan\",\"edad\":25}'; // JSON inválido\n\nconst objeto1 = parsearJSON(jsonInvalido);\nconsole.log(objeto1); // { nombre: 'Juan', edad: 25 }\n\nconst objeto2 = parsearJSON(jsonInvalido2);\nconsole.log(objeto2); // null\n\n// Arrays JSON\nconst personas = [\n  { nombre: 'Juan', edad: 25 },\n  { nombre: 'María', edad: 30 },\n  { nombre: 'Pedro', edad: 20 }\n];\n\nconst jsonArray = JSON.stringify(personas);\nconsole.log(jsonArray);\n// '[{\"nombre\":\"Juan\",\"edad\":25},{\"nombre\":\"María\",\"edad\":30},{\"nombre\":\"Pedro\",\"edad\":20}]'\n\nconst arrayParseado = JSON.parse(jsonArray);\nconsole.log(arrayParseado); // Array de objetos\n\n// Clonar objetos con JSON\nconst objetoOriginal = { nombre: 'Juan', edad: 25 };\nconst objetoClonado = JSON.parse(JSON.stringify(objetoOriginal));\nobjetoClonado.edad = 30;\nconsole.log(objetoOriginal); // { nombre: 'Juan', edad: 25 }\nconsole.log(objetoClonado); // { nombre: 'Juan', edad: 30 }\n\n// Validar JSON\nfunction esJSONValido(jsonString) {\n  try {\n    JSON.parse(jsonString);\n    return true;\n  } catch {\n    return false;\n  }\n}\n\nconsole.log(esJSONValido('{\"nombre\":\"Juan\"}')); // true\nconsole.log(esJSONValido('{\"nombre\":\"Juan\"}')); // false\n```",
+        "Destructuring avanzado: arrays y objetos anidados": "El destructuring avanzado permite extraer valores de estructuras de datos complejas de manera elegante. Se puede usar con arrays anidados, objetos anidados, y combinaciones complejas. Es una característica poderosa para trabajar con datos estructurados.\n\n**Ejemplos:**\n```javascript\n// Destructuring de arrays anidados\nconst datos = [1, [2, 3], [4, [5, 6]]];\nconst [primero, [segundo, tercero], [cuarto, [quinto, sexto]]] = datos;\nconsole.log(primero, segundo, tercero, cuarto, quinto, sexto); // 1 2 3 4 5 6\n\n// Destructuring con valores por defecto\nconst colores = ['rojo', 'verde'];\nconst [color1, color2, color3 = 'azul'] = colores;\nconsole.log(color1, color2, color3); // rojo verde azul\n\n// Destructuring de objetos anidados\nconst usuario = {\n  nombre: 'Juan',\n  edad: 25,\n  direccion: {\n    calle: 'Calle Mayor',\n    numero: 123,\n    ciudad: 'Madrid',\n    coordenadas: {\n      lat: 40.4168,\n      lng: -3.7038\n    }\n  },\n  hobbies: ['leer', 'cocinar', 'viajar']\n};\n\n// Destructuring anidado\nconst {\n  nombre,\n  edad,\n  direccion: {\n    calle,\n    numero,\n    ciudad,\n    coordenadas: { lat, lng }\n  },\n  hobbies: [hobby1, hobby2, hobby3]\n} = usuario;\n\nconsole.log(nombre, calle, lat, hobby1); // Juan Calle Mayor 40.4168 leer\n\n// Destructuring con renombrado\nconst {\n  nombre: nombreUsuario,\n  direccion: {\n    calle: direccionCalle,\n    ciudad: ciudadUsuario\n  }\n} = usuario;\n\nconsole.log(nombreUsuario, direccionCalle, ciudadUsuario); // Juan Calle Mayor Madrid\n\n// Destructuring con valores por defecto anidados\nconst configuracion = {\n  tema: 'oscuro',\n  notificaciones: {\n    email: true\n  }\n};\n\nconst {\n  tema = 'claro',\n  notificaciones: {\n    email = false,\n    push = false,\n    sms = false\n  } = {},\n  idioma = 'es'\n} = configuracion;\n\nconsole.log(tema, email, push, sms, idioma); // oscuro true false false es\n\n// Destructuring en parámetros de función\nfunction procesarUsuario({\n  nombre,\n  edad,\n  direccion: { ciudad } = {},\n  hobbies = []\n}) {\n  console.log(`Usuario: ${nombre}, Edad: ${edad}, Ciudad: ${ciudad}`);\n  console.log(`Hobbies: ${hobbies.join(', ')}`);\n}\n\nprocesarUsuario(usuario);\n\n// Destructuring con rest operator\nconst numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\nconst [primero, segundo, ...resto] = numeros;\nconsole.log(primero, segundo); // 1 2\nconsole.log(resto); // [3, 4, 5, 6, 7, 8, 9, 10]\n\n// Destructuring de objetos con rest\nconst persona = {\n  nombre: 'María',\n  edad: 30,\n  ciudad: 'Barcelona',\n  profesion: 'Desarrolladora',\n  salario: 50000\n};\n\nconst { nombre, edad, ...otrosDatos } = persona;\nconsole.log(nombre, edad); // María 30\nconsole.log(otrosDatos); // { ciudad: 'Barcelona', profesion: 'Desarrolladora', salario: 50000 }\n\n// Destructuring en bucles\nconst estudiantes = [\n  { nombre: 'Juan', calificaciones: [8, 9, 7] },\n  { nombre: 'María', calificaciones: [9, 8, 9] },\n  { nombre: 'Pedro', calificaciones: [7, 8, 6] }\n];\n\nfor (const { nombre, calificaciones: [primera, segunda, tercera] } of estudiantes) {\n  console.log(`${nombre}: ${primera}, ${segunda}, ${tercera}`);\n}\n\n// Destructuring con arrays de objetos\nconst empleados = [\n  { id: 1, nombre: 'Juan', departamento: 'IT', salario: 50000 },\n  { id: 2, nombre: 'María', departamento: 'HR', salario: 45000 },\n  { id: 3, nombre: 'Pedro', departamento: 'IT', salario: 55000 }\n];\n\n// Extraer solo nombres y departamentos\nconst nombresYDepartamentos = empleados.map(({ nombre, departamento }) => ({ nombre, departamento }));\nconsole.log(nombresYDepartamentos);\n\n// Destructuring condicional\nfunction obtenerUsuario(id) {\n  // Simular datos de usuario\n  const usuarios = {\n    1: { nombre: 'Juan', edad: 25, activo: true },\n    2: { nombre: 'María', edad: 30, activo: false }\n  };\n  \n  return usuarios[id] || null;\n}\n\nconst usuario1 = obtenerUsuario(1);\nif (usuario1) {\n  const { nombre, edad, activo } = usuario1;\n  console.log(`Usuario activo: ${nombre}, edad: ${edad}`);\n}\n\n// Destructuring con funciones que retornan arrays\nfunction obtenerCoordenadas() {\n  return [40.4168, -3.7038];\n}\n\nconst [latitud, longitud] = obtenerCoordenadas();\nconsole.log(`Latitud: ${latitud}, Longitud: ${longitud}`);\n\n// Destructuring con funciones que retornan objetos\nfunction obtenerConfiguracion() {\n  return {\n    tema: 'oscuro',\n    idioma: 'es',\n    notificaciones: true\n  };\n}\n\nconst { tema, idioma, notificaciones } = obtenerConfiguracion();\nconsole.log(`Tema: ${tema}, Idioma: ${idioma}, Notificaciones: ${notificaciones}`);\n```",
         
-        "Local Storage: persistencia de datos": "Local Storage permite almacenar datos en el navegador del usuario de forma persistente. Los datos se mantienen incluso después de cerrar el navegador y reiniciar la computadora. Es útil para guardar preferencias del usuario, datos de sesión, y configuraciones de la aplicación.\n\n**Ejemplos:**\n```javascript\n// Verificar soporte de Local Storage\nif (typeof(Storage) !== 'undefined') {\n  console.log('Local Storage soportado');\n} else {\n  console.log('Local Storage no soportado');\n}\n\n// Guardar datos\nlocalStorage.setItem('nombre', 'Juan');\nlocalStorage.setItem('edad', '25');\nlocalStorage.setItem('ciudad', 'Madrid');\n\n// Leer datos\nconst nombre = localStorage.getItem('nombre');\nconst edad = localStorage.getItem('edad');\nconst ciudad = localStorage.getItem('ciudad');\n\nconsole.log(nombre); // Juan\nconsole.log(edad); // 25\nconsole.log(ciudad); // Madrid\n\n// Leer datos con valor por defecto\nconst telefono = localStorage.getItem('telefono') || 'No disponible';\nconsole.log(telefono); // No disponible\n\n// Eliminar datos\nlocalStorage.removeItem('ciudad');\nconsole.log(localStorage.getItem('ciudad')); // null\n\n// Limpiar todo el Local Storage\nlocalStorage.clear();\nconsole.log(localStorage.length); // 0\n\n// Guardar objetos\nconst persona = {\n  nombre: 'María',\n  edad: 30,\n  ciudad: 'Barcelona',\n  hobbies: ['leer', 'cocinar']\n};\n\nlocalStorage.setItem('persona', JSON.stringify(persona));\n\n// Leer objetos\nconst personaGuardada = JSON.parse(localStorage.getItem('persona') || '{}');\nconsole.log(personaGuardada); // { nombre: 'María', edad: 30, ciudad: 'Barcelona', hobbies: ['leer', 'cocinar'] }\n\n// Guardar arrays\nconst tareas = [\n  { id: 1, texto: 'Comprar leche', completada: false },\n  { id: 2, texto: 'Hacer ejercicio', completada: true },\n  { id: 3, texto: 'Leer libro', completada: false }\n];\n\nlocalStorage.setItem('tareas', JSON.stringify(tareas));\n\n// Leer arrays\nconst tareasGuardadas = JSON.parse(localStorage.getItem('tareas') || '[]');\nconsole.log(tareasGuardadas); // Array de tareas\n\n// Función helper para Local Storage\nconst StorageHelper = {\n  set: function(key, value) {\n    try {\n      localStorage.setItem(key, JSON.stringify(value));\n      return true;\n    } catch (error) {\n      console.error('Error al guardar en Local Storage:', error);\n      return false;\n    }\n  },\n  \n  get: function(key, defaultValue = null) {\n    try {\n      const item = localStorage.getItem(key);\n      return item ? JSON.parse(item) : defaultValue;\n    } catch (error) {\n      console.error('Error al leer de Local Storage:', error);\n      return defaultValue;\n    }\n  },\n  \n  remove: function(key) {\n    try {\n      localStorage.removeItem(key);\n      return true;\n    } catch (error) {\n      console.error('Error al eliminar de Local Storage:', error);\n      return false;\n    }\n  },\n  \n  clear: function() {\n    try {\n      localStorage.clear();\n      return true;\n    } catch (error) {\n      console.error('Error al limpiar Local Storage:', error);\n      return false;\n    }\n  },\n  \n  keys: function() {\n    const keys = [];\n    for (let i = 0; i < localStorage.length; i++) {\n      keys.push(localStorage.key(i));\n    }\n    return keys;\n  }\n};\n\n// Usar StorageHelper\nStorageHelper.set('configuracion', { tema: 'oscuro', idioma: 'es' });\nconst configuracion = StorageHelper.get('configuracion', { tema: 'claro', idioma: 'en' });\nconsole.log(configuracion); // { tema: 'oscuro', idioma: 'es' }\n\n// Ejemplo de aplicación de tareas\nclass TareaApp {\n  constructor() {\n    this.tareas = StorageHelper.get('tareas', []);\n  }\n  \n  agregarTarea(texto) {\n    const nuevaTarea = {\n      id: Date.now(),\n      texto: texto,\n      completada: false,\n      fechaCreacion: new Date().toISOString()\n    };\n    \n    this.tareas.push(nuevaTarea);\n    this.guardarTareas();\n    return nuevaTarea;\n  }\n  \n  completarTarea(id) {\n    const tarea = this.tareas.find(t => t.id === id);\n    if (tarea) {\n      tarea.completada = !tarea.completada;\n      this.guardarTareas();\n    }\n  }\n  \n  eliminarTarea(id) {\n    this.tareas = this.tareas.filter(t => t.id !== id);\n    this.guardarTareas();\n  }\n  \n  guardarTareas() {\n    StorageHelper.set('tareas', this.tareas);\n  }\n  \n  obtenerTareas() {\n    return this.tareas;\n  }\n}\n\nconst app = new TareaApp();\napp.agregarTarea('Aprender JavaScript');\napp.agregarTarea('Practicar CSS');\nconsole.log(app.obtenerTareas()); // Array de tareas\n```",
+        "Spread operator y rest parameters": "El spread operator (...) y rest parameters son características poderosas de ES6+ que permiten trabajar con arrays y objetos de manera más flexible. El spread operator expande elementos, mientras que rest parameters captura elementos restantes. Son fundamentales para la programación moderna en JavaScript.\n\n**Ejemplos:**\n```javascript\n// Spread operator con arrays\nconst numeros1 = [1, 2, 3];\nconst numeros2 = [4, 5, 6];\nconst numeros3 = [7, 8, 9];\n\n// Combinar arrays\nconst todosNumeros = [...numeros1, ...numeros2, ...numeros3];\nconsole.log(todosNumeros); // [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n// Agregar elementos\nconst numerosConCero = [0, ...numeros1, 10];\nconsole.log(numerosConCero); // [0, 1, 2, 3, 10]\n\n// Copiar arrays\nconst numerosCopia = [...numeros1];\nnumerosCopia.push(4);\nconsole.log(numeros1); // [1, 2, 3] (sin cambios)\nconsole.log(numerosCopia); // [1, 2, 3, 4]\n\n// Spread operator con objetos\nconst persona = {\n  nombre: 'Juan',\n  edad: 25,\n  ciudad: 'Madrid'\n};\n\nconst personaActualizada = {\n  ...persona,\n  edad: 26,\n  profesion: 'Desarrollador'\n};\nconsole.log(personaActualizada); // { nombre: 'Juan', edad: 26, ciudad: 'Madrid', profesion: 'Desarrollador' }\n\n// Combinar objetos\nconst configuracion = {\n  tema: 'oscuro',\n  idioma: 'es'\n};\n\nconst configuracionUsuario = {\n  notificaciones: true,\n  sonido: false\n};\n\nconst configuracionCompleta = {\n  ...configuracion,\n  ...configuracionUsuario,\n  tema: 'claro' // Sobrescribe el tema\n};\nconsole.log(configuracionCompleta); // { tema: 'claro', idioma: 'es', notificaciones: true, sonido: false }\n\n// Rest parameters en funciones\nfunction sumar(...numeros) {\n  return numeros.reduce((acc, num) => acc + num, 0);\n}\n\nconsole.log(sumar(1, 2, 3, 4, 5)); // 15\nconsole.log(sumar(10, 20)); // 30\n\n// Rest parameters con otros parámetros\nfunction crearUsuario(nombre, edad, ...hobbies) {\n  return {\n    nombre,\n    edad,\n    hobbies\n  };\n}\n\nconst usuario = crearUsuario('María', 30, 'leer', 'cocinar', 'viajar');\nconsole.log(usuario); // { nombre: 'María', edad: 30, hobbies: ['leer', 'cocinar', 'viajar'] }\n\n// Destructuring con rest\nconst [primero, segundo, ...resto] = [1, 2, 3, 4, 5, 6];\nconsole.log(primero, segundo); // 1 2\nconsole.log(resto); // [3, 4, 5, 6]\n\nconst { nombre, edad, ...otrosDatos } = {\n  nombre: 'Pedro',\n  edad: 28,\n  ciudad: 'Barcelona',\n  profesion: 'Diseñador',\n  salario: 45000\n};\nconsole.log(nombre, edad); // Pedro 28\nconsole.log(otrosDatos); // { ciudad: 'Barcelona', profesion: 'Diseñador', salario: 45000 }\n\n// Spread con strings\nconst nombre = 'Juan';\nconst letras = [...nombre];\nconsole.log(letras); // ['J', 'u', 'a', 'n']\n\n// Spread con NodeList\nconst elementos = document.querySelectorAll('.mi-clase');\nconst arrayElementos = [...elementos];\nconsole.log(arrayElementos); // Array de elementos DOM\n\n// Spread en llamadas a funciones\nfunction encontrarMaximo(...numeros) {\n  return Math.max(...numeros);\n}\n\nconst numeros = [1, 5, 3, 9, 2];\nconsole.log(encontrarMaximo(...numeros)); // 9\n\n// Spread con objetos y arrays anidados\nconst datos = {\n  usuarios: [\n    { nombre: 'Juan', edad: 25 },\n    { nombre: 'María', edad: 30 }\n  ],\n  configuracion: {\n    tema: 'oscuro',\n    idioma: 'es'\n  }\n};\n\n// Clonar objeto con arrays anidados\nconst datosClonados = {\n  ...datos,\n  usuarios: [...datos.usuarios],\n  configuracion: { ...datos.configuracion }\n};\n\n// Modificar clon sin afectar original\ndatosClonados.usuarios.push({ nombre: 'Pedro', edad: 28 });\ndatosClonados.configuracion.tema = 'claro';\n\nconsole.log(datos.usuarios.length); // 2 (sin cambios)\nconsole.log(datosClonados.usuarios.length); // 3\n\n// Rest en objetos (ES2018)\nconst objeto = {\n  a: 1,\n  b: 2,\n  c: 3,\n  d: 4,\n  e: 5\n};\n\nconst { a, b, ...resto } = objeto;\nconsole.log(a, b); // 1 2\nconsole.log(resto); // { c: 3, d: 4, e: 5 }\n\n// Spread con Map y Set\nconst mapa = new Map([['a', 1], ['b', 2]]);\nconst arrayDelMapa = [...mapa];\nconsole.log(arrayDelMapa); // [['a', 1], ['b', 2]]\n\nconst set = new Set([1, 2, 3, 3, 4]);\nconst arrayDelSet = [...set];\nconsole.log(arrayDelSet); // [1, 2, 3, 4]\n\n// Ejemplo práctico: función de merge profundo\nfunction mergeProfundo(...objetos) {\n  return objetos.reduce((resultado, objeto) => {\n    for (const [clave, valor] of Object.entries(objeto)) {\n      if (typeof valor === 'object' && valor !== null && !Array.isArray(valor)) {\n        resultado[clave] = mergeProfundo(resultado[clave] || {}, valor);\n      } else {\n        resultado[clave] = valor;\n      }\n    }\n    return resultado;\n  }, {});\n}\n\nconst obj1 = { a: 1, b: { c: 2 } };\nconst obj2 = { b: { d: 3 }, e: 4 };\nconst obj3 = { f: 5 };\n\nconst resultado = mergeProfundo(obj1, obj2, obj3);\nconsole.log(resultado); // { a: 1, b: { c: 2, d: 3 }, e: 4, f: 5 }\n```",
         
-        "Session Storage: datos temporales": "Session Storage es similar a Local Storage pero los datos se eliminan cuando se cierra la pestaña del navegador. Es útil para datos temporales como el estado de la aplicación, datos de sesión, y información que no necesita persistir entre sesiones.\n\n**Ejemplos:**\n```javascript\n// Verificar soporte de Session Storage\nif (typeof(Storage) !== 'undefined') {\n  console.log('Session Storage soportado');\n} else {\n  console.log('Session Storage no soportado');\n}\n\n// Guardar datos temporales\nsessionStorage.setItem('usuarioActual', 'Juan');\nsessionStorage.setItem('ultimaActividad', new Date().toISOString());\nsessionStorage.setItem('contadorVisitas', '1');\n\n// Leer datos temporales\nconst usuarioActual = sessionStorage.getItem('usuarioActual');\nconst ultimaActividad = sessionStorage.getItem('ultimaActividad');\nconst contadorVisitas = parseInt(sessionStorage.getItem('contadorVisitas') || '0');\n\nconsole.log(usuarioActual); // Juan\nconsole.log(ultimaActividad); // Fecha actual\nconsole.log(contadorVisitas); // 1\n\n// Incrementar contador\nsessionStorage.setItem('contadorVisitas', (contadorVisitas + 1).toString());\n\n// Guardar objetos temporales\nconst estadoApp = {\n  paginaActual: 'inicio',\n  filtrosActivos: ['categoria1', 'categoria2'],\n  datosCargados: true,\n  timestamp: Date.now()\n};\n\nsessionStorage.setItem('estadoApp', JSON.stringify(estadoApp));\n\n// Leer objetos temporales\nconst estadoGuardado = JSON.parse(sessionStorage.getItem('estadoApp') || '{}');\nconsole.log(estadoGuardado); // Objeto con estado de la app\n\n// Función helper para Session Storage\nconst SessionStorageHelper = {\n  set: function(key, value) {\n    try {\n      sessionStorage.setItem(key, JSON.stringify(value));\n      return true;\n    } catch (error) {\n      console.error('Error al guardar en Session Storage:', error);\n      return false;\n    }\n  },\n  \n  get: function(key, defaultValue = null) {\n    try {\n      const item = sessionStorage.getItem(key);\n      return item ? JSON.parse(item) : defaultValue;\n    } catch (error) {\n      console.error('Error al leer de Session Storage:', error);\n      return defaultValue;\n    }\n  },\n  \n  remove: function(key) {\n    try {\n      sessionStorage.removeItem(key);\n      return true;\n    } catch (error) {\n      console.error('Error al eliminar de Session Storage:', error);\n      return false;\n    }\n  },\n  \n  clear: function() {\n    try {\n      sessionStorage.clear();\n      return true;\n    } catch (error) {\n      console.error('Error al limpiar Session Storage:', error);\n      return false;\n    }\n  }\n};\n\n// Usar SessionStorageHelper\nSessionStorageHelper.set('configuracionTemporal', { tema: 'claro', vista: 'lista' });\nconst configTemporal = SessionStorageHelper.get('configuracionTemporal', { tema: 'oscuro', vista: 'grid' });\nconsole.log(configTemporal); // { tema: 'claro', vista: 'lista' }\n\n// Ejemplo de aplicación con Session Storage\nclass AppSession {\n  constructor() {\n    this.estado = SessionStorageHelper.get('appEstado', {\n      usuario: null,\n      carrito: [],\n      filtros: {},\n      pagina: 'inicio'\n    });\n  }\n  \n  iniciarSesion(usuario) {\n    this.estado.usuario = usuario;\n    this.guardarEstado();\n  }\n  \n  cerrarSesion() {\n    this.estado.usuario = null;\n    this.estado.carrito = [];\n    this.guardarEstado();\n  }\n  \n  agregarAlCarrito(producto) {\n    this.estado.carrito.push(producto);\n    this.guardarEstado();\n  }\n  \n  aplicarFiltros(filtros) {\n    this.estado.filtros = filtros;\n    this.guardarEstado();\n  }\n  \n  cambiarPagina(pagina) {\n    this.estado.pagina = pagina;\n    this.guardarEstado();\n  }\n  \n  guardarEstado() {\n    SessionStorageHelper.set('appEstado', this.estado);\n  }\n  \n  obtenerEstado() {\n    return this.estado;\n  }\n}\n\nconst appSession = new AppSession();\nappSession.iniciarSesion({ nombre: 'Juan', email: 'juan@ejemplo.com' });\nappSession.agregarAlCarrito({ id: 1, nombre: 'Producto 1', precio: 100 });\nappSession.aplicarFiltros({ categoria: 'electronica', precio: '100-500' });\nconsole.log(appSession.obtenerEstado()); // Estado completo de la app\n\n// Comparación Local Storage vs Session Storage\nconsole.log('Local Storage:', localStorage.length, 'items');\nconsole.log('Session Storage:', sessionStorage.length, 'items');\n\n// Los datos de Local Storage persisten entre sesiones\nlocalStorage.setItem('persistente', 'valor1');\n\n// Los datos de Session Storage se eliminan al cerrar la pestaña\nsessionStorage.setItem('temporal', 'valor2');\n\n// Verificar datos\nconsole.log('Local Storage persistente:', localStorage.getItem('persistente'));\nconsole.log('Session Storage temporal:', sessionStorage.getItem('temporal'));\n```",
+        "Map, Set y WeakMap/WeakSet": "Map, Set, WeakMap y WeakSet son estructuras de datos avanzadas en JavaScript que ofrecen capacidades específicas para diferentes casos de uso. Map permite claves de cualquier tipo, Set almacena valores únicos, y las versiones Weak permiten garbage collection automático.\n\n**Ejemplos:**\n```javascript\n// Map: Estructura clave-valor con claves de cualquier tipo\nconst mapa = new Map();\n\n// Agregar elementos\nmapa.set('nombre', 'Juan');\nmapa.set(123, 'número como clave');\nmapa.set({ id: 1 }, 'objeto como clave');\nmapa.set(true, 'booleano como clave');\n\nconsole.log(mapa.get('nombre')); // Juan\nconsole.log(mapa.get(123)); // número como clave\nconsole.log(mapa.has('nombre')); // true\nconsole.log(mapa.size); // 4\n\n// Iterar sobre Map\nfor (const [clave, valor] of mapa) {\n  console.log(`${clave}: ${valor}`);\n}\n\n// Map con arrays de inicialización\nconst mapaInicial = new Map([\n  ['a', 1],\n  ['b', 2],\n  ['c', 3]\n]);\n\n// Convertir Map a Array\nconst arrayDelMapa = Array.from(mapaInicial);\nconsole.log(arrayDelMapa); // [['a', 1], ['b', 2], ['c', 3]]\n\n// Set: Colección de valores únicos\nconst conjunto = new Set();\n\n// Agregar elementos\nconjunto.add(1);\nconjunto.add(2);\nconjunto.add(2); // Duplicado, no se agrega\nconjunto.add('texto');\nconjunto.add({ id: 1 });\nconjunto.add({ id: 1 }); // Objetos diferentes, ambos se agregan\n\nconsole.log(conjunto.size); // 5\nconsole.log(conjunto.has(2)); // true\n\n// Iterar sobre Set\nfor (const valor of conjunto) {\n  console.log(valor);\n}\n\n// Set con array de inicialización\nconst conjuntoInicial = new Set([1, 2, 3, 3, 4, 4, 5]);\nconsole.log(conjuntoInicial); // Set {1, 2, 3, 4, 5}\n\n// Operaciones con Set\nconst set1 = new Set([1, 2, 3, 4]);\nconst set2 = new Set([3, 4, 5, 6]);\n\n// Unión\nconst union = new Set([...set1, ...set2]);\nconsole.log(union); // Set {1, 2, 3, 4, 5, 6}\n\n// Intersección\nconst interseccion = new Set([...set1].filter(x => set2.has(x)));\nconsole.log(interseccion); // Set {3, 4}\n\n// Diferencia\nconst diferencia = new Set([...set1].filter(x => !set2.has(x)));\nconsole.log(diferencia); // Set {1, 2}\n\n// WeakMap: Map con referencias débiles\nconst weakMap = new WeakMap();\nconst obj1 = { id: 1 };\nconst obj2 = { id: 2 };\n\nweakMap.set(obj1, 'datos del objeto 1');\nweakMap.set(obj2, 'datos del objeto 2');\n\nconsole.log(weakMap.get(obj1)); // datos del objeto 1\nconsole.log(weakMap.has(obj1)); // true\n\n// Eliminar referencia\nobj1 = null; // El objeto puede ser garbage collected\n\n// WeakSet: Set con referencias débiles\nconst weakSet = new WeakSet();\nconst obj3 = { id: 3 };\nconst obj4 = { id: 4 };\n\nweakSet.add(obj3);\nweakSet.add(obj4);\n\nconsole.log(weakSet.has(obj3)); // true\n\n// Casos de uso prácticos\n// 1. Cache con Map\nclass Cache {\n  constructor() {\n    this.cache = new Map();\n    this.maxSize = 100;\n  }\n  \n  set(key, value) {\n    if (this.cache.size >= this.maxSize) {\n      const firstKey = this.cache.keys().next().value;\n      this.cache.delete(firstKey);\n    }\n    this.cache.set(key, value);\n  }\n  \n  get(key) {\n    return this.cache.get(key);\n  }\n  \n  has(key) {\n    return this.cache.has(key);\n  }\n  \n  clear() {\n    this.cache.clear();\n  }\n}\n\nconst cache = new Cache();\ncache.set('usuario:1', { nombre: 'Juan', edad: 25 });\ncache.set('usuario:2', { nombre: 'María', edad: 30 });\nconsole.log(cache.get('usuario:1')); // { nombre: 'Juan', edad: 25 }\n\n// 2. Eliminar duplicados con Set\nconst numeros = [1, 2, 3, 3, 4, 4, 5, 5, 6];\nconst numerosUnicos = [...new Set(numeros)];\nconsole.log(numerosUnicos); // [1, 2, 3, 4, 5, 6]\n\n// 3. Contar elementos únicos\nconst palabras = ['hola', 'mundo', 'hola', 'javascript', 'mundo', 'hola'];\nconst palabrasUnicas = new Set(palabras);\nconsole.log(`Palabras únicas: ${palabrasUnicas.size}`); // 3\n\n// 4. Mapeo de objetos con WeakMap\nconst metadata = new WeakMap();\n\nfunction agregarMetadata(objeto, datos) {\n  metadata.set(objeto, datos);\n}\n\nfunction obtenerMetadata(objeto) {\n  return metadata.get(objeto);\n}\n\nconst usuario = { nombre: 'Pedro' };\nagregarMetadata(usuario, { creado: new Date(), version: 1 });\nconsole.log(obtenerMetadata(usuario)); // { creado: Date, version: 1 }\n\n// 5. Tracking de objetos con WeakSet\nconst objetosProcesados = new WeakSet();\n\nfunction procesarObjeto(objeto) {\n  if (objetosProcesados.has(objeto)) {\n    console.log('Objeto ya procesado');\n    return;\n  }\n  \n  objetosProcesados.add(objeto);\n  console.log('Procesando objeto:', objeto);\n}\n\nconst obj = { id: 1 };\nprocesarObjeto(obj); // Procesando objeto: { id: 1 }\nprocesarObjeto(obj); // Objeto ya procesado\n\n// 6. Sistema de eventos con Map\nclass EventEmitter {\n  constructor() {\n    this.events = new Map();\n  }\n  \n  on(evento, callback) {\n    if (!this.events.has(evento)) {\n      this.events.set(evento, new Set());\n    }\n    this.events.get(evento).add(callback);\n  }\n  \n  off(evento, callback) {\n    if (this.events.has(evento)) {\n      this.events.get(evento).delete(callback);\n    }\n  }\n  \n  emit(evento, ...args) {\n    if (this.events.has(evento)) {\n      for (const callback of this.events.get(evento)) {\n        callback(...args);\n      }\n    }\n  }\n}\n\nconst emitter = new EventEmitter();\nconst callback1 = (data) => console.log('Callback 1:', data);\nconst callback2 = (data) => console.log('Callback 2:', data);\n\nemitter.on('test', callback1);\nemitter.on('test', callback2);\nemitter.emit('test', 'Hola mundo');\n// Callback 1: Hola mundo\n// Callback 2: Hola mundo\n\nemitter.off('test', callback1);\nemitter.emit('test', 'Segundo mensaje');\n// Callback 2: Segundo mensaje\n```",
         
-        "Estructuras de datos complejas": "Las estructuras de datos complejas combinan arrays, objetos y otros tipos de datos para crear representaciones más sofisticadas. Incluyen arrays de objetos, objetos anidados, mapas, sets, y estructuras jerárquicas que son comunes en aplicaciones reales.\n\n**Ejemplos:**\n```javascript\n// Array de objetos complejos\nconst estudiantes = [\n  {\n    id: 1,\n    nombre: 'Juan',\n    edad: 20,\n    calificaciones: [8, 9, 7, 8],\n    contacto: {\n      email: 'juan@ejemplo.com',\n      telefono: '123-456-7890',\n      direccion: {\n        calle: 'Calle Mayor 123',\n        ciudad: 'Madrid',\n        codigoPostal: '28001'\n      }\n    },\n    cursos: ['Matemáticas', 'Física', 'Química']\n  },\n  {\n    id: 2,\n    nombre: 'María',\n    edad: 22,\n    calificaciones: [9, 8, 9, 10],\n    contacto: {\n      email: 'maria@ejemplo.com',\n      telefono: '098-765-4321',\n      direccion: {\n        calle: 'Avenida Principal 456',\n        ciudad: 'Barcelona',\n        codigoPostal: '08001'\n      }\n    },\n    cursos: ['Historia', 'Literatura', 'Arte']\n  }\n];\n\n// Acceder a datos anidados\nconsole.log(estudiantes[0].contacto.direccion.ciudad); // Madrid\nconsole.log(estudiantes[1].calificaciones[3]); // 10\n\n// Calcular promedio de calificaciones\nconst promedios = estudiantes.map(estudiante => {\n  const promedio = estudiante.calificaciones.reduce((acc, cal) => acc + cal, 0) / estudiante.calificaciones.length;\n  return {\n    nombre: estudiante.nombre,\n    promedio: promedio.toFixed(2)\n  };\n});\nconsole.log(promedios); // [{ nombre: 'Juan', promedio: '8.00' }, { nombre: 'María', promedio: '9.00' }]\n\n// Estructura jerárquica (árbol)\nconst empresa = {\n  nombre: 'TechCorp',\n  ceo: 'Ana García',\n  departamentos: [\n    {\n      nombre: 'Desarrollo',\n      jefe: 'Carlos López',\n      empleados: [\n        { nombre: 'Juan', puesto: 'Desarrollador Frontend', salario: 50000 },\n        { nombre: 'María', puesto: 'Desarrollador Backend', salario: 55000 }\n      ]\n    },\n    {\n      nombre: 'Marketing',\n      jefe: 'Laura Martínez',\n      empleados: [\n        { nombre: 'Pedro', puesto: 'Especialista en Redes Sociales', salario: 45000 },\n        { nombre: 'Sofia', puesto: 'Analista de Mercado', salario: 48000 }\n      ]\n    }\n  ]\n};\n\n// Buscar empleado por nombre\nfunction buscarEmpleado(empresa, nombreEmpleado) {\n  for (const departamento of empresa.departamentos) {\n    for (const empleado of departamento.empleados) {\n      if (empleado.nombre === nombreEmpleado) {\n        return {\n          empleado: empleado,\n          departamento: departamento.nombre,\n          jefe: departamento.jefe\n        };\n      }\n    }\n  }\n  return null;\n}\n\nconst empleadoEncontrado = buscarEmpleado(empresa, 'Juan');\nconsole.log(empleadoEncontrado); // { empleado: {...}, departamento: 'Desarrollo', jefe: 'Carlos López' }\n\n// Estructura de datos con Map y Set\nconst inventario = new Map();\ninventario.set('laptop', { precio: 1000, stock: 5, categoria: 'electronica' });\ninventario.set('mouse', { precio: 25, stock: 20, categoria: 'electronica' });\ninventario.set('libro', { precio: 15, stock: 50, categoria: 'libros' });\n\n// Usar Map\nconsole.log(inventario.get('laptop')); // { precio: 1000, stock: 5, categoria: 'electronica' }\nconsole.log(inventario.has('mouse')); // true\nconsole.log(inventario.size); // 3\n\n// Iterar sobre Map\nfor (const [producto, datos] of inventario) {\n  console.log(`${producto}: $${datos.precio} (${datos.stock} en stock)`);\n}\n\n// Usar Set para categorías únicas\nconst categorias = new Set();\nfor (const [producto, datos] of inventario) {\n  categorias.add(datos.categoria);\n}\nconsole.log(categorias); // Set(['electronica', 'libros'])\n\n// Estructura de datos para e-commerce\nconst tienda = {\n  productos: [\n    {\n      id: 1,\n      nombre: 'Laptop Gaming',\n      precio: 1500,\n      categoria: 'electronica',\n      stock: 10,\n      caracteristicas: ['16GB RAM', 'SSD 512GB', 'RTX 3060'],\n      reviews: [\n        { usuario: 'Juan', calificacion: 5, comentario: 'Excelente laptop' },\n        { usuario: 'María', calificacion: 4, comentario: 'Muy buena relación calidad-precio' }\n      ]\n    },\n    {\n      id: 2,\n      nombre: 'Smartphone',\n      precio: 800,\n      categoria: 'electronica',\n      stock: 25,\n      caracteristicas: ['128GB', 'Cámara 48MP', 'Batería 4000mAh'],\n      reviews: [\n        { usuario: 'Pedro', calificacion: 5, comentario: 'Perfecto para fotos' }\n      ]\n    }\n  ],\n  usuarios: [\n    { id: 1, nombre: 'Juan', email: 'juan@ejemplo.com', tipo: 'premium' },\n    { id: 2, nombre: 'María', email: 'maria@ejemplo.com', tipo: 'regular' }\n  ],\n  pedidos: [\n    {\n      id: 1,\n      usuarioId: 1,\n      productos: [1, 2],\n      total: 2300,\n      fecha: '2024-01-15',\n      estado: 'completado'\n    }\n  ]\n};\n\n// Funciones para trabajar con la estructura\nfunction buscarProductoPorCategoria(tienda, categoria) {\n  return tienda.productos.filter(producto => producto.categoria === categoria);\n}\n\nfunction calcularPromedioCalificaciones(producto) {\n  if (producto.reviews.length === 0) return 0;\n  const suma = producto.reviews.reduce((acc, review) => acc + review.calificacion, 0);\n  return suma / producto.reviews.length;\n}\n\nfunction obtenerPedidosUsuario(tienda, usuarioId) {\n  return tienda.pedidos.filter(pedido => pedido.usuarioId === usuarioId);\n}\n\n// Usar las funciones\nconst productosElectronica = buscarProductoPorCategoria(tienda, 'electronica');\nconsole.log(productosElectronica); // Array de productos de electrónica\n\nconst promedioLaptop = calcularPromedioCalificaciones(tienda.productos[0]);\nconsole.log(promedioLaptop); // 4.5\n\nconst pedidosJuan = obtenerPedidosUsuario(tienda, 1);\nconsole.log(pedidosJuan); // Array de pedidos de Juan\n\n// Estructura de datos para sistema de archivos\nconst sistemaArchivos = {\n  nombre: 'Mi PC',\n  tipo: 'directorio',\n  contenido: [\n    {\n      nombre: 'Documentos',\n      tipo: 'directorio',\n      contenido: [\n        { nombre: 'trabajo.docx', tipo: 'archivo', tamaño: 1024 },\n        { nombre: 'personal.pdf', tipo: 'archivo', tamaño: 2048 }\n      ]\n    },\n    {\n      nombre: 'Imágenes',\n      tipo: 'directorio',\n      contenido: [\n        { nombre: 'vacaciones.jpg', tipo: 'archivo', tamaño: 5120 },\n        { nombre: 'familia.png', tipo: 'archivo', tamaño: 3072 }\n      ]\n    },\n    { nombre: 'config.txt', tipo: 'archivo', tamaño: 256 }\n  ]\n};\n\n// Función recursiva para buscar archivos\nfunction buscarArchivo(sistema, nombreArchivo) {\n  if (sistema.tipo === 'archivo' && sistema.nombre === nombreArchivo) {\n    return sistema;\n  }\n  \n  if (sistema.tipo === 'directorio' && sistema.contenido) {\n    for (const item of sistema.contenido) {\n      const resultado = buscarArchivo(item, nombreArchivo);\n      if (resultado) return resultado;\n    }\n  }\n  \n  return null;\n}\n\nconst archivoEncontrado = buscarArchivo(sistemaArchivos, 'vacaciones.jpg');\nconsole.log(archivoEncontrado); // { nombre: 'vacaciones.jpg', tipo: 'archivo', tamaño: 5120 }\n```"
+        "Algoritmos de búsqueda y ordenamiento": "Los algoritmos de búsqueda y ordenamiento son fundamentales en programación. JavaScript proporciona métodos nativos como sort(), pero entender los algoritmos subyacentes es crucial para optimizar el rendimiento y resolver problemas complejos. Incluyen búsqueda lineal, binaria, y algoritmos de ordenamiento como bubble sort, quick sort, y merge sort.\n\n**Ejemplos:**\n```javascript\n// Búsqueda lineal (Linear Search)\nfunction busquedaLineal(array, elemento) {\n  for (let i = 0; i < array.length; i++) {\n    if (array[i] === elemento) {\n      return i; // Retorna el índice\n    }\n  }\n  return -1; // No encontrado\n}\n\nconst numeros = [1, 3, 5, 7, 9, 11, 13, 15];\nconsole.log(busquedaLineal(numeros, 7)); // 3\nconsole.log(busquedaLineal(numeros, 4)); // -1\n\n// Búsqueda binaria (Binary Search) - requiere array ordenado\nfunction busquedaBinaria(array, elemento) {\n  let inicio = 0;\n  let fin = array.length - 1;\n  \n  while (inicio <= fin) {\n    const medio = Math.floor((inicio + fin) / 2);\n    \n    if (array[medio] === elemento) {\n      return medio;\n    } else if (array[medio] < elemento) {\n      inicio = medio + 1;\n    } else {\n      fin = medio - 1;\n    }\n  }\n  \n  return -1;\n}\n\nconsole.log(busquedaBinaria(numeros, 7)); // 3\nconsole.log(busquedaBinaria(numeros, 4)); // -1\n\n// Búsqueda en objetos\nfunction busquedaPorPropiedad(array, propiedad, valor) {\n  return array.findIndex(item => item[propiedad] === valor);\n}\n\nconst estudiantes = [\n  { nombre: 'Juan', edad: 20, calificacion: 85 },\n  { nombre: 'María', edad: 22, calificacion: 92 },\n  { nombre: 'Pedro', edad: 21, calificacion: 78 }\n];\n\nconsole.log(busquedaPorPropiedad(estudiantes, 'nombre', 'María')); // 1\nconsole.log(busquedaPorPropiedad(estudiantes, 'calificacion', 78)); // 2\n\n// Bubble Sort (Ordenamiento burbuja)\nfunction bubbleSort(array) {\n  const arr = [...array]; // Copia para no modificar el original\n  const n = arr.length;\n  \n  for (let i = 0; i < n - 1; i++) {\n    for (let j = 0; j < n - i - 1; j++) {\n      if (arr[j] > arr[j + 1]) {\n        // Intercambiar elementos\n        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];\n      }\n    }\n  }\n  \n  return arr;\n}\n\nconst numerosDesordenados = [64, 34, 25, 12, 22, 11, 90];\nconsole.log(bubbleSort(numerosDesordenados)); // [11, 12, 22, 25, 34, 64, 90]\n\n// Quick Sort (Ordenamiento rápido)\nfunction quickSort(array) {\n  if (array.length <= 1) {\n    return array;\n  }\n  \n  const pivot = array[Math.floor(array.length / 2)];\n  const menores = array.filter(x => x < pivot);\n  const iguales = array.filter(x => x === pivot);\n  const mayores = array.filter(x => x > pivot);\n  \n  return [...quickSort(menores), ...iguales, ...quickSort(mayores)];\n}\n\nconsole.log(quickSort(numerosDesordenados)); // [11, 12, 22, 25, 34, 64, 90]\n\n// Merge Sort (Ordenamiento por mezcla)\nfunction mergeSort(array) {\n  if (array.length <= 1) {\n    return array;\n  }\n  \n  const medio = Math.floor(array.length / 2);\n  const izquierda = array.slice(0, medio);\n  const derecha = array.slice(medio);\n  \n  return merge(mergeSort(izquierda), mergeSort(derecha));\n}\n\nfunction merge(izquierda, derecha) {\n  const resultado = [];\n  let i = 0, j = 0;\n  \n  while (i < izquierda.length && j < derecha.length) {\n    if (izquierda[i] <= derecha[j]) {\n      resultado.push(izquierda[i]);\n      i++;\n    } else {\n      resultado.push(derecha[j]);\n      j++;\n    }\n  }\n  \n  return resultado.concat(izquierda.slice(i)).concat(derecha.slice(j));\n}\n\nconsole.log(mergeSort(numerosDesordenados)); // [11, 12, 22, 25, 34, 64, 90]\n\n// Ordenamiento de objetos por propiedad\nfunction ordenarPorPropiedad(array, propiedad, orden = 'asc') {\n  return array.sort((a, b) => {\n    if (orden === 'asc') {\n      return a[propiedad] - b[propiedad];\n    } else {\n      return b[propiedad] - a[propiedad];\n    }\n  });\n}\n\nconst productos = [\n  { nombre: 'Laptop', precio: 1000, stock: 5 },\n  { nombre: 'Mouse', precio: 25, stock: 20 },\n  { nombre: 'Teclado', precio: 75, stock: 15 }\n];\n\nconsole.log(ordenarPorPropiedad(productos, 'precio', 'asc'));\n// [{ nombre: 'Mouse', precio: 25, stock: 20 }, { nombre: 'Teclado', precio: 75, stock: 15 }, { nombre: 'Laptop', precio: 1000, stock: 5 }]\n\n// Ordenamiento personalizado con función de comparación\nfunction ordenarPersonalizado(array, comparar) {\n  return array.sort(comparar);\n}\n\n// Ordenar por múltiples criterios\nconst empleados = [\n  { nombre: 'Juan', departamento: 'IT', salario: 50000, antiguedad: 3 },\n  { nombre: 'María', departamento: 'HR', salario: 45000, antiguedad: 5 },\n  { nombre: 'Pedro', departamento: 'IT', salario: 55000, antiguedad: 2 },\n  { nombre: 'Ana', departamento: 'HR', salario: 48000, antiguedad: 4 }\n];\n\n// Ordenar por departamento, luego por salario\nconst empleadosOrdenados = ordenarPersonalizado(empleados, (a, b) => {\n  if (a.departamento !== b.departamento) {\n    return a.departamento.localeCompare(b.departamento);\n  }\n  return b.salario - a.salario; // Mayor salario primero\n});\n\nconsole.log(empleadosOrdenados);\n\n// Algoritmo de búsqueda de texto (Búsqueda de subcadena)\nfunction busquedaTexto(texto, patron) {\n  const indices = [];\n  let posicion = 0;\n  \n  while (posicion < texto.length) {\n    const indice = texto.indexOf(patron, posicion);\n    if (indice === -1) break;\n    \n    indices.push(indice);\n    posicion = indice + 1;\n  }\n  \n  return indices;\n}\n\nconst texto = 'JavaScript es genial. JavaScript es poderoso.';\nconsole.log(busquedaTexto(texto, 'JavaScript')); // [0, 25]\n\n// Búsqueda con expresiones regulares\nfunction busquedaRegex(texto, patron) {\n  const regex = new RegExp(patron, 'gi');\n  const coincidencias = [];\n  let match;\n  \n  while ((match = regex.exec(texto)) !== null) {\n    coincidencias.push({\n      texto: match[0],\n      indice: match.index,\n      longitud: match[0].length\n    });\n  }\n  \n  return coincidencias;\n}\n\nconsole.log(busquedaRegex(texto, 'javascript')); // [{ texto: 'JavaScript', indice: 0, longitud: 10 }, { texto: 'JavaScript', indice: 25, longitud: 10 }]\n\n// Algoritmo de búsqueda en árbol binario\nclass NodoArbol {\n  constructor(valor) {\n    this.valor = valor;\n    this.izquierda = null;\n    this.derecha = null;\n  }\n}\n\nclass ArbolBinario {\n  constructor() {\n    this.raiz = null;\n  }\n  \n  insertar(valor) {\n    const nuevoNodo = new NodoArbol(valor);\n    \n    if (!this.raiz) {\n      this.raiz = nuevoNodo;\n      return;\n    }\n    \n    this._insertarNodo(this.raiz, nuevoNodo);\n  }\n  \n  _insertarNodo(nodo, nuevoNodo) {\n    if (nuevoNodo.valor < nodo.valor) {\n      if (!nodo.izquierda) {\n        nodo.izquierda = nuevoNodo;\n      } else {\n        this._insertarNodo(nodo.izquierda, nuevoNodo);\n      }\n    } else {\n      if (!nodo.derecha) {\n        nodo.derecha = nuevoNodo;\n      } else {\n        this._insertarNodo(nodo.derecha, nuevoNodo);\n      }\n    }\n  }\n  \n  buscar(valor) {\n    return this._buscarNodo(this.raiz, valor);\n  }\n  \n  _buscarNodo(nodo, valor) {\n    if (!nodo) return false;\n    \n    if (valor === nodo.valor) return true;\n    \n    if (valor < nodo.valor) {\n      return this._buscarNodo(nodo.izquierda, valor);\n    } else {\n      return this._buscarNodo(nodo.derecha, valor);\n    }\n  }\n}\n\nconst arbol = new ArbolBinario();\narbol.insertar(50);\narbol.insertar(30);\narbol.insertar(70);\narbol.insertar(20);\narbol.insertar(40);\narbol.insertar(60);\narbol.insertar(80);\n\nconsole.log(arbol.buscar(40)); // true\nconsole.log(arbol.buscar(45)); // false\n\n// Medición de rendimiento\nfunction medirTiempo(funcion, ...args) {\n  const inicio = performance.now();\n  const resultado = funcion(...args);\n  const fin = performance.now();\n  \n  return {\n    resultado,\n    tiempo: fin - inicio\n  };\n}\n\nconst arrayGrande = Array.from({ length: 10000 }, () => Math.floor(Math.random() * 10000));\n\nconst resultadoBubble = medirTiempo(bubbleSort, arrayGrande);\nconst resultadoQuick = medirTiempo(quickSort, arrayGrande);\nconst resultadoMerge = medirTiempo(mergeSort, arrayGrande);\n\nconsole.log(`Bubble Sort: ${resultadoBubble.tiempo.toFixed(2)}ms`);\nconsole.log(`Quick Sort: ${resultadoQuick.tiempo.toFixed(2)}ms`);\nconsole.log(`Merge Sort: ${resultadoMerge.tiempo.toFixed(2)}ms`);\n```",
+        
+        "Estructuras de datos complejas y recursión": "Las estructuras de datos complejas y la recursión son conceptos avanzados que permiten resolver problemas complejos de manera elegante. La recursión es una técnica donde una función se llama a sí misma, y es especialmente útil para trabajar con estructuras de datos anidadas, árboles, y algoritmos complejos.\n\n**Ejemplos:**\n```javascript\n// Recursión básica - Factorial\nfunction factorial(n) {\n  // Caso base\n  if (n <= 1) {\n    return 1;\n  }\n  // Caso recursivo\n  return n * factorial(n - 1);\n}\n\nconsole.log(factorial(5)); // 120\nconsole.log(factorial(0)); // 1\n\n// Recursión con Fibonacci\nfunction fibonacci(n) {\n  if (n <= 1) {\n    return n;\n  }\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\nconsole.log(fibonacci(10)); // 55\n\n// Fibonacci optimizado con memoización\nconst memo = new Map();\nfunction fibonacciMemo(n) {\n  if (memo.has(n)) {\n    return memo.get(n);\n  }\n  \n  if (n <= 1) {\n    memo.set(n, n);\n    return n;\n  }\n  \n  const resultado = fibonacciMemo(n - 1) + fibonacciMemo(n - 2);\n  memo.set(n, resultado);\n  return resultado;\n}\n\nconsole.log(fibonacciMemo(50)); // 12586269025 (mucho más rápido)\n\n// Recursión con arrays anidados\nfunction aplanarArray(array) {\n  const resultado = [];\n  \n  for (const elemento of array) {\n    if (Array.isArray(elemento)) {\n      resultado.push(...aplanarArray(elemento));\n    } else {\n      resultado.push(elemento);\n    }\n  }\n  \n  return resultado;\n}\n\nconst arrayAnidado = [1, [2, 3], [4, [5, 6]], 7];\nconsole.log(aplanarArray(arrayAnidado)); // [1, 2, 3, 4, 5, 6, 7]\n\n// Recursión con objetos anidados\nfunction buscarEnObjeto(objeto, clave) {\n  for (const [key, value] of Object.entries(objeto)) {\n    if (key === clave) {\n      return value;\n    }\n    \n    if (typeof value === 'object' && value !== null) {\n      const resultado = buscarEnObjeto(value, clave);\n      if (resultado !== undefined) {\n        return resultado;\n      }\n    }\n  }\n  \n  return undefined;\n}\n\nconst objetoComplejo = {\n  usuario: {\n    nombre: 'Juan',\n    direccion: {\n      ciudad: 'Madrid',\n      coordenadas: {\n        lat: 40.4168,\n        lng: -3.7038\n      }\n    }\n  },\n  configuracion: {\n    tema: 'oscuro'\n  }\n};\n\nconsole.log(buscarEnObjeto(objetoComplejo, 'lat')); // 40.4168\nconsole.log(buscarEnObjeto(objetoComplejo, 'tema')); // oscuro\n\n// Estructura de árbol con recursión\nclass NodoArbol {\n  constructor(valor) {\n    this.valor = valor;\n    this.hijos = [];\n  }\n  \n  agregarHijo(nodo) {\n    this.hijos.push(nodo);\n  }\n  \n  // Recorrido en profundidad (DFS)\n  recorrerProfundidad(callback) {\n    callback(this.valor);\n    \n    for (const hijo of this.hijos) {\n      hijo.recorrerProfundidad(callback);\n    }\n  }\n  \n  // Buscar nodo por valor\n  buscar(valor) {\n    if (this.valor === valor) {\n      return this;\n    }\n    \n    for (const hijo of this.hijos) {\n      const resultado = hijo.buscar(valor);\n      if (resultado) {\n        return resultado;\n      }\n    }\n    \n    return null;\n  }\n  \n  // Contar nodos\n  contarNodos() {\n    let contador = 1;\n    \n    for (const hijo of this.hijos) {\n      contador += hijo.contarNodos();\n    }\n    \n    return contador;\n  }\n}\n\n// Crear árbol\nconst raiz = new NodoArbol('A');\nconst nodoB = new NodoArbol('B');\nconst nodoC = new NodoArbol('C');\nconst nodoD = new NodoArbol('D');\nconst nodoE = new NodoArbol('E');\n\nraiz.agregarHijo(nodoB);\nraiz.agregarHijo(nodoC);\nnodoB.agregarHijo(nodoD);\nnodoB.agregarHijo(nodoE);\n\n// Recorrer árbol\nconst valores = [];\nraiz.recorrerProfundidad(valor => valores.push(valor));\nconsole.log(valores); // ['A', 'B', 'D', 'E', 'C']\n\n// Buscar en árbol\nconst nodoEncontrado = raiz.buscar('D');\nconsole.log(nodoEncontrado?.valor); // 'D'\n\n// Contar nodos\nconsole.log(raiz.contarNodos()); // 5\n\n// Recursión con división y conquista\nfunction busquedaBinariaRecursiva(array, elemento, inicio = 0, fin = array.length - 1) {\n  if (inicio > fin) {\n    return -1;\n  }\n  \n  const medio = Math.floor((inicio + fin) / 2);\n  \n  if (array[medio] === elemento) {\n    return medio;\n  } else if (array[medio] < elemento) {\n    return busquedaBinariaRecursiva(array, elemento, medio + 1, fin);\n  } else {\n    return busquedaBinariaRecursiva(array, elemento, inicio, medio - 1);\n  }\n}\n\nconst arrayOrdenado = [1, 3, 5, 7, 9, 11, 13, 15];\nconsole.log(busquedaBinariaRecursiva(arrayOrdenado, 7)); // 3\nconsole.log(busquedaBinariaRecursiva(arrayOrdenado, 4)); // -1\n\n// Merge Sort recursivo\nfunction mergeSortRecursivo(array) {\n  if (array.length <= 1) {\n    return array;\n  }\n  \n  const medio = Math.floor(array.length / 2);\n  const izquierda = mergeSortRecursivo(array.slice(0, medio));\n  const derecha = mergeSortRecursivo(array.slice(medio));\n  \n  return merge(izquierda, derecha);\n}\n\nfunction merge(izquierda, derecha) {\n  const resultado = [];\n  let i = 0, j = 0;\n  \n  while (i < izquierda.length && j < derecha.length) {\n    if (izquierda[i] <= derecha[j]) {\n      resultado.push(izquierda[i]);\n      i++;\n    } else {\n      resultado.push(derecha[j]);\n      j++;\n    }\n  }\n  \n  return resultado.concat(izquierda.slice(i)).concat(derecha.slice(j));\n}\n\nconst numerosDesordenados = [64, 34, 25, 12, 22, 11, 90];\nconsole.log(mergeSortRecursivo(numerosDesordenados)); // [11, 12, 22, 25, 34, 64, 90]\n\n// Recursión con validación de estructura\nfunction validarEstructura(objeto, esquema) {\n  for (const [clave, tipo] of Object.entries(esquema)) {\n    if (!(clave in objeto)) {\n      return false;\n    }\n    \n    if (typeof tipo === 'object' && tipo !== null) {\n      if (!validarEstructura(objeto[clave], tipo)) {\n        return false;\n      }\n    } else if (typeof objeto[clave] !== tipo) {\n      return false;\n    }\n  }\n  \n  return true;\n}\n\nconst esquema = {\n  nombre: 'string',\n  edad: 'number',\n  direccion: {\n    calle: 'string',\n    ciudad: 'string',\n    coordenadas: {\n      lat: 'number',\n      lng: 'number'\n    }\n  }\n};\n\nconst objetoValido = {\n  nombre: 'Juan',\n  edad: 25,\n  direccion: {\n    calle: 'Calle Mayor',\n    ciudad: 'Madrid',\n    coordenadas: {\n      lat: 40.4168,\n      lng: -3.7038\n    }\n  }\n};\n\nconsole.log(validarEstructura(objetoValido, esquema)); // true\n\n// Recursión con generación de combinaciones\nfunction generarCombinaciones(array, tamaño) {\n  if (tamaño === 0) {\n    return [[]];\n  }\n  \n  if (array.length === 0) {\n    return [];\n  }\n  \n  const [primerElemento, ...resto] = array;\n  const combinacionesConPrimero = generarCombinaciones(resto, tamaño - 1)\n    .map(combinacion => [primerElemento, ...combinacion]);\n  \n  const combinacionesSinPrimero = generarCombinaciones(resto, tamaño);\n  \n  return [...combinacionesConPrimero, ...combinacionesSinPrimero];\n}\n\nconst elementos = ['A', 'B', 'C', 'D'];\nconsole.log(generarCombinaciones(elementos, 2));\n// [['A', 'B'], ['A', 'C'], ['A', 'D'], ['B', 'C'], ['B', 'D'], ['C', 'D']]\n\n// Recursión con backtracking - N-Queens\nfunction resolverNQueens(n) {\n  const tablero = Array(n).fill().map(() => Array(n).fill(0));\n  const soluciones = [];\n  \n  function esSeguro(fila, columna) {\n    // Verificar columna\n    for (let i = 0; i < fila; i++) {\n      if (tablero[i][columna] === 1) {\n        return false;\n      }\n    }\n    \n    // Verificar diagonal superior izquierda\n    for (let i = fila, j = columna; i >= 0 && j >= 0; i--, j--) {\n      if (tablero[i][j] === 1) {\n        return false;\n      }\n    }\n    \n    // Verificar diagonal superior derecha\n    for (let i = fila, j = columna; i >= 0 && j < n; i--, j++) {\n      if (tablero[i][j] === 1) {\n        return false;\n      }\n    }\n    \n    return true;\n  }\n  \n  function resolver(fila) {\n    if (fila === n) {\n      soluciones.push(tablero.map(fila => [...fila]));\n      return;\n    }\n    \n    for (let columna = 0; columna < n; columna++) {\n      if (esSeguro(fila, columna)) {\n        tablero[fila][columna] = 1;\n        resolver(fila + 1);\n        tablero[fila][columna] = 0; // Backtrack\n      }\n    }\n  }\n  \n  resolver(0);\n  return soluciones;\n}\n\nconst soluciones4Queens = resolverNQueens(4);\nconsole.log(`Número de soluciones para 4-Queens: ${soluciones4Queens.length}`); // 2\n\n// Recursión con memoización para problemas complejos\nconst cacheRecursivo = new Map();\n\nfunction problemaComplejo(n, m) {\n  const clave = `${n},${m}`;\n  \n  if (cacheRecursivo.has(clave)) {\n    return cacheRecursivo.get(clave);\n  }\n  \n  if (n === 0 || m === 0) {\n    cacheRecursivo.set(clave, 1);\n    return 1;\n  }\n  \n  const resultado = problemaComplejo(n - 1, m) + problemaComplejo(n, m - 1);\n  cacheRecursivo.set(clave, resultado);\n  return resultado;\n}\n\nconsole.log(problemaComplejo(10, 10)); // 184756\n```"
       },
       practical: [
-        "Manipular arrays con métodos modernos",
-        "Crear y modificar objetos",
-        "Guardar datos en el navegador",
-        "Proyecto: lista de tareas con persistencia",
-        "Implementar búsqueda y filtrado"
+        "Implementar métodos avanzados de arrays",
+        "Trabajar con destructuring y spread operator",
+        "Crear estructuras de datos con Map y Set",
+        "Desarrollar algoritmos de búsqueda y ordenamiento",
+        "Resolver problemas con recursión"
       ]
     },
     activities: [
       {
-        title: "Arrays y métodos",
+        title: "Fundamentos: arrays, objetos y clases",
         duration: "45 min",
-        description: "Trabajar con map, filter, reduce y otros métodos"
+        description: "Repasar conceptos básicos de arrays, objetos y clases con ejemplos prácticos del sistema de gestión de biblioteca. Crear instancias de clases y trabajar con arrays de objetos."
       },
       {
-        title: "Objetos y JSON",
+        title: "Métodos avanzados de arrays",
         duration: "45 min",
-        description: "Manipular objetos y trabajar con JSON"
+        description: "Implementar métodos avanzados como sort, splice, slice, concat, findLast, flat, flatMap y trabajar con algoritmos de ordenamiento."
       },
       {
-        title: "Local Storage",
+        title: "Destructuring y estructuras de datos",
         duration: "30 min",
-        description: "Implementar persistencia de datos en el navegador"
+        description: "Trabajar con destructuring avanzado, spread operator, rest parameters, Map, Set, WeakMap y WeakSet para estructuras de datos complejas."
+      },
+      {
+        title: "Algoritmos y recursión",
+        duration: "30 min",
+        description: "Desarrollar algoritmos de búsqueda y ordenamiento, implementar funciones recursivas y resolver problemas complejos con estructuras de datos anidadas."
       }
     ],
     homework: [
-      "Crear lista de tareas con Local Storage",
-      "Implementar búsqueda y filtrado",
-      "Agregar funcionalidad de edición"
+      "Crear sistema de gestión de inventario con Map y Set",
+      "Implementar algoritmos de ordenamiento personalizados",
+      "Desarrollar aplicación con estructuras de datos recursivas"
     ],
     materials: [
-      "Proyecto React con hooks",
-      "React Router DOM",
-      "Diseño de navegación"
+      "Editor de código con soporte para JavaScript ES6+",
+      "Navegador web con DevTools",
+      "Ejemplos de algoritmos de ordenamiento",
+      "Documentación de Map, Set y estructuras de datos"
     ],
     exercises: [
       {
-        title: "Aplicación Multi-página",
-        description: "Crea una aplicación con múltiples páginas usando React Router.",
-        code: `// Configuración de rutas
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
+        title: "Sistema de Gestión de Inventario",
+        description: "Crea un sistema de gestión de inventario usando Map, Set, algoritmos de ordenamiento y estructuras de datos recursivas.",
+        code: `// Sistema de gestión de inventario
+class Inventario {
+  constructor() {
+    this.productos = new Map();
+    this.categorias = new Set();
+    this.ventas = [];
+  }
 
-function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                {/* Tu configuración de rutas aquí */}
-            </Routes>
-        </BrowserRouter>
-    );
+  // Agregar producto
+  agregarProducto(id, producto) {
+    // Tu código aquí
+  }
+
+  // Buscar producto
+  buscarProducto(id) {
+    // Tu código aquí
+  }
+
+  // Ordenar productos por precio
+  ordenarPorPrecio(ascendente = true) {
+    // Tu código aquí
+  }
+
+  // Obtener productos por categoría
+  obtenerPorCategoria(categoria) {
+    // Tu código aquí
+  }
+
+  // Calcular estadísticas
+  calcularEstadisticas() {
+    // Tu código aquí
+  }
 }
 
-export default App;`,
-        solution: `// Aplicación multi-página con React Router - Solución
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import Post from './pages/Post';
-import NotFound from './pages/NotFound';
+// Ejemplo de uso
+const inventario = new Inventario();`,
+        solution: `// Sistema de gestión de inventario - Solución
+class Inventario {
+  constructor() {
+    this.productos = new Map();
+    this.categorias = new Set();
+    this.ventas = [];
+  }
 
-function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="contact" element={<Contact />} />
-                    <Route path="blog" element={<Blog />} />
-                    <Route path="blog/:id" element={<Post />} />
-                    <Route path="*" element={<NotFound />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    );
-}
-
-export default App;
-
-// Componente Layout
-import { Outlet, Link, useLocation } from 'react-router-dom';
-import './Layout.css';
-
-function Layout() {
-    const location = useLocation();
+  // Agregar producto
+  agregarProducto(id, producto) {
+    this.productos.set(id, {
+      ...producto,
+      id,
+      fechaRegistro: new Date(),
+      stock: producto.stock || 0
+    });
     
-    return (
-        <div className="layout">
-            <nav className="navbar">
-                <div className="nav-brand">
-                    <Link to="/">Mi App</Link>
-                </div>
-                <ul className="nav-links">
-                    <li>
-                        <Link 
-                            to="/" 
-                            className={location.pathname === '/' ? 'active' : ''}
-                        >
-                            Inicio
-                        </Link>
-                    </li>
-                    <li>
-                        <Link 
-                            to="/about"
-                            className={location.pathname === '/about' ? 'active' : ''}
-                        >
-                            Acerca de
-                        </Link>
-                    </li>
-                    <li>
-                        <Link 
-                            to="/blog"
-                            className={location.pathname === '/blog' ? 'active' : ''}
-                        >
-                            Blog
-                        </Link>
-                    </li>
-                    <li>
-                        <Link 
-                            to="/contact"
-                            className={location.pathname === '/contact' ? 'active' : ''}
-                        >
-                            Contacto
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
-            
-            <main className="main-content">
-                <Outlet />
-            </main>
-            
-            <footer className="footer">
-                <p>&copy; 2024 Mi App. Todos los derechos reservados.</p>
-            </footer>
-        </div>
-    );
+    if (producto.categoria) {
+      this.categorias.add(producto.categoria);
+    }
+  }
+
+  // Buscar producto
+  buscarProducto(id) {
+    return this.productos.get(id);
+  }
+
+  // Ordenar productos por precio
+  ordenarPorPrecio(ascendente = true) {
+    const productosArray = Array.from(this.productos.values());
+    
+    return productosArray.sort((a, b) => {
+      return ascendente ? a.precio - b.precio : b.precio - a.precio;
+    });
+  }
+
+  // Obtener productos por categoría
+  obtenerPorCategoria(categoria) {
+    const productos = [];
+    
+    for (const [id, producto] of this.productos) {
+      if (producto.categoria === categoria) {
+        productos.push(producto);
+      }
+    }
+    
+    return productos;
+  }
+
+  // Calcular estadísticas
+  calcularEstadisticas() {
+    const productos = Array.from(this.productos.values());
+    
+    if (productos.length === 0) {
+      return {
+        totalProductos: 0,
+        precioPromedio: 0,
+        categoriaMasComun: null,
+        stockTotal: 0
+      };
+    }
+
+    const precios = productos.map(p => p.precio);
+    const categorias = productos.map(p => p.categoria);
+    const stocks = productos.map(p => p.stock);
+
+    // Calcular precio promedio
+    const precioPromedio = precios.reduce((acc, precio) => acc + precio, 0) / precios.length;
+
+    // Encontrar categoría más común
+    const conteoCategorias = new Map();
+    categorias.forEach(categoria => {
+      conteoCategorias.set(categoria, (conteoCategorias.get(categoria) || 0) + 1);
+    });
+
+    let categoriaMasComun = null;
+    let maxConteo = 0;
+    for (const [categoria, conteo] of conteoCategorias) {
+      if (conteo > maxConteo) {
+        maxConteo = conteo;
+        categoriaMasComun = categoria;
+      }
+    }
+
+    return {
+      totalProductos: productos.length,
+      precioPromedio: Math.round(precioPromedio * 100) / 100,
+      categoriaMasComun,
+      stockTotal: stocks.reduce((acc, stock) => acc + stock, 0)
+    };
+  }
+
+  // Algoritmo de búsqueda binaria para productos ordenados por precio
+  buscarPorPrecio(precioObjetivo) {
+    const productosOrdenados = this.ordenarPorPrecio(true);
+    
+    function busquedaBinaria(array, precio, inicio = 0, fin = array.length - 1) {
+      if (inicio > fin) {
+        return [];
+      }
+
+      const medio = Math.floor((inicio + fin) / 2);
+      const producto = array[medio];
+
+      if (producto.precio === precio) {
+        // Encontrar todos los productos con el mismo precio
+        const resultados = [producto];
+        
+        // Buscar hacia la izquierda
+        let i = medio - 1;
+        while (i >= 0 && array[i].precio === precio) {
+          resultados.unshift(array[i]);
+          i--;
+        }
+        
+        // Buscar hacia la derecha
+        let j = medio + 1;
+        while (j < array.length && array[j].precio === precio) {
+          resultados.push(array[j]);
+          j++;
+        }
+        
+        return resultados;
+      } else if (producto.precio < precio) {
+        return busquedaBinaria(array, precio, medio + 1, fin);
+      } else {
+        return busquedaBinaria(array, precio, inicio, medio - 1);
+      }
+    }
+
+    return busquedaBinaria(productosOrdenados, precioObjetivo);
+  }
+
+  // Función recursiva para generar reporte de inventario
+  generarReporte(nivel = 0) {
+    const indentacion = '  '.repeat(nivel);
+    let reporte = '';
+
+    if (nivel === 0) {
+      reporte += '=== REPORTE DE INVENTARIO ===\n';
+      const stats = this.calcularEstadisticas();
+      reporte += 'Total de productos: ' + stats.totalProductos + '\n';
+      reporte += 'Precio promedio: $' + stats.precioPromedio + '\n';
+      reporte += 'Categoría más común: ' + stats.categoriaMasComun + '\n';
+      reporte += 'Stock total: ' + stats.stockTotal + '\n\n';
+    }
+
+    // Agrupar productos por categoría
+    const productosPorCategoria = new Map();
+    for (const [id, producto] of this.productos) {
+      const categoria = producto.categoria || 'Sin categoría';
+      if (!productosPorCategoria.has(categoria)) {
+        productosPorCategoria.set(categoria, []);
+      }
+      productosPorCategoria.get(categoria).push(producto);
+    }
+
+    // Generar reporte por categoría
+    for (const [categoria, productos] of productosPorCategoria) {
+      reporte += indentacion + '📁 ' + categoria + ' (' + productos.length + ' productos)\n';
+      
+      // Ordenar productos por nombre
+      const productosOrdenados = productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+      
+      for (const producto of productosOrdenados) {
+        reporte += indentacion + '  📦 ' + producto.nombre + ' - $' + producto.precio + ' (Stock: ' + producto.stock + ')\n';
+      }
+      reporte += '\n';
+    }
+
+    return reporte;
+  }
 }
 
-export default Layout;`
+// Ejemplo de uso completo
+const inventario = new Inventario();
+
+// Agregar productos
+inventario.agregarProducto(1, {
+  nombre: 'Laptop Gaming',
+  precio: 1500,
+  categoria: 'Electrónicos',
+  stock: 10
+});
+
+inventario.agregarProducto(2, {
+  nombre: 'Mouse Inalámbrico',
+  precio: 25,
+  categoria: 'Electrónicos',
+  stock: 50
+});
+
+inventario.agregarProducto(3, {
+  nombre: 'Teclado Mecánico',
+  precio: 75,
+  categoria: 'Electrónicos',
+  stock: 30
+});
+
+inventario.agregarProducto(4, {
+  nombre: 'Monitor 4K',
+  precio: 300,
+  categoria: 'Electrónicos',
+  stock: 15
+});
+
+inventario.agregarProducto(5, {
+  nombre: 'Silla Ergonómica',
+  precio: 200,
+  categoria: 'Muebles',
+  stock: 8
+});
+
+// Probar funcionalidades
+console.log('=== BÚSQUEDA DE PRODUCTO ===');
+console.log(inventario.buscarProducto(1));
+
+console.log('\n=== ORDENAMIENTO POR PRECIO ===');
+const productosOrdenados = inventario.ordenarPorPrecio(true);
+productosOrdenados.forEach(p => console.log(p.nombre + ': $' + p.precio));
+
+console.log('\n=== PRODUCTOS POR CATEGORÍA ===');
+const electronicos = inventario.obtenerPorCategoria('Electrónicos');
+console.log('Electrónicos:', electronicos.map(p => p.nombre));
+
+console.log('\n=== ESTADÍSTICAS ===');
+const stats = inventario.calcularEstadisticas();
+console.log(stats);
+
+console.log('\n=== BÚSQUEDA POR PRECIO ===');
+const productos25 = inventario.buscarPorPrecio(25);
+console.log('Productos de $25:', productos25.map(p => p.nombre));
+
+console.log('\n=== REPORTE COMPLETO ===');
+console.log(inventario.generarReporte());
+
+// Función recursiva para encontrar productos con stock bajo
+function encontrarStockBajo(inventario, limite = 20) {
+  const productos = Array.from(inventario.productos.values());
+  const productosStockBajo = [];
+
+  function buscarRecursivo(productos, indice = 0) {
+    if (indice >= productos.length) {
+      return;
+    }
+
+    const producto = productos[indice];
+    if (producto.stock < limite) {
+      productosStockBajo.push(producto);
+    }
+
+    buscarRecursivo(productos, indice + 1);
+  }
+
+  buscarRecursivo(productos);
+  return productosStockBajo;
+}
+
+console.log('\n=== PRODUCTOS CON STOCK BAJO ===');
+const stockBajo = encontrarStockBajo(inventario, 20);
+stockBajo.forEach(p => console.log(p.nombre + ': ' + p.stock + ' unidades'));`
       }
     ]
   },
@@ -2780,96 +4507,404 @@ const taskManager = new TaskManager();`
     level: "Intermedio",
     completed: false,
     objectives: [
-      "Comprender programación asíncrona en JavaScript",
-      "Implementar Promises y async/await",
-      "Consumir APIs REST con Fetch",
-      "Manejar errores en operaciones asíncronas"
+      "Comprender programación asíncrona con analogías del mundo real",
+      "Dominar la evolución: Callbacks → Promises → Async/Await",
+      "Consumir APIs REST con Fetch API y manejo de errores",
+      "Crear aplicación práctica de clima con datos simulados",
+      "Implementar estados de UI (cargando, éxito, error)"
     ],
     content: {
       theoretical: [
-        "Programación asíncrona: callbacks, Promises, async/await",
-        "Fetch API: GET, POST, PUT, DELETE",
-        "Manejo de errores: try-catch, .catch()",
-        "APIs REST: estructura y consumo",
-        "JSON: parse y stringify",
-        "CORS y políticas de seguridad"
+        "Programación asíncrona: analogía del restaurante y estados de Promise",
+        "Evolución: Callbacks → Promises → Async/Await con ejemplos",
+        "Fetch API: métodos HTTP y manejo de respuestas",
+        "Manejo de errores: try-catch, validación y feedback al usuario",
+        "APIs REST: estructura, consumo y autenticación",
+        "JSON: parse, stringify y validación de datos",
+        "CORS: políticas de seguridad y soluciones",
+        "Estados de UI: cargando, éxito, error con ejemplos prácticos"
       ],
       theoreticalDetails: {
-        "Programación asíncrona: callbacks, Promises, async/await": "La programación asíncrona permite ejecutar código sin bloquear el hilo principal. JavaScript maneja esto con callbacks, Promises y async/await. Es fundamental para operaciones que toman tiempo como llamadas a APIs, lectura de archivos o timers.\n\n**Ejemplos:**\n```javascript\n// Callbacks (forma tradicional)\nsetTimeout(() => {\n  console.log('Ejecutado después de 1 segundo');\n}, 1000);\n\nfunction obtenerDatos(callback) {\n  setTimeout(() => {\n    callback(null, { datos: 'Información importante' });\n  }, 1000);\n}\n\nobtenerDatos((error, datos) => {\n  if (error) {\n    console.error('Error:', error);\n  } else {\n    console.log('Datos recibidos:', datos);\n  }\n});\n\n// Promises (ES6)\nfunction obtenerDatosPromise() {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      const exito = Math.random() > 0.5;\n      if (exito) {\n        resolve({ datos: 'Información importante' });\n      } else {\n        reject(new Error('Error al obtener datos'));\n      }\n    }, 1000);\n  });\n}\n\nobtenerDatosPromise()\n  .then(datos => {\n    console.log('Datos recibidos:', datos);\n    return datos.datos;\n  })\n  .then(datosProcesados => {\n    console.log('Datos procesados:', datosProcesados);\n  })\n  .catch(error => {\n    console.error('Error:', error.message);\n  });\n\n// async/await (ES2017)\nasync function procesarDatos() {\n  try {\n    console.log('Iniciando proceso...');\n    const datos = await obtenerDatosPromise();\n    console.log('Datos recibidos:', datos);\n    \n    const datosProcesados = await procesarDatosAsincrono(datos);\n    console.log('Datos procesados:', datosProcesados);\n    \n    return datosProcesados;\n  } catch (error) {\n    console.error('Error en el proceso:', error.message);\n    throw error;\n  }\n}\n\nasync function procesarDatosAsincrono(datos) {\n  return new Promise(resolve => {\n    setTimeout(() => {\n      resolve({ ...datos, procesado: true });\n    }, 500);\n  });\n}\n\n// Usar async/await\nprocesarDatos()\n  .then(resultado => console.log('Proceso completado:', resultado))\n  .catch(error => console.error('Error final:', error));\n\n// Promise.all - Ejecutar múltiples promesas en paralelo\nasync function cargarDatosParalelo() {\n  try {\n    const [usuarios, posts, comentarios] = await Promise.all([\n      fetch('/api/usuarios').then(r => r.json()),\n      fetch('/api/posts').then(r => r.json()),\n      fetch('/api/comentarios').then(r => r.json())\n    ]);\n    \n    console.log('Todos los datos cargados:', { usuarios, posts, comentarios });\n    return { usuarios, posts, comentarios };\n  } catch (error) {\n    console.error('Error al cargar datos:', error);\n  }\n}\n\n// Promise.race - Primera promesa que se resuelve\nasync function cargarDatosRapido() {\n  try {\n    const datos = await Promise.race([\n      fetch('/api/datos-rapidos').then(r => r.json()),\n      new Promise((_, reject) => \n        setTimeout(() => reject(new Error('Timeout')), 5000)\n      )\n    ]);\n    \n    console.log('Datos cargados rápidamente:', datos);\n    return datos;\n  } catch (error) {\n    console.error('Error o timeout:', error.message);\n  }\n}\n```",
+        "Programación asíncrona: analogía del restaurante y estados de Promise": "La programación asíncrona permite ejecutar código sin bloquear el hilo principal. JavaScript maneja esto con callbacks, Promises y async/await. Es fundamental para operaciones que toman tiempo como llamadas a APIs, lectura de archivos o timers.\n\n**Ejemplos:**\n```javascript\n// Callbacks (forma tradicional)\nsetTimeout(() => {\n  console.log('Ejecutado después de 1 segundo');\n}, 1000);\n\nfunction obtenerDatos(callback) {\n  setTimeout(() => {\n    callback(null, { datos: 'Información importante' });\n  }, 1000);\n}\n\nobtenerDatos((error, datos) => {\n  if (error) {\n    console.error('Error:', error);\n  } else {\n    console.log('Datos recibidos:', datos);\n  }\n});\n\n// Promises (ES6)\nfunction obtenerDatosPromise() {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      const exito = Math.random() > 0.5;\n      if (exito) {\n        resolve({ datos: 'Información importante' });\n      } else {\n        reject(new Error('Error al obtener datos'));\n      }\n    }, 1000);\n  });\n}\n\nobtenerDatosPromise()\n  .then(datos => {\n    console.log('Datos recibidos:', datos);\n    return datos.datos;\n  })\n  .then(datosProcesados => {\n    console.log('Datos procesados:', datosProcesados);\n  })\n  .catch(error => {\n    console.error('Error:', error.message);\n  });\n\n// async/await (ES2017)\nasync function procesarDatos() {\n  try {\n    console.log('Iniciando proceso...');\n    const datos = await obtenerDatosPromise();\n    console.log('Datos recibidos:', datos);\n    \n    const datosProcesados = await procesarDatosAsincrono(datos);\n    console.log('Datos procesados:', datosProcesados);\n    \n    return datosProcesados;\n  } catch (error) {\n    console.error('Error en el proceso:', error.message);\n    throw error;\n  }\n}\n\nasync function procesarDatosAsincrono(datos) {\n  return new Promise(resolve => {\n    setTimeout(() => {\n      resolve({ ...datos, procesado: true });\n    }, 500);\n  });\n}\n\n// Usar async/await\nprocesarDatos()\n  .then(resultado => console.log('Proceso completado:', resultado))\n  .catch(error => console.error('Error final:', error));\n\n// Promise.all - Ejecutar múltiples promesas en paralelo\nasync function cargarDatosParalelo() {\n  try {\n    const [usuarios, posts, comentarios] = await Promise.all([\n      fetch('/api/usuarios').then(r => r.json()),\n      fetch('/api/posts').then(r => r.json()),\n      fetch('/api/comentarios').then(r => r.json())\n    ]);\n    \n    console.log('Todos los datos cargados:', { usuarios, posts, comentarios });\n    return { usuarios, posts, comentarios };\n  } catch (error) {\n    console.error('Error al cargar datos:', error);\n  }\n}\n\n// Promise.race - Primera promesa que se resuelve\nasync function cargarDatosRapido() {\n  try {\n    const datos = await Promise.race([\n      fetch('/api/datos-rapidos').then(r => r.json()),\n      new Promise((_, reject) => \n        setTimeout(() => reject(new Error('Timeout')), 5000)\n      )\n    ]);\n    \n    console.log('Datos cargados rápidamente:', datos);\n    return datos;\n  } catch (error) {\n    console.error('Error o timeout:', error.message);\n  }\n}\n```",
         
-        "Fetch API: GET, POST, PUT, DELETE": "Fetch API es la forma moderna de hacer peticiones HTTP en JavaScript. Proporciona una interfaz simple y poderosa para consumir APIs REST. Es más flexible que XMLHttpRequest y devuelve Promises nativamente.\n\n**Ejemplos:**\n```javascript\n// GET - Obtener datos\nasync function obtenerUsuarios() {\n  try {\n    const response = await fetch('https://jsonplaceholder.typicode.com/users');\n    \n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n    \n    const usuarios = await response.json();\n    console.log('Usuarios obtenidos:', usuarios);\n    return usuarios;\n  } catch (error) {\n    console.error('Error al obtener usuarios:', error);\n    throw error;\n  }\n}\n\n// GET con parámetros\nasync function obtenerUsuario(id) {\n  try {\n    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);\n    \n    if (!response.ok) {\n      throw new Error(`Usuario no encontrado: ${response.status}`);\n    }\n    \n    const usuario = await response.json();\n    console.log('Usuario obtenido:', usuario);\n    return usuario;\n  } catch (error) {\n    console.error('Error al obtener usuario:', error);\n    throw error;\n  }\n}\n\n// POST - Crear datos\nasync function crearUsuario(datosUsuario) {\n  try {\n    const response = await fetch('https://jsonplaceholder.typicode.com/users', {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n      },\n      body: JSON.stringify(datosUsuario)\n    });\n    \n    if (!response.ok) {\n      throw new Error(`Error al crear usuario: ${response.status}`);\n    }\n    \n    const nuevoUsuario = await response.json();\n    console.log('Usuario creado:', nuevoUsuario);\n    return nuevoUsuario;\n  } catch (error) {\n    console.error('Error al crear usuario:', error);\n    throw error;\n  }\n}\n\n// PUT - Actualizar datos\nasync function actualizarUsuario(id, datosActualizados) {\n  try {\n    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {\n      method: 'PUT',\n      headers: {\n        'Content-Type': 'application/json',\n      },\n      body: JSON.stringify(datosActualizados)\n    });\n    \n    if (!response.ok) {\n      throw new Error(`Error al actualizar usuario: ${response.status}`);\n    }\n    \n    const usuarioActualizado = await response.json();\n    console.log('Usuario actualizado:', usuarioActualizado);\n    return usuarioActualizado;\n  } catch (error) {\n    console.error('Error al actualizar usuario:', error);\n    throw error;\n  }\n}\n\n// DELETE - Eliminar datos\nasync function eliminarUsuario(id) {\n  try {\n    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {\n      method: 'DELETE'\n    });\n    \n    if (!response.ok) {\n      throw new Error(`Error al eliminar usuario: ${response.status}`);\n    }\n    \n    console.log('Usuario eliminado exitosamente');\n    return true;\n  } catch (error) {\n    console.error('Error al eliminar usuario:', error);\n    throw error;\n  }\n}\n\n// Fetch con headers personalizados\nasync function obtenerDatosConAutenticacion(token) {\n  try {\n    const response = await fetch('https://api.ejemplo.com/datos', {\n      headers: {\n        'Authorization': `Bearer ${token}`,\n        'Content-Type': 'application/json',\n        'Accept': 'application/json'\n      }\n    });\n    \n    if (!response.ok) {\n      if (response.status === 401) {\n        throw new Error('Token de autenticación inválido');\n      }\n      throw new Error(`Error HTTP: ${response.status}`);\n    }\n    \n    const datos = await response.json();\n    return datos;\n  } catch (error) {\n    console.error('Error con autenticación:', error);\n    throw error;\n  }\n}\n\n// Fetch con timeout\nasync function obtenerDatosConTimeout(url, timeoutMs = 5000) {\n  try {\n    const controller = new AbortController();\n    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);\n    \n    const response = await fetch(url, {\n      signal: controller.signal\n    });\n    \n    clearTimeout(timeoutId);\n    \n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n    \n    const datos = await response.json();\n    return datos;\n  } catch (error) {\n    if (error.name === 'AbortError') {\n      throw new Error('La petición fue cancelada por timeout');\n    }\n    throw error;\n  }\n}\n\n// Usar las funciones\nasync function ejemploCompleto() {\n  try {\n    // Obtener usuarios\n    const usuarios = await obtenerUsuarios();\n    console.log('Total de usuarios:', usuarios.length);\n    \n    // Crear nuevo usuario\n    const nuevoUsuario = await crearUsuario({\n      name: 'Juan Pérez',\n      email: 'juan@ejemplo.com',\n      username: 'juanperez'\n    });\n    \n    // Actualizar usuario\n    const usuarioActualizado = await actualizarUsuario(nuevoUsuario.id, {\n      name: 'Juan Carlos Pérez',\n      email: 'juancarlos@ejemplo.com'\n    });\n    \n    // Eliminar usuario\n    await eliminarUsuario(nuevoUsuario.id);\n    \n    console.log('Operaciones completadas exitosamente');\n  } catch (error) {\n    console.error('Error en el ejemplo:', error);\n  }\n}\n```",
+        "Fetch API: métodos HTTP y manejo de respuestas": "Fetch API es la forma moderna de hacer peticiones HTTP en JavaScript. Proporciona una interfaz simple y poderosa para consumir APIs REST. Es más flexible que XMLHttpRequest y devuelve Promises nativamente.\n\n**Ejemplos:**\n```javascript\n// GET - Obtener datos\nasync function obtenerUsuarios() {\n  try {\n    const response = await fetch('https://jsonplaceholder.typicode.com/users');\n    \n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n    \n    const usuarios = await response.json();\n    console.log('Usuarios obtenidos:', usuarios);\n    return usuarios;\n  } catch (error) {\n    console.error('Error al obtener usuarios:', error);\n    throw error;\n  }\n}\n\n// GET con parámetros\nasync function obtenerUsuario(id) {\n  try {\n    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);\n    \n    if (!response.ok) {\n      throw new Error(`Usuario no encontrado: ${response.status}`);\n    }\n    \n    const usuario = await response.json();\n    console.log('Usuario obtenido:', usuario);\n    return usuario;\n  } catch (error) {\n    console.error('Error al obtener usuario:', error);\n    throw error;\n  }\n}\n\n// POST - Crear datos\nasync function crearUsuario(datosUsuario) {\n  try {\n    const response = await fetch('https://jsonplaceholder.typicode.com/users', {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n      },\n      body: JSON.stringify(datosUsuario)\n    });\n    \n    if (!response.ok) {\n      throw new Error(`Error al crear usuario: ${response.status}`);\n    }\n    \n    const nuevoUsuario = await response.json();\n    console.log('Usuario creado:', nuevoUsuario);\n    return nuevoUsuario;\n  } catch (error) {\n    console.error('Error al crear usuario:', error);\n    throw error;\n  }\n}\n\n// PUT - Actualizar datos\nasync function actualizarUsuario(id, datosActualizados) {\n  try {\n    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {\n      method: 'PUT',\n      headers: {\n        'Content-Type': 'application/json',\n      },\n      body: JSON.stringify(datosActualizados)\n    });\n    \n    if (!response.ok) {\n      throw new Error(`Error al actualizar usuario: ${response.status}`);\n    }\n    \n    const usuarioActualizado = await response.json();\n    console.log('Usuario actualizado:', usuarioActualizado);\n    return usuarioActualizado;\n  } catch (error) {\n    console.error('Error al actualizar usuario:', error);\n    throw error;\n  }\n}\n\n// DELETE - Eliminar datos\nasync function eliminarUsuario(id) {\n  try {\n    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {\n      method: 'DELETE'\n    });\n    \n    if (!response.ok) {\n      throw new Error(`Error al eliminar usuario: ${response.status}`);\n    }\n    \n    console.log('Usuario eliminado exitosamente');\n    return true;\n  } catch (error) {\n    console.error('Error al eliminar usuario:', error);\n    throw error;\n  }\n}\n\n// Fetch con headers personalizados\nasync function obtenerDatosConAutenticacion(token) {\n  try {\n    const response = await fetch('https://api.ejemplo.com/datos', {\n      headers: {\n        'Authorization': `Bearer ${token}`,\n        'Content-Type': 'application/json',\n        'Accept': 'application/json'\n      }\n    });\n    \n    if (!response.ok) {\n      if (response.status === 401) {\n        throw new Error('Token de autenticación inválido');\n      }\n      throw new Error(`Error HTTP: ${response.status}`);\n    }\n    \n    const datos = await response.json();\n    return datos;\n  } catch (error) {\n    console.error('Error con autenticación:', error);\n    throw error;\n  }\n}\n\n// Fetch con timeout\nasync function obtenerDatosConTimeout(url, timeoutMs = 5000) {\n  try {\n    const controller = new AbortController();\n    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);\n    \n    const response = await fetch(url, {\n      signal: controller.signal\n    });\n    \n    clearTimeout(timeoutId);\n    \n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n    \n    const datos = await response.json();\n    return datos;\n  } catch (error) {\n    if (error.name === 'AbortError') {\n      throw new Error('La petición fue cancelada por timeout');\n    }\n    throw error;\n  }\n}\n\n// Usar las funciones\nasync function ejemploCompleto() {\n  try {\n    // Obtener usuarios\n    const usuarios = await obtenerUsuarios();\n    console.log('Total de usuarios:', usuarios.length);\n    \n    // Crear nuevo usuario\n    const nuevoUsuario = await crearUsuario({\n      name: 'Juan Pérez',\n      email: 'juan@ejemplo.com',\n      username: 'juanperez'\n    });\n    \n    // Actualizar usuario\n    const usuarioActualizado = await actualizarUsuario(nuevoUsuario.id, {\n      name: 'Juan Carlos Pérez',\n      email: 'juancarlos@ejemplo.com'\n    });\n    \n    // Eliminar usuario\n    await eliminarUsuario(nuevoUsuario.id);\n    \n    console.log('Operaciones completadas exitosamente');\n  } catch (error) {\n    console.error('Error en el ejemplo:', error);\n  }\n}\n```",
         
-        "Manejo de errores: try-catch, .catch()": "El manejo de errores es crucial en programación asíncrona. try-catch funciona con async/await, mientras que .catch() funciona con Promises. Es importante manejar diferentes tipos de errores y proporcionar mensajes útiles al usuario.\n\n**Ejemplos:**\n```javascript\n// try-catch con async/await\nasync function manejarErroresAsync() {\n  try {\n    console.log('Iniciando operación...');\n    \n    const response = await fetch('https://api.ejemplo.com/datos');\n    \n    if (!response.ok) {\n      throw new Error(`Error HTTP: ${response.status} - ${response.statusText}`);\n    }\n    \n    const datos = await response.json();\n    console.log('Datos obtenidos:', datos);\n    \n    return datos;\n  } catch (error) {\n    console.error('Error en operación asíncrona:', error.message);\n    \n    // Manejar diferentes tipos de errores\n    if (error.name === 'TypeError') {\n      console.error('Error de red o URL inválida');\n    } else if (error.message.includes('HTTP error')) {\n      console.error('Error del servidor');\n    } else {\n      console.error('Error desconocido');\n    }\n    \n    throw error; // Re-lanzar el error si es necesario\n  }\n}\n\n// .catch() con Promises\nfunction manejarErroresPromise() {\n  return fetch('https://api.ejemplo.com/datos')\n    .then(response => {\n      if (!response.ok) {\n        throw new Error(`Error HTTP: ${response.status}`);\n      }\n      return response.json();\n    })\n    .then(datos => {\n      console.log('Datos obtenidos:', datos);\n      return datos;\n    })\n    .catch(error => {\n      console.error('Error en Promise:', error.message);\n      \n      // Manejar diferentes tipos de errores\n      if (error.name === 'TypeError') {\n        console.error('Error de red');\n      } else if (error.message.includes('HTTP error')) {\n        console.error('Error del servidor');\n      }\n      \n      throw error; // Re-lanzar el error\n    });\n}\n\n// Manejo de errores específicos\nasync function obtenerDatosConManejoEspecifico() {\n  try {\n    const response = await fetch('https://api.ejemplo.com/datos');\n    \n    switch (response.status) {\n      case 200:\n        return await response.json();\n      case 404:\n        throw new Error('Recurso no encontrado');\n      case 401:\n        throw new Error('No autorizado - token inválido');\n      case 403:\n        throw new Error('Acceso denegado');\n      case 500:\n        throw new Error('Error interno del servidor');\n      default:\n        throw new Error(`Error HTTP: ${response.status}`);\n    }\n  } catch (error) {\n    if (error.name === 'TypeError') {\n      throw new Error('Error de conexión - verifica tu internet');\n    }\n    throw error;\n  }\n}\n\n// Función helper para manejo de errores\nfunction crearManejadorErrores(contexto) {\n  return function(error) {\n    console.error(`Error en ${contexto}:`, error.message);\n    \n    // Log del error para debugging\n    console.error('Stack trace:', error.stack);\n    \n    // Mostrar mensaje al usuario\n    mostrarErrorAlUsuario(`Error en ${contexto}: ${error.message}`);\n    \n    // Enviar error a servicio de logging (opcional)\n    enviarErrorALogging(error, contexto);\n  };\n}\n\n// Usar el manejador de errores\nconst manejarErrorAPI = crearManejadorErrores('API');\n\nasync function ejemploConManejador() {\n  try {\n    const datos = await obtenerDatosConManejoEspecifico();\n    return datos;\n  } catch (error) {\n    manejarErrorAPI(error);\n    throw error;\n  }\n}\n\n// Manejo de errores con retry\nasync function obtenerDatosConRetry(url, maxIntentos = 3) {\n  let ultimoError;\n  \n  for (let intento = 1; intento <= maxIntentos; intento++) {\n    try {\n      console.log(`Intento ${intento} de ${maxIntentos}`);\n      \n      const response = await fetch(url);\n      \n      if (!response.ok) {\n        throw new Error(`HTTP error: ${response.status}`);\n      }\n      \n      const datos = await response.json();\n      console.log('Datos obtenidos exitosamente');\n      return datos;\n      \n    } catch (error) {\n      ultimoError = error;\n      console.error(`Intento ${intento} falló:`, error.message);\n      \n      if (intento < maxIntentos) {\n        const delay = Math.pow(2, intento) * 1000; // Backoff exponencial\n        console.log(`Esperando ${delay}ms antes del siguiente intento...`);\n        await new Promise(resolve => setTimeout(resolve, delay));\n      }\n    }\n  }\n  \n  throw new Error(`Falló después de ${maxIntentos} intentos. Último error: ${ultimoError.message}`);\n}\n\n// Manejo de errores con fallback\nasync function obtenerDatosConFallback() {\n  try {\n    // Intentar obtener datos de la API principal\n    return await fetch('https://api.principal.com/datos').then(r => r.json());\n  } catch (error) {\n    console.warn('API principal falló, intentando API de respaldo...');\n    \n    try {\n      // Intentar API de respaldo\n      return await fetch('https://api.respaldo.com/datos').then(r => r.json());\n    } catch (errorRespaldo) {\n      console.error('Ambas APIs fallaron');\n      \n      // Usar datos en caché o datos por defecto\n      return obtenerDatosEnCache() || obtenerDatosPorDefecto();\n    }\n  }\n}\n\n// Funciones auxiliares\nfunction mostrarErrorAlUsuario(mensaje) {\n  // Implementar UI para mostrar error al usuario\n  console.log('Mostrando error al usuario:', mensaje);\n}\n\nfunction enviarErrorALogging(error, contexto) {\n  // Implementar envío de error a servicio de logging\n  console.log('Enviando error a logging:', { error: error.message, contexto });\n}\n\nfunction obtenerDatosEnCache() {\n  // Implementar lógica de caché\n  return null;\n}\n\nfunction obtenerDatosPorDefecto() {\n  // Implementar datos por defecto\n  return { datos: 'Datos por defecto' };\n}\n```",
+        "Manejo de errores: try-catch, validación y feedback al usuario": "El manejo de errores es crucial en programación asíncrona. try-catch funciona con async/await, mientras que .catch() funciona con Promises. Es importante manejar diferentes tipos de errores y proporcionar mensajes útiles al usuario.\n\n**Ejemplos:**\n```javascript\n// try-catch con async/await\nasync function manejarErroresAsync() {\n  try {\n    console.log('Iniciando operación...');\n    \n    const response = await fetch('https://api.ejemplo.com/datos');\n    \n    if (!response.ok) {\n      throw new Error(`Error HTTP: ${response.status} - ${response.statusText}`);\n    }\n    \n    const datos = await response.json();\n    console.log('Datos obtenidos:', datos);\n    \n    return datos;\n  } catch (error) {\n    console.error('Error en operación asíncrona:', error.message);\n    \n    // Manejar diferentes tipos de errores\n    if (error.name === 'TypeError') {\n      console.error('Error de red o URL inválida');\n    } else if (error.message.includes('HTTP error')) {\n      console.error('Error del servidor');\n    } else {\n      console.error('Error desconocido');\n    }\n    \n    throw error; // Re-lanzar el error si es necesario\n  }\n}\n\n// .catch() con Promises\nfunction manejarErroresPromise() {\n  return fetch('https://api.ejemplo.com/datos')\n    .then(response => {\n      if (!response.ok) {\n        throw new Error(`Error HTTP: ${response.status}`);\n      }\n      return response.json();\n    })\n    .then(datos => {\n      console.log('Datos obtenidos:', datos);\n      return datos;\n    })\n    .catch(error => {\n      console.error('Error en Promise:', error.message);\n      \n      // Manejar diferentes tipos de errores\n      if (error.name === 'TypeError') {\n        console.error('Error de red');\n      } else if (error.message.includes('HTTP error')) {\n        console.error('Error del servidor');\n      }\n      \n      throw error; // Re-lanzar el error\n    });\n}\n\n// Manejo de errores específicos\nasync function obtenerDatosConManejoEspecifico() {\n  try {\n    const response = await fetch('https://api.ejemplo.com/datos');\n    \n    switch (response.status) {\n      case 200:\n        return await response.json();\n      case 404:\n        throw new Error('Recurso no encontrado');\n      case 401:\n        throw new Error('No autorizado - token inválido');\n      case 403:\n        throw new Error('Acceso denegado');\n      case 500:\n        throw new Error('Error interno del servidor');\n      default:\n        throw new Error(`Error HTTP: ${response.status}`);\n    }\n  } catch (error) {\n    if (error.name === 'TypeError') {\n      throw new Error('Error de conexión - verifica tu internet');\n    }\n    throw error;\n  }\n}\n\n// Función helper para manejo de errores\nfunction crearManejadorErrores(contexto) {\n  return function(error) {\n    console.error(`Error en ${contexto}:`, error.message);\n    \n    // Log del error para debugging\n    console.error('Stack trace:', error.stack);\n    \n    // Mostrar mensaje al usuario\n    mostrarErrorAlUsuario(`Error en ${contexto}: ${error.message}`);\n    \n    // Enviar error a servicio de logging (opcional)\n    enviarErrorALogging(error, contexto);\n  };\n}\n\n// Usar el manejador de errores\nconst manejarErrorAPI = crearManejadorErrores('API');\n\nasync function ejemploConManejador() {\n  try {\n    const datos = await obtenerDatosConManejoEspecifico();\n    return datos;\n  } catch (error) {\n    manejarErrorAPI(error);\n    throw error;\n  }\n}\n\n// Manejo de errores con retry\nasync function obtenerDatosConRetry(url, maxIntentos = 3) {\n  let ultimoError;\n  \n  for (let intento = 1; intento <= maxIntentos; intento++) {\n    try {\n      console.log(`Intento ${intento} de ${maxIntentos}`);\n      \n      const response = await fetch(url);\n      \n      if (!response.ok) {\n        throw new Error(`HTTP error: ${response.status}`);\n      }\n      \n      const datos = await response.json();\n      console.log('Datos obtenidos exitosamente');\n      return datos;\n      \n    } catch (error) {\n      ultimoError = error;\n      console.error(`Intento ${intento} falló:`, error.message);\n      \n      if (intento < maxIntentos) {\n        const delay = Math.pow(2, intento) * 1000; // Backoff exponencial\n        console.log(`Esperando ${delay}ms antes del siguiente intento...`);\n        await new Promise(resolve => setTimeout(resolve, delay));\n      }\n    }\n  }\n  \n  throw new Error(`Falló después de ${maxIntentos} intentos. Último error: ${ultimoError.message}`);\n}\n\n// Manejo de errores con fallback\nasync function obtenerDatosConFallback() {\n  try {\n    // Intentar obtener datos de la API principal\n    return await fetch('https://api.principal.com/datos').then(r => r.json());\n  } catch (error) {\n    console.warn('API principal falló, intentando API de respaldo...');\n    \n    try {\n      // Intentar API de respaldo\n      return await fetch('https://api.respaldo.com/datos').then(r => r.json());\n    } catch (errorRespaldo) {\n      console.error('Ambas APIs fallaron');\n      \n      // Usar datos en caché o datos por defecto\n      return obtenerDatosEnCache() || obtenerDatosPorDefecto();\n    }\n  }\n}\n\n// Funciones auxiliares\nfunction mostrarErrorAlUsuario(mensaje) {\n  // Implementar UI para mostrar error al usuario\n  console.log('Mostrando error al usuario:', mensaje);\n}\n\nfunction enviarErrorALogging(error, contexto) {\n  // Implementar envío de error a servicio de logging\n  console.log('Enviando error a logging:', { error: error.message, contexto });\n}\n\nfunction obtenerDatosEnCache() {\n  // Implementar lógica de caché\n  return null;\n}\n\nfunction obtenerDatosPorDefecto() {\n  // Implementar datos por defecto\n  return { datos: 'Datos por defecto' };\n}\n```",
         
-        "APIs REST: estructura y consumo": "REST (Representational State Transfer) es un estilo arquitectónico para diseñar APIs web. Las APIs REST usan HTTP para comunicarse y siguen principios específicos. Son la forma más común de consumir datos en aplicaciones web modernas.\n\n**Ejemplos:**\n```javascript\n// Estructura típica de API REST\nconst API_BASE_URL = 'https://jsonplaceholder.typicode.com';\n\n// Clase para manejar API REST\nclass ApiClient {\n  constructor(baseUrl) {\n    this.baseUrl = baseUrl;\n    this.defaultHeaders = {\n      'Content-Type': 'application/json',\n      'Accept': 'application/json'\n    };\n  }\n  \n  // Método genérico para hacer peticiones\n  async request(endpoint, options = {}) {\n    const url = `${this.baseUrl}${endpoint}`;\n    const config = {\n      headers: { ...this.defaultHeaders, ...options.headers },\n      ...options\n    };\n    \n    try {\n      const response = await fetch(url, config);\n      \n      if (!response.ok) {\n        throw new Error(`HTTP error! status: ${response.status}`);\n      }\n      \n      return await response.json();\n    } catch (error) {\n      console.error(`Error en petición a ${endpoint}:`, error);\n      throw error;\n    }\n  }\n  \n  // GET - Obtener recursos\n  async get(endpoint) {\n    return this.request(endpoint, { method: 'GET' });\n  }\n  \n  // POST - Crear recurso\n  async post(endpoint, data) {\n    return this.request(endpoint, {\n      method: 'POST',\n      body: JSON.stringify(data)\n    });\n  }\n  \n  // PUT - Actualizar recurso completo\n  async put(endpoint, data) {\n    return this.request(endpoint, {\n      method: 'PUT',\n      body: JSON.stringify(data)\n    });\n  }\n  \n  // PATCH - Actualizar recurso parcialmente\n  async patch(endpoint, data) {\n    return this.request(endpoint, {\n      method: 'PATCH',\n      body: JSON.stringify(data)\n    });\n  }\n  \n  // DELETE - Eliminar recurso\n  async delete(endpoint) {\n    return this.request(endpoint, { method: 'DELETE' });\n  }\n}\n\n// Crear instancia del cliente API\nconst apiClient = new ApiClient(API_BASE_URL);\n\n// Ejemplos de uso de API REST\nclass UsuarioService {\n  constructor(apiClient) {\n    this.api = apiClient;\n  }\n  \n  // Obtener todos los usuarios\n  async obtenerUsuarios() {\n    return this.api.get('/users');\n  }\n  \n  // Obtener usuario por ID\n  async obtenerUsuario(id) {\n    return this.api.get(`/users/${id}`);\n  }\n  \n  // Crear nuevo usuario\n  async crearUsuario(datosUsuario) {\n    return this.api.post('/users', datosUsuario);\n  }\n  \n  // Actualizar usuario completo\n  async actualizarUsuario(id, datosUsuario) {\n    return this.api.put(`/users/${id}`, datosUsuario);\n  }\n  \n  // Actualizar usuario parcialmente\n  async actualizarUsuarioParcial(id, datosParciales) {\n    return this.api.patch(`/users/${id}`, datosParciales);\n  }\n  \n  // Eliminar usuario\n  async eliminarUsuario(id) {\n    return this.api.delete(`/users/${id}`);\n  }\n  \n  // Obtener posts de un usuario\n  async obtenerPostsUsuario(id) {\n    return this.api.get(`/users/${id}/posts`);\n  }\n  \n  // Obtener comentarios de un post\n  async obtenerComentariosPost(postId) {\n    return this.api.get(`/posts/${postId}/comments`);\n  }\n}\n\n// Crear servicio de usuarios\nconst usuarioService = new UsuarioService(apiClient);\n\n// Ejemplos de uso\nasync function ejemploUsoAPI() {\n  try {\n    // Obtener todos los usuarios\n    const usuarios = await usuarioService.obtenerUsuarios();\n    console.log('Usuarios obtenidos:', usuarios.length);\n    \n    // Obtener usuario específico\n    const usuario = await usuarioService.obtenerUsuario(1);\n    console.log('Usuario 1:', usuario.name);\n    \n    // Crear nuevo usuario\n    const nuevoUsuario = await usuarioService.crearUsuario({\n      name: 'Juan Pérez',\n      email: 'juan@ejemplo.com',\n      username: 'juanperez'\n    });\n    console.log('Usuario creado:', nuevoUsuario.id);\n    \n    // Actualizar usuario\n    const usuarioActualizado = await usuarioService.actualizarUsuarioParcial(nuevoUsuario.id, {\n      name: 'Juan Carlos Pérez'\n    });\n    console.log('Usuario actualizado:', usuarioActualizado.name);\n    \n    // Obtener posts del usuario\n    const posts = await usuarioService.obtenerPostsUsuario(1);\n    console.log('Posts del usuario 1:', posts.length);\n    \n    // Eliminar usuario\n    await usuarioService.eliminarUsuario(nuevoUsuario.id);\n    console.log('Usuario eliminado');\n    \n  } catch (error) {\n    console.error('Error en ejemplo de API:', error);\n  }\n}\n\n// API con autenticación\nclass ApiClientAutenticado extends ApiClient {\n  constructor(baseUrl, token) {\n    super(baseUrl);\n    this.token = token;\n    this.defaultHeaders.Authorization = `Bearer ${token}`;\n  }\n  \n  // Actualizar token\n  actualizarToken(nuevoToken) {\n    this.token = nuevoToken;\n    this.defaultHeaders.Authorization = `Bearer ${nuevoToken}`;\n  }\n  \n  // Método para refrescar token\n  async refrescarToken() {\n    try {\n      const response = await this.request('/auth/refresh', {\n        method: 'POST',\n        headers: { ...this.defaultHeaders, Authorization: `Bearer ${this.token}` }\n      });\n      \n      this.actualizarToken(response.token);\n      return response.token;\n    } catch (error) {\n      console.error('Error al refrescar token:', error);\n      throw error;\n    }\n  }\n}\n\n// API con paginación\nclass ApiClientConPaginacion extends ApiClient {\n  async obtenerConPaginacion(endpoint, pagina = 1, limite = 10) {\n    const params = new URLSearchParams({\n      _page: pagina.toString(),\n      _limit: limite.toString()\n    });\n    \n    return this.request(`${endpoint}?${params}`);\n  }\n  \n  async obtenerTodos(endpoint, limite = 100) {\n    let pagina = 1;\n    let todosLosDatos = [];\n    let hayMasDatos = true;\n    \n    while (hayMasDatos) {\n      const datos = await this.obtenerConPaginacion(endpoint, pagina, limite);\n      \n      if (datos.length === 0) {\n        hayMasDatos = false;\n      } else {\n        todosLosDatos = todosLosDatos.concat(datos);\n        pagina++;\n      }\n    }\n    \n    return todosLosDatos;\n  }\n}\n\n// Usar API con paginación\nconst apiConPaginacion = new ApiClientConPaginacion(API_BASE_URL);\n\nasync function ejemploPaginacion() {\n  try {\n    // Obtener primera página\n    const primeraPagina = await apiConPaginacion.obtenerConPaginacion('/posts', 1, 5);\n    console.log('Primera página:', primeraPagina.length);\n    \n    // Obtener todos los posts\n    const todosLosPosts = await apiConPaginacion.obtenerTodos('/posts');\n    console.log('Total de posts:', todosLosPosts.length);\n    \n  } catch (error) {\n    console.error('Error en paginación:', error);\n  }\n}\n```",
+        "APIs REST: estructura, consumo y autenticación": "REST (Representational State Transfer) es un estilo arquitectónico para diseñar APIs web. Las APIs REST usan HTTP para comunicarse y siguen principios específicos. Son la forma más común de consumir datos en aplicaciones web modernas.\n\n**Ejemplos:**\n```javascript\n// Estructura típica de API REST\nconst API_BASE_URL = 'https://jsonplaceholder.typicode.com';\n\n// Clase para manejar API REST\nclass ApiClient {\n  constructor(baseUrl) {\n    this.baseUrl = baseUrl;\n    this.defaultHeaders = {\n      'Content-Type': 'application/json',\n      'Accept': 'application/json'\n    };\n  }\n  \n  // Método genérico para hacer peticiones\n  async request(endpoint, options = {}) {\n    const url = `${this.baseUrl}${endpoint}`;\n    const config = {\n      headers: { ...this.defaultHeaders, ...options.headers },\n      ...options\n    };\n    \n    try {\n      const response = await fetch(url, config);\n      \n      if (!response.ok) {\n        throw new Error(`HTTP error! status: ${response.status}`);\n      }\n      \n      return await response.json();\n    } catch (error) {\n      console.error(`Error en petición a ${endpoint}:`, error);\n      throw error;\n    }\n  }\n  \n  // GET - Obtener recursos\n  async get(endpoint) {\n    return this.request(endpoint, { method: 'GET' });\n  }\n  \n  // POST - Crear recurso\n  async post(endpoint, data) {\n    return this.request(endpoint, {\n      method: 'POST',\n      body: JSON.stringify(data)\n    });\n  }\n  \n  // PUT - Actualizar recurso completo\n  async put(endpoint, data) {\n    return this.request(endpoint, {\n      method: 'PUT',\n      body: JSON.stringify(data)\n    });\n  }\n  \n  // PATCH - Actualizar recurso parcialmente\n  async patch(endpoint, data) {\n    return this.request(endpoint, {\n      method: 'PATCH',\n      body: JSON.stringify(data)\n    });\n  }\n  \n  // DELETE - Eliminar recurso\n  async delete(endpoint) {\n    return this.request(endpoint, { method: 'DELETE' });\n  }\n}\n\n// Crear instancia del cliente API\nconst apiClient = new ApiClient(API_BASE_URL);\n\n// Ejemplos de uso de API REST\nclass UsuarioService {\n  constructor(apiClient) {\n    this.api = apiClient;\n  }\n  \n  // Obtener todos los usuarios\n  async obtenerUsuarios() {\n    return this.api.get('/users');\n  }\n  \n  // Obtener usuario por ID\n  async obtenerUsuario(id) {\n    return this.api.get(`/users/${id}`);\n  }\n  \n  // Crear nuevo usuario\n  async crearUsuario(datosUsuario) {\n    return this.api.post('/users', datosUsuario);\n  }\n  \n  // Actualizar usuario completo\n  async actualizarUsuario(id, datosUsuario) {\n    return this.api.put(`/users/${id}`, datosUsuario);\n  }\n  \n  // Actualizar usuario parcialmente\n  async actualizarUsuarioParcial(id, datosParciales) {\n    return this.api.patch(`/users/${id}`, datosParciales);\n  }\n  \n  // Eliminar usuario\n  async eliminarUsuario(id) {\n    return this.api.delete(`/users/${id}`);\n  }\n  \n  // Obtener posts de un usuario\n  async obtenerPostsUsuario(id) {\n    return this.api.get(`/users/${id}/posts`);\n  }\n  \n  // Obtener comentarios de un post\n  async obtenerComentariosPost(postId) {\n    return this.api.get(`/posts/${postId}/comments`);\n  }\n}\n\n// Crear servicio de usuarios\nconst usuarioService = new UsuarioService(apiClient);\n\n// Ejemplos de uso\nasync function ejemploUsoAPI() {\n  try {\n    // Obtener todos los usuarios\n    const usuarios = await usuarioService.obtenerUsuarios();\n    console.log('Usuarios obtenidos:', usuarios.length);\n    \n    // Obtener usuario específico\n    const usuario = await usuarioService.obtenerUsuario(1);\n    console.log('Usuario 1:', usuario.name);\n    \n    // Crear nuevo usuario\n    const nuevoUsuario = await usuarioService.crearUsuario({\n      name: 'Juan Pérez',\n      email: 'juan@ejemplo.com',\n      username: 'juanperez'\n    });\n    console.log('Usuario creado:', nuevoUsuario.id);\n    \n    // Actualizar usuario\n    const usuarioActualizado = await usuarioService.actualizarUsuarioParcial(nuevoUsuario.id, {\n      name: 'Juan Carlos Pérez'\n    });\n    console.log('Usuario actualizado:', usuarioActualizado.name);\n    \n    // Obtener posts del usuario\n    const posts = await usuarioService.obtenerPostsUsuario(1);\n    console.log('Posts del usuario 1:', posts.length);\n    \n    // Eliminar usuario\n    await usuarioService.eliminarUsuario(nuevoUsuario.id);\n    console.log('Usuario eliminado');\n    \n  } catch (error) {\n    console.error('Error en ejemplo de API:', error);\n  }\n}\n\n// API con autenticación\nclass ApiClientAutenticado extends ApiClient {\n  constructor(baseUrl, token) {\n    super(baseUrl);\n    this.token = token;\n    this.defaultHeaders.Authorization = `Bearer ${token}`;\n  }\n  \n  // Actualizar token\n  actualizarToken(nuevoToken) {\n    this.token = nuevoToken;\n    this.defaultHeaders.Authorization = `Bearer ${nuevoToken}`;\n  }\n  \n  // Método para refrescar token\n  async refrescarToken() {\n    try {\n      const response = await this.request('/auth/refresh', {\n        method: 'POST',\n        headers: { ...this.defaultHeaders, Authorization: `Bearer ${this.token}` }\n      });\n      \n      this.actualizarToken(response.token);\n      return response.token;\n    } catch (error) {\n      console.error('Error al refrescar token:', error);\n      throw error;\n    }\n  }\n}\n\n// API con paginación\nclass ApiClientConPaginacion extends ApiClient {\n  async obtenerConPaginacion(endpoint, pagina = 1, limite = 10) {\n    const params = new URLSearchParams({\n      _page: pagina.toString(),\n      _limit: limite.toString()\n    });\n    \n    return this.request(`${endpoint}?${params}`);\n  }\n  \n  async obtenerTodos(endpoint, limite = 100) {\n    let pagina = 1;\n    let todosLosDatos = [];\n    let hayMasDatos = true;\n    \n    while (hayMasDatos) {\n      const datos = await this.obtenerConPaginacion(endpoint, pagina, limite);\n      \n      if (datos.length === 0) {\n        hayMasDatos = false;\n      } else {\n        todosLosDatos = todosLosDatos.concat(datos);\n        pagina++;\n      }\n    }\n    \n    return todosLosDatos;\n  }\n}\n\n// Usar API con paginación\nconst apiConPaginacion = new ApiClientConPaginacion(API_BASE_URL);\n\nasync function ejemploPaginacion() {\n  try {\n    // Obtener primera página\n    const primeraPagina = await apiConPaginacion.obtenerConPaginacion('/posts', 1, 5);\n    console.log('Primera página:', primeraPagina.length);\n    \n    // Obtener todos los posts\n    const todosLosPosts = await apiConPaginacion.obtenerTodos('/posts');\n    console.log('Total de posts:', todosLosPosts.length);\n    \n  } catch (error) {\n    console.error('Error en paginación:', error);\n  }\n}\n```",
         
-        "JSON: parse y stringify": "JSON (JavaScript Object Notation) es el formato estándar para intercambio de datos en APIs REST. JavaScript proporciona métodos nativos para convertir objetos a JSON y viceversa. Es fundamental para la comunicación entre cliente y servidor.\n\n**Ejemplos:**\n```javascript\n// Objeto JavaScript\nconst usuario = {\n  id: 1,\n  nombre: 'Juan Pérez',\n  email: 'juan@ejemplo.com',\n  activo: true,\n  fechaRegistro: new Date('2024-01-15'),\n  hobbies: ['leer', 'cocinar', 'viajar'],\n  direccion: {\n    calle: 'Calle Mayor 123',\n    ciudad: 'Madrid',\n    codigoPostal: '28001'\n  }\n};\n\n// JSON.stringify - Convertir objeto a JSON\nconst jsonString = JSON.stringify(usuario);\nconsole.log('JSON string:', jsonString);\n// '{\"id\":1,\"nombre\":\"Juan Pérez\",\"email\":\"juan@ejemplo.com\",\"activo\":true,\"fechaRegistro\":\"2024-01-15T00:00:00.000Z\",\"hobbies\":[\"leer\",\"cocinar\",\"viajar\"],\"direccion\":{\"calle\":\"Calle Mayor 123\",\"ciudad\":\"Madrid\",\"codigoPostal\":\"28001\"}}'\n\n// JSON.stringify con formato\nconst jsonFormateado = JSON.stringify(usuario, null, 2);\nconsole.log('JSON formateado:', jsonFormateado);\n// {\n//   \"id\": 1,\n//   \"nombre\": \"Juan Pérez\",\n//   \"email\": \"juan@ejemplo.com\",\n//   \"activo\": true,\n//   \"fechaRegistro\": \"2024-01-15T00:00:00.000Z\",\n//   \"hobbies\": [\"leer\", \"cocinar\", \"viajar\"],\n//   \"direccion\": {\n//     \"calle\": \"Calle Mayor 123\",\n//     \"ciudad\": \"Madrid\",\n//     \"codigoPostal\": \"28001\"\n//   }\n// }\n\n// JSON.stringify con replacer\nconst jsonConReplacer = JSON.stringify(usuario, ['nombre', 'email', 'activo']);\nconsole.log('JSON con replacer:', jsonConReplacer);\n// '{\"nombre\":\"Juan Pérez\",\"email\":\"juan@ejemplo.com\",\"activo\":true}'\n\n// JSON.stringify con función replacer\nconst jsonConFuncionReplacer = JSON.stringify(usuario, function(key, value) {\n  if (key === 'fechaRegistro') {\n    return value.toISOString().split('T')[0]; // Solo la fecha\n  }\n  if (key === 'email') {\n    return value.toLowerCase(); // Email en minúsculas\n  }\n  return value;\n});\nconsole.log('JSON con función replacer:', jsonConFuncionReplacer);\n\n// JSON.parse - Convertir JSON a objeto\nconst jsonString2 = '{\"nombre\":\"María García\",\"email\":\"maria@ejemplo.com\",\"activo\":true}';\nconst objeto = JSON.parse(jsonString2);\nconsole.log('Objeto parseado:', objeto);\n// { nombre: 'María García', email: 'maria@ejemplo.com', activo: true }\n\n// JSON.parse con reviver\nconst jsonConFecha = '{\"nombre\":\"Pedro López\",\"fechaRegistro\":\"2024-01-15\"}';\nconst objetoConFecha = JSON.parse(jsonConFecha, function(key, value) {\n  if (key === 'fechaRegistro') {\n    return new Date(value);\n  }\n  return value;\n});\nconsole.log('Objeto con fecha:', objetoConFecha);\n// { nombre: 'Pedro López', fechaRegistro: Date object }\n\n// Manejo de errores en JSON\nfunction parsearJSONSeguro(jsonString) {\n  try {\n    return JSON.parse(jsonString);\n  } catch (error) {\n    console.error('Error al parsear JSON:', error.message);\n    return null;\n  }\n}\n\nconst jsonInvalido = '{\"nombre\":\"Juan\",\"email\":\"juan@ejemplo.com\"}'; // JSON válido\nconst jsonInvalido2 = '{\"nombre\":\"Juan\",\"email\":\"juan@ejemplo.com\"}'; // JSON inválido\n\nconst objeto1 = parsearJSONSeguro(jsonInvalido);\nconsole.log('Objeto 1:', objeto1); // { nombre: 'Juan', email: 'juan@ejemplo.com' }\n\nconst objeto2 = parsearJSONSeguro(jsonInvalido2);\nconsole.log('Objeto 2:', objeto2); // null\n\n// Arrays JSON\nconst usuarios = [\n  { nombre: 'Juan', email: 'juan@ejemplo.com' },\n  { nombre: 'María', email: 'maria@ejemplo.com' },\n  { nombre: 'Pedro', email: 'pedro@ejemplo.com' }\n];\n\nconst jsonArray = JSON.stringify(usuarios);\nconsole.log('JSON array:', jsonArray);\n// '[{\"nombre\":\"Juan\",\"email\":\"juan@ejemplo.com\"},{\"nombre\":\"María\",\"email\":\"maria@ejemplo.com\"},{\"nombre\":\"Pedro\",\"email\":\"pedro@ejemplo.com\"}]'\n\nconst arrayParseado = JSON.parse(jsonArray);\nconsole.log('Array parseado:', arrayParseado);\n// Array de objetos\n\n// Clonar objetos con JSON\nconst objetoOriginal = { nombre: 'Juan', edad: 25 };\nconst objetoClonado = JSON.parse(JSON.stringify(objetoOriginal));\nobjetoClonado.edad = 30;\nconsole.log('Objeto original:', objetoOriginal); // { nombre: 'Juan', edad: 25 }\nconsole.log('Objeto clonado:', objetoClonado); // { nombre: 'Juan', edad: 30 }\n\n// Validar JSON\nfunction esJSONValido(jsonString) {\n  try {\n    JSON.parse(jsonString);\n    return true;\n  } catch {\n    return false;\n  }\n}\n\nconsole.log(esJSONValido('{\"nombre\":\"Juan\"}')); // true\nconsole.log(esJSONValido('{\"nombre\":\"Juan\"}')); // false\n\n// JSON en APIs\nasync function ejemploJSONEnAPI() {\n  try {\n    // Enviar datos JSON\n    const response = await fetch('https://jsonplaceholder.typicode.com/posts', {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json'\n      },\n      body: JSON.stringify({\n        title: 'Mi Post',\n        body: 'Contenido del post',\n        userId: 1\n      })\n    });\n    \n    const nuevoPost = await response.json();\n    console.log('Post creado:', nuevoPost);\n    \n    // Recibir datos JSON\n    const response2 = await fetch('https://jsonplaceholder.typicode.com/posts/1');\n    const post = await response2.json();\n    console.log('Post obtenido:', post);\n    \n  } catch (error) {\n    console.error('Error en API:', error);\n  }\n}\n\n// JSON con tipos de datos especiales\nconst datosComplejos = {\n  fecha: new Date(),\n  numero: 42,\n  texto: 'Hola mundo',\n  booleano: true,\n  nulo: null,\n  indefinido: undefined,\n  funcion: function() { return 'Hola'; },\n  simbolo: Symbol('test')\n};\n\nconst jsonComplejo = JSON.stringify(datosComplejos);\nconsole.log('JSON complejo:', jsonComplejo);\n// '{\"fecha\":\"2024-12-15T10:30:00.000Z\",\"numero\":42,\"texto\":\"Hola mundo\",\"booleano\":true,\"nulo\":null}'\n// Nota: undefined, funciones y símbolos se omiten\n\n// JSON con espacios y caracteres especiales\nconst datosConEspacios = {\n  'nombre con espacios': 'Juan Pérez',\n  'email-con-guiones': 'juan@ejemplo.com',\n  'dirección': 'Calle Mayor 123'\n};\n\nconst jsonConEspacios = JSON.stringify(datosConEspacios);\nconsole.log('JSON con espacios:', jsonConEspacios);\n// '{\"nombre con espacios\":\"Juan Pérez\",\"email-con-guiones\":\"juan@ejemplo.com\",\"dirección\":\"Calle Mayor 123\"}'\n```",
+        "JSON: parse, stringify y validación de datos": "JSON (JavaScript Object Notation) es el formato estándar para intercambio de datos en APIs REST. JavaScript proporciona métodos nativos para convertir objetos a JSON y viceversa. Es fundamental para la comunicación entre cliente y servidor.\n\n**Ejemplos:**\n```javascript\n// Objeto JavaScript\nconst usuario = {\n  id: 1,\n  nombre: 'Juan Pérez',\n  email: 'juan@ejemplo.com',\n  activo: true,\n  fechaRegistro: new Date('2024-01-15'),\n  hobbies: ['leer', 'cocinar', 'viajar'],\n  direccion: {\n    calle: 'Calle Mayor 123',\n    ciudad: 'Madrid',\n    codigoPostal: '28001'\n  }\n};\n\n// JSON.stringify - Convertir objeto a JSON\nconst jsonString = JSON.stringify(usuario);\nconsole.log('JSON string:', jsonString);\n// '{\"id\":1,\"nombre\":\"Juan Pérez\",\"email\":\"juan@ejemplo.com\",\"activo\":true,\"fechaRegistro\":\"2024-01-15T00:00:00.000Z\",\"hobbies\":[\"leer\",\"cocinar\",\"viajar\"],\"direccion\":{\"calle\":\"Calle Mayor 123\",\"ciudad\":\"Madrid\",\"codigoPostal\":\"28001\"}}'\n\n// JSON.stringify con formato\nconst jsonFormateado = JSON.stringify(usuario, null, 2);\nconsole.log('JSON formateado:', jsonFormateado);\n// {\n//   \"id\": 1,\n//   \"nombre\": \"Juan Pérez\",\n//   \"email\": \"juan@ejemplo.com\",\n//   \"activo\": true,\n//   \"fechaRegistro\": \"2024-01-15T00:00:00.000Z\",\n//   \"hobbies\": [\"leer\", \"cocinar\", \"viajar\"],\n//   \"direccion\": {\n//     \"calle\": \"Calle Mayor 123\",\n//     \"ciudad\": \"Madrid\",\n//     \"codigoPostal\": \"28001\"\n//   }\n// }\n\n// JSON.stringify con replacer\nconst jsonConReplacer = JSON.stringify(usuario, ['nombre', 'email', 'activo']);\nconsole.log('JSON con replacer:', jsonConReplacer);\n// '{\"nombre\":\"Juan Pérez\",\"email\":\"juan@ejemplo.com\",\"activo\":true}'\n\n// JSON.stringify con función replacer\nconst jsonConFuncionReplacer = JSON.stringify(usuario, function(key, value) {\n  if (key === 'fechaRegistro') {\n    return value.toISOString().split('T')[0]; // Solo la fecha\n  }\n  if (key === 'email') {\n    return value.toLowerCase(); // Email en minúsculas\n  }\n  return value;\n});\nconsole.log('JSON con función replacer:', jsonConFuncionReplacer);\n\n// JSON.parse - Convertir JSON a objeto\nconst jsonString2 = '{\"nombre\":\"María García\",\"email\":\"maria@ejemplo.com\",\"activo\":true}';\nconst objeto = JSON.parse(jsonString2);\nconsole.log('Objeto parseado:', objeto);\n// { nombre: 'María García', email: 'maria@ejemplo.com', activo: true }\n\n// JSON.parse con reviver\nconst jsonConFecha = '{\"nombre\":\"Pedro López\",\"fechaRegistro\":\"2024-01-15\"}';\nconst objetoConFecha = JSON.parse(jsonConFecha, function(key, value) {\n  if (key === 'fechaRegistro') {\n    return new Date(value);\n  }\n  return value;\n});\nconsole.log('Objeto con fecha:', objetoConFecha);\n// { nombre: 'Pedro López', fechaRegistro: Date object }\n\n// Manejo de errores en JSON\nfunction parsearJSONSeguro(jsonString) {\n  try {\n    return JSON.parse(jsonString);\n  } catch (error) {\n    console.error('Error al parsear JSON:', error.message);\n    return null;\n  }\n}\n\nconst jsonInvalido = '{\"nombre\":\"Juan\",\"email\":\"juan@ejemplo.com\"}'; // JSON válido\nconst jsonInvalido2 = '{\"nombre\":\"Juan\",\"email\":\"juan@ejemplo.com\"}'; // JSON inválido\n\nconst objeto1 = parsearJSONSeguro(jsonInvalido);\nconsole.log('Objeto 1:', objeto1); // { nombre: 'Juan', email: 'juan@ejemplo.com' }\n\nconst objeto2 = parsearJSONSeguro(jsonInvalido2);\nconsole.log('Objeto 2:', objeto2); // null\n\n// Arrays JSON\nconst usuarios = [\n  { nombre: 'Juan', email: 'juan@ejemplo.com' },\n  { nombre: 'María', email: 'maria@ejemplo.com' },\n  { nombre: 'Pedro', email: 'pedro@ejemplo.com' }\n];\n\nconst jsonArray = JSON.stringify(usuarios);\nconsole.log('JSON array:', jsonArray);\n// '[{\"nombre\":\"Juan\",\"email\":\"juan@ejemplo.com\"},{\"nombre\":\"María\",\"email\":\"maria@ejemplo.com\"},{\"nombre\":\"Pedro\",\"email\":\"pedro@ejemplo.com\"}]'\n\nconst arrayParseado = JSON.parse(jsonArray);\nconsole.log('Array parseado:', arrayParseado);\n// Array de objetos\n\n// Clonar objetos con JSON\nconst objetoOriginal = { nombre: 'Juan', edad: 25 };\nconst objetoClonado = JSON.parse(JSON.stringify(objetoOriginal));\nobjetoClonado.edad = 30;\nconsole.log('Objeto original:', objetoOriginal); // { nombre: 'Juan', edad: 25 }\nconsole.log('Objeto clonado:', objetoClonado); // { nombre: 'Juan', edad: 30 }\n\n// Validar JSON\nfunction esJSONValido(jsonString) {\n  try {\n    JSON.parse(jsonString);\n    return true;\n  } catch {\n    return false;\n  }\n}\n\nconsole.log(esJSONValido('{\"nombre\":\"Juan\"}')); // true\nconsole.log(esJSONValido('{\"nombre\":\"Juan\"}')); // false\n\n// JSON en APIs\nasync function ejemploJSONEnAPI() {\n  try {\n    // Enviar datos JSON\n    const response = await fetch('https://jsonplaceholder.typicode.com/posts', {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json'\n      },\n      body: JSON.stringify({\n        title: 'Mi Post',\n        body: 'Contenido del post',\n        userId: 1\n      })\n    });\n    \n    const nuevoPost = await response.json();\n    console.log('Post creado:', nuevoPost);\n    \n    // Recibir datos JSON\n    const response2 = await fetch('https://jsonplaceholder.typicode.com/posts/1');\n    const post = await response2.json();\n    console.log('Post obtenido:', post);\n    \n  } catch (error) {\n    console.error('Error en API:', error);\n  }\n}\n\n// JSON con tipos de datos especiales\nconst datosComplejos = {\n  fecha: new Date(),\n  numero: 42,\n  texto: 'Hola mundo',\n  booleano: true,\n  nulo: null,\n  indefinido: undefined,\n  funcion: function() { return 'Hola'; },\n  simbolo: Symbol('test')\n};\n\nconst jsonComplejo = JSON.stringify(datosComplejos);\nconsole.log('JSON complejo:', jsonComplejo);\n// '{\"fecha\":\"2024-12-15T10:30:00.000Z\",\"numero\":42,\"texto\":\"Hola mundo\",\"booleano\":true,\"nulo\":null}'\n// Nota: undefined, funciones y símbolos se omiten\n\n// JSON con espacios y caracteres especiales\nconst datosConEspacios = {\n  'nombre con espacios': 'Juan Pérez',\n  'email-con-guiones': 'juan@ejemplo.com',\n  'dirección': 'Calle Mayor 123'\n};\n\nconst jsonConEspacios = JSON.stringify(datosConEspacios);\nconsole.log('JSON con espacios:', jsonConEspacios);\n// '{\"nombre con espacios\":\"Juan Pérez\",\"email-con-guiones\":\"juan@ejemplo.com\",\"dirección\":\"Calle Mayor 123\"}'\n```",
         
-        "CORS y políticas de seguridad": "CORS (Cross-Origin Resource Sharing) es una política de seguridad que controla cómo las páginas web pueden acceder a recursos de otros dominios. Es fundamental para entender por qué algunas peticiones fallan y cómo solucionarlo.\n\n**Ejemplos:**\n```javascript\n// CORS básico\nasync function ejemploCORS() {\n  try {\n    // Esta petición puede fallar por CORS\n    const response = await fetch('https://api.ejemplo.com/datos');\n    const datos = await response.json();\n    console.log('Datos obtenidos:', datos);\n  } catch (error) {\n    if (error.message.includes('CORS')) {\n      console.error('Error de CORS:', error.message);\n    } else {\n      console.error('Otro error:', error.message);\n    }\n  }\n}\n\n// Headers CORS comunes\nconst headersCORS = {\n  'Access-Control-Allow-Origin': '*', // Permite cualquier origen\n  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',\n  'Access-Control-Allow-Headers': 'Content-Type, Authorization',\n  'Access-Control-Allow-Credentials': 'true' // Permite cookies\n};\n\n// Petición con credenciales\nasync function peticionConCredenciales() {\n  try {\n    const response = await fetch('https://api.ejemplo.com/datos', {\n      credentials: 'include', // Incluir cookies\n      headers: {\n        'Authorization': 'Bearer token123'\n      }\n    });\n    \n    const datos = await response.json();\n    return datos;\n  } catch (error) {\n    console.error('Error con credenciales:', error);\n  }\n}\n\n// Preflight request\nasync function peticionPreflight() {\n  try {\n    // Esta petición puede generar un preflight request\n    const response = await fetch('https://api.ejemplo.com/datos', {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n        'Authorization': 'Bearer token123'\n      },\n      body: JSON.stringify({ datos: 'test' })\n    });\n    \n    const datos = await response.json();\n    return datos;\n  } catch (error) {\n    console.error('Error en preflight:', error);\n  }\n}\n\n// Manejar CORS en el cliente\nclass ApiClientCORS {\n  constructor(baseUrl) {\n    this.baseUrl = baseUrl;\n  }\n  \n  async request(endpoint, options = {}) {\n    const url = `${this.baseUrl}${endpoint}`;\n    const config = {\n      ...options,\n      headers: {\n        'Content-Type': 'application/json',\n        ...options.headers\n      }\n    };\n    \n    try {\n      const response = await fetch(url, config);\n      \n      if (!response.ok) {\n        throw new Error(`HTTP error! status: ${response.status}`);\n      }\n      \n      return await response.json();\n    } catch (error) {\n      if (error.name === 'TypeError' && error.message.includes('CORS')) {\n        throw new Error('Error de CORS: El servidor no permite peticiones desde este origen');\n      }\n      throw error;\n    }\n  }\n}\n\n// Proxy para evitar CORS\nclass ProxyCORS {\n  constructor(proxyUrl) {\n    this.proxyUrl = proxyUrl;\n  }\n  \n  async obtenerDatos(url) {\n    try {\n      const response = await fetch(`${this.proxyUrl}?url=${encodeURIComponent(url)}`);\n      return await response.json();\n    } catch (error) {\n      console.error('Error en proxy:', error);\n      throw error;\n    }\n  }\n}\n\n// Usar proxy\nconst proxy = new ProxyCORS('https://cors-anywhere.herokuapp.com/');\n\nasync function ejemploProxy() {\n  try {\n    const datos = await proxy.obtenerDatos('https://api.ejemplo.com/datos');\n    console.log('Datos obtenidos via proxy:', datos);\n  } catch (error) {\n    console.error('Error con proxy:', error);\n  }\n}\n\n// CORS con diferentes orígenes\nconst origenesPermitidos = [\n  'https://mi-app.com',\n  'https://www.mi-app.com',\n  'http://localhost:3000',\n  'http://127.0.0.1:3000'\n];\n\nfunction verificarOrigen(origin) {\n  return origenesPermitidos.includes(origin);\n}\n\n// Headers CORS dinámicos\nfunction obtenerHeadersCORS(origin) {\n  const headers = {\n    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',\n    'Access-Control-Allow-Headers': 'Content-Type, Authorization'\n  };\n  \n  if (verificarOrigen(origin)) {\n    headers['Access-Control-Allow-Origin'] = origin;\n    headers['Access-Control-Allow-Credentials'] = 'true';\n  } else {\n    headers['Access-Control-Allow-Origin'] = '*';\n  }\n  \n  return headers;\n}\n\n// Manejo de errores CORS\nfunction manejarErrorCORS(error) {\n  if (error.name === 'TypeError' && error.message.includes('CORS')) {\n    console.error('Error de CORS detectado');\n    console.error('Posibles soluciones:');\n    console.error('1. Verificar que el servidor permita el origen');\n    console.error('2. Usar un proxy CORS');\n    console.error('3. Configurar el servidor para permitir CORS');\n  }\n}\n\n// Ejemplo de uso\nasync function ejemploCompletoCORS() {\n  try {\n    const response = await fetch('https://api.ejemplo.com/datos');\n    const datos = await response.json();\n    return datos;\n  } catch (error) {\n    manejarErrorCORS(error);\n    throw error;\n  }\n}\n```"
+        "CORS: políticas de seguridad y soluciones": "CORS (Cross-Origin Resource Sharing) es una política de seguridad que controla cómo las páginas web pueden acceder a recursos de otros dominios. Es fundamental para entender por qué algunas peticiones fallan y cómo solucionarlo.\n\n**Ejemplos:**\n```javascript\n// CORS básico\nasync function ejemploCORS() {\n  try {\n    // Esta petición puede fallar por CORS\n    const response = await fetch('https://api.ejemplo.com/datos');\n    const datos = await response.json();\n    console.log('Datos obtenidos:', datos);\n  } catch (error) {\n    if (error.message.includes('CORS')) {\n      console.error('Error de CORS:', error.message);\n    } else {\n      console.error('Otro error:', error.message);\n    }\n  }\n}\n\n// Headers CORS comunes\nconst headersCORS = {\n  'Access-Control-Allow-Origin': '*', // Permite cualquier origen\n  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',\n  'Access-Control-Allow-Headers': 'Content-Type, Authorization',\n  'Access-Control-Allow-Credentials': 'true' // Permite cookies\n};\n\n// Petición con credenciales\nasync function peticionConCredenciales() {\n  try {\n    const response = await fetch('https://api.ejemplo.com/datos', {\n      credentials: 'include', // Incluir cookies\n      headers: {\n        'Authorization': 'Bearer token123'\n      }\n    });\n    \n    const datos = await response.json();\n    return datos;\n  } catch (error) {\n    console.error('Error con credenciales:', error);\n  }\n}\n\n// Preflight request\nasync function peticionPreflight() {\n  try {\n    // Esta petición puede generar un preflight request\n    const response = await fetch('https://api.ejemplo.com/datos', {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n        'Authorization': 'Bearer token123'\n      },\n      body: JSON.stringify({ datos: 'test' })\n    });\n    \n    const datos = await response.json();\n    return datos;\n  } catch (error) {\n    console.error('Error en preflight:', error);\n  }\n}\n\n// Manejar CORS en el cliente\nclass ApiClientCORS {\n  constructor(baseUrl) {\n    this.baseUrl = baseUrl;\n  }\n  \n  async request(endpoint, options = {}) {\n    const url = `${this.baseUrl}${endpoint}`;\n    const config = {\n      ...options,\n      headers: {\n        'Content-Type': 'application/json',\n        ...options.headers\n      }\n    };\n    \n    try {\n      const response = await fetch(url, config);\n      \n      if (!response.ok) {\n        throw new Error(`HTTP error! status: ${response.status}`);\n      }\n      \n      return await response.json();\n    } catch (error) {\n      if (error.name === 'TypeError' && error.message.includes('CORS')) {\n        throw new Error('Error de CORS: El servidor no permite peticiones desde este origen');\n      }\n      throw error;\n    }\n  }\n}\n\n// Proxy para evitar CORS\nclass ProxyCORS {\n  constructor(proxyUrl) {\n    this.proxyUrl = proxyUrl;\n  }\n  \n  async obtenerDatos(url) {\n    try {\n      const response = await fetch(`${this.proxyUrl}?url=${encodeURIComponent(url)}`);\n      return await response.json();\n    } catch (error) {\n      console.error('Error en proxy:', error);\n      throw error;\n    }\n  }\n}\n\n// Usar proxy\nconst proxy = new ProxyCORS('https://cors-anywhere.herokuapp.com/');\n\nasync function ejemploProxy() {\n  try {\n    const datos = await proxy.obtenerDatos('https://api.ejemplo.com/datos');\n    console.log('Datos obtenidos via proxy:', datos);\n  } catch (error) {\n    console.error('Error con proxy:', error);\n  }\n}\n\n// CORS con diferentes orígenes\nconst origenesPermitidos = [\n  'https://mi-app.com',\n  'https://www.mi-app.com',\n  'http://localhost:3000',\n  'http://127.0.0.1:3000'\n];\n\nfunction verificarOrigen(origin) {\n  return origenesPermitidos.includes(origin);\n}\n\n// Headers CORS dinámicos\nfunction obtenerHeadersCORS(origin) {\n  const headers = {\n    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',\n    'Access-Control-Allow-Headers': 'Content-Type, Authorization'\n  };\n  \n  if (verificarOrigen(origin)) {\n    headers['Access-Control-Allow-Origin'] = origin;\n    headers['Access-Control-Allow-Credentials'] = 'true';\n  } else {\n    headers['Access-Control-Allow-Origin'] = '*';\n  }\n  \n  return headers;\n}\n\n// Manejo de errores CORS\nfunction manejarErrorCORS(error) {\n  if (error.name === 'TypeError' && error.message.includes('CORS')) {\n    console.error('Error de CORS detectado');\n    console.error('Posibles soluciones:');\n    console.error('1. Verificar que el servidor permita el origen');\n    console.error('2. Usar un proxy CORS');\n    console.error('3. Configurar el servidor para permitir CORS');\n  }\n}\n\n// Ejemplo de uso\nasync function ejemploCompletoCORS() {\n  try {\n    const response = await fetch('https://api.ejemplo.com/datos');\n    const datos = await response.json();\n    return datos;\n  } catch (error) {\n    manejarErrorCORS(error);\n    throw error;\n  }\n}\n```"
       },
       practical: [
-        "Crear funciones asíncronas con async/await",
-        "Consumir API REST con Fetch",
-        "Implementar manejo de errores",
-        "Proyecto: aplicación que consume API",
-        "Optimizar carga de datos"
+        "Aplicación de clima con modo demo (datos simulados)",
+        "Estados de UI: cargando, éxito, error con feedback visual",
+        "Manejo de errores robusto con mensajes específicos",
+        "Fetch API con timeout y validación de respuestas",
+        "Proyecto completo: HTML, CSS, JavaScript integrado"
       ]
     },
     activities: [
       {
-        title: "Promises y async/await",
+        title: "Teoría de Asincronía con Analogías",
         duration: "60 min",
-        description: "Implementar funciones asíncronas y manejar Promises"
+        description: "Explicar programación asíncrona con analogía del restaurante y evolución Callbacks → Promises → Async/Await"
       },
       {
-        title: "Consumo de APIs",
+        title: "Aplicación de Clima en Modo Demo",
         duration: "60 min",
-        description: "Usar Fetch API para consumir servicios REST"
+        description: "Construir aplicación completa con datos simulados, estados de UI y manejo de errores"
       },
       {
-        title: "Manejo de errores",
-        duration: "30 min",
-        description: "Implementar manejo robusto de errores"
+        title: "Ejercicios Prácticos Progresivos",
+        duration: "60 min",
+        description: "API de datos falsos, manejo de estados, peticiones en paralelo y aplicación de gatos"
       }
     ],
     homework: [
-      "Crear aplicación que consuma API de clima",
-      "Implementar caché de datos",
-      "Agregar indicadores de carga"
+      "Crear aplicación que consuma API diferente (gatos, chistes, citas)",
+      "Implementar modo demo con datos simulados",
+      "Agregar estados de carga, éxito y error con feedback visual",
+      "Integrar con la lista de tareas de la sesión anterior"
     ],
     materials: [
       "Editor de código (VS Code)",
-      "Navegador web",
-      "API de prueba (JSONPlaceholder)"
+      "Navegador web con DevTools",
+      "Aplicación de clima (modo demo incluido)",
+      "APIs gratuitas: JSONPlaceholder, The Cat API, Quotable",
+      "Guía completa con ejemplos paso a paso"
     ],
     exercises: [
       {
-        title: "Consumidor de API REST",
-        description: "Crea una aplicación que consuma una API REST y muestre los datos.",
-        code: `// Consumir API REST con Fetch
-async function fetchUsers() {
+        title: "Aplicación de Clima con Modo Demo",
+        description: "Aplicación completa que consume API de clima con datos simulados para demostración.",
+        code: `// Aplicación de Clima - Modo Demo
+const API_KEY = 'demo-key';
+const MODO_DEMO = API_KEY === 'demo-key';
+
+// Datos simulados para demo
+function generarDatosSimulados(ciudad) {
+  const temperaturas = [15, 18, 22, 25, 28, 30, 32, 20, 16, 12];
+  const descripciones = ['cielo despejado', 'parcialmente nublado', 'nublado', 'lluvia ligera', 'soleado'];
+  
+  const temperatura = temperaturas[Math.floor(Math.random() * temperaturas.length)];
+  const descripcion = descripciones[Math.floor(Math.random() * descripciones.length)];
+  
+  return {
+    name: ciudad,
+    sys: { country: 'ES' },
+    main: {
+      temp: temperatura + 273.15,
+      feels_like: (temperatura + Math.random() * 4 - 2) + 273.15,
+      humidity: Math.floor(Math.random() * 40) + 40
+    },
+    weather: [{ description: descripcion }],
+    wind: { speed: Math.random() * 10 + 2 }
+  };
+}
+
+// Función principal para obtener clima
+async function obtenerClima(ciudad) {
   try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users');
-    if (!response.ok) {
-      throw new Error('Error al obtener usuarios');
+    mostrarEstado('cargando');
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    if (MODO_DEMO) {
+      console.log('🌤️ Modo DEMO: Usando datos simulados');
+      return generarDatosSimulados(ciudad);
     }
-    const users = await response.json();
-    return users;
+    
+    const response = await fetch(\`https://api.openweathermap.org/data/2.5/weather?q=\${ciudad}&appid=\${API_KEY}\`);
+    
+    if (!response.ok) {
+      throw new Error(\`Error HTTP: \${response.status}\`);
+    }
+    
+    return await response.json();
   } catch (error) {
-    console.error('Error:', error);
-    return [];
+    throw new Error('Error al obtener datos del clima');
   }
 }
 
-// Usar la función
-fetchUsers().then(users => {
-  console.log('Usuarios:', users);
-});`,
-        solution: `// Solución completa del consumidor de API
-class ApiConsumer {
-  constructor(baseUrl) {
-    this.baseUrl = baseUrl;
+// Mostrar estados de UI
+function mostrarEstado(estado) {
+  document.getElementById('cargando').classList.toggle('oculto', estado !== 'cargando');
+  document.getElementById('error').classList.toggle('oculto', estado !== 'error');
+  document.getElementById('resultado').classList.toggle('oculto', estado !== 'resultado');
+}
+
+// Procesar y mostrar datos
+function mostrarDatosClima(datos) {
+  const temp = Math.round(datos.main.temp - 273.15);
+  document.getElementById('nombre-ciudad').textContent = \`\${datos.name}, \${datos.sys.country}\`;
+  document.getElementById('temperatura').textContent = temp;
+  document.getElementById('descripcion').textContent = datos.weather[0].description;
+  mostrarEstado('resultado');
+}
+
+// Función principal
+async function buscarClima(ciudad) {
+  try {
+    const datos = await obtenerClima(ciudad);
+    mostrarDatosClima(datos);
+  } catch (error) {
+    document.getElementById('mensaje-error').textContent = error.message;
+    mostrarEstado('error');
   }
+}
+
+// Event listener
+document.getElementById('formulario-clima').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const ciudad = document.getElementById('ciudad').value;
+  await buscarClima(ciudad);
+});`,
+        solution: `// Solución completa - Aplicación de Clima con Modo Demo
+// HTML, CSS y JavaScript integrados
+
+// 1. HTML Structure
+\`\`\`html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicación de Clima</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aplicación de Clima</h1>
+            <p>Consulta el clima de cualquier ciudad</p>
+        </header>
+        
+        <main>
+            <form id="formulario-clima">
+                <input type="text" id="ciudad" placeholder="Ingresa el nombre de la ciudad" required>
+                <button type="submit">Buscar Clima</button>
+            </form>
+            
+            <div id="cargando" class="estado oculto">
+                <div class="spinner"></div>
+                <p>Consultando el clima...</p>
+            </div>
+            
+            <div id="error" class="estado oculto">
+                <div class="error-icon">⚠️</div>
+                <h3>Error</h3>
+                <p id="mensaje-error"></p>
+                <button id="reintentar">Reintentar</button>
+            </div>
+            
+            <div id="resultado" class="estado oculto">
+                <h2 id="nombre-ciudad"></h2>
+                <div class="temperatura">
+                    <span id="temperatura"></span>
+                    <span class="unidad">°C</span>
+                </div>
+                <p id="descripcion"></p>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+\`\`\`
+
+// 2. CSS Styles
+\`\`\`css
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+#ciudad {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 15px 30px;
+    background: #74b9ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.estado {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #74b9ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.temperatura {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #2d3436;
+    margin: 20px 0;
+}
+\`\`\`
+
+// 3. JavaScript Logic
+\`\`\`javascript
+// Configuración
+const API_KEY = 'demo-key';
+const MODO_DEMO = API_KEY === 'demo-key';
+
+// Datos simulados
+function generarDatosSimulados(ciudad) {
+  const temperaturas = [15, 18, 22, 25, 28, 30, 32, 20, 16, 12];
+  const descripciones = ['cielo despejado', 'parcialmente nublado', 'nublado', 'lluvia ligera', 'soleado'];
+  
+  const temperatura = temperaturas[Math.floor(Math.random() * temperaturas.length)];
+  const descripcion = descripciones[Math.floor(Math.random() * descripciones.length)];
+  
+  return {
+    name: ciudad,
+    sys: { country: 'ES' },
+    main: {
+      temp: temperatura + 273.15,
+      feels_like: (temperatura + Math.random() * 4 - 2) + 273.15,
+      humidity: Math.floor(Math.random() * 40) + 40
+    },
+    weather: [{ description: descripcion }],
+    wind: { speed: Math.random() * 10 + 2 }
+  };
+}
+
+// Función principal
+async function obtenerClima(ciudad) {
+  try {
+    mostrarEstado('cargando');
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    if (MODO_DEMO) {
+      console.log('🌤️ Modo DEMO: Usando datos simulados');
+      return generarDatosSimulados(ciudad);
+    }
+    
+    const response = await fetch(\`https://api.openweathermap.org/data/2.5/weather?q=\${ciudad}&appid=\${API_KEY}\`);
+    
+    if (!response.ok) {
+      throw new Error(\`Error HTTP: \${response.status}\`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    throw new Error('Error al obtener datos del clima');
+  }
+}
+
+// Estados de UI
+function mostrarEstado(estado) {
+  document.getElementById('cargando').classList.toggle('oculto', estado !== 'cargando');
+  document.getElementById('error').classList.toggle('oculto', estado !== 'error');
+  document.getElementById('resultado').classList.toggle('oculto', estado !== 'resultado');
+}
+
+// Mostrar datos
+function mostrarDatosClima(datos) {
+  const temp = Math.round(datos.main.temp - 273.15);
+  document.getElementById('nombre-ciudad').textContent = \`\${datos.name}, \${datos.sys.country}\`;
+  document.getElementById('temperatura').textContent = temp;
+  document.getElementById('descripcion').textContent = datos.weather[0].description;
+  mostrarEstado('resultado');
+}
+
+// Función principal
+async function buscarClima(ciudad) {
+  try {
+    const datos = await obtenerClima(ciudad);
+    mostrarDatosClima(datos);
+  } catch (error) {
+    document.getElementById('mensaje-error').textContent = error.message;
+    mostrarEstado('error');
+  }
+}
+
+// Event listeners
+document.getElementById('formulario-clima').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const ciudad = document.getElementById('ciudad').value;
+  await buscarClima(ciudad);
+});
+
+document.getElementById('reintentar').addEventListener('click', () => {
+  const ciudad = document.getElementById('ciudad').value;
+  if (ciudad) buscarClima(ciudad);
+});
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', () => {
+  if (MODO_DEMO) {
+    console.log('🌤️ MODO DEMO activado - Usando datos simulados');
+  }
+});
+\`\`\`
+
+// Características implementadas:
+// ✅ Modo demo con datos simulados
+// ✅ Estados de UI (cargando, éxito, error)
+// ✅ Manejo robusto de errores
+// ✅ Interfaz moderna y responsive
+// ✅ Funciona sin API key
+// ✅ Perfecto para demostración en clase
   
   async get(endpoint) {
     try {
@@ -2995,26 +5030,26 @@ function displayUsers(users) {
     level: "Intermedio",
     completed: false,
     objectives: [
-      "Integrar HTML, CSS, JavaScript y APIs en un proyecto",
-      "Crear aplicación web completa y funcional",
-      "Implementar diseño responsive",
-      "Consumir APIs externas"
+      "Crear una aplicación completa de gestión de películas",
+      "Implementar operaciones CRUD con API REST",
+      "Aplicar todos los conceptos aprendidos en sesiones anteriores",
+      "Desarrollar habilidades prácticas de programación frontend"
     ],
     content: {
       theoretical: [
-        "Integración de tecnologías frontend",
-        "Arquitectura de aplicaciones web",
-        "APIs REST y consumo de datos",
-        "Manejo de estado en aplicaciones",
-        "Responsive design avanzado",
-        "Optimización de rendimiento"
+        "Aplicación de gestión de películas con CRUD completo",
+        "Consumo de APIs REST con Fetch API",
+        "Manejo de estados de UI (cargando, éxito, error)",
+        "Validación de formularios y manejo de errores",
+        "Diseño responsive y animaciones CSS",
+        "Transformación de datos entre formulario y API"
       ],
       theoreticalDetails: {
-        "Integración de tecnologías frontend": "HTML estructura el contenido, CSS proporciona el diseño visual y JavaScript añade interactividad. La integración efectiva requiere:\n\n• Separación de responsabilidades: HTML semántico, CSS modular, JS organizado\n• Comunicación entre capas: eventos DOM, manipulación de clases CSS\n• Ejemplo: Un botón que cambia contenido y estilo:\n\n```html\n<button id=\"toggleBtn\" class=\"btn-primary\">Mostrar/Ocultar</button>\n<div id=\"content\" class=\"hidden\">Contenido dinámico</div>\n```\n\n```css\n.hidden { display: none; }\n.btn-primary { background: #007bff; color: white; }\n```\n\n```javascript\nconst btn = document.getElementById('toggleBtn');\nconst content = document.getElementById('content');\nbtn.addEventListener('click', () => {\n  content.classList.toggle('hidden');\n});\n```",
+        "Aplicación de gestión de películas con CRUD completo": "En esta sesión crearemos una aplicación completa que permite gestionar películas con operaciones CRUD (Create, Read, Update, Delete):\n\n• **Create**: Agregar nuevas películas con formulario completo\n• **Read**: Mostrar lista de películas en tarjetas atractivas\n• **Update**: Editar películas existentes\n• **Delete**: Eliminar películas con confirmación\n\nLa aplicación incluye:\n- Formulario con validación en tiempo real\n- Búsqueda y filtros por género\n- Estados de carga, éxito y error\n- Diseño responsive para móviles y desktop\n- Animaciones y transiciones suaves\n\n```javascript\n// Ejemplo de estructura de datos de película\nconst movie = {\n  id: 1,\n  title: \"El Padrino\",\n  director: \"Francis Ford Coppola\",\n  year: 1972,\n  genre: \"Drama\",\n  rating: 9.2,\n  description: \"La historia de una familia de la mafia italiana...\"\n};\n```",
         
-        "Arquitectura de aplicaciones web": "Estructura organizacional que define cómo se relacionan los componentes:\n\n• Patrón MVC: Modelo (datos), Vista (UI), Controlador (lógica)\n• Componentes reutilizables y modulares\n• Flujo de datos unidireccional\n• Ejemplo de arquitectura simple:\n\n```javascript\n// Modelo - Datos\nconst UserModel = {\n  users: [],\n  addUser: (user) => UserModel.users.push(user),\n  getUsers: () => UserModel.users\n};\n\n// Vista - UI\nconst UserView = {\n  render: (users) => {\n    const html = users.map(user => \n      `<div class=\"user\">${user.name}</div>`\n    ).join('');\n    document.getElementById('userList').innerHTML = html;\n  }\n};\n\n// Controlador - Lógica\nconst UserController = {\n  addUser: (name) => {\n    UserModel.addUser({name});\n    UserView.render(UserModel.getUsers());\n  }\n};\n```",
+        "Consumo de APIs REST con Fetch API": "La aplicación consume una API REST para gestionar películas. Usamos Fetch API con async/await para operaciones asíncronas:\n\n```javascript\n// Cliente API reutilizable\nclass ApiClient {\n  constructor(baseUrl) {\n    this.baseUrl = baseUrl;\n    this.defaultHeaders = {\n      'Content-Type': 'application/json',\n      'Accept': 'application/json'\n    };\n  }\n\n  async request(endpoint, options = {}) {\n    const url = `${this.baseUrl}${endpoint}`;\n    const config = {\n      headers: { ...this.defaultHeaders, ...options.headers },\n      ...options\n    };\n\n    const response = await fetch(url, config);\n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n    return await response.json();\n  }\n\n  async get(endpoint) {\n    return this.request(endpoint, { method: 'GET' });\n  }\n\n  async post(endpoint, data) {\n    return this.request(endpoint, {\n      method: 'POST',\n      body: JSON.stringify(data)\n    });\n  }\n}\n\n// Uso en la aplicación\nconst apiClient = new ApiClient('http://localhost:4000');\nconst movies = await apiClient.get('/movies');\n```",
         
-        "APIs REST y consumo de datos": "REST (Representational State Transfer) define cómo comunicarse con servicios web:\n\n• Métodos HTTP: GET (leer), POST (crear), PUT (actualizar), DELETE (eliminar)\n• URLs semánticas: /api/users, /api/users/123\n• Respuestas en formato JSON\n• Ejemplo de consumo:\n\n```javascript\n// GET - Obtener usuarios\nfetch('/api/users')\n  .then(response => response.json())\n  .then(users => console.log(users))\n  .catch(error => console.error('Error:', error));\n\n// POST - Crear usuario\nfetch('/api/users', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify({ name: 'Juan', email: 'juan@email.com' })\n})\n.then(response => response.json())\n.then(user => console.log('Usuario creado:', user));\n```",
+        "Manejo de estados de UI (cargando, éxito, error)": "La aplicación maneja diferentes estados de la interfaz para proporcionar feedback visual al usuario:\n\n```javascript\n// Estados de la aplicación\nconst APP_STATES = {\n  LOADING: 'loading',\n  SUCCESS: 'success',\n  ERROR: 'error',\n  EMPTY: 'empty'\n};\n\n// Función para mostrar estados\nfunction showState(state, message = '') {\n  // Ocultar todos los estados\n  elements.loadingState.style.display = 'none';\n  elements.errorState.style.display = 'none';\n  elements.emptyState.style.display = 'none';\n  elements.moviesContainer.style.display = 'none';\n  \n  switch (state) {\n    case APP_STATES.LOADING:\n      elements.loadingState.style.display = 'block';\n      break;\n    case APP_STATES.ERROR:\n      elements.errorState.style.display = 'block';\n      if (message) {\n        elements.errorMessage.textContent = message;\n      }\n      break;\n    case APP_STATES.EMPTY:\n      elements.emptyState.style.display = 'block';\n      break;\n    case APP_STATES.SUCCESS:\n      elements.moviesContainer.style.display = 'grid';\n      break;\n  }\n}\n\n// Uso en operaciones CRUD\nasync function fetchMovies() {\n  try {\n    showState(APP_STATES.LOADING);\n    const data = await apiClient.get('/movies');\n    // Procesar datos...\n    showState(APP_STATES.SUCCESS);\n  } catch (error) {\n    showState(APP_STATES.ERROR, 'Error al cargar las películas');\n  }\n}\n```",
         
         "Manejo de estado en aplicaciones": "Estado = datos que cambian y afectan la UI:\n\n• Estado local: variables en componentes\n• Estado global: datos compartidos entre componentes\n• Patrón Observer: notificar cambios automáticamente\n• Ejemplo de manejo de estado:\n\n```javascript\nclass StateManager {\n  constructor() {\n    this.state = {};\n    this.listeners = [];\n  }\n  \n  setState(newState) {\n    this.state = { ...this.state, ...newState };\n    this.listeners.forEach(listener => listener(this.state));\n  }\n  \n  subscribe(listener) {\n    this.listeners.push(listener);\n  }\n}\n\n// Uso\nconst appState = new StateManager();\nappState.subscribe(state => {\n  document.getElementById('counter').textContent = state.count || 0;\n});\nappState.setState({ count: 5 });\n```",
         
@@ -3032,355 +5067,467 @@ function displayUsers(users) {
     },
     activities: [
       {
-        title: "Planificación del proyecto",
+        title: "Configuración del entorno y estructura HTML",
         duration: "30 min",
-        description: "Definir estructura y funcionalidades de la aplicación"
+        description: "Crear la estructura HTML semántica para la aplicación de películas"
       },
       {
-        title: "Desarrollo de la aplicación",
-        duration: "120 min",
-        description: "Implementar la aplicación completa con todas las tecnologías"
+        title: "Implementación de estilos CSS y diseño responsive",
+        duration: "45 min",
+        description: "Desarrollar los estilos CSS con variables, Grid, Flexbox y responsive design"
       },
       {
-        title: "Testing y optimización",
-        duration: "30 min",
-        description: "Probar la aplicación y optimizar el rendimiento"
+        title: "Lógica JavaScript y consumo de API",
+        duration: "90 min",
+        description: "Implementar las operaciones CRUD, manejo de estados y consumo de la API REST"
+      },
+      {
+        title: "Testing, validación y refinamiento",
+        duration: "15 min",
+        description: "Probar todas las funcionalidades, validar formularios y optimizar la experiencia"
       }
     ],
     homework: [
-      "Mejorar la interfaz de usuario",
-      "Agregar más funcionalidades",
-      "Implementar tests unitarios"
+      "Agregar funcionalidad de favoritos para películas",
+      "Implementar búsqueda avanzada con múltiples filtros",
+      "Crear un modo de vista detallada para cada película",
+      "Agregar validación de imagen de póster",
+      "Implementar paginación para grandes cantidades de películas"
     ],
     materials: [
       "Editor de código (VS Code)",
-      "Navegador web",
-      "API de prueba"
+      "Navegador web moderno",
+      "API local corriendo en localhost:4000",
+      "Servidor local para la aplicación web",
+      "Documentación de la API (swagger.yaml)"
     ],
     exercises: [
       {
-        title: "Aplicación Web Completa",
-        description: "Crea una aplicación web completa que integre HTML, CSS, JavaScript y APIs.",
+        title: "Aplicación de Gestión de Películas",
+        description: "Crea una aplicación web completa para gestionar películas con operaciones CRUD, consumiendo una API REST.",
         code: `// Estructura del proyecto
 /*
-proyecto/
-├── index.html
-├── styles/
-│   ├── main.css
-│   └── responsive.css
-├── scripts/
-│   ├── main.js
-│   └── api.js
-└── assets/
-    └── images/
-*/`,
-        solution: `// Solución completa del proyecto integrador
+app-peliculas/
+├── index.html          # Estructura HTML semántica
+├── styles.css          # Estilos CSS modernos y responsivos
+├── app.js             # Lógica JavaScript con CRUD completo
+├── README.md          # Documentación del proyecto
+├── API_CONFIG.md      # Configuración de la API
+└── swagger.yaml       # Documentación de la API
+*/
+
+// Configuración de la API
+const API_BASE_URL = 'http://localhost:4000';
+const API_ENDPOINTS = {
+  movies: '/movies',
+  movieById: (id) => \`/movies/\${id}\`
+};
+
+// Mapeo de campos entre formulario y API
+const FIELD_MAPPING = {
+  formToApi: {
+    title: 'title',
+    director: 'tagline',
+    year: 'release_date',
+    genre: 'genres',
+    rating: 'vote_average',
+    description: 'overview'
+  }
+};`,
+        solution: `// Solución: Aplicación de Gestión de Películas
 // HTML (index.html)
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicación Web Integrada</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/responsive.css">
+    <title>🎬 Gestión de Películas - Sesión 15</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <h1>Mi Aplicación Web</h1>
-        <nav class="nav">
-            <a href="#home" class="nav-link active">Inicio</a>
-            <a href="#about" class="nav-link">Acerca de</a>
-            <a href="#contact" class="nav-link">Contacto</a>
-        </nav>
+        <div class="container">
+            <h1 class="header__title">
+                <i class="fas fa-film"></i>
+                Gestión de Películas
+            </h1>
+            <p class="header__subtitle">Aplicación CRUD con API REST - Sesión 15</p>
+        </div>
     </header>
-    
+
     <main class="main">
-        <section id="home" class="section active">
-            <h2>Bienvenido</h2>
-            <div class="content">
-                <div class="card">
-                    <h3>Datos de la API</h3>
-                    <div id="api-data" class="api-data">
-                        <p>Cargando datos...</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <h3>Formulario de Contacto</h3>
-                    <form id="contact-form" class="form">
+        <div class="container">
+            <!-- Formulario para agregar/editar películas -->
+            <section class="form-section">
+                <div class="form-container">
+                    <h2 class="form-title">
+                        <i class="fas fa-plus-circle"></i>
+                        <span id="form-title-text">Agregar Nueva Película</span>
+                    </h2>
+                    
+                    <form id="movie-form" class="movie-form">
                         <div class="form-group">
-                            <label for="name">Nombre:</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="title" class="form-label">
+                                <i class="fas fa-ticket-alt"></i>
+                                Título
+                            </label>
+                            <input type="text" id="title" name="title" class="form-input" placeholder="Ej: El Padrino" required>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="director" class="form-label">
+                                <i class="fas fa-user"></i>
+                                Director
+                            </label>
+                            <input type="text" id="director" name="director" class="form-input" placeholder="Ej: Francis Ford Coppola" required>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="message">Mensaje:</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <label for="year" class="form-label">
+                                <i class="fas fa-calendar"></i>
+                                Año
+                            </label>
+                            <input type="number" id="year" name="year" class="form-input" placeholder="Ej: 1972" min="1888" max="2024" required>
                         </div>
-                        <button type="submit">Enviar</button>
+                        
+                        <div class="form-group">
+                            <label for="genre" class="form-label">
+                                <i class="fas fa-tags"></i>
+                                Género
+                            </label>
+                            <select id="genre" name="genre" class="form-select" required>
+                                <option value="">Selecciona un género</option>
+                                <option value="Acción">Acción</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Comedia">Comedia</option>
+                                <option value="Terror">Terror</option>
+                                <option value="Ciencia Ficción">Ciencia Ficción</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="rating" class="form-label">
+                                <i class="fas fa-star"></i>
+                                Calificación (1-10)
+                            </label>
+                            <input type="number" id="rating" name="rating" class="form-input" placeholder="Ej: 9.2" min="1" max="10" step="0.1" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description" class="form-label">
+                                <i class="fas fa-align-left"></i>
+                                Descripción
+                            </label>
+                            <textarea id="description" name="description" class="form-textarea" placeholder="Breve descripción de la película..." rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" id="submit-btn">
+                                <i class="fas fa-save"></i>
+                                <span id="submit-text">Agregar Película</span>
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="cancel-btn" style="display: none;">
+                                <i class="fas fa-times"></i>
+                                Cancelar
+                            </button>
+                        </div>
                     </form>
                 </div>
-            </div>
-        </section>
-        
-        <section id="about" class="section">
-            <h2>Acerca de</h2>
-            <p>Esta es una aplicación web integrada que demuestra el uso de HTML, CSS, JavaScript y APIs.</p>
-        </section>
-        
-        <section id="contact" class="section">
-            <h2>Contacto</h2>
-            <p>Puedes contactarnos a través del formulario en la página principal.</p>
-        </section>
+            </section>
+
+            <!-- Búsqueda y filtros -->
+            <section class="search-section">
+                <div class="search-container">
+                    <div class="search-group">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="search-input" class="search-input" placeholder="Buscar películas por título, director o género...">
+                    </div>
+                    <div class="filter-group">
+                        <select id="genre-filter" class="filter-select">
+                            <option value="">Todos los géneros</option>
+                            <option value="Acción">Acción</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Comedia">Comedia</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Ciencia Ficción">Ciencia Ficción</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Estados de la aplicación -->
+            <section class="states-section">
+                <div id="loading-state" class="state-container loading-state" style="display: none;">
+                    <div class="spinner"></div>
+                    <p class="state-message">Cargando películas...</p>
+                </div>
+
+                <div id="error-state" class="state-container error-state" style="display: none;">
+                    <div class="error-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3 class="state-title">Error</h3>
+                    <p class="state-message" id="error-message">Ha ocurrido un error al cargar las películas.</p>
+                    <button class="btn btn-primary" id="retry-btn">
+                        <i class="fas fa-redo"></i>
+                        Reintentar
+                    </button>
+                </div>
+
+                <div id="empty-state" class="state-container empty-state" style="display: none;">
+                    <div class="empty-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="state-title">No hay películas</h3>
+                    <p class="state-message">Agrega tu primera película usando el formulario de arriba.</p>
+                </div>
+            </section>
+
+            <!-- Lista de películas -->
+            <section class="movies-section">
+                <div class="movies-header">
+                    <h2 class="movies-title">
+                        <i class="fas fa-list"></i>
+                        Lista de Películas
+                        <span class="movies-count" id="movies-count">(0)</span>
+                    </h2>
+                </div>
+                
+                <div id="movies-container" class="movies-container">
+                    <!-- Las películas se cargarán aquí dinámicamente -->
+                </div>
+            </section>
+        </div>
     </main>
-    
+
     <footer class="footer">
-        <p>&copy; 2024 Mi Aplicación Web. Todos los derechos reservados.</p>
+        <div class="container">
+            <p class="footer-text">
+                <i class="fas fa-code"></i>
+                Desarrollado con HTML, CSS y JavaScript puro - Sesión 15
+            </p>
+            <p class="footer-api">
+                <i class="fas fa-database"></i>
+                API: MoviesAPI.ReactJS
+            </p>
+        </div>
     </footer>
-    
-    <script src="scripts/api.js"></script>
-    <script src="scripts/main.js"></script>
+
+    <script src="app.js"></script>
 </body>
 </html>
 
-// CSS (styles/main.css)
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// JavaScript (app.js) - Funciones principales
+// Configuración de la API
+const API_BASE_URL = 'http://localhost:4000';
+const API_ENDPOINTS = {
+  movies: '/movies',
+  movieById: (id) => \`/movies/\${id}\`
+};
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
+// Cliente API reutilizable
+class ApiClient {
+  constructor(baseUrl) {
+    this.baseUrl = baseUrl;
+    this.defaultHeaders = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    };
+  }
 
-.header {
-    background: #333;
-    color: white;
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
+  async request(endpoint, options = {}) {
+    const url = \`\${this.baseUrl}\${endpoint}\`;
+    const config = {
+      headers: { ...this.defaultHeaders, ...options.headers },
+      ...options
+    };
 
-.header h1 {
-    margin-bottom: 0.5rem;
-}
-
-.nav {
-    display: flex;
-    gap: 1rem;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    background-color: #555;
-}
-
-.main {
-    margin-top: 120px;
-    padding: 2rem;
-}
-
-.section {
-    display: none;
-}
-
-.section.active {
-    display: block;
-}
-
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.form-group textarea {
-    height: 100px;
-    resize: vertical;
-}
-
-button {
-    background: #333;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background: #555;
-}
-
-.api-data {
-    min-height: 200px;
-}
-
-.footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-// JavaScript (scripts/main.js)
-class App {
-    constructor() {
-        this.api = new ApiService();
-        this.init();
+    try {
+      const response = await fetch(url, config);
+      if (!response.ok) {
+        throw new Error(\`HTTP error! status: \${response.status}\`);
+      }
+      return await response.json();
+    } catch (error) {
+      console.error(\`Error en petición a \${endpoint}:\`, error);
+      throw error;
     }
-    
-    init() {
-        this.setupNavigation();
-        this.setupForm();
-        this.loadApiData();
+  }
+
+  async get(endpoint) {
+    return this.request(endpoint, { method: 'GET' });
+  }
+
+  async post(endpoint, data) {
+    return this.request(endpoint, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    });
+  }
+
+  async put(endpoint, data) {
+    return this.request(endpoint, {
+      method: 'PUT',
+      body: JSON.stringify(data)
+    });
+  }
+
+  async delete(endpoint) {
+    return this.request(endpoint, { method: 'DELETE' });
+  }
+}
+
+// Crear instancia del cliente API
+const apiClient = new ApiClient(API_BASE_URL);
+
+// Transformar datos del formulario a formato de API
+function transformFormToApi(formData) {
+  return {
+    title: formData.title,
+    tagline: formData.director,
+    release_date: formData.year ? \`\${formData.year}-01-01\` : null,
+    genres: formData.genre ? [formData.genre] : [],
+    vote_average: parseFloat(formData.rating) || 0,
+    overview: formData.description || '',
+    poster_path: 'https://via.placeholder.com/300x450?text=No+Image',
+    runtime: 120,
+    budget: 0,
+    revenue: 0,
+    vote_count: 0
+  };
+}
+
+// Obtener todas las películas
+async function fetchMovies() {
+  try {
+    showState('loading');
+    const response = await apiClient.get(API_ENDPOINTS.movies);
+    let moviesData = [];
+    if (response && Array.isArray(response.data)) {
+      moviesData = response.data;
     }
+    movies = moviesData;
+    filteredMovies = [...movies];
     
-    setupNavigation() {
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('.section');
+    if (movies.length === 0) {
+      showState('empty');
+    } else {
+      showState('success');
+      renderMovies();
+    }
+    updateMoviesCount();
+  } catch (error) {
+    console.error('Error al obtener películas:', error);
+    showState('error', 'Error al cargar las películas. Verifica tu conexión a internet.');
+  }
+}
+
+// Crear nueva película
+async function createMovie(formData) {
+  try {
+    const apiData = transformFormToApi(formData);
+    const response = await apiClient.post(API_ENDPOINTS.movies, apiData);
+    const newMovie = response;
+    
+    movies.unshift(newMovie);
+    filteredMovies = [...movies];
+    renderMovies();
+    updateMoviesCount();
+    clearForm();
+    
+    showNotification('Película agregada exitosamente', 'success');
+  } catch (error) {
+    console.error('Error al crear película:', error);
+    showNotification('Error al agregar la película', 'error');
+    throw error;
+  }
+}
+
+// Renderizar películas
+function renderMovies() {
+  if (filteredMovies.length === 0) {
+    elements.moviesContainer.innerHTML = \`
+      <div class="empty-state" style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+        <i class="fas fa-search" style="font-size: 3rem; color: var(--gray); margin-bottom: 1rem;"></i>
+        <h3>No se encontraron películas</h3>
+        <p>Intenta ajustar los filtros de búsqueda.</p>
+      </div>
+    \`;
+    return;
+  }
+  
+  elements.moviesContainer.innerHTML = filteredMovies.map(movie => createMovieCard(movie)).join('');
+}
+
+// Crear tarjeta de película
+function createMovieCard(movie) {
+  const title = movie.title || 'Sin título';
+  const year = movie.release_date ? new Date(movie.release_date).getFullYear() : 'N/A';
+  const director = movie.tagline || 'Director desconocido';
+  const genre = Array.isArray(movie.genres) && movie.genres.length > 0 ? movie.genres[0] : 'Sin género';
+  const rating = movie.vote_average || 0;
+  const description = movie.overview || '';
+  const stars = generateStars(rating);
+  
+  return \`
+    <div class="movie-card" data-id="\${movie.id}">
+      <div class="movie-header">
+        <div>
+          <h3 class="movie-title">\${escapeHtml(title)}</h3>
+          <p class="movie-year">\${year}</p>
+        </div>
+        <div class="movie-actions">
+          <button class="btn btn-warning btn-sm" onclick="editMovie(\${movie.id})" title="Editar">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn btn-danger btn-sm" onclick="deleteMovie(\${movie.id})" title="Eliminar">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="movie-info">
+        <div class="movie-director">
+          <i class="fas fa-user"></i>
+          <span>\${escapeHtml(director)}</span>
+        </div>
         
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                
-                // Remover clase active de todos los enlaces y secciones
-                navLinks.forEach(l => l.classList.remove('active'));
-                sections.forEach(s => s.classList.remove('active'));
-                
-                // Agregar clase active al enlace y sección seleccionados
-                link.classList.add('active');
-                document.getElementById(targetId).classList.add('active');
-            });
-        });
-    }
-    
-    setupForm() {
-        const form = document.getElementById('contact-form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            this.handleFormSubmit(form);
-        });
-    }
-    
-    async handleFormSubmit(form) {
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
+        <div class="movie-genre">
+          <i class="fas fa-tags"></i>
+          <span>\${escapeHtml(genre)}</span>
+        </div>
         
-        try {
-            // Simular envío de formulario
-            await this.simulateFormSubmission(data);
-            this.showMessage('Formulario enviado correctamente', 'success');
-            form.reset();
-        } catch (error) {
-            this.showMessage('Error al enviar el formulario', 'error');
-        }
-    }
-    
-    async simulateFormSubmission(data) {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if (data.name && data.email && data.message) {
-                    resolve(data);
-                } else {
-                    reject(new Error('Datos incompletos'));
-                }
-            }, 1000);
-        });
-    }
-    
-    showMessage(message, type) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = \`message \${type}\`;
-        messageDiv.textContent = message;
+        <div class="movie-rating">
+          <div class="rating-stars">\${stars}</div>
+          <span class="rating-value">\${rating}/10</span>
+        </div>
         
-        const main = document.querySelector('.main');
-        main.insertBefore(messageDiv, main.firstChild);
-        
-        setTimeout(() => {
-            messageDiv.remove();
-        }, 3000);
-    }
-    
-    async loadApiData() {
-        try {
-            const data = await this.api.getData();
-            this.displayApiData(data);
-        } catch (error) {
-            console.error('Error al cargar datos:', error);
-            this.displayApiDataError();
-        }
-    }
-    
-    displayApiData(data) {
-        const container = document.getElementById('api-data');
-        container.innerHTML = \`
-            <h4>Datos de la API:</h4>
-            <ul>
-                \${data.map(item => \`<li>\${item.title}</li>\`).join('')}
-            </ul>
-        \`;
-    }
-    
-    displayApiDataError() {
-        const container = document.getElementById('api-data');
-        container.innerHTML = '<p>Error al cargar los datos de la API</p>';
-    }
+        \${description ? \`
+          <div class="movie-description">
+            \${escapeHtml(description)}
+          </div>
+        \` : ''}
+      </div>
+    </div>
+  \`;
 }
 
-// Inicializar la aplicación
-document.addEventListener('DOMContentLoaded', () => {
-    new App();
-});`
+// Inicializar aplicación
+async function init() {
+  console.log('🎬 Iniciando aplicación de gestión de películas...');
+  try {
+    await fetchMovies();
+    updateFormUI();
+    console.log('✅ Aplicación iniciada correctamente');
+  } catch (error) {
+    console.error('❌ Error al inicializar la aplicación:', error);
+    showState('error', 'Error al inicializar la aplicación');
+  }
+}
+
+// Inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', init);`
       }
     ]
   },
@@ -3391,201 +5538,235 @@ document.addEventListener('DOMContentLoaded', () => {
     level: "Intermedio",
     completed: false,
     objectives: [
-      "Comprender qué es React y por qué usarlo",
-      "Aprender JSX y sus diferencias con HTML",
-      "Entender props y componentes",
-      "Configurar entorno de desarrollo con Vite"
+      "Comprender React como librería de UI y su ecosistema moderno",
+      "Configurar entorno de desarrollo: comparar Vite vs Create React App",
+      "Dominar JSX: sintaxis, reglas y diferencias con HTML",
+      "Crear componentes funcionales reutilizables y escalables",
+      "Implementar props para comunicación entre componentes",
+      "Aplicar estilos en React: CSS global, modules e inline",
+      "Organizar estructura de proyecto React profesional",
+      "Desarrollar aplicación práctica: Sistema de tarjetas de equipo"
     ],
     content: {
       theoretical: [
-        "¿Qué es React y por qué usarlo?",
-        "JSX: JavaScript XML y sus diferencias con HTML",
-        "Componentes: bloques reutilizables de UI",
-        "Props: pasando datos entre componentes",
-        "Virtual DOM y rendimiento",
-        "Ecosistema React: herramientas y librerías"
+        "React: Librería de UI moderna y su ecosistema",
+        "Configuración completa del entorno de desarrollo",
+        "JSX: Sintaxis, reglas y diferencias con HTML",
+        "Componentes funcionales: estructura y mejores prácticas",
+        "Estilos en React: CSS, CSS Modules y estilos inline",
+        "Props: Tipos, validación y comunicación entre componentes",
+        "Estructura de proyecto React: archivos y organización",
+        "Herramientas de desarrollo: DevTools y debugging"
       ],
       theoreticalDetails: {
-        "¿Qué es React y por qué usarlo?": "React es una librería de JavaScript desarrollada por Facebook para construir interfaces de usuario interactivas. Su principal ventaja es el uso del Virtual DOM, que permite actualizaciones eficientes de la interfaz. React utiliza un enfoque basado en componentes, donde cada pieza de la UI es un componente reutilizable. Esto facilita el mantenimiento del código, la escalabilidad de aplicaciones y el trabajo en equipo. React también introduce conceptos como JSX, que permite escribir HTML dentro de JavaScript de manera más intuitiva.\n\n**Ejemplos:**\n```javascript\n// Componente simple de React\nfunction Saludo({ nombre }) {\n  return <h1>¡Hola, {nombre}!</h1>;\n}\n\n// Uso del componente\n<Saludo nombre=\"Juan\" />\n\n// Ventajas de React:\n// ✅ Componentes reutilizables\n// ✅ Virtual DOM para rendimiento\n// ✅ Ecosistema maduro\n// ✅ Herramientas de desarrollo\n// ✅ Comunidad activa\n```",
+        "React: Librería de UI moderna y su ecosistema": "React es una librería de JavaScript desarrollada por Meta (Facebook) para construir interfaces de usuario interactivas y escalables. Su filosofía se basa en componentes reutilizables, Virtual DOM para rendimiento óptimo, y un ecosistema maduro de herramientas.\n\n**¿Por qué React?**\n- **Componentes reutilizables**: Cada pieza de UI es independiente y reutilizable\n- **Virtual DOM**: Actualizaciones eficientes que mejoran el rendimiento\n- **Ecosistema maduro**: Miles de librerías y herramientas disponibles\n- **Comunidad activa**: Soporte continuo y actualizaciones regulares\n- **Flexibilidad**: Se puede usar con diferentes arquitecturas y librerías\n\n**Ecosistema React:**\n```javascript\n// Herramientas esenciales\n- Vite/Webpack: Bundling y desarrollo\n- React Router: Navegación\n- Redux/Context: Manejo de estado\n- Material-UI/Ant Design: Componentes UI\n- Jest/Testing Library: Testing\n- React DevTools: Debugging\n\n// Ejemplo de componente moderno\nfunction ProductCard({ product, onAddToCart }) {\n  return (\n    <div className=\"product-card\">\n      <img src={product.image} alt={product.name} />\n      <h3>{product.name}</h3>\n      <p className=\"price\">${product.price}</p>\n      <button onClick={() => onAddToCart(product)}>\n        Agregar al carrito\n      </button>\n    </div>\n  );\n}\n\n// Uso del componente\n<ProductCard \n  product={productData} \n  onAddToCart={handleAddToCart} \n/>\n```",
         
-        "JSX: JavaScript XML y sus diferencias con HTML": "JSX (JavaScript XML) es una extensión de sintaxis que permite escribir código similar a HTML dentro de JavaScript. Aunque se ve como HTML, JSX tiene algunas diferencias importantes: los atributos usan camelCase (className en lugar de class), los elementos deben cerrarse explícitamente, y se pueden usar expresiones JavaScript dentro de llaves {}. JSX se transpila a JavaScript puro antes de ejecutarse, convirtiendo elementos JSX en llamadas a React.createElement(). Esto permite combinar la potencia de JavaScript con la familiaridad de HTML.\n\n**Ejemplos:**\n```javascript\n// Diferencias entre HTML y JSX\n// HTML\n<div class=\"container\">\n  <img src=\"image.jpg\">\n  <input type=\"text\">\n</div>\n\n// JSX\n<div className=\"container\">\n  <img src=\"image.jpg\" />\n  <input type=\"text\" />\n</div>\n\n// Expresiones JavaScript en JSX\nfunction Usuario({ nombre, edad }) {\n  return (\n    <div>\n      <h1>{nombre}</h1>\n      <p>Edad: {edad}</p>\n      <p>Es mayor: {edad >= 18 ? 'Sí' : 'No'}</p>\n    </div>\n  );\n}\n```",
+        "Configuración completa del entorno de desarrollo": "Configurar React puede hacerse con dos herramientas principales: Vite (moderno y rápido) o Create React App (tradicional y estable). Ambas ofrecen ventajas específicas según las necesidades del proyecto.\n\n**Paso 1: Verificar Node.js**\n```bash\n# Verificar versión de Node.js (requiere 16+)\nnode --version\nnpm --version\n\n# Si no tienes Node.js, descargar desde nodejs.org\n```\n\n**Paso 2: Crear proyecto React**\n\n**Opción A: Vite (Recomendado) ⚡**\n```bash\n# Crear proyecto con Vite\nnpm create vite@latest mi-app-react -- --template react\ncd mi-app-react\nnpm install\nnpm run dev\n```\n\n**Opción B: Create React App (CRA) 🏗️**\n```bash\n# Crear proyecto con CRA\nnpx create-react-app mi-app-react\ncd mi-app-react\nnpm start\n```\n\n**Comparativa Vite vs CRA:**\n| Característica | **Vite** ⚡ | **Create React App** 🏗️ |\n|---|---|---|\n| **Velocidad de inicio** | 1-3 segundos | 10-30 segundos |\n| **Hot Reload** | Instantáneo | Rápido |\n| **Puerto por defecto** | 5173 | 3000 |\n| **Configuración** | Mínima | Completa |\n| **Ecosistema** | Nuevo | Maduro |\n\n**Estructura del proyecto:**\n\n**Con Vite:**\n```\nmi-app-react/\n├── public/\n│   └── vite.svg\n├── src/\n│   ├── App.jsx          # Componente principal\n│   ├── main.jsx        # Punto de entrada\n│   └── index.css       # Estilos globales\n├── index.html          # HTML base\n├── package.json        # Dependencias\n└── vite.config.js      # Configuración de Vite\n```\n\n**Con Create React App:**\n```\nmi-app-react/\n├── public/\n│   ├── index.html      # HTML base\n│   ├── favicon.ico     # Favicon\n│   └── manifest.json   # Web App Manifest\n├── src/\n│   ├── App.js          # Componente principal\n│   ├── index.js        # Punto de entrada\n│   ├── index.css       # Estilos globales\n│   └── logo.svg        # Logo de React\n├── package.json        # Dependencias\n└── README.md           # Documentación\n```\n\n**Scripts disponibles:**\n\n**Vite:**\n```bash\nnpm run dev      # Servidor de desarrollo\nnpm run build    # Build para producción\nnpm run preview  # Preview del build\nnpm run lint     # Linting del código\n```\n\n**Create React App:**\n```bash\nnpm start        # Servidor de desarrollo\nnpm run build    # Build para producción\nnpm test         # Ejecutar pruebas\nnpm run eject    # Exponer configuración (¡CUIDADO!)\n```\n\n**Recomendación para la clase:**\n- **Vite**: Para proyectos nuevos, máxima velocidad y simplicidad\n- **CRA**: Para compatibilidad con proyectos legacy o equipos familiarizados\n- **Ambas**: Conocer las dos opciones para tomar decisiones informadas",
         
-        "Componentes: bloques reutilizables de UI": "Los componentes en React son funciones o clases que retornan elementos JSX. Cada componente encapsula su propia lógica y estado, lo que los hace reutilizables y fáciles de mantener. Los componentes pueden ser funcionales (usando funciones) o de clase (usando clases ES6). Los componentes funcionales son más simples y son la forma recomendada actualmente. Un componente puede contener otros componentes, creando una estructura jerárquica que refleja la estructura de la aplicación.",
+        "JSX: Sintaxis, reglas y diferencias con HTML": "JSX (JavaScript XML) es una extensión de sintaxis que permite escribir HTML-like code dentro de JavaScript. Se transpila a JavaScript puro usando React.createElement().\n\n**Reglas importantes de JSX:**\n- **CamelCase para atributos**: `className` en lugar de `class`\n- **Elementos auto-cerrados**: `<img />` en lugar de `<img>`\n- **Expresiones JavaScript**: Usar `{}` para variables y funciones\n- **Un solo elemento padre**: Envolver en `<div>` o React.Fragment\n\n**Ejemplos prácticos:**\n```javascript\n// Diferencias HTML vs JSX\n// ❌ HTML\n<div class=\"container\">\n  <img src=\"image.jpg\">\n  <input type=\"text\">\n</div>\n\n// ✅ JSX\n<div className=\"container\">\n  <img src=\"image.jpg\" alt=\"Imagen\" />\n  <input type=\"text\" />\n</div>\n\n// Expresiones JavaScript en JSX\nfunction UserProfile({ user, isOnline }) {\n  return (\n    <div className=\"user-card\">\n      <h2>{user.name}</h2>\n      <p>Email: {user.email}</p>\n      <span className={isOnline ? 'online' : 'offline'}>\n        {isOnline ? 'En línea' : 'Desconectado'}\n      </span>\n      {user.age >= 18 && <p>Usuario adulto</p>}\n    </div>\n  );\n}\n\n// Listas y keys\nfunction TodoList({ todos }) {\n  return (\n    <ul>\n      {todos.map(todo => (\n        <li key={todo.id}>\n          {todo.text}\n        </li>\n      ))}\n    </ul>\n  );\n}\n```",
         
-        "Props: pasando datos entre componentes": "Props (propiedades) son la forma de pasar datos de un componente padre a un componente hijo en React. Son inmutables y solo pueden ser leídas por el componente que las recibe. Las props permiten que los componentes sean configurables y reutilizables. Se pasan como atributos en JSX y se acceden como propiedades del objeto props en el componente hijo. Las props pueden ser strings, números, objetos, funciones o incluso otros componentes.\n\n**Ejemplos:**\n```javascript\n// Componente hijo que recibe props\nfunction Tarjeta({ titulo, contenido, color }) {\n  return (\n    <div style={{ backgroundColor: color }}>\n      <h2>{titulo}</h2>\n      <p>{contenido}</p>\n    </div>\n  );\n}\n\n// Componente padre que pasa props\nfunction App() {\n  return (\n    <div>\n      <Tarjeta \n        titulo=\"Noticia 1\" \n        contenido=\"Contenido de la noticia\" \n        color=\"lightblue\" \n      />\n      <Tarjeta \n        titulo=\"Noticia 2\" \n        contenido=\"Otra noticia\" \n        color=\"lightgreen\" \n      />\n    </div>\n  );\n}\n\n// Props con valores por defecto\nfunction Boton({ texto = 'Click', onClick }) {\n  return <button onClick={onClick}>{texto}</button>;\n}\n```",
+        "Componentes funcionales: estructura y mejores prácticas": "Los componentes funcionales son la forma moderna y recomendada de crear componentes en React. Son más simples, legibles y optimizables que los componentes de clase.\n\n**Estructura básica:**\n```javascript\n// Componente funcional simple\nfunction Welcome({ name }) {\n  return <h1>¡Hola, {name}!</h1>;\n}\n\n// Componente con props complejas\nfunction ProductCard({ product, onAddToCart }) {\n  return (\n    <div className=\"product-card\">\n      <img src={product.image} alt={product.name} />\n      <h3>{product.name}</h3>\n      <p className=\"price\">${product.price}</p>\n      <button onClick={() => onAddToCart(product)}>\n        Agregar al carrito\n      </button>\n    </div>\n  );\n}\n\n// Componente con props complejas\nfunction UserCard({ user, onEdit, onDelete }) {\n  return (\n    <div className=\"user-card\">\n      <img src={user.avatar} alt={user.name} />\n      <h3>{user.name}</h3>\n      <p>{user.email}</p>\n      <div className=\"actions\">\n        <button onClick={() => onEdit(user.id)}>Editar</button>\n        <button onClick={() => onDelete(user.id)}>Eliminar</button>\n      </div>\n    </div>\n  );\n}\n```\n\n**Mejores prácticas:**\n- **Nombres descriptivos**: `UserProfile` en lugar de `Profile`\n- **Props destructuring**: `{ name, age }` en lugar de `props`\n- **Componentes pequeños**: Una responsabilidad por componente\n- **Reutilización**: Crear componentes genéricos y configurables",
         
-        "Virtual DOM y rendimiento": "El Virtual DOM es una representación en memoria del DOM real. Cuando el estado de un componente cambia, React crea un nuevo Virtual DOM y lo compara con el anterior (proceso llamado 'diffing'). Solo las diferencias se aplican al DOM real, lo que hace que las actualizaciones sean muy eficientes. Este enfoque evita manipulaciones costosas del DOM y mejora significativamente el rendimiento de las aplicaciones, especialmente en interfaces complejas con muchos elementos.",
+        "Estilos en React: CSS, CSS Modules y estilos inline": "React ofrece múltiples formas de aplicar estilos a los componentes, cada una con sus ventajas y casos de uso específicos. La elección depende del tamaño del proyecto y las necesidades de mantenimiento.\n\n**1. CSS Global (Tradicional)**\n```javascript\n// styles/globals.css\n.user-card {\n  border: 2px solid #646cff;\n  border-radius: 12px;\n  padding: 20px;\n  margin: 15px;\n  background: #1a1a1a;\n  display: flex;\n  align-items: center;\n  gap: 15px;\n  transition: transform 0.3s ease;\n  max-width: 400px;\n}\n\n.user-card:hover {\n  transform: translateY(-5px);\n  box-shadow: 0 8px 25px rgba(100, 108, 255, 0.3);\n}\n\n.user-avatar {\n  width: 80px;\n  height: 80px;\n  border-radius: 50%;\n  object-fit: cover;\n  border: 3px solid #646cff;\n}\n\n// Componente React\nimport './styles/globals.css';\n\nfunction UserCard({ name, email, avatar }) {\n  return (\n    <div className=\"user-card\">\n      <img src={avatar} alt={name} className=\"user-avatar\" />\n      <div className=\"user-info\">\n        <h3 className=\"user-name\">{name}</h3>\n        <p className=\"user-email\">{email}</p>\n      </div>\n    </div>\n  );\n}\n```\n\n**2. CSS Modules (Recomendado)**\n```javascript\n// UserCard.module.css\n.card {\n  border: 2px solid #646cff;\n  border-radius: 12px;\n  padding: 20px;\n  margin: 15px;\n  background: #1a1a1a;\n  display: flex;\n  align-items: center;\n  gap: 15px;\n  transition: transform 0.3s ease;\n  max-width: 400px;\n}\n\n.card:hover {\n  transform: translateY(-5px);\n  box-shadow: 0 8px 25px rgba(100, 108, 255, 0.3);\n}\n\n.avatar {\n  width: 80px;\n  height: 80px;\n  border-radius: 50%;\n  object-fit: cover;\n  border: 3px solid #646cff;\n}\n\n.name {\n  color: #646cff;\n  margin: 0 0 8px 0;\n  font-size: 1.2rem;\n}\n\n.email {\n  color: #888;\n  margin: 5px 0;\n  font-size: 0.9rem;\n}\n\n// Componente con CSS Modules\nimport styles from './UserCard.module.css';\n\nfunction UserCard({ name, email, avatar }) {\n  return (\n    <div className={styles.card}>\n      <img src={avatar} alt={name} className={styles.avatar} />\n      <div className={styles.info}>\n        <h3 className={styles.name}>{name}</h3>\n        <p className={styles.email}>{email}</p>\n      </div>\n    </div>\n  );\n}\n```\n\n**3. Estilos Inline (Dinámicos)**\n```javascript\n// Estilos inline para valores dinámicos\nfunction UserCard({ name, email, avatar, isOnline, theme }) {\n  const cardStyle = {\n    border: `2px solid ${theme.primary}`,\n    borderRadius: '12px',\n    padding: '20px',\n    margin: '15px',\n    backgroundColor: theme.background,\n    display: 'flex',\n    alignItems: 'center',\n    gap: '15px',\n    transition: 'transform 0.3s ease',\n    maxWidth: '400px',\n    transform: isOnline ? 'translateY(-5px)' : 'none'\n  };\n\n  const avatarStyle = {\n    width: '80px',\n    height: '80px',\n    borderRadius: '50%',\n    objectFit: 'cover',\n    border: `3px solid ${theme.primary}`\n  };\n\n  const nameStyle = {\n    color: theme.primary,\n    margin: '0 0 8px 0',\n    fontSize: '1.2rem'\n  };\n\n  return (\n    <div style={cardStyle}>\n      <img src={avatar} alt={name} style={avatarStyle} />\n      <div>\n        <h3 style={nameStyle}>{name}</h3>\n        <p style={{ color: theme.text, margin: '5px 0' }}>{email}</p>\n        <span style={{ \n          color: isOnline ? theme.success : theme.error,\n          fontSize: '0.8rem'\n        }}>\n          {isOnline ? 'En línea' : 'Desconectado'}\n        </span>\n      </div>\n    </div>\n  );\n}\n```\n\n**4. Estilos con Variables CSS**\n```javascript\n// styles/variables.css\n:root {\n  --primary-color: #646cff;\n  --background-color: #1a1a1a;\n  --text-color: #ffffff;\n  --border-radius: 12px;\n  --spacing: 20px;\n  --transition: all 0.3s ease;\n}\n\n// styles/components.css\n.user-card {\n  border: 2px solid var(--primary-color);\n  border-radius: var(--border-radius);\n  padding: var(--spacing);\n  background: var(--background-color);\n  color: var(--text-color);\n  transition: var(--transition);\n}\n\n.user-card:hover {\n  transform: translateY(-5px);\n  box-shadow: 0 8px 25px rgba(100, 108, 255, 0.3);\n}\n```\n\n**5. Combinación de Métodos**\n```javascript\n// Componente que combina diferentes métodos\nimport './UserCard.css'; // CSS global\nimport styles from './UserCard.module.css'; // CSS Modules\n\nfunction UserCard({ name, email, avatar, isOnline, theme }) {\n  // Estilos inline para valores dinámicos\n  const dynamicStyle = {\n    borderColor: theme.primary,\n    backgroundColor: theme.background\n  };\n\n  return (\n    <div \n      className={`${styles.card} user-card`} // Combinar CSS Modules y global\n      style={dynamicStyle} // Estilos inline dinámicos\n    >\n      <img src={avatar} alt={name} className={styles.avatar} />\n      <div className={styles.info}>\n        <h3 className={styles.name}>{name}</h3>\n        <p className={styles.email}>{email}</p>\n        <span className={isOnline ? styles.online : styles.offline}>\n          {isOnline ? 'En línea' : 'Desconectado'}\n        </span>\n      </div>\n    </div>\n  );\n}\n```\n\n**Cuándo usar cada método:**\n- **CSS Global**: Estilos base, reset, tipografías\n- **CSS Modules**: Componentes específicos, evitar conflictos\n- **Estilos Inline**: Valores dinámicos, temas, estados\n- **Variables CSS**: Temas, valores reutilizables\n- **Combinación**: Proyectos complejos con múltiples necesidades",
         
-        "Ecosistema React: herramientas y librerías": "El ecosistema de React incluye herramientas esenciales como Create React App y Vite para configuración inicial, React Router para navegación, Redux o Context API para manejo de estado global, y librerías de UI como Material-UI o Ant Design. También incluye herramientas de desarrollo como React DevTools para debugging, Jest para testing, y Webpack para bundling. Este ecosistema maduro facilita el desarrollo de aplicaciones complejas y escalables."
+        "Props: Tipos, validación y comunicación entre componentes": "Props son la forma de pasar datos de componentes padre a hijo en React. Son inmutables y permiten crear componentes reutilizables y configurables.\n\n**Tipos de props:**\n```javascript\n// Props primitivas\nfunction Button({ text, disabled, onClick }) {\n  return (\n    <button disabled={disabled} onClick={onClick}>\n      {text}\n    </button>\n  );\n}\n\n// Props de objeto\nfunction UserCard({ user, onEdit }) {\n  return (\n    <div className=\"user-card\">\n      <h3>{user.name}</h3>\n      <p>{user.email}</p>\n      <button onClick={() => onEdit(user.id)}>Editar</button>\n    </div>\n  );\n}\n\n// Props de función\nfunction TodoItem({ todo, onToggle, onDelete }) {\n  return (\n    <div className=\"todo-item\">\n      <input \n        type=\"checkbox\" \n        checked={todo.completed}\n        onChange={() => onToggle(todo.id)}\n      />\n      <span>{todo.text}</span>\n      <button onClick={() => onDelete(todo.id)}>Eliminar</button>\n    </div>\n  );\n}\n\n// Props con valores por defecto\nfunction Input({ placeholder = 'Escribe aquí...', type = 'text' }) {\n  return <input type={type} placeholder={placeholder} />;\n}\n```\n\n**Comunicación entre componentes:**\n```javascript\n// Componente padre que pasa datos a hijos\nfunction TeamApp() {\n  const teamMembers = [\n    { id: 1, name: 'Juan Pérez', role: 'Developer' },\n    { id: 2, name: 'María García', role: 'Designer' },\n    { id: 3, name: 'Carlos López', role: 'Manager' }\n  ];\n  \n  const handleEdit = (id) => {\n    console.log('Editando usuario:', id);\n  };\n  \n  const handleDelete = (id) => {\n    console.log('Eliminando usuario:', id);\n  };\n  \n  return (\n    <div>\n      <h1>Mi Equipo</h1>\n      {teamMembers.map(member => (\n        <UserCard \n          key={member.id}\n          user={member} \n          onEdit={handleEdit}\n          onDelete={handleDelete}\n        />\n      ))}\n    </div>\n  );\n}\n```",
+        
+        "Estructura de proyecto React: archivos y organización": "Una buena organización de archivos es fundamental para mantener proyectos React escalables y mantenibles. React no impone una estructura específica, pero hay convenciones establecidas por la comunidad.\n\n**Estructura recomendada para principiantes:**\n```\nmi-app-react/\n├── public/\n│   ├── index.html          # HTML base\n│   ├── favicon.ico         # Icono del sitio\n│   └── logo192.png         # Imágenes estáticas\n├── src/\n│   ├── components/         # Componentes reutilizables\n│   │   ├── Header.jsx\n│   │   ├── Footer.jsx\n│   │   └── Button.jsx\n│   ├── pages/             # Páginas/views\n│   │   ├── Home.jsx\n│   │   ├── About.jsx\n│   │   └── Contact.jsx\n│   ├── styles/            # Archivos CSS\n│   │   ├── globals.css\n│   │   ├── components.css\n│   │   └── pages.css\n│   ├── App.jsx            # Componente principal\n│   ├── main.jsx          # Punto de entrada\n│   └── index.css         # Estilos globales\n├── package.json           # Dependencias y scripts\n├── vite.config.js        # Configuración de Vite\n└── README.md             # Documentación\n```\n\n**Convenciones de nomenclatura:**\n- **Componentes**: PascalCase (`UserCard.jsx`)\n- **Archivos**: kebab-case (`user-card.jsx`)\n- **Carpetas**: kebab-case (`user-components/`)\n- **Variables**: camelCase (`userName`)\n- **Constantes**: UPPER_SNAKE_CASE (`API_URL`)\n\n**Ejemplo de organización:**\n```javascript\n// components/UserCard.jsx\nfunction UserCard({ name, email, avatar }) {\n  return (\n    <div className=\"user-card\">\n      <img src={avatar} alt={name} />\n      <h3>{name}</h3>\n      <p>{email}</p>\n    </div>\n  );\n}\n\nexport default UserCard;\n\n// pages/Home.jsx\nimport UserCard from '../components/UserCard';\n\nfunction Home() {\n  return (\n    <div>\n      <h1>Mi Equipo</h1>\n      <UserCard name=\"Juan\" email=\"juan@email.com\" />\n    </div>\n  );\n}\n\nexport default Home;\n```",
       },
       practical: [
-        "Configurar proyecto React con Vite",
-        "Crear primer componente React",
-        "Usar JSX para renderizar elementos",
-        "Pasar props entre componentes",
-        "Proyecto: componente de saludo personalizable"
+        "Configurar entorno React: comparar Vite vs Create React App",
+        "Crear primer componente funcional con JSX",
+        "Dominar sintaxis JSX: expresiones, condicionales y listas",
+        "Aplicar estilos en React: CSS global, modules e inline",
+        "Implementar props: tipos, validación y comunicación",
+        "Organizar estructura de proyecto React profesional",
+        "Proyecto: Sistema de tarjetas de equipo con estilos modernos"
       ]
     },
     activities: [
       {
-        title: "Configuración de React",
-        duration: "45 min",
-        description: "Instalar Vite y crear primer proyecto React"
+        title: "Configuración del entorno React",
+        duration: "30 min",
+        description: "Comparar Vite vs Create React App, crear proyecto con ambas herramientas y configurar entorno de desarrollo"
       },
       {
-        title: "Componentes y JSX",
+        title: "Primeros pasos con React",
+        duration: "45 min",
+        description: "Entender JSX, crear primer componente funcional y explorar diferencias entre Vite y CRA"
+      },
+      {
+        title: "Estilos en React",
+        duration: "45 min",
+        description: "Aplicar CSS global, CSS Modules y estilos inline en componentes React con ejemplos prácticos"
+      },
+      {
+        title: "Componentes y Props",
         duration: "60 min",
-        description: "Crear componentes básicos y entender JSX"
+        description: "Crear componentes reutilizables, implementar props con validación y construir sistema de tarjetas de usuario"
       },
       {
-        title: "Props y datos",
+        title: "Proyecto práctico",
         duration: "45 min",
-        description: "Pasar datos entre componentes usando props"
+        description: "Desarrollar aplicación completa: Sistema de tarjetas de equipo con estilos modernos, estructura profesional y componentes personalizados"
       }
     ],
     homework: [
-      "Crear aplicación React con 3 componentes",
-      "Implementar props en todos los componentes",
-      "Experimentar con JSX y estilos"
+      "Crear aplicación React con Vite y otra con Create React App para comparar",
+      "Implementar 3 componentes diferentes con props y validación",
+      "Experimentar con JSX: condicionales, listas y expresiones",
+      "Aplicar estilos CSS: global, modules e inline en diferentes componentes",
+      "Crear tema personalizado con variables CSS y estilos dinámicos",
+      "Organizar proyecto con estructura profesional y documentar el código"
     ],
     materials: [
-      "Node.js instalado",
-      "Editor de código",
-      "Navegador web"
+      "Node.js v16+ instalado y configurado",
+      "Editor de código (VS Code recomendado)",
+      "Navegador web moderno (Chrome, Firefox, Safari)",
+      "React DevTools instalado",
+      "Conexión a internet para descargar dependencias",
+      "Conocimiento básico de HTML, CSS y JavaScript",
+      "Guía de configuración React (Vite vs CRA)"
     ],
     exercises: [
       {
-        title: "Hook Personalizado",
-        description: "Crea un hook personalizado para manejar formularios.",
-        code: `// Hook personalizado para formularios
-function useForm(initialValues) {
+        title: "Componente de Tarjeta de Usuario",
+        description: "Crea un componente reutilizable para mostrar información de usuario con props.",
+        code: `// Componente UserCard
+function UserCard({ name, email, role, avatar }) {
   // Tu código aquí
 }
 
-// Usar el hook
-function MyForm() {
-  const { values, handleChange, handleSubmit } = useForm({
-    name: '',
-    email: ''
-  });
-  
+// Usar el componente
+function App() {
   return (
-    <form onSubmit={handleSubmit}>
-      <input 
-        name="name"
-        value={values.name}
-        onChange={handleChange}
-        placeholder="Nombre"
+    <div className="app">
+      <h1>Mi Equipo</h1>
+      <UserCard 
+        name="Juan Pérez"
+        email="juan@email.com"
+        role="Developer"
+        avatar="https://via.placeholder.com/100"
       />
-      <input 
-        name="email"
-        value={values.email}
-        onChange={handleChange}
-        placeholder="Email"
+      <UserCard 
+        name="María García"
+        email="maria@email.com"
+        role="Designer"
+        avatar="https://via.placeholder.com/100"
       />
-      <button type="submit">Enviar</button>
-    </form>
+    </div>
   );
 }`,
-        solution: `// Hook personalizado para formularios - Solución
-import { useState, useCallback } from 'react';
-
-function useForm(initialValues) {
-  const [values, setValues] = useState(initialValues);
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
-  const handleChange = useCallback((e) => {
-    const { name, value } = e.target;
-    setValues(prev => ({
-      ...prev,
-      [name]: value
-    }));
-    
-    // Limpiar error cuando el usuario empiece a escribir
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ''
-      }));
-    }
-  }, [errors]);
-  
-  const handleSubmit = useCallback(async (e, onSubmit) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      await onSubmit(values);
-    } catch (error) {
-      console.error('Error al enviar formulario:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  }, [values]);
-  
-  const reset = useCallback(() => {
-    setValues(initialValues);
-    setErrors({});
-    setIsSubmitting(false);
-  }, [initialValues]);
-  
-  const setValue = useCallback((name, value) => {
-    setValues(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  }, []);
-  
-  const setError = useCallback((name, error) => {
-    setErrors(prev => ({
-      ...prev,
-      [name]: error
-    }));
-  }, []);
-  
-  return {
-    values,
-    errors,
-    isSubmitting,
-    handleChange,
-    handleSubmit,
-    reset,
-    setValue,
-    setError
-  };
+        solution: `// Componente UserCard - Solución
+function UserCard({ name, email, role, avatar }) {
+  return (
+    <div className="user-card">
+      <img 
+        src={avatar} 
+        alt={name}
+        className="user-avatar"
+      />
+      <div className="user-info">
+        <h3 className="user-name">{name}</h3>
+        <p className="user-email">{email}</p>
+        <span className="user-role">{role}</span>
+      </div>
+    </div>
+  );
 }
 
-// Hook personalizado para consumo de API
-function useApi(url) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  
-  const fetchData = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error('Error al obtener datos');
-      }
-      const result = await response.json();
-      setData(result);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  }, [url]);
-  
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
-  
-  return { data, loading, error, refetch: fetchData };
+// CSS para el componente
+const styles = \`
+.user-card {
+  border: 2px solid #646cff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+  max-width: 400px;
 }
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(100, 108, 255, 0.3);
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #646cff;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  color: #646cff;
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.user-email {
+  color: #888;
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.user-role {
+  display: inline-block;
+  background: #646cff;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 8px;
+}
+\`;
+
+// Uso del componente
+function App() {
+  return (
+    <div className="app">
+      <style>{styles}</style>
+      <h1>Mi Equipo</h1>
+      <div className="team-container">
+        <UserCard 
+          name="Juan Pérez"
+          email="juan@email.com"
+          role="Developer"
+          avatar="https://via.placeholder.com/100"
+        />
+        <UserCard 
+          name="María García"
+          email="maria@email.com"
+          role="Designer"
+          avatar="https://via.placeholder.com/100"
+        />
+        <UserCard 
+          name="Carlos López"
+          email="carlos@email.com"
+          role="Manager"
+          avatar="https://via.placeholder.com/100"
+        />
+      </div>
+    </div>
+  );
+}
+
+// Conceptos aplicados:
+// ✅ Componentes funcionales
+// ✅ Props (name, email, role, avatar)
+// ✅ JSX con expresiones JavaScript
+// ✅ Estilos CSS
+// ✅ Reutilización de componentes
+// ✅ Estructura semántica HTML
 
 // Hook personalizado para localStorage
 function useLocalStorage(key, initialValue) {
@@ -3668,62 +5849,73 @@ export { useForm, useApi, useLocalStorage };`
     level: "Intermedio-Avanzado",
     completed: false,
     objectives: [
-      "Comprender el concepto de hooks",
-      "Usar useState para manejar estado",
-      "Implementar useEffect para efectos secundarios",
-      "Crear hooks personalizados"
+      "Dominar useState: estado local, actualizaciones y mejores prácticas",
+      "Implementar useEffect: efectos secundarios, cleanup y dependencias",
+      "Crear hooks personalizados reutilizables para lógica común",
+      "Manejar estado complejo con useReducer",
+      "Optimizar rendimiento con useMemo y useCallback",
+      "Proyecto: Aplicación de gestión de tareas con hooks avanzados"
     ],
     content: {
       theoretical: [
-        "¿Qué son los hooks?",
-        "useState: manejo de estado local",
-        "useEffect: efectos secundarios",
-        "Reglas de los hooks",
-        "Hooks personalizados",
-        "useContext para estado global"
+        "Hooks: Conceptos fundamentales y reglas de uso",
+        "useState: Estado local, actualizaciones y mejores prácticas",
+        "useEffect: Efectos secundarios, cleanup y dependencias",
+        "useReducer: Estado complejo y lógica de actualización",
+        "useMemo y useCallback: Optimización de rendimiento",
+        "Hooks personalizados: Lógica reutilizable y mejores prácticas",
+        "useContext: Estado global y comunicación entre componentes"
       ],
       theoreticalDetails: {
-        "¿Qué son los hooks?": "Los hooks son funciones especiales que permiten usar estado y otras características de React en componentes funcionales. Introducidos en React 16.8, los hooks revolucionaron la forma de escribir componentes al permitir que los componentes funcionales tengan estado y ciclo de vida. Los hooks siempre comienzan con 'use' y deben ser llamados en el nivel superior de los componentes, nunca dentro de bucles, condiciones o funciones anidadas. Los hooks más comunes incluyen useState para estado, useEffect para efectos secundarios, y useContext para contexto.",
+        "Hooks: Conceptos fundamentales y reglas de uso": "Los hooks son funciones especiales que permiten usar estado y otras características de React en componentes funcionales. Introducidos en React 16.8, revolucionaron la forma de escribir componentes al permitir que los componentes funcionales tengan estado y ciclo de vida.\n\n**¿Qué son los hooks?**\n- **Funciones especiales**: Comienzan con 'use' (useState, useEffect, etc.)\n- **Estado en funcionales**: Permiten usar estado sin clases\n- **Lógica reutilizable**: Pueden extraerse en hooks personalizados\n- **Composición**: Se pueden combinar múltiples hooks\n\n**Reglas fundamentales:**\n1. **Solo en el nivel superior**: Nunca dentro de bucles, condiciones o funciones anidadas\n2. **Solo en React**: Llamar hooks de React o hooks personalizados\n3. **Mismo orden**: Los hooks deben llamarse en el mismo orden en cada renderizado\n\n**Ejemplos de uso correcto:**\n```javascript\n// ✅ Correcto - nivel superior\nfunction MiComponente() {\n  const [count, setCount] = useState(0);\n  const [name, setName] = useState('');\n  \n  useEffect(() => {\n    document.title = `Count: ${count}`;\n  }, [count]);\n  \n  return <div>{count}</div>;\n}\n\n// ❌ Incorrecto - dentro de condición\nfunction MiComponente() {\n  if (true) {\n    const [count, setCount] = useState(0); // ❌ Error!\n  }\n  \n  return <div>Hola</div>;\n}\n```\n\n**Hooks más comunes:**\n- **useState**: Estado local\n- **useEffect**: Efectos secundarios\n- **useContext**: Contexto global\n- **useReducer**: Estado complejo\n- **useMemo**: Memoización de valores\n- **useCallback**: Memoización de funciones",
         
-        "useState: manejo de estado local": "useState es el hook más fundamental que permite agregar estado local a componentes funcionales. Retorna un array con dos elementos: el valor actual del estado y una función para actualizarlo. Cuando se llama a la función de actualización, React re-renderiza el componente con el nuevo estado. useState puede inicializarse con un valor inicial o con una función que retorna el valor inicial. Es importante entender que las actualizaciones de estado son asíncronas y pueden ser agrupadas por React para optimizar el rendimiento.\n\n**Ejemplos:**\n```javascript\nimport { useState } from 'react';\n\nfunction Contador() {\n  const [contador, setContador] = useState(0);\n  \n  return (\n    <div>\n      <p>Contador: {contador}</p>\n      <button onClick={() => setContador(contador + 1)}>\n        Incrementar\n      </button>\n      <button onClick={() => setContador(contador - 1)}>\n        Decrementar\n      </button>\n    </div>\n  );\n}\n\n// Múltiples estados\nfunction Formulario() {\n  const [nombre, setNombre] = useState('');\n  const [email, setEmail] = useState('');\n  \n  return (\n    <form>\n      <input \n        value={nombre}\n        onChange={(e) => setNombre(e.target.value)}\n        placeholder=\"Nombre\"\n      />\n      <input \n        value={email}\n        onChange={(e) => setEmail(e.target.value)}\n        placeholder=\"Email\"\n      />\n    </form>\n  );\n}\n```",
+        "useState: Estado local, actualizaciones y mejores prácticas": "useState es el hook más fundamental que permite agregar estado local a componentes funcionales. Retorna un array con dos elementos: el valor actual del estado y una función para actualizarlo.\n\n**Conceptos clave:**\n- **Estado local**: Cada componente tiene su propio estado\n- **Actualizaciones asíncronas**: Las actualizaciones pueden agruparse\n- **Re-renderizado**: El componente se re-renderiza cuando el estado cambia\n- **Inicialización**: Puede ser un valor o una función\n\n**Sintaxis básica:**\n```javascript\nconst [estado, setEstado] = useState(valorInicial);\n```\n\n**Ejemplos prácticos:**\n```javascript\nimport { useState } from 'react';\n\n// Estado simple\nfunction Contador() {\n  const [count, setCount] = useState(0);\n  \n  const incrementar = () => setCount(count + 1);\n  const decrementar = () => setCount(count - 1);\n  const resetear = () => setCount(0);\n  \n  return (\n    <div>\n      <h2>Contador: {count}</h2>\n      <button onClick={incrementar}>+</button>\n      <button onClick={decrementar}>-</button>\n      <button onClick={resetear}>Reset</button>\n    </div>\n  );\n}\n\n// Estado con objeto\nfunction FormularioUsuario() {\n  const [usuario, setUsuario] = useState({\n    nombre: '',\n    email: '',\n    edad: 0\n  });\n  \n  const actualizarCampo = (campo, valor) => {\n    setUsuario(prev => ({\n      ...prev,\n      [campo]: valor\n    }));\n  };\n  \n  return (\n    <form>\n      <input\n        value={usuario.nombre}\n        onChange={(e) => actualizarCampo('nombre', e.target.value)}\n        placeholder=\"Nombre\"\n      />\n      <input\n        value={usuario.email}\n        onChange={(e) => actualizarCampo('email', e.target.value)}\n        placeholder=\"Email\"\n      />\n      <input\n        type=\"number\"\n        value={usuario.edad}\n        onChange={(e) => actualizarCampo('edad', parseInt(e.target.value))}\n        placeholder=\"Edad\"\n      />\n    </form>\n  );\n}\n\n// Estado con array\nfunction ListaTareas() {\n  const [tareas, setTareas] = useState([]);\n  const [nuevaTarea, setNuevaTarea] = useState('');\n  \n  const agregarTarea = () => {\n    if (nuevaTarea.trim()) {\n      setTareas(prev => [...prev, {\n        id: Date.now(),\n        texto: nuevaTarea,\n        completada: false\n      }]);\n      setNuevaTarea('');\n    }\n  };\n  \n  const toggleTarea = (id) => {\n    setTareas(prev => prev.map(tarea =>\n      tarea.id === id ? { ...tarea, completada: !tarea.completada } : tarea\n    ));\n  };\n  \n  return (\n    <div>\n      <input\n        value={nuevaTarea}\n        onChange={(e) => setNuevaTarea(e.target.value)}\n        placeholder=\"Nueva tarea\"\n      />\n      <button onClick={agregarTarea}>Agregar</button>\n      <ul>\n        {tareas.map(tarea => (\n          <li key={tarea.id}>\n            <input\n              type=\"checkbox\"\n              checked={tarea.completada}\n              onChange={() => toggleTarea(tarea.id)}\n            />\n            <span style={{ textDecoration: tarea.completada ? 'line-through' : 'none' }}>\n              {tarea.texto}\n            </span>\n          </li>\n        ))}\n      </ul>\n    </div>\n  );\n}\n```\n\n**Mejores prácticas:**\n- **Actualizaciones funcionales**: Usar `setEstado(prev => newValue)` para evitar problemas de closure\n- **Estado inmutable**: Nunca mutar el estado directamente\n- **Separación de responsabilidades**: Un estado por concepto\n- **Inicialización perezosa**: Usar función para cálculos costosos",
         
-        "useEffect: efectos secundarios": "useEffect permite realizar efectos secundarios en componentes funcionales, reemplazando los métodos de ciclo de vida de los componentes de clase. Se ejecuta después de cada renderizado y puede realizar operaciones como llamadas a APIs, suscripciones, timers, o manipulación del DOM. useEffect acepta dos parámetros: una función de efecto y un array de dependencias. El array de dependencias controla cuándo se ejecuta el efecto: si está vacío, se ejecuta solo una vez; si contiene valores, se ejecuta cuando esos valores cambian.\n\n**Ejemplos:**\n```javascript\nimport { useState, useEffect } from 'react';\n\nfunction Usuario({ userId }) {\n  const [usuario, setUsuario] = useState(null);\n  \n  // Se ejecuta solo una vez al montar\n  useEffect(() => {\n    fetch(`/api/usuarios/${userId}`)\n      .then(res => res.json())\n      .then(data => setUsuario(data));\n  }, []); // Array vacío = solo al montar\n  \n  // Se ejecuta cuando cambia userId\n  useEffect(() => {\n    if (userId) {\n      fetch(`/api/usuarios/${userId}`)\n        .then(res => res.json())\n        .then(data => setUsuario(data));\n    }\n  }, [userId]); // Se ejecuta cuando userId cambia\n  \n  // Cleanup function\n  useEffect(() => {\n    const timer = setInterval(() => {\n      console.log('Timer ejecutándose');\n    }, 1000);\n    \n    return () => clearInterval(timer); // Cleanup\n  }, []);\n  \n  return <div>{usuario?.nombre}</div>;\n}\n```",
+        "useEffect: Efectos secundarios, cleanup y dependencias": "useEffect permite realizar efectos secundarios en componentes funcionales, reemplazando los métodos de ciclo de vida de los componentes de clase.\n\n**Conceptos clave:**\n- **Efectos secundarios**: Operaciones que afectan el mundo exterior\n- **Dependencias**: Controlan cuándo se ejecuta el efecto\n- **Cleanup**: Limpieza de recursos para evitar memory leaks\n- **Timing**: Se ejecuta después del renderizado\n\n**Sintaxis:**\n```javascript\nuseEffect(() => {\n  // Efecto\n  return () => {\n    // Cleanup (opcional)\n  };\n}, [dependencias]);\n```\n\n**Tipos de dependencias:**\n- **`[]`**: Se ejecuta solo una vez (componentDidMount)\n- **`[valor]`**: Se ejecuta cuando `valor` cambia\n- **Sin array**: Se ejecuta en cada renderizado\n\n**Ejemplos prácticos:**\n```javascript\nimport { useState, useEffect } from 'react';\n\n// 1. Efecto con dependencias\nfunction Usuario({ userId }) {\n  const [usuario, setUsuario] = useState(null);\n  const [loading, setLoading] = useState(false);\n  \n  useEffect(() => {\n    if (!userId) return;\n    \n    setLoading(true);\n    fetch(`/api/usuarios/${userId}`)\n      .then(res => res.json())\n      .then(data => {\n        setUsuario(data);\n        setLoading(false);\n      })\n      .catch(error => {\n        console.error('Error:', error);\n        setLoading(false);\n      });\n  }, [userId]); // Se ejecuta cuando userId cambia\n  \n  if (loading) return <div>Cargando...</div>;\n  return <div>{usuario?.nombre}</div>;\n}\n\n// 2. Efecto con cleanup\nfunction Timer() {\n  const [count, setCount] = useState(0);\n  \n  useEffect(() => {\n    const interval = setInterval(() => {\n      setCount(prev => prev + 1);\n    }, 1000);\n    \n    return () => clearInterval(interval); // Cleanup\n  }, []); // Solo al montar\n  \n  return <div>Timer: {count}</div>;\n}\n\n// 3. Efecto para suscripciones\nfunction ChatRoom({ roomId }) {\n  const [messages, setMessages] = useState([]);\n  \n  useEffect(() => {\n    const socket = new WebSocket(`ws://localhost:8080/room/${roomId}`);\n    \n    socket.onmessage = (event) => {\n      const message = JSON.parse(event.data);\n      setMessages(prev => [...prev, message]);\n    };\n    \n    return () => socket.close(); // Cleanup\n  }, [roomId]);\n  \n  return (\n    <div>\n      {messages.map(msg => (\n        <div key={msg.id}>{msg.text}</div>\n      ))}\n    </div>\n  );\n}\n\n// 4. Efecto para manipulación del DOM\nfunction FocusInput() {\n  const [inputValue, setInputValue] = useState('');\n  const inputRef = useRef(null);\n  \n  useEffect(() => {\n    if (inputRef.current) {\n      inputRef.current.focus();\n    }\n  }, []);\n  \n  return (\n    <input\n      ref={inputRef}\n      value={inputValue}\n      onChange={(e) => setInputValue(e.target.value)}\n    />\n  );\n}\n\n// 5. Efecto para actualizar título\nfunction DocumentTitle({ title }) {\n  useEffect(() => {\n    document.title = title;\n  }, [title]);\n  \n  return null;\n}\n```\n\n**Mejores prácticas:**\n- **Dependencias exactas**: Incluir todas las variables del efecto\n- **Cleanup necesario**: Limpiar timers, suscripciones, event listeners\n- **Efectos separados**: Un useEffect por responsabilidad\n- **Evitar dependencias innecesarias**: Usar useCallback para funciones",
         
-        "Reglas de los hooks": "Los hooks tienen dos reglas fundamentales: 1) Solo llamar hooks en el nivel superior de componentes funcionales o hooks personalizados, nunca dentro de bucles, condiciones o funciones anidadas. 2) Solo llamar hooks de React, no hooks personalizados dentro de funciones regulares. Estas reglas aseguran que los hooks se llamen en el mismo orden en cada renderizado, lo cual es crucial para que React mantenga el estado correctamente entre renderizados. Violar estas reglas puede causar bugs difíciles de encontrar.",
+        "useReducer: Estado complejo y lógica de actualización": "useReducer es una alternativa a useState para manejar estado complejo. Es especialmente útil cuando el estado tiene múltiples subvalores o cuando las actualizaciones dependen del estado anterior.\n\n**Conceptos clave:**\n- **Reducer**: Función pura que toma estado y acción, retorna nuevo estado\n- **Dispatch**: Función para enviar acciones al reducer\n- **Acciones**: Objetos que describen qué cambio hacer\n- **Estado inmutable**: El reducer nunca muta el estado original\n\n**Sintaxis:**\n```javascript\nconst [estado, dispatch] = useReducer(reducer, estadoInicial);\n```\n\n**Ejemplos prácticos:**\n```javascript\nimport { useReducer } from 'react';\n\n// 1. Contador con useReducer\nconst initialState = { count: 0 };\n\nfunction counterReducer(state, action) {\n  switch (action.type) {\n    case 'increment':\n      return { count: state.count + 1 };\n    case 'decrement':\n      return { count: state.count - 1 };\n    case 'reset':\n      return { count: 0 };\n    case 'set':\n      return { count: action.payload };\n    default:\n      return state;\n  }\n}\n\nfunction Contador() {\n  const [state, dispatch] = useReducer(counterReducer, initialState);\n  \n  return (\n    <div>\n      <h2>Count: {state.count}</h2>\n      <button onClick={() => dispatch({ type: 'increment' })}>+</button>\n      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>\n      <button onClick={() => dispatch({ type: 'reset' })}>Reset</button>\n      <button onClick={() => dispatch({ type: 'set', payload: 10 })}>\n        Set to 10\n      </button>\n    </div>\n  );\n}\n\n// 2. Formulario complejo con useReducer\nconst formInitialState = {\n  values: { name: '', email: '', age: 0 },\n  errors: {},\n  isSubmitting: false,\n  isSubmitted: false\n};\n\nfunction formReducer(state, action) {\n  switch (action.type) {\n    case 'SET_FIELD':\n      return {\n        ...state,\n        values: {\n          ...state.values,\n          [action.field]: action.value\n        },\n        errors: {\n          ...state.errors,\n          [action.field]: ''\n        }\n      };\n    case 'SET_ERROR':\n      return {\n        ...state,\n        errors: {\n          ...state.errors,\n          [action.field]: action.error\n        }\n      };\n    case 'SET_SUBMITTING':\n      return {\n        ...state,\n        isSubmitting: action.isSubmitting\n      };\n    case 'SUBMIT_SUCCESS':\n      return {\n        ...state,\n        isSubmitted: true,\n        isSubmitting: false\n      };\n    case 'RESET':\n      return formInitialState;\n    default:\n      return state;\n  }\n}\n\nfunction FormularioComplejo() {\n  const [state, dispatch] = useReducer(formReducer, formInitialState);\n  \n  const handleChange = (field, value) => {\n    dispatch({ type: 'SET_FIELD', field, value });\n  };\n  \n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    dispatch({ type: 'SET_SUBMITTING', isSubmitting: true });\n    \n    try {\n      // Simular envío\n      await new Promise(resolve => setTimeout(resolve, 1000));\n      dispatch({ type: 'SUBMIT_SUCCESS' });\n    } catch (error) {\n      dispatch({ type: 'SET_SUBMITTING', isSubmitting: false });\n    }\n  };\n  \n  if (state.isSubmitted) {\n    return <div>¡Formulario enviado exitosamente!</div>;\n  }\n  \n  return (\n    <form onSubmit={handleSubmit}>\n      <input\n        value={state.values.name}\n        onChange={(e) => handleChange('name', e.target.value)}\n        placeholder=\"Nombre\"\n      />\n      <input\n        value={state.values.email}\n        onChange={(e) => handleChange('email', e.target.value)}\n        placeholder=\"Email\"\n      />\n      <input\n        type=\"number\"\n        value={state.values.age}\n        onChange={(e) => handleChange('age', parseInt(e.target.value))}\n        placeholder=\"Edad\"\n      />\n      <button type=\"submit\" disabled={state.isSubmitting}>\n        {state.isSubmitting ? 'Enviando...' : 'Enviar'}\n      </button>\n    </form>\n  );\n}\n\n// 3. Lista de tareas con useReducer\nconst todoInitialState = {\n  todos: [],\n  filter: 'all', // all, active, completed\n  nextId: 1\n};\n\nfunction todoReducer(state, action) {\n  switch (action.type) {\n    case 'ADD_TODO':\n      return {\n        ...state,\n        todos: [...state.todos, {\n          id: state.nextId,\n          text: action.text,\n          completed: false\n        }],\n        nextId: state.nextId + 1\n      };\n    case 'TOGGLE_TODO':\n      return {\n        ...state,\n        todos: state.todos.map(todo =>\n          todo.id === action.id ? { ...todo, completed: !todo.completed } : todo\n        )\n      };\n    case 'DELETE_TODO':\n      return {\n        ...state,\n        todos: state.todos.filter(todo => todo.id !== action.id)\n      };\n    case 'SET_FILTER':\n      return {\n        ...state,\n        filter: action.filter\n      };\n    default:\n      return state;\n  }\n}\n\nfunction TodoApp() {\n  const [state, dispatch] = useReducer(todoReducer, todoInitialState);\n  const [newTodo, setNewTodo] = useState('');\n  \n  const filteredTodos = state.todos.filter(todo => {\n    if (state.filter === 'active') return !todo.completed;\n    if (state.filter === 'completed') return todo.completed;\n    return true;\n  });\n  \n  const addTodo = () => {\n    if (newTodo.trim()) {\n      dispatch({ type: 'ADD_TODO', text: newTodo });\n      setNewTodo('');\n    }\n  };\n  \n  return (\n    <div>\n      <input\n        value={newTodo}\n        onChange={(e) => setNewTodo(e.target.value)}\n        placeholder=\"Nueva tarea\"\n      />\n      <button onClick={addTodo}>Agregar</button>\n      \n      <div>\n        <button onClick={() => dispatch({ type: 'SET_FILTER', filter: 'all' })}>\n          Todas\n        </button>\n        <button onClick={() => dispatch({ type: 'SET_FILTER', filter: 'active' })}>\n          Activas\n        </button>\n        <button onClick={() => dispatch({ type: 'SET_FILTER', filter: 'completed' })}>\n          Completadas\n        </button>\n      </div>\n      \n      <ul>\n        {filteredTodos.map(todo => (\n          <li key={todo.id}>\n            <input\n              type=\"checkbox\"\n              checked={todo.completed}\n              onChange={() => dispatch({ type: 'TOGGLE_TODO', id: todo.id })}\n            />\n            <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>\n              {todo.text}\n            </span>\n            <button onClick={() => dispatch({ type: 'DELETE_TODO', id: todo.id })}>\n              Eliminar\n            </button>\n          </li>\n        ))}\n      </ul>\n    </div>\n  );\n}\n```\n\n**Cuándo usar useReducer vs useState:**\n- **useReducer**: Estado complejo, múltiples subvalores, lógica de actualización compleja\n- **useState**: Estado simple, actualizaciones directas\n- **useReducer**: Mejor para formularios complejos, listas con filtros, estado de autenticación",
         
-        "Hooks personalizados": "Los hooks personalizados son funciones que comienzan con 'use' y pueden llamar otros hooks. Permiten extraer lógica de estado de componentes para reutilizarla entre diferentes componentes. Un hook personalizado puede encapsular lógica compleja, hacer llamadas a APIs, manejar formularios, o cualquier otra funcionalidad que necesite ser compartida. Los hooks personalizados siguen las mismas reglas que los hooks de React y pueden retornar cualquier valor: estado, funciones, objetos, etc.",
+        "useMemo y useCallback: Optimización de rendimiento": "useMemo y useCallback son hooks de optimización que ayudan a prevenir cálculos innecesarios y re-renderizados.\n\n**useMemo - Memoización de valores:**\n- **Propósito**: Memoriza el resultado de un cálculo costoso\n- **Cuándo usar**: Cálculos complejos, transformaciones de datos, filtros\n- **Dependencias**: Se recalcula solo cuando las dependencias cambian\n\n**useCallback - Memoización de funciones:**\n- **Propósito**: Memoriza una función para evitar recrearla en cada render\n- **Cuándo usar**: Funciones pasadas como props, dependencias de useEffect\n- **Dependencias**: Se recrea solo cuando las dependencias cambian\n\n**Ejemplos prácticos:**\n```javascript\nimport { useState, useMemo, useCallback } from 'react';\n\n// 1. useMemo para cálculos costosos\nfunction ListaProductos({ productos, filtro, orden }) {\n  // Cálculo costoso que se memoriza\n  const productosFiltrados = useMemo(() => {\n    console.log('Filtrando productos...'); // Solo se ejecuta cuando cambia filtro\n    \n    return productos\n      .filter(producto => \n        producto.nombre.toLowerCase().includes(filtro.toLowerCase())\n      )\n      .sort((a, b) => {\n        if (orden === 'precio') return a.precio - b.precio;\n        if (orden === 'nombre') return a.nombre.localeCompare(b.nombre);\n        return 0;\n      });\n  }, [productos, filtro, orden]); // Dependencias\n  \n  return (\n    <div>\n      {productosFiltrados.map(producto => (\n        <div key={producto.id}>\n          <h3>{producto.nombre}</h3>\n          <p>Precio: ${producto.precio}</p>\n        </div>\n      ))}\n    </div>\n  );\n}\n\n// 2. useCallback para funciones\nfunction Contador({ inicial, paso }) {\n  const [count, setCount] = useState(inicial);\n  \n  // Función memorizada que no se recrea en cada render\n  const incrementar = useCallback(() => {\n    setCount(prev => prev + paso);\n  }, [paso]); // Solo se recrea si cambia 'paso'\n  \n  const decrementar = useCallback(() => {\n    setCount(prev => prev - paso);\n  }, [paso]);\n  \n  const resetear = useCallback(() => {\n    setCount(inicial);\n  }, [inicial]);\n  \n  return (\n    <div>\n      <h2>Contador: {count}</h2>\n      <button onClick={incrementar}>+{paso}</button>\n      <button onClick={decrementar}>-{paso}</button>\n      <button onClick={resetear}>Reset</button>\n    </div>\n  );\n}\n\n// 3. Combinación de useMemo y useCallback\nfunction ListaTareas({ tareas, filtro }) {\n  const [nuevaTarea, setNuevaTarea] = useState('');\n  \n  // Memoizar la lista filtrada\n  const tareasFiltradas = useMemo(() => {\n    return tareas.filter(tarea => {\n      if (filtro === 'todas') return true;\n      if (filtro === 'activas') return !tarea.completada;\n      if (filtro === 'completadas') return tarea.completada;\n      return true;\n    });\n  }, [tareas, filtro]);\n  \n  // Memoizar estadísticas\n  const estadisticas = useMemo(() => {\n    const total = tareas.length;\n    const completadas = tareas.filter(t => t.completada).length;\n    const activas = total - completadas;\n    \n    return { total, completadas, activas };\n  }, [tareas]);\n  \n  // Funciones memoizadas\n  const agregarTarea = useCallback((texto) => {\n    if (texto.trim()) {\n      // Lógica para agregar tarea\n      console.log('Agregando tarea:', texto);\n    }\n  }, []); // Sin dependencias\n  \n  const toggleTarea = useCallback((id) => {\n    // Lógica para toggle tarea\n    console.log('Toggle tarea:', id);\n  }, []);\n  \n  const eliminarTarea = useCallback((id) => {\n    // Lógica para eliminar tarea\n    console.log('Eliminar tarea:', id);\n  }, []);\n  \n  return (\n    <div>\n      <div>\n        <p>Total: {estadisticas.total}</p>\n        <p>Activas: {estadisticas.activas}</p>\n        <p>Completadas: {estadisticas.completadas}</p>\n      </div>\n      \n      <input\n        value={nuevaTarea}\n        onChange={(e) => setNuevaTarea(e.target.value)}\n        placeholder=\"Nueva tarea\"\n      />\n      <button onClick={() => agregarTarea(nuevaTarea)}>\n        Agregar\n      </button>\n      \n      <ul>\n        {tareasFiltradas.map(tarea => (\n          <li key={tarea.id}>\n            <input\n              type=\"checkbox\"\n              checked={tarea.completada}\n              onChange={() => toggleTarea(tarea.id)}\n            />\n            <span>{tarea.texto}</span>\n            <button onClick={() => eliminarTarea(tarea.id)}>\n              Eliminar\n            </button>\n          </li>\n        ))}\n      </ul>\n    </div>\n  );\n}\n\n// 4. useMemo para objetos complejos\nfunction UsuarioCard({ usuario, onEdit, onDelete }) {\n  // Memoizar objeto de estilo para evitar recreación\n  const cardStyle = useMemo(() => ({\n    border: '1px solid #ccc',\n    borderRadius: '8px',\n    padding: '16px',\n    margin: '8px',\n    backgroundColor: usuario.activo ? '#f0f8ff' : '#f5f5f5'\n  }), [usuario.activo]);\n  \n  // Memoizar datos procesados\n  const datosProcesados = useMemo(() => ({\n    nombreCompleto: `${usuario.nombre} ${usuario.apellido}`,\n    edad: new Date().getFullYear() - usuario.añoNacimiento,\n    estado: usuario.activo ? 'Activo' : 'Inactivo'\n  }), [usuario.nombre, usuario.apellido, usuario.añoNacimiento, usuario.activo]);\n  \n  return (\n    <div style={cardStyle}>\n      <h3>{datosProcesados.nombreCompleto}</h3>\n      <p>Edad: {datosProcesados.edad}</p>\n      <p>Estado: {datosProcesados.estado}</p>\n      <button onClick={() => onEdit(usuario.id)}>Editar</button>\n      <button onClick={() => onDelete(usuario.id)}>Eliminar</button>\n    </div>\n  );\n}\n```\n\n**Mejores prácticas:**\n- **No sobre-optimizar**: Solo usar cuando hay problemas de rendimiento reales\n- **Dependencias exactas**: Incluir todas las variables que usa la función/valor\n- **Medir antes de optimizar**: Usar React DevTools Profiler\n- **useMemo para valores**: Cálculos costosos, objetos complejos\n- **useCallback para funciones**: Props de componentes hijos, dependencias de useEffect",
         
         "useContext para estado global": "useContext permite consumir un contexto de React sin necesidad de usar el patrón Provider/Consumer. Es útil para compartir datos entre componentes que están muy separados en el árbol de componentes, evitando el 'prop drilling'. useContext acepta un objeto de contexto creado con React.createContext() y retorna el valor actual de ese contexto. Es especialmente útil para temas, autenticación, configuración global, o cualquier dato que necesite ser accesible desde múltiples componentes."
       },
       practical: [
-        "Implementar useState en componentes",
-        "Usar useEffect para efectos secundarios",
-        "Crear hooks personalizados",
-        "Proyecto: aplicación con hooks",
-        "Optimizar rendimiento con hooks"
+        "Implementar useState: estado simple y complejo con objetos y arrays",
+        "Usar useEffect: efectos secundarios, cleanup y dependencias",
+        "Crear hooks personalizados: lógica reutilizable y mejores prácticas",
+        "Implementar useReducer: estado complejo y lógica de actualización",
+        "Optimizar rendimiento: useMemo y useCallback en aplicaciones reales",
+        "Proyecto: Aplicación de gestión de tareas con hooks avanzados"
       ]
     },
     activities: [
       {
-        title: "useState y useEffect",
+        title: "useState y useEffect avanzados",
         duration: "60 min",
-        description: "Implementar manejo de estado y efectos secundarios"
+        description: "Implementar estado complejo con objetos y arrays, efectos secundarios con cleanup"
+      },
+      {
+        title: "useReducer y estado complejo",
+        duration: "45 min",
+        description: "Manejar estado complejo con useReducer, formularios y listas"
       },
       {
         title: "Hooks personalizados",
-        duration: "60 min",
-        description: "Crear hooks reutilizables para lógica común"
+        duration: "45 min",
+        description: "Crear hooks reutilizables para lógica común y APIs"
       },
       {
-        title: "Optimización",
+        title: "Optimización de rendimiento",
         duration: "30 min",
-        description: "Optimizar rendimiento con hooks"
+        description: "Implementar useMemo y useCallback para optimizar aplicaciones"
       }
     ],
     homework: [
-      "Crear hook personalizado para formularios",
-      "Implementar hook para consumo de API",
-      "Optimizar componentes con hooks"
+      "Crear aplicación con useReducer para manejo de estado complejo",
+      "Implementar hooks personalizados: useForm, useApi, useLocalStorage",
+      "Optimizar aplicación con useMemo y useCallback",
+      "Crear sistema de tareas con filtros, búsqueda y estadísticas",
+      "Implementar formularios complejos con validación y estados de carga"
     ],
     materials: [
       "Node.js instalado",
@@ -3869,62 +6061,85 @@ export default App;`
     level: "Intermedio-Avanzado",
     completed: false,
     objectives: [
-      "Implementar routing en React",
-      "Usar React Router para navegación",
-      "Manejar rutas protegidas",
-      "Implementar navegación programática"
+      "Dominar React Router: configuración, componentes y hooks esenciales",
+      "Implementar navegación declarativa y programática con ejemplos prácticos",
+      "Crear rutas anidadas, layouts y sistemas de navegación complejos",
+      "Implementar rutas protegidas con autenticación y autorización",
+      "Manejar parámetros de URL, query strings y navegación avanzada",
+      "Proyecto: Aplicación completa con sistema de routing profesional"
     ],
     content: {
       theoretical: [
-        "¿Qué es el routing en SPA?",
-        "React Router: instalación y configuración",
-        "Componentes: BrowserRouter, Routes, Route",
-        "Navegación: Link, NavLink, useNavigate",
-        "Rutas anidadas y layouts",
-        "Rutas protegidas y autenticación"
+        "Routing en SPA: Conceptos fundamentales y diferencias con aplicaciones tradicionales",
+        "React Router v6: Instalación, configuración y componentes principales",
+        "Navegación declarativa: Link, NavLink y componentes de navegación",
+        "Navegación programática: useNavigate, useLocation y hooks de routing",
+        "Rutas dinámicas: Parámetros, query strings y navegación avanzada",
+        "Rutas anidadas y layouts: Estructura jerárquica y componentes compartidos",
+        "Rutas protegidas: Autenticación, autorización y redirecciones",
+        "Optimización: Lazy loading, code splitting y rendimiento de routing"
       ],
       theoreticalDetails: {
-        "¿Qué es el routing en SPA?": "El routing en Single Page Applications (SPA) permite navegar entre diferentes vistas sin recargar la página completa. A diferencia de las aplicaciones tradicionales donde cada página requiere una nueva solicitud al servidor, las SPA cargan una sola página HTML y usan JavaScript para cambiar el contenido dinámicamente. El routing se basa en la URL del navegador para determinar qué componente mostrar. Esto proporciona una experiencia de usuario más fluida y rápida, similar a las aplicaciones nativas.",
+        "Routing en SPA: Conceptos fundamentales y diferencias con aplicaciones tradicionales": "El routing en Single Page Applications (SPA) permite navegar entre diferentes vistas sin recargar la página completa, proporcionando una experiencia de usuario fluida y rápida.\n\n**Conceptos fundamentales:**\n- **SPA vs MPA**: Una sola página HTML vs múltiples páginas del servidor\n- **Client-side routing**: Navegación manejada por JavaScript en el navegador\n- **History API**: Manipulación del historial del navegador sin recargas\n- **Estado de la aplicación**: Mantenimiento del estado entre navegaciones\n\n**Ventajas de SPA:**\n- **Rendimiento**: No recarga recursos estáticos (CSS, JS)\n- **Experiencia fluida**: Transiciones suaves entre vistas\n- **Estado persistente**: Mantiene datos en memoria\n- **Offline capability**: Funciona sin conexión (con service workers)\n\n**Desafíos de SPA:**\n- **SEO**: Contenido no indexable inicialmente\n- **Carga inicial**: Mayor tiempo de carga inicial\n- **Complejidad**: Manejo de estado y routing\n- **Navegación**: Botones atrás/adelante del navegador\n\n**Ejemplo de routing básico:**\n```javascript\n// Aplicación tradicional (MPA)\n// Página 1: /home.html\n// Página 2: /about.html\n// Página 3: /contact.html\n// Cada navegación = nueva solicitud al servidor\n\n// Aplicación SPA\n// Una página: /index.html\n// Navegación: /home, /about, /contact\n// Cambio de contenido sin recargar la página\n\n// Ejemplo de implementación básica\nfunction App() {\n  const [currentPage, setCurrentPage] = useState('home');\n  \n  const renderPage = () => {\n    switch(currentPage) {\n      case 'home': return <Home />;\n      case 'about': return <About />;\n      case 'contact': return <Contact />;\n      default: return <NotFound />;\n    }\n  };\n  \n  return (\n    <div>\n      <nav>\n        <button onClick={() => setCurrentPage('home')}>Home</button>\n        <button onClick={() => setCurrentPage('about')}>About</button>\n        <button onClick={() => setCurrentPage('contact')}>Contact</button>\n      </nav>\n      <main>{renderPage()}</main>\n    </div>\n  );\n}\n```",
         
-        "React Router: instalación y configuración": "React Router es la librería estándar para routing en aplicaciones React. Se instala con npm install react-router-dom y proporciona componentes y hooks para manejar la navegación. La configuración básica incluye envolver la aplicación con BrowserRouter, que utiliza la API History del navegador para manejar la URL. React Router v6 introdujo cambios significativos en la API, simplificando muchos conceptos y mejorando el rendimiento. La configuración típica incluye definir rutas con el componente Routes y Route.",
+        "React Router v6: Instalación, configuración y componentes principales": "React Router es la librería estándar para routing en aplicaciones React, proporcionando una solución completa para navegación client-side.\n\n**Instalación:**\n```bash\n# Instalar React Router v6\nnpm install react-router-dom\n\n# O con yarn\n yarn add react-router-dom\n```\n\n**Configuración básica:**\n```javascript\n// main.jsx o index.js\nimport React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport { BrowserRouter } from 'react-router-dom';\nimport App from './App';\n\nconst root = ReactDOM.createRoot(document.getElementById('root'));\n\nroot.render(\n  <React.StrictMode>\n    <BrowserRouter>\n      <App />\n    </BrowserRouter>\n  </React.StrictMode>\n);\n```\n\n**Componentes principales:**\n\n**1. BrowserRouter:**\n- **Propósito**: Proporciona contexto de routing a toda la aplicación\n- **Características**: Usa HTML5 History API, URLs limpias sin hash\n- **Uso**: Envolver la aplicación completa\n\n**2. Routes:**\n- **Propósito**: Contenedor que agrupa múltiples Route\n- **Características**: Determina qué ruta renderizar basándose en la URL\n- **Uso**: Reemplaza Switch de versiones anteriores\n\n**3. Route:**\n- **Propósito**: Define una ruta específica\n- **Propiedades**: `path` (URL), `element` (componente a renderizar)\n- **Características**: Soporta rutas dinámicas y comodín\n\n**Ejemplo completo:**\n```javascript\nimport { BrowserRouter, Routes, Route } from 'react-router-dom';\nimport Home from './pages/Home';\nimport About from './pages/About';\nimport Contact from './pages/Contact';\nimport NotFound from './pages/NotFound';\n\nfunction App() {\n  return (\n    <BrowserRouter>\n      <Routes>\n        <Route path=\"/\" element={<Home />} />\n        <Route path=\"/about\" element={<About />} />\n        <Route path=\"/contact\" element={<Contact />} />\n        <Route path=\"*\" element={<NotFound />} />\n      </Routes>\n    </BrowserRouter>\n  );\n}\n\nexport default App;\n```\n\n**Diferencias con React Router v5:**\n- **Routes vs Switch**: Routes es más inteligente en matching\n- **element vs component**: Usar JSX directamente\n- **useNavigate vs useHistory**: API simplificada\n- **Rutas anidadas**: Estructura más clara y flexible",
         
-        "Componentes: BrowserRouter, Routes, Route": "BrowserRouter es el componente principal que proporciona el contexto de routing a toda la aplicación. Routes actúa como un contenedor que agrupa múltiples Route y determina cuál renderizar basándose en la URL actual. Route define una ruta específica con propiedades como 'path' (la URL) y 'element' (el componente a renderizar). También soporta rutas dinámicas con parámetros usando ':param' y rutas comodín con '*'. Los componentes pueden ser elementos JSX o referencias a componentes.",
+        "Componentes: BrowserRouter, Routes, Route": "BrowserRouter es el componente principal que proporciona el contexto de routing a toda la aplicación. Routes actúa como un contenedor que agrupa múltiples Route y determina cuál renderizar basándose en la URL actual. Route define una ruta específica con propiedades como 'path' (la URL) y 'element' (el componente a renderizar). También soporta rutas dinámicas con parámetros usando ':param' y rutas comodín con '*'. Los componentes pueden ser elementos JSX o referencias a componentes.\n\n**Ejemplo básico de configuración:**\n```jsx\n// App.jsx\nimport { BrowserRouter, Routes, Route } from 'react-router-dom';\nimport Home from './pages/Home';\nimport About from './pages/About';\nimport Contact from './pages/Contact';\nimport UserProfile from './pages/UserProfile';\nimport NotFound from './pages/NotFound';\n\nfunction App() {\n  return (\n    <BrowserRouter>\n      <div className=\"app\">\n        <Routes>\n          {/* Ruta exacta */}\n          <Route path=\"/\" element={<Home />} />\n          \n          {/* Rutas estáticas */}\n          <Route path=\"/about\" element={<About />} />\n          <Route path=\"/contact\" element={<Contact />} />\n          \n          {/* Ruta dinámica con parámetro */}\n          <Route path=\"/user/:id\" element={<UserProfile />} />\n          \n          {/* Ruta comodín para 404 */}\n          <Route path=\"*\" element={<NotFound />} />\n        </Routes>\n      </div>\n    </BrowserRouter>\n  );\n}\n\nexport default App;\n```\n\n**Ejemplo de rutas dinámicas:**\n```jsx\n// UserProfile.jsx\nimport { useParams } from 'react-router-dom';\n\nfunction UserProfile() {\n  const { id } = useParams();\n  \n  return (\n    <div>\n      <h1>Perfil del Usuario</h1>\n      <p>ID del usuario: {id}</p>\n    </div>\n  );\n}\n\nexport default UserProfile;\n```\n\n**Ejemplo con múltiples parámetros:**\n```jsx\n// Rutas con múltiples parámetros\n<Route path=\"/user/:userId/post/:postId\" element={<UserPost />} />\n\n// En el componente\nfunction UserPost() {\n  const { userId, postId } = useParams();\n  \n  return (\n    <div>\n      <h1>Post del Usuario</h1>\n      <p>Usuario: {userId}</p>\n      <p>Post: {postId}</p>\n    </div>\n  );\n}\n```\n\n**Ejemplo de rutas opcionales:**\n```jsx\n// Ruta con parámetro opcional\n<Route path=\"/blog/:slug?\" element={<BlogPost />} />\n\n// En el componente\nfunction BlogPost() {\n  const { slug } = useParams();\n  \n  if (slug) {\n    return <div>Mostrando post: {slug}</div>;\n  }\n  \n  return <div>Lista de todos los posts</div>;\n}\n```",
         
-        "Navegación: Link, NavLink, useNavigate": "Link es el componente principal para navegación declarativa, similar a un enlace HTML pero sin recargar la página. NavLink extiende Link con funcionalidades adicionales como estilos activos cuando la ruta coincide. useNavigate es un hook para navegación programática, útil para navegar después de acciones como envío de formularios o autenticación. También permite navegación hacia atrás/adelante y reemplazar la entrada actual del historial. La navegación programática es especialmente útil para flujos de usuario complejos.",
+        "Navegación declarativa: Link, NavLink y componentes de navegación": "React Router proporciona componentes para navegación declarativa que permiten crear enlaces sin recargar la página. Link es el componente básico para navegación, similar a un enlace HTML pero con routing. NavLink extiende Link con funcionalidades adicionales como estilos activos cuando la ruta coincide. Los componentes Link y NavLink permiten navegación declarativa con props como 'to' para la ruta destino y 'replace' para reemplazar el historial. NavLink incluye props adicionales como 'className', 'activeClassName', 'style' y 'activeStyle' para personalizar la apariencia cuando la ruta está activa.\n\n**Ejemplo básico de Link:**\n```jsx\n// Navigation.jsx\nimport { Link } from 'react-router-dom';\n\nfunction Navigation() {\n  return (\n    <nav>\n      <ul>\n        <li>\n          <Link to=\"/\">Inicio</Link>\n        </li>\n        <li>\n          <Link to=\"/about\">Acerca de</Link>\n        </li>\n        <li>\n          <Link to=\"/contact\">Contacto</Link>\n        </li>\n        <li>\n          <Link to=\"/user/123\">Mi Perfil</Link>\n        </li>\n      </ul>\n    </nav>\n  );\n}\n\nexport default Navigation;\n```\n\n**Ejemplo con NavLink y estilos activos:**\n```jsx\n// NavigationWithStyles.jsx\nimport { NavLink } from 'react-router-dom';\nimport './Navigation.css';\n\nfunction NavigationWithStyles() {\n  return (\n    <nav className=\"main-nav\">\n      <ul>\n        <li>\n          <NavLink \n            to=\"/\" \n            className={({ isActive }) => \n              isActive ? 'nav-link active' : 'nav-link'\n            }\n          >\n            Inicio\n          </NavLink>\n        </li>\n        <li>\n          <NavLink \n            to=\"/about\"\n            className={({ isActive }) => \n              isActive ? 'nav-link active' : 'nav-link'\n            }\n          >\n            Acerca de\n          </NavLink>\n        </li>\n        <li>\n          <NavLink \n            to=\"/contact\"\n            className={({ isActive }) => \n              isActive ? 'nav-link active' : 'nav-link'\n            }\n          >\n            Contacto\n          </NavLink>\n        </li>\n      </ul>\n    </nav>\n  );\n}\n\nexport default NavigationWithStyles;\n```\n\n**CSS para estilos activos:**\n```css\n/* Navigation.css */\n.nav-link {\n  padding: 8px 16px;\n  text-decoration: none;\n  color: #333;\n  border-radius: 4px;\n  transition: all 0.3s ease;\n}\n\n.nav-link:hover {\n  background-color: #f0f0f0;\n  color: #007bff;\n}\n\n.nav-link.active {\n  background-color: #007bff;\n  color: white;\n  font-weight: bold;\n}\n```\n\n**Ejemplo con NavLink y estilos inline:**\n```jsx\n// NavigationInline.jsx\nimport { NavLink } from 'react-router-dom';\n\nfunction NavigationInline() {\n  return (\n    <nav>\n      <NavLink \n        to=\"/\"\n        style={({ isActive }) => ({\n          color: isActive ? 'red' : 'blue',\n          fontWeight: isActive ? 'bold' : 'normal',\n          textDecoration: 'none',\n          margin: '0 10px'\n        })}\n      >\n        Inicio\n      </NavLink>\n      \n      <NavLink \n        to=\"/about\"\n        style={({ isActive }) => ({\n          color: isActive ? 'red' : 'blue',\n          fontWeight: isActive ? 'bold' : 'normal',\n          textDecoration: 'none',\n          margin: '0 10px'\n        })}\n      >\n        Acerca de\n      </NavLink>\n    </nav>\n  );\n}\n\nexport default NavigationInline;\n```\n\n**Ejemplo con Link y replace:**\n```jsx\n// NavigationReplace.jsx\nimport { Link } from 'react-router-dom';\n\nfunction NavigationReplace() {\n  return (\n    <nav>\n      <Link to=\"/\" replace>\n        Inicio (reemplaza historial)\n      </Link>\n      \n      <Link to=\"/about\">\n        Acerca de (agrega al historial)\n      </Link>\n    </nav>\n  );\n}\n\nexport default NavigationReplace;\n```\n\n**Ejemplo de navegación con parámetros:**\n```jsx\n// UserNavigation.jsx\nimport { Link } from 'react-router-dom';\n\nfunction UserNavigation({ userId }) {\n  return (\n    <nav>\n      <Link to={`/user/${userId}`}>\n        Mi Perfil\n      </Link>\n      \n      <Link to={`/user/${userId}/posts`}>\n        Mis Posts\n      </Link>\n      \n      <Link to={`/user/${userId}/settings`}>\n        Configuración\n      </Link>\n    </nav>\n  );\n}\n\nexport default UserNavigation;\n```",
         
-        "Rutas anidadas y layouts": "Las rutas anidadas permiten crear jerarquías de navegación donde componentes padre contienen componentes hijo. Esto es útil para layouts compartidos, como un header y sidebar que permanecen mientras cambia el contenido principal. Se implementan usando Route anidados dentro de otros Route, o usando Outlet para renderizar componentes hijo. Los layouts pueden ser componentes que envuelven el contenido y proporcionan estructura común, navegación, o funcionalidades compartidas como autenticación o temas.",
+        "Rutas anidadas y layouts": "Las rutas anidadas permiten crear jerarquías de navegación donde componentes padre contienen componentes hijo. Esto es útil para layouts compartidos, como un header y sidebar que permanecen mientras cambia el contenido principal. Se implementan usando Route anidados dentro de otros Route, o usando Outlet para renderizar componentes hijo. Los layouts pueden ser componentes que envuelven el contenido y proporcionan estructura común, navegación, o funcionalidades compartidas como autenticación o temas.\n\n**Ejemplo básico de layout con Outlet:**\n```jsx\n// Layout.jsx\nimport { Outlet } from 'react-router-dom';\nimport Header from './Header';\nimport Sidebar from './Sidebar';\nimport Footer from './Footer';\n\nfunction Layout() {\n  return (\n    <div className=\"app-layout\">\n      <Header />\n      <div className=\"main-content\">\n        <Sidebar />\n        <main className=\"content\">\n          <Outlet />\n        </main>\n      </div>\n      <Footer />\n    </div>\n  );\n}\n\nexport default Layout;\n```\n\n**Configuración de rutas anidadas:**\n```jsx\n// App.jsx\nimport { BrowserRouter, Routes, Route } from 'react-router-dom';\nimport Layout from './Layout';\nimport Home from './pages/Home';\nimport About from './pages/About';\nimport Contact from './pages/Contact';\nimport Dashboard from './pages/Dashboard';\nimport Profile from './pages/Profile';\nimport Settings from './pages/Settings';\n\nfunction App() {\n  return (\n    <BrowserRouter>\n      <Routes>\n        {/* Ruta con layout */}\n        <Route path=\"/\" element={<Layout />}>\n          <Route index element={<Home />} />\n          <Route path=\"about\" element={<About />} />\n          <Route path=\"contact\" element={<Contact />} />\n        </Route>\n        \n        {/* Ruta con layout de dashboard */}\n        <Route path=\"/dashboard\" element={<DashboardLayout />}>\n          <Route index element={<Dashboard />} />\n          <Route path=\"profile\" element={<Profile />} />\n          <Route path=\"settings\" element={<Settings />} />\n        </Route>\n      </Routes>\n    </BrowserRouter>\n  );\n}\n\nexport default App;\n```\n\n**Ejemplo de DashboardLayout:**\n```jsx\n// DashboardLayout.jsx\nimport { Outlet, Link } from 'react-router-dom';\nimport './DashboardLayout.css';\n\nfunction DashboardLayout() {\n  return (\n    <div className=\"dashboard-layout\">\n      <aside className=\"sidebar\">\n        <nav>\n          <Link to=\"/dashboard\">Dashboard</Link>\n          <Link to=\"/dashboard/profile\">Perfil</Link>\n          <Link to=\"/dashboard/settings\">Configuración</Link>\n        </nav>\n      </aside>\n      \n      <main className=\"dashboard-content\">\n        <Outlet />\n      </main>\n    </div>\n  );\n}\n\nexport default DashboardLayout;\n```\n\n**CSS para el layout:**\n```css\n/* DashboardLayout.css */\n.dashboard-layout {\n  display: flex;\n  min-height: 100vh;\n}\n\n.sidebar {\n  width: 250px;\n  background-color: #2c3e50;\n  color: white;\n  padding: 20px;\n}\n\n.sidebar nav {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n\n.sidebar a {\n  color: white;\n  text-decoration: none;\n  padding: 10px;\n  border-radius: 4px;\n  transition: background-color 0.3s;\n}\n\n.sidebar a:hover {\n  background-color: #34495e;\n}\n\n.dashboard-content {\n  flex: 1;\n  padding: 20px;\n  background-color: #f8f9fa;\n}\n```\n\n**Ejemplo de rutas anidadas con parámetros:**\n```jsx\n// Rutas anidadas con parámetros\n<Route path=\"/user/:userId\" element={<UserLayout />}>\n  <Route index element={<UserProfile />} />\n  <Route path=\"posts\" element={<UserPosts />} />\n  <Route path=\"settings\" element={<UserSettings />} />\n  <Route path=\"posts/:postId\" element={<PostDetail />} />\n</Route>\n```\n\n**UserLayout con breadcrumbs:**\n```jsx\n// UserLayout.jsx\nimport { Outlet, Link, useParams, useLocation } from 'react-router-dom';\n\nfunction UserLayout() {\n  const { userId } = useParams();\n  const location = useLocation();\n  \n  const getBreadcrumbs = () => {\n    const pathnames = location.pathname.split('/').filter(x => x);\n    return pathnames.map((name, index) => {\n      const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;\n      return {\n        name: name.charAt(0).toUpperCase() + name.slice(1),\n        route: routeTo\n      };\n    });\n  };\n  \n  return (\n    <div className=\"user-layout\">\n      <nav className=\"breadcrumbs\">\n        <Link to=\"/\">Inicio</Link>\n        {getBreadcrumbs().map((crumb, index) => (\n          <span key={index}>\n            {' > '}\n            <Link to={crumb.route}>{crumb.name}</Link>\n          </span>\n        ))}\n      </nav>\n      \n      <div className=\"user-content\">\n        <Outlet />\n      </div>\n    </div>\n  );\n}\n\nexport default UserLayout;\n```\n\n**Ejemplo de layout con autenticación:**\n```jsx\n// ProtectedLayout.jsx\nimport { Outlet, Navigate } from 'react-router-dom';\nimport { useAuth } from './AuthContext';\n\nfunction ProtectedLayout() {\n  const { isAuthenticated, user } = useAuth();\n  \n  if (!isAuthenticated) {\n    return <Navigate to=\"/login\" replace />;\n  }\n  \n  return (\n    <div className=\"protected-layout\">\n      <header>\n        <h1>Bienvenido, {user.name}</h1>\n        <button onClick={logout}>Cerrar Sesión</button>\n      </header>\n      \n      <main>\n        <Outlet />\n      </main>\n    </div>\n  );\n}\n\nexport default ProtectedLayout;\n```",
         
-        "Rutas protegidas y autenticación": "Las rutas protegidas requieren autenticación antes de permitir el acceso. Se implementan creando componentes wrapper que verifican el estado de autenticación y redirigen a login si es necesario. Esto puede incluir verificar tokens JWT, sesiones, o cualquier otro mecanismo de autenticación. Las rutas protegidas pueden tener diferentes niveles de acceso (admin, usuario, invitado) y pueden redirigir a diferentes páginas según el rol del usuario. También es importante manejar la expiración de sesiones y la renovación automática de tokens."
+        "Navegación programática: useNavigate, useLocation y hooks de routing": "React Router v6 proporciona hooks para navegación programática que permiten cambiar de ruta desde JavaScript. useNavigate reemplaza useHistory de versiones anteriores y proporciona una API más simple. useLocation permite acceder a la información de la ubicación actual, incluyendo pathname, search, hash y state. Estos hooks son esenciales para navegación basada en eventos, formularios y lógica de aplicación.\n\n**Ejemplo básico de useNavigate:**\n```jsx\n// NavigationExample.jsx\nimport { useNavigate } from 'react-router-dom';\n\nfunction NavigationExample() {\n  const navigate = useNavigate();\n  \n  const handleGoHome = () => {\n    navigate('/');\n  };\n  \n  const handleGoBack = () => {\n    navigate(-1); // Ir a la página anterior\n  };\n  \n  const handleGoForward = () => {\n    navigate(1); // Ir a la página siguiente\n  };\n  \n  const handleGoToUser = (userId) => {\n    navigate(`/user/${userId}`);\n  };\n  \n  return (\n    <div>\n      <button onClick={handleGoHome}>Ir a Inicio</button>\n      <button onClick={handleGoBack}>Atrás</button>\n      <button onClick={handleGoForward}>Adelante</button>\n      <button onClick={() => handleGoToUser(123)}>Ver Usuario 123</button>\n    </div>\n  );\n}\n\nexport default NavigationExample;\n```\n\n**Ejemplo con useLocation:**\n```jsx\n// LocationExample.jsx\nimport { useLocation } from 'react-router-dom';\n\nfunction LocationExample() {\n  const location = useLocation();\n  \n  return (\n    <div>\n      <h2>Información de Ubicación</h2>\n      <p><strong>Pathname:</strong> {location.pathname}</p>\n      <p><strong>Search:</strong> {location.search}</p>\n      <p><strong>Hash:</strong> {location.hash}</p>\n      <p><strong>State:</strong> {JSON.stringify(location.state)}</p>\n    </div>\n  );\n}\n\nexport default LocationExample;\n```\n\n**Ejemplo de navegación con estado:**\n```jsx\n// NavigationWithState.jsx\nimport { useNavigate } from 'react-router-dom';\n\nfunction NavigationWithState() {\n  const navigate = useNavigate();\n  \n  const handleNavigateWithState = () => {\n    navigate('/profile', {\n      state: {\n        from: 'dashboard',\n        message: 'Navegación desde dashboard'\n      }\n    });\n  };\n  \n  const handleReplace = () => {\n    navigate('/login', { replace: true });\n  };\n  \n  return (\n    <div>\n      <button onClick={handleNavigateWithState}>\n        Ir a Perfil con Estado\n      </button>\n      <button onClick={handleReplace}>\n        Reemplazar con Login\n      </button>\n    </div>\n  );\n}\n\nexport default NavigationWithState;\n```\n\n**Ejemplo de navegación en formulario:**\n```jsx\n// FormWithNavigation.jsx\nimport { useState } from 'react';\nimport { useNavigate } from 'react-router-dom';\n\nfunction FormWithNavigation() {\n  const [formData, setFormData] = useState({ name: '', email: '' });\n  const navigate = useNavigate();\n  \n  const handleSubmit = (e) => {\n    e.preventDefault();\n    \n    // Procesar formulario\n    console.log('Form data:', formData);\n    \n    // Navegar a página de confirmación\n    navigate('/confirmation', {\n      state: { formData }\n    });\n  };\n  \n  const handleCancel = () => {\n    navigate('/dashboard');\n  };\n  \n  return (\n    <form onSubmit={handleSubmit}>\n      <div>\n        <label>Nombre:</label>\n        <input\n          type=\"text\"\n          value={formData.name}\n          onChange={(e) => setFormData({...formData, name: e.target.value})}\n        />\n      </div>\n      \n      <div>\n        <label>Email:</label>\n        <input\n          type=\"email\"\n          value={formData.email}\n          onChange={(e) => setFormData({...formData, email: e.target.value})}\n        />\n      </div>\n      \n      <button type=\"submit\">Enviar</button>\n      <button type=\"button\" onClick={handleCancel}>Cancelar</button>\n    </form>\n  );\n}\n\nexport default FormWithNavigation;\n```\n\n**Ejemplo de navegación condicional:**\n```jsx\n// ConditionalNavigation.jsx\nimport { useNavigate, useLocation } from 'react-router-dom';\nimport { useEffect } from 'react';\n\nfunction ConditionalNavigation() {\n  const navigate = useNavigate();\n  const location = useLocation();\n  \n  useEffect(() => {\n    // Redirigir si no hay permisos\n    if (location.pathname === '/admin' && !hasAdminAccess()) {\n      navigate('/unauthorized');\n    }\n  }, [location, navigate]);\n  \n  const hasAdminAccess = () => {\n    // Lógica para verificar permisos\n    return localStorage.getItem('userRole') === 'admin';\n  };\n  \n  const handleLogout = () => {\n    localStorage.removeItem('token');\n    navigate('/login', { replace: true });\n  };\n  \n  return (\n    <div>\n      <h1>Panel de Administración</h1>\n      <button onClick={handleLogout}>Cerrar Sesión</button>\n    </div>\n  );\n}\n\nexport default ConditionalNavigation;\n```\n\n**Ejemplo de navegación con query parameters:**\n```jsx\n// QueryNavigation.jsx\nimport { useNavigate, useLocation } from 'react-router-dom';\nimport { useSearchParams } from 'react-router-dom';\n\nfunction QueryNavigation() {\n  const navigate = useNavigate();\n  const location = useLocation();\n  const [searchParams, setSearchParams] = useSearchParams();\n  \n  const handleSearch = (query) => {\n    // Navegar con query parameters\n    navigate(`/search?q=${query}&page=1`);\n  };\n  \n  const handleFilter = (filter) => {\n    // Actualizar query parameters sin cambiar la ruta\n    setSearchParams({ filter, page: '1' });\n  };\n  \n  return (\n    <div>\n      <input\n        type=\"text\"\n        placeholder=\"Buscar...\"\n        onKeyPress={(e) => {\n          if (e.key === 'Enter') {\n            handleSearch(e.target.value);\n          }\n        }}\n      />\n      \n      <select onChange={(e) => handleFilter(e.target.value)}>\n        <option value=\"all\">Todos</option>\n        <option value=\"active\">Activos</option>\n        <option value=\"inactive\">Inactivos</option>\n      </select>\n    </div>\n  );\n}\n\nexport default QueryNavigation;\n```",
+        
+        "Rutas dinámicas: Parámetros, query strings y navegación avanzada": "Las rutas dinámicas permiten crear URLs con parámetros variables que pueden ser accedidos en los componentes. Los parámetros se definen con ':' en la ruta y se acceden con useParams. Los query strings se manejan con useSearchParams y permiten pasar datos adicionales en la URL. Esta funcionalidad es esencial para crear aplicaciones con navegación rica y URLs semánticas.\n\n**Ejemplo básico de parámetros de ruta:**\n```jsx\n// App.jsx\nimport { BrowserRouter, Routes, Route } from 'react-router-dom';\nimport UserProfile from './UserProfile';\nimport PostDetail from './PostDetail';\nimport ProductPage from './ProductPage';\n\nfunction App() {\n  return (\n    <BrowserRouter>\n      <Routes>\n        {/* Parámetro simple */}\n        <Route path=\"/user/:id\" element={<UserProfile />} />\n        \n        {/* Múltiples parámetros */}\n        <Route path=\"/user/:userId/post/:postId\" element={<PostDetail />} />\n        \n        {/* Parámetro opcional */}\n        <Route path=\"/product/:id?\" element={<ProductPage />} />\n        \n        {/* Parámetros con restricciones */}\n        <Route path=\"/user/:id(\\d+)\" element={<UserProfile />} />\n      </Routes>\n    </BrowserRouter>\n  );\n}\n\nexport default App;\n```\n\n**Ejemplo de uso de useParams:**\n```jsx\n// UserProfile.jsx\nimport { useParams, useNavigate } from 'react-router-dom';\nimport { useEffect, useState } from 'react';\n\nfunction UserProfile() {\n  const { id } = useParams();\n  const navigate = useNavigate();\n  const [user, setUser] = useState(null);\n  const [loading, setLoading] = useState(true);\n  \n  useEffect(() => {\n    const fetchUser = async () => {\n      try {\n        const response = await fetch(`/api/users/${id}`);\n        if (response.ok) {\n          const userData = await response.json();\n          setUser(userData);\n        } else {\n          navigate('/not-found');\n        }\n      } catch (error) {\n        console.error('Error fetching user:', error);\n        navigate('/error');\n      } finally {\n        setLoading(false);\n      }\n    };\n    \n    fetchUser();\n  }, [id, navigate]);\n  \n  if (loading) return <div>Cargando...</div>;\n  if (!user) return <div>Usuario no encontrado</div>;\n  \n  return (\n    <div>\n      <h1>Perfil de {user.name}</h1>\n      <p>ID: {id}</p>\n      <p>Email: {user.email}</p>\n      <button onClick={() => navigate(`/user/${id}/edit`)}>\n        Editar Perfil\n      </button>\n    </div>\n  );\n}\n\nexport default UserProfile;\n```\n\n**Ejemplo con query strings:**\n```jsx\n// SearchResults.jsx\nimport { useSearchParams, useNavigate } from 'react-router-dom';\nimport { useEffect, useState } from 'react';\n\nfunction SearchResults() {\n  const [searchParams, setSearchParams] = useSearchParams();\n  const navigate = useNavigate();\n  const [results, setResults] = useState([]);\n  \n  const query = searchParams.get('q');\n  const page = searchParams.get('page') || '1';\n  const category = searchParams.get('category');\n  \n  useEffect(() => {\n    const fetchResults = async () => {\n      const params = new URLSearchParams({\n        q: query,\n        page: page,\n        ...(category && { category })\n      });\n      \n      const response = await fetch(`/api/search?${params}`);\n      const data = await response.json();\n      setResults(data.results);\n    };\n    \n    if (query) {\n      fetchResults();\n    }\n  }, [query, page, category]);\n  \n  const updateFilters = (newFilters) => {\n    const newParams = new URLSearchParams(searchParams);\n    \n    Object.entries(newFilters).forEach(([key, value]) => {\n      if (value) {\n        newParams.set(key, value);\n      } else {\n        newParams.delete(key);\n      }\n    });\n    \n    setSearchParams(newParams);\n  };\n  \n  const goToPage = (newPage) => {\n    navigate(`/search?q=${query}&page=${newPage}`);\n  };\n  \n  return (\n    <div>\n      <h1>Resultados de búsqueda para: {query}</h1>\n      \n      <div className=\"filters\">\n        <select \n          value={category || ''} \n          onChange={(e) => updateFilters({ category: e.target.value })}\n        >\n          <option value=\"\">Todas las categorías</option>\n          <option value=\"tech\">Tecnología</option>\n          <option value=\"business\">Negocios</option>\n        </select>\n      </div>\n      \n      <div className=\"results\">\n        {results.map(result => (\n          <div key={result.id} className=\"result-item\">\n            <h3>{result.title}</h3>\n            <p>{result.description}</p>\n          </div>\n        ))}\n      </div>\n      \n      <div className=\"pagination\">\n        <button onClick={() => goToPage(parseInt(page) - 1)} disabled={page === '1'}>\n          Anterior\n        </button>\n        <span>Página {page}</span>\n        <button onClick={() => goToPage(parseInt(page) + 1)}>\n          Siguiente\n        </button>\n      </div>\n    </div>\n  );\n}\n\nexport default SearchResults;\n```\n\n**Ejemplo de navegación con hash:**\n```jsx\n// HashNavigation.jsx\nimport { useLocation, useNavigate } from 'react-router-dom';\nimport { useEffect } from 'react';\n\nfunction HashNavigation() {\n  const location = useLocation();\n  const navigate = useNavigate();\n  \n  useEffect(() => {\n    // Scroll to element when hash changes\n    if (location.hash) {\n      const element = document.querySelector(location.hash);\n      if (element) {\n        element.scrollIntoView({ behavior: 'smooth' });\n      }\n    }\n  }, [location.hash]);\n  \n  const scrollToSection = (sectionId) => {\n    navigate(`#${sectionId}`);\n  };\n  \n  return (\n    <div>\n      <nav>\n        <button onClick={() => scrollToSection('intro')}>Introducción</button>\n        <button onClick={() => scrollToSection('features')}>Características</button>\n        <button onClick={() => scrollToSection('contact')}>Contacto</button>\n      </nav>\n      \n      <section id=\"intro\">\n        <h2>Introducción</h2>\n        <p>Contenido de introducción...</p>\n      </section>\n      \n      <section id=\"features\">\n        <h2>Características</h2>\n        <p>Contenido de características...</p>\n      </section>\n      \n      <section id=\"contact\">\n        <h2>Contacto</h2>\n        <p>Información de contacto...</p>\n      </section>\n    </div>\n  );\n}\n\nexport default HashNavigation;\n```\n\n**Ejemplo de navegación programática avanzada:**\n```jsx\n// AdvancedNavigation.jsx\nimport { useNavigate, useLocation } from 'react-router-dom';\nimport { useEffect, useRef } from 'react';\n\nfunction AdvancedNavigation() {\n  const navigate = useNavigate();\n  const location = useLocation();\n  const previousLocation = useRef();\n  \n  useEffect(() => {\n    // Guardar ubicación anterior\n    previousLocation.current = location;\n  }, [location]);\n  \n  const handleGoBack = () => {\n    if (previousLocation.current) {\n      navigate(previousLocation.current.pathname);\n    } else {\n      navigate(-1);\n    }\n  };\n  \n  const handleRedirect = (path) => {\n    // Redirigir con reemplazo\n    navigate(path, { replace: true });\n  };\n  \n  const handleNavigateWithState = (path, state) => {\n    navigate(path, { state });\n  };\n  \n  return (\n    <div>\n      <button onClick={handleGoBack}>Volver</button>\n      <button onClick={() => handleRedirect('/home')}>Ir a Home</button>\n      <button onClick={() => handleNavigateWithState('/profile', { from: 'dashboard' })}>\n        Ir a Perfil con Estado\n      </button>\n    </div>\n  );\n}\n\nexport default AdvancedNavigation;\n```",
+        
+        "Rutas protegidas y autenticación": "Las rutas protegidas requieren autenticación antes de permitir el acceso. Se implementan creando componentes wrapper que verifican el estado de autenticación y redirigen a login si es necesario. Esto puede incluir verificar tokens JWT, sesiones, o cualquier otro mecanismo de autenticación. Las rutas protegidas pueden tener diferentes niveles de acceso (admin, usuario, invitado) y pueden redirigir a diferentes páginas según el rol del usuario. También es importante manejar la expiración de sesiones y la renovación automática de tokens.\n\n**Ejemplo básico de componente ProtectedRoute:**\n```jsx\n// ProtectedRoute.jsx\nimport { Navigate } from 'react-router-dom';\nimport { useAuth } from './AuthContext';\n\nfunction ProtectedRoute({ children }) {\n  const { isAuthenticated, loading } = useAuth();\n  \n  if (loading) {\n    return <div>Cargando...</div>;\n  }\n  \n  if (!isAuthenticated) {\n    return <Navigate to=\"/login\" replace />;\n  }\n  \n  return children;\n}\n\nexport default ProtectedRoute;\n```\n\n**Uso de ProtectedRoute:**\n```jsx\n// App.jsx\nimport { BrowserRouter, Routes, Route } from 'react-router-dom';\nimport ProtectedRoute from './ProtectedRoute';\nimport Login from './pages/Login';\nimport Dashboard from './pages/Dashboard';\nimport Profile from './pages/Profile';\nimport AdminPanel from './pages/AdminPanel';\n\nfunction App() {\n  return (\n    <BrowserRouter>\n      <Routes>\n        <Route path=\"/login\" element={<Login />} />\n        \n        <Route path=\"/dashboard\" element={\n          <ProtectedRoute>\n            <Dashboard />\n          </ProtectedRoute>\n        } />\n        \n        <Route path=\"/profile\" element={\n          <ProtectedRoute>\n            <Profile />\n          </ProtectedRoute>\n        } />\n        \n        <Route path=\"/admin\" element={\n          <ProtectedRoute>\n            <AdminPanel />\n          </ProtectedRoute>\n        } />\n      </Routes>\n    </BrowserRouter>\n  );\n}\n\nexport default App;\n```\n\n**Ejemplo de AuthContext:**\n```jsx\n// AuthContext.jsx\nimport { createContext, useContext, useState, useEffect } from 'react';\n\nconst AuthContext = createContext();\n\nexport function useAuth() {\n  return useContext(AuthContext);\n}\n\nexport function AuthProvider({ children }) {\n  const [user, setUser] = useState(null);\n  const [loading, setLoading] = useState(true);\n  \n  useEffect(() => {\n    // Verificar token almacenado\n    const token = localStorage.getItem('token');\n    if (token) {\n      // Validar token con el servidor\n      validateToken(token);\n    } else {\n      setLoading(false);\n    }\n  }, []);\n  \n  const validateToken = async (token) => {\n    try {\n      const response = await fetch('/api/validate-token', {\n        headers: {\n          'Authorization': `Bearer ${token}`\n        }\n      });\n      \n      if (response.ok) {\n        const userData = await response.json();\n        setUser(userData);\n      } else {\n        localStorage.removeItem('token');\n      }\n    } catch (error) {\n      console.error('Error validating token:', error);\n      localStorage.removeItem('token');\n    } finally {\n      setLoading(false);\n    }\n  };\n  \n  const login = async (email, password) => {\n    try {\n      const response = await fetch('/api/login', {\n        method: 'POST',\n        headers: {\n          'Content-Type': 'application/json'\n        },\n        body: JSON.stringify({ email, password })\n      });\n      \n      if (response.ok) {\n        const { token, user } = await response.json();\n        localStorage.setItem('token', token);\n        setUser(user);\n        return { success: true };\n      } else {\n        return { success: false, error: 'Credenciales inválidas' };\n      }\n    } catch (error) {\n      return { success: false, error: 'Error de conexión' };\n    }\n  };\n  \n  const logout = () => {\n    localStorage.removeItem('token');\n    setUser(null);\n  };\n  \n  const value = {\n    user,\n    isAuthenticated: !!user,\n    loading,\n    login,\n    logout\n  };\n  \n  return (\n    <AuthContext.Provider value={value}>\n      {children}\n    </AuthContext.Provider>\n  );\n}\n```\n\n**Ejemplo de rutas con roles:**\n```jsx\n// RoleBasedRoute.jsx\nimport { Navigate } from 'react-router-dom';\nimport { useAuth } from './AuthContext';\n\nfunction RoleBasedRoute({ children, requiredRole }) {\n  const { user, isAuthenticated, loading } = useAuth();\n  \n  if (loading) {\n    return <div>Cargando...</div>;\n  }\n  \n  if (!isAuthenticated) {\n    return <Navigate to=\"/login\" replace />;\n  }\n  \n  if (user.role !== requiredRole) {\n    return <Navigate to=\"/unauthorized\" replace />;\n  }\n  \n  return children;\n}\n\nexport default RoleBasedRoute;\n```\n\n**Uso de rutas con roles:**\n```jsx\n// App.jsx con roles\n<Route path=\"/admin\" element={\n  <RoleBasedRoute requiredRole=\"admin\">\n    <AdminPanel />\n  </RoleBasedRoute>\n} />\n\n<Route path=\"/user\" element={\n  <RoleBasedRoute requiredRole=\"user\">\n    <UserDashboard />\n  </RoleBasedRoute>\n} />\n```\n\n**Ejemplo de componente de Login:**\n```jsx\n// Login.jsx\nimport { useState } from 'react';\nimport { useNavigate, useLocation } from 'react-router-dom';\nimport { useAuth } from './AuthContext';\n\nfunction Login() {\n  const [email, setEmail] = useState('');\n  const [password, setPassword] = useState('');\n  const [error, setError] = useState('');\n  const { login } = useAuth();\n  const navigate = useNavigate();\n  const location = useLocation();\n  \n  const from = location.state?.from?.pathname || '/dashboard';\n  \n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    setError('');\n    \n    const result = await login(email, password);\n    \n    if (result.success) {\n      navigate(from, { replace: true });\n    } else {\n      setError(result.error);\n    }\n  };\n  \n  return (\n    <div className=\"login-container\">\n      <form onSubmit={handleSubmit}>\n        <h2>Iniciar Sesión</h2>\n        \n        {error && <div className=\"error\">{error}</div>}\n        \n        <div>\n          <label>Email:</label>\n          <input\n            type=\"email\"\n            value={email}\n            onChange={(e) => setEmail(e.target.value)}\n            required\n          />\n        </div>\n        \n        <div>\n          <label>Contraseña:</label>\n          <input\n            type=\"password\"\n            value={password}\n            onChange={(e) => setPassword(e.target.value)}\n            required\n          />\n        </div>\n        \n        <button type=\"submit\">Iniciar Sesión</button>\n      </form>\n    </div>\n  );\n}\n\nexport default Login;\n```\n\n**Ejemplo de middleware de autenticación:**\n```jsx\n// AuthMiddleware.jsx\nimport { useEffect } from 'react';\nimport { useAuth } from './AuthContext';\nimport { useNavigate } from 'react-router-dom';\n\nfunction AuthMiddleware({ children }) {\n  const { isAuthenticated, loading } = useAuth();\n  const navigate = useNavigate();\n  \n  useEffect(() => {\n    if (!loading && !isAuthenticated) {\n      navigate('/login');\n    }\n  }, [isAuthenticated, loading, navigate]);\n  \n  if (loading) {\n    return <div>Cargando...</div>;\n  }\n  \n  if (!isAuthenticated) {\n    return null;\n  }\n  \n  return children;\n}\n\nexport default AuthMiddleware;\n```"
       },
       practical: [
-        "Configurar React Router",
-        "Crear rutas y navegación",
-        "Implementar rutas protegidas",
-        "Proyecto: aplicación con routing",
-        "Optimizar navegación"
+        "Configurar React Router v6: instalación, configuración y estructura básica",
+        "Implementar navegación declarativa: Link, NavLink con estilos activos",
+        "Crear navegación programática: useNavigate, useLocation y hooks de routing",
+        "Implementar rutas dinámicas: parámetros, query strings y navegación avanzada",
+        "Crear rutas anidadas y layouts: estructura jerárquica y componentes compartidos",
+        "Implementar rutas protegidas: autenticación, autorización y redirecciones",
+        "Proyecto: Aplicación completa con sistema de routing profesional"
       ]
     },
     activities: [
       {
-        title: "Configuración de React Router",
+        title: "Configuración de React Router v6",
         duration: "45 min",
-        description: "Instalar y configurar React Router en la aplicación"
+        description: "Instalar, configurar y crear estructura básica de routing"
       },
       {
-        title: "Creación de rutas",
+        title: "Navegación declarativa y programática",
         duration: "60 min",
-        description: "Implementar rutas básicas y navegación"
+        description: "Implementar Link, NavLink, useNavigate y useLocation"
       },
       {
-        title: "Rutas protegidas",
+        title: "Rutas dinámicas y parámetros",
         duration: "45 min",
-        description: "Implementar autenticación y rutas protegidas"
+        description: "Crear rutas con parámetros, query strings y navegación avanzada"
+      },
+      {
+        title: "Rutas anidadas y layouts",
+        duration: "45 min",
+        description: "Implementar estructura jerárquica y componentes compartidos"
+      },
+      {
+        title: "Rutas protegidas y autenticación",
+        duration: "45 min",
+        description: "Crear sistema de autenticación y autorización con redirecciones"
       }
     ],
     homework: [
-      "Crear aplicación con múltiples rutas",
-      "Implementar autenticación",
-      "Agregar navegación breadcrumb"
+      "Crear aplicación completa con React Router v6: múltiples rutas, navegación y layouts",
+      "Implementar sistema de autenticación con rutas protegidas y redirecciones",
+      "Crear navegación breadcrumb dinámica con useLocation",
+      "Implementar rutas dinámicas con parámetros y query strings",
+      "Agregar navegación programática con useNavigate en formularios y acciones",
+      "Crear sistema de roles y permisos con rutas protegidas por nivel de acceso"
     ],
     materials: [
       "Node.js instalado",
@@ -3933,22 +6148,35 @@ export default App;`
     ],
     exercises: [
       {
-        title: "Configuración de React Router",
-        description: "Configura React Router en una aplicación React básica.",
-        code: `// Crear Context
-import { createContext, useContext } from 'react';
+        title: "Aplicación Completa con React Router y Permisos",
+        description: "Crear una aplicación completa con React Router v6, navegación, rutas protegidas y sistema de permisos por roles.",
+        code: `// EJERCICIO: Aplicación de Gestión de Usuarios con React Router
+// Objetivo: Implementar navegación, rutas protegidas y permisos por roles
 
-const AppContext = createContext();
+// 1. Estructura de archivos a crear:
+// src/
+//   components/
+//     Layout.jsx
+//     Navigation.jsx
+//     ProtectedRoute.jsx
+//     RoleBasedRoute.jsx
+//   pages/
+//     Home.jsx
+//     Login.jsx
+//     Dashboard.jsx
+//     Users.jsx
+//     Profile.jsx
+//     Admin.jsx
+//     NotFound.jsx
+//   context/
+//     AuthContext.jsx
+//   App.jsx
+//   index.js
 
-// Provider
-function AppProvider({ children }) {
-    // Tu código aquí
-}
+// 2. Instalación de dependencias:
+// npm install react-router-dom
 
-// Hook personalizado
-function useApp() {
-  // Tu código aquí
-}`,
+// 3. Tu código aquí - Implementa la aplicación completa`,
         solution: `// Solución completa de Context global
 import React, { createContext, useContext, useReducer } from 'react';
 
@@ -4106,62 +6334,81 @@ export default App;`
     level: "Avanzado",
     completed: false,
     objectives: [
-      "Comprender el patrón Context en React",
-      "Implementar estado global con Context",
-      "Crear providers y consumers",
-      "Optimizar rendimiento con Context"
+      "Dominar Context API: createContext, useContext y patrones de uso",
+      "Implementar estado global: Provider, Consumer y gestión de estado complejo",
+      "Resolver prop drilling: comunicación entre componentes distantes",
+      "Optimizar rendimiento: evitar re-renders innecesarios y mejores prácticas",
+      "Crear sistemas de autenticación y temas con Context",
+      "Proyecto: Aplicación con estado global y Context API avanzado"
     ],
     content: {
       theoretical: [
-        "¿Qué es Context API?",
-        "createContext y useContext",
-        "Provider y Consumer patterns",
-        "Estado global vs props drilling",
-        "Optimización de Context",
-        "Alternativas: Redux, Zustand"
+        "Context API: Conceptos fundamentales y casos de uso",
+        "createContext y useContext: Creación y consumo de contexto",
+        "Provider y Consumer: Patrones de implementación y mejores prácticas",
+        "Estado global vs props drilling: Cuándo usar cada enfoque",
+        "Optimización de Context: Evitar re-renders y mejorar rendimiento",
+        "Context + useReducer: Manejo de estado complejo",
+        "Sistemas de autenticación y temas con Context",
+        "Alternativas: Redux, Zustand y cuándo usarlas"
       ],
       theoreticalDetails: {
-        "¿Qué es Context API?": "Context API es una característica de React que permite compartir datos entre componentes sin necesidad de pasar props manualmente a través de cada nivel del árbol de componentes. Es especialmente útil para datos que son considerados 'globales' para un árbol de componentes, como temas, idioma preferido, o información de autenticación. Context proporciona una forma de pasar datos a través del árbol de componentes sin tener que pasar props hacia abajo manualmente en cada nivel.",
+        "Context API: Conceptos fundamentales y casos de uso": "Context API es una característica de React que permite compartir datos entre componentes sin necesidad de pasar props manualmente a través de cada nivel del árbol de componentes.\n\n**Conceptos fundamentales:**\n- **Prop drilling**: Problema de pasar props a través de múltiples niveles\n- **Estado global**: Datos accesibles desde cualquier componente\n- **Context**: Mecanismo para compartir datos sin prop drilling\n- **Provider/Consumer**: Patrón para proporcionar y consumir contexto\n\n**Casos de uso ideales:**\n- **Temas**: Colores, tipografías, estilos globales\n- **Autenticación**: Usuario actual, permisos, tokens\n- **Idioma**: Configuración de idioma y localización\n- **Configuración**: Configuraciones globales de la aplicación\n- **Estado de UI**: Modales, notificaciones, loading states\n\n**Ventajas:**\n- **Elimina prop drilling**: No pasar props innecesarias\n- **Estado global**: Acceso directo desde cualquier componente\n- **Flexibilidad**: Múltiples providers y consumers\n- **Integración nativa**: Parte de React, sin dependencias externas\n\n**Desventajas:**\n- **Re-renders**: Todos los consumers se re-renderizan\n- **Complejidad**: Puede hacer el código más difícil de seguir\n- **Debugging**: Más difícil de debuggear que props locales\n\n**Ejemplo completo: Sistema de E-commerce con Context:**\n```javascript\n// 🛒 EJEMPLO COMPLETO: Sistema de E-commerce\n// Este ejemplo demuestra todos los conceptos de Context API\n// en una aplicación real de e-commerce\n\nimport React, { createContext, useContext, useState, useReducer, useEffect } from 'react';\n\n// ========================================\n// 1. CONTEXTOS MÚLTIPLES (Separación de responsabilidades)\n// ========================================\n\n// Contexto para autenticación\nexport const AuthContext = createContext();\n\n// Contexto para carrito de compras\nexport const CartContext = createContext();\n\n// Contexto para tema y configuración\nexport const ThemeContext = createContext();\n\n// Contexto para notificaciones\nexport const NotificationContext = createContext();\n\n// ========================================\n// 2. REDUCER PARA ESTADO COMPLEJO (Cart)\n// ========================================\n\nconst cartReducer = (state, action) => {\n  switch (action.type) {\n    case 'ADD_ITEM':\n      const existingItem = state.items.find(item => item.id === action.payload.id);\n      \n      if (existingItem) {\n        return {\n          ...state,\n          items: state.items.map(item =>\n            item.id === action.payload.id\n              ? { ...item, quantity: item.quantity + 1 }\n              : item\n          ),\n          total: state.total + action.payload.price,\n          itemCount: state.itemCount + 1\n        };\n      } else {\n        return {\n          ...state,\n          items: [...state.items, { ...action.payload, quantity: 1 }],\n          total: state.total + action.payload.price,\n          itemCount: state.itemCount + 1\n        };\n      }\n      \n    case 'REMOVE_ITEM':\n      const itemToRemove = state.items.find(item => item.id === action.payload);\n      return {\n        ...state,\n        items: state.items.filter(item => item.id !== action.payload),\n        total: state.total - (itemToRemove.price * itemToRemove.quantity),\n        itemCount: state.itemCount - itemToRemove.quantity\n      };\n      \n    case 'UPDATE_QUANTITY':\n      const { id, quantity } = action.payload;\n      const item = state.items.find(item => item.id === id);\n      \n      if (quantity <= 0) {\n        return {\n          ...state,\n          items: state.items.filter(item => item.id !== id),\n          total: state.total - (item.price * item.quantity),\n          itemCount: state.itemCount - item.quantity\n        };\n      }\n      \n      const quantityDiff = quantity - item.quantity;\n      return {\n        ...state,\n        items: state.items.map(item =>\n          item.id === id ? { ...item, quantity } : item\n        ),\n        total: state.total + (item.price * quantityDiff),\n        itemCount: state.itemCount + quantityDiff\n      };\n      \n    case 'CLEAR_CART':\n      return {\n        items: [],\n        total: 0,\n        itemCount: 0\n      };\n      \n    default:\n      return state;\n  }\n};\n\n// ========================================\n// 3. PROVIDERS CON ESTADO COMPLEJO\n// ========================================\n\n// AuthProvider - Manejo de autenticación\nexport function AuthProvider({ children }) {\n  const [user, setUser] = useState(null);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState(null);\n  \n  // Simular carga inicial de usuario\n  useEffect(() => {\n    const savedUser = localStorage.getItem('user');\n    if (savedUser) {\n      setUser(JSON.parse(savedUser));\n    }\n    setLoading(false);\n  }, []);\n  \n  const login = async (credentials) => {\n    setLoading(true);\n    setError(null);\n    \n    try {\n      // Simular llamada a API\n      const response = await fetch('/api/login', {\n        method: 'POST',\n        headers: { 'Content-Type': 'application/json' },\n        body: JSON.stringify(credentials)\n      });\n      \n      if (!response.ok) {\n        throw new Error('Credenciales inválidas');\n      }\n      \n      const userData = await response.json();\n      setUser(userData);\n      localStorage.setItem('user', JSON.stringify(userData));\n    } catch (err) {\n      setError(err.message);\n    } finally {\n      setLoading(false);\n    }\n  };\n  \n  const logout = () => {\n    setUser(null);\n    localStorage.removeItem('user');\n  };\n  \n  const value = {\n    user,\n    loading,\n    error,\n    login,\n    logout,\n    isAuthenticated: !!user\n  };\n  \n  return (\n    <AuthContext.Provider value={value}>\n      {children}\n    </AuthContext.Provider>\n  );\n}\n\n// CartProvider - Manejo de carrito con useReducer\nexport function CartProvider({ children }) {\n  const [state, dispatch] = useReducer(cartReducer, {\n    items: [],\n    total: 0,\n    itemCount: 0\n  });\n  \n  const addItem = (product) => {\n    dispatch({ type: 'ADD_ITEM', payload: product });\n  };\n  \n  const removeItem = (id) => {\n    dispatch({ type: 'REMOVE_ITEM', payload: id });\n  };\n  \n  const updateQuantity = (id, quantity) => {\n    dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });\n  };\n  \n  const clearCart = () => {\n    dispatch({ type: 'CLEAR_CART' });\n  };\n  \n  const value = {\n    ...state,\n    addItem,\n    removeItem,\n    updateQuantity,\n    clearCart\n  };\n  \n  return (\n    <CartContext.Provider value={value}>\n      {children}\n    </CartContext.Provider>\n  );\n}\n\n// ThemeProvider - Manejo de tema y configuración\nexport function ThemeProvider({ children }) {\n  const [theme, setTheme] = useState('light');\n  const [language, setLanguage] = useState('es');\n  const [fontSize, setFontSize] = useState('medium');\n  \n  // Cargar configuración guardada\n  useEffect(() => {\n    const savedTheme = localStorage.getItem('theme');\n    const savedLanguage = localStorage.getItem('language');\n    const savedFontSize = localStorage.getItem('fontSize');\n    \n    if (savedTheme) setTheme(savedTheme);\n    if (savedLanguage) setLanguage(savedLanguage);\n    if (savedFontSize) setFontSize(savedFontSize);\n  }, []);\n  \n  // Guardar configuración\n  useEffect(() => {\n    localStorage.setItem('theme', theme);\n  }, [theme]);\n  \n  useEffect(() => {\n    localStorage.setItem('language', language);\n  }, [language]);\n  \n  useEffect(() => {\n    localStorage.setItem('fontSize', fontSize);\n  }, [fontSize]);\n  \n  const toggleTheme = () => {\n    setTheme(prev => prev === 'light' ? 'dark' : 'light');\n  };\n  \n  const changeLanguage = (lang) => {\n    setLanguage(lang);\n  };\n  \n  const changeFontSize = (size) => {\n    setFontSize(size);\n  };\n  \n  const value = {\n    theme,\n    language,\n    fontSize,\n    toggleTheme,\n    changeLanguage,\n    changeFontSize\n  };\n  \n  return (\n    <ThemeContext.Provider value={value}>\n      {children}\n    </ThemeContext.Provider>\n  );\n}\n\n// NotificationProvider - Sistema de notificaciones\nexport function NotificationProvider({ children }) {\n  const [notifications, setNotifications] = useState([]);\n  \n  const addNotification = (message, type = 'info', duration = 5000) => {\n    const id = Date.now() + Math.random();\n    const notification = { id, message, type, timestamp: new Date() };\n    \n    setNotifications(prev => [...prev, notification]);\n    \n    // Auto-remove notification\n    setTimeout(() => {\n      removeNotification(id);\n    }, duration);\n  };\n  \n  const removeNotification = (id) => {\n    setNotifications(prev => prev.filter(n => n.id !== id));\n  };\n  \n  const clearAllNotifications = () => {\n    setNotifications([]);\n  };\n  \n  const value = {\n    notifications,\n    addNotification,\n    removeNotification,\n    clearAllNotifications\n  };\n  \n  return (\n    <NotificationContext.Provider value={value}>\n      {children}\n    </NotificationContext.Provider>\n  );\n}\n\n// ========================================\n// 4. HOOKS PERSONALIZADOS\n// ========================================\n\n// Hook para autenticación\nexport function useAuth() {\n  const context = useContext(AuthContext);\n  if (!context) {\n    throw new Error('useAuth debe usarse dentro de AuthProvider');\n  }\n  return context;\n}\n\n// Hook para carrito\nexport function useCart() {\n  const context = useContext(CartContext);\n  if (!context) {\n    throw new Error('useCart debe usarse dentro de CartProvider');\n  }\n  return context;\n}\n\n// Hook para tema\nexport function useTheme() {\n  const context = useContext(ThemeContext);\n  if (!context) {\n    throw new Error('useTheme debe usarse dentro de ThemeProvider');\n  }\n  return context;\n}\n\n// Hook para notificaciones\nexport function useNotifications() {\n  const context = useContext(NotificationContext);\n  if (!context) {\n    throw new Error('useNotifications debe usarse dentro de NotificationProvider');\n  }\n  return context;\n}\n\n// ========================================\n// 5. COMPONENTES QUE USAN CONTEXT\n// ========================================\n\n// Header con autenticación y tema\nfunction Header() {\n  const { user, isAuthenticated, logout } = useAuth();\n  const { theme, toggleTheme } = useTheme();\n  const { itemCount } = useCart();\n  \n  return (\n    <header className={`header ${theme}`}>\n      <div className=\"header-content\">\n        <h1>🛒 Mi E-commerce</h1>\n        \n        <div className=\"header-actions\">\n          <button onClick={toggleTheme} className=\"theme-toggle\">\n            {theme === 'light' ? '🌙' : '☀️'}\n          </button>\n          \n          <div className=\"cart-icon\">\n            🛒 {itemCount}\n          </div>\n          \n          {isAuthenticated ? (\n            <div className=\"user-menu\">\n              <span>Hola, {user.name}</span>\n              <button onClick={logout}>Cerrar Sesión</button>\n            </div>\n          ) : (\n            <button>Iniciar Sesión</button>\n          )}\n        </div>\n      </div>\n    </header>\n  );\n}\n\n// Producto con funcionalidad de carrito\nfunction ProductCard({ product }) {\n  const { addItem } = useCart();\n  const { addNotification } = useNotifications();\n  \n  const handleAddToCart = () => {\n    addItem(product);\n    addNotification(\n      `${product.name} agregado al carrito`, \n      'success'\n    );\n  };\n  \n  return (\n    <div className=\"product-card\">\n      <img src={product.image} alt={product.name} />\n      <h3>{product.name}</h3>\n      <p className=\"price\">${product.price}</p>\n      <button onClick={handleAddToCart} className=\"add-to-cart\">\n        Agregar al carrito\n      </button>\n    </div>\n  );\n}\n\n// Carrito de compras\nfunction ShoppingCart() {\n  const { items, total, itemCount, removeItem, updateQuantity, clearCart } = useCart();\n  \n  if (itemCount === 0) {\n    return (\n      <div className=\"empty-cart\">\n        <h3>Tu carrito está vacío</h3>\n        <p>¡Agrega algunos productos!</p>\n      </div>\n    );\n  }\n  \n  return (\n    <div className=\"shopping-cart\">\n      <div className=\"cart-header\">\n        <h3>Carrito ({itemCount} items)</h3>\n        <button onClick={clearCart} className=\"clear-cart\">\n          Vaciar carrito\n        </button>\n      </div>\n      \n      <div className=\"cart-items\">\n        {items.map(item => (\n          <div key={item.id} className=\"cart-item\">\n            <img src={item.image} alt={item.name} />\n            <div className=\"item-details\">\n              <h4>{item.name}</h4>\n              <p>${item.price}</p>\n              \n              <div className=\"quantity-controls\">\n                <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>\n                  -\n                </button>\n                <span>{item.quantity}</span>\n                <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>\n                  +\n                </button>\n              </div>\n            </div>\n            \n            <button \n              onClick={() => removeItem(item.id)}\n              className=\"remove-item\"\n            >\n              ❌\n            </button>\n          </div>\n        ))}\n      </div>\n      \n      <div className=\"cart-footer\">\n        <div className=\"cart-total\">\n          <strong>Total: ${total.toFixed(2)}</strong>\n        </div>\n        <button className=\"checkout-btn\">\n          Proceder al pago\n        </button>\n      </div>\n    </div>\n  );\n}\n\n// Sistema de notificaciones\nfunction NotificationSystem() {\n  const { notifications, removeNotification } = useNotifications();\n  \n  return (\n    <div className=\"notification-container\">\n      {notifications.map(notification => (\n        <div \n          key={notification.id} \n          className={`notification ${notification.type}`}\n        >\n          <span>{notification.message}</span>\n          <button onClick={() => removeNotification(notification.id)}>\n            ×\n          </button>\n        </div>\n      ))}\n    </div>\n  );\n}\n\n// ========================================\n// 6. APLICACIÓN PRINCIPAL\n// ========================================\n\nfunction App() {\n  return (\n    <AuthProvider>\n      <CartProvider>\n        <ThemeProvider>\n          <NotificationProvider>\n            <div className=\"app\">\n              <Header />\n              \n              <main className=\"main-content\">\n                <div className=\"products-section\">\n                  <h2>Productos Destacados</h2>\n                  <div className=\"products-grid\">\n                    {products.map(product => (\n                      <ProductCard key={product.id} product={product} />\n                    ))}\n                  </div>\n                </div>\n                \n                <div className=\"cart-section\">\n                  <ShoppingCart />\n                </div>\n              </main>\n              \n              <NotificationSystem />\n            </div>\n          </NotificationProvider>\n        </ThemeProvider>\n      </CartProvider>\n    </AuthProvider>\n  );\n}\n\n// ========================================\n// 7. DATOS DE EJEMPLO\n// ========================================\n\nconst products = [\n  {\n    id: 1,\n    name: 'Laptop Gaming',\n    price: 1299.99,\n    image: '/images/laptop.jpg'\n  },\n  {\n    id: 2,\n    name: 'Smartphone Pro',\n    price: 899.99,\n    image: '/images/phone.jpg'\n  },\n  {\n    id: 3,\n    name: 'Auriculares Wireless',\n    price: 199.99,\n    image: '/images/headphones.jpg'\n  }\n];\n\nexport default App;\n```\n\n**Características del ejemplo:**\n\n✅ **Múltiples Contextos**: Separación clara de responsabilidades\n✅ **useReducer**: Para estado complejo del carrito\n✅ **Persistencia**: Datos guardados en localStorage\n✅ **Hooks personalizados**: Encapsulación de lógica\n✅ **Notificaciones**: Sistema global de notificaciones\n✅ **Tema dinámico**: Cambio de tema en tiempo real\n✅ **Autenticación**: Sistema completo de login/logout\n✅ **Carrito funcional**: Agregar, quitar, actualizar cantidades\n✅ **Validación de contexto**: Errores si se usa fuera del Provider\n✅ **Código real**: Aplicación funcional de e-commerce",
         
-        "createContext y useContext": "createContext crea un objeto Context que puede ser usado por componentes para acceder a datos compartidos. useContext es un hook que permite consumir el valor de un Context en un componente funcional. createContext acepta un valor por defecto que se usa cuando un componente no está envuelto en un Provider correspondiente. useContext debe ser llamado dentro de un componente funcional y retorna el valor actual del Context más cercano en el árbol de componentes.",
+        "createContext y useContext: Creación y consumo de contexto": "createContext y useContext son las funciones fundamentales para crear y consumir contexto en React.\n\n**createContext:**\n- **Propósito**: Crear un objeto Context para compartir datos\n- **Sintaxis**: `createContext(defaultValue)`\n- **Valor por defecto**: Se usa cuando no hay Provider\n- **Retorna**: Objeto con Provider y Consumer\n\n**useContext:**\n- **Propósito**: Consumir el valor de un Context\n- **Sintaxis**: `useContext(Context)`\n- **Retorna**: Valor actual del Context\n- **Reglas**: Solo en componentes funcionales\n\n**Ejemplos prácticos:**\n```javascript\nimport { createContext, useContext, useState } from 'react';\n\n// 1. Crear contexto con valor por defecto\nconst UserContext = createContext({\n  user: null,\n  login: () => {},\n  logout: () => {}\n});\n\n// 2. Crear provider con estado\nfunction UserProvider({ children }) {\n  const [user, setUser] = useState(null);\n  \n  const login = (userData) => {\n    setUser(userData);\n  };\n  \n  const logout = () => {\n    setUser(null);\n  };\n  \n  return (\n    <UserContext.Provider value={{ user, login, logout }}>\n      {children}\n    </UserContext.Provider>\n  );\n}\n\n// 3. Consumir contexto en componente\nfunction UserProfile() {\n  const { user, logout } = useContext(UserContext);\n  \n  if (!user) {\n    return <div>No hay usuario logueado</div>;\n  }\n  \n  return (\n    <div>\n      <h2>Hola, {user.name}</h2>\n      <p>Email: {user.email}</p>\n      <button onClick={logout}>Cerrar Sesión</button>\n    </div>\n  );\n}\n\n// 4. Múltiples contextos\nconst ThemeContext = createContext('light');\nconst LanguageContext = createContext('es');\n\nfunction App() {\n  return (\n    <UserProvider>\n      <ThemeProvider>\n        <LanguageProvider>\n          <UserProfile />\n        </LanguageProvider>\n      </ThemeProvider>\n    </UserProvider>\n  );\n}\n\n// 5. Hook personalizado para contexto\nfunction useUser() {\n  const context = useContext(UserContext);\n  \n  if (!context) {\n    throw new Error('useUser debe usarse dentro de UserProvider');\n  }\n  \n  return context;\n}\n\n// 6. Usar hook personalizado\nfunction LoginForm() {\n  const { login } = useUser();\n  \n  const handleSubmit = (e) => {\n    e.preventDefault();\n    login({ name: 'Juan', email: 'juan@email.com' });\n  };\n  \n  return (\n    <form onSubmit={handleSubmit}>\n      <button type=\"submit\">Iniciar Sesión</button>\n    </form>\n  );\n}\n\n// 7. Contexto con múltiples valores\nconst AppContext = createContext();\n\nfunction AppProvider({ children }) {\n  const [theme, setTheme] = useState('light');\n  const [language, setLanguage] = useState('es');\n  const [user, setUser] = useState(null);\n  \n  const value = {\n    theme: { current: theme, setTheme },\n    language: { current: language, setLanguage },\n    user: { current: user, setUser }\n  };\n  \n  return (\n    <AppContext.Provider value={value}>\n      {children}\n    </AppContext.Provider>\n  );\n}\n\n// 8. Consumir múltiples valores\nfunction Settings() {\n  const { theme, language, user } = useContext(AppContext);\n  \n  return (\n    <div>\n      <h2>Configuración</h2>\n      <p>Tema: {theme.current}</p>\n      <p>Idioma: {language.current}</p>\n      <p>Usuario: {user.current?.name || 'No logueado'}</p>\n    </div>\n  );\n}\n```\n\n**Mejores prácticas:**\n- **Valor por defecto**: Siempre proporcionar un valor por defecto\n- **Hook personalizado**: Crear hooks para encapsular lógica\n- **Validación**: Verificar que el contexto existe\n- **Separación**: Un contexto por responsabilidad\n- **Documentación**: Documentar la estructura del contexto",
         
-        "Provider y Consumer patterns": "Provider es un componente que permite a los componentes consumidores suscribirse a cambios en el Context. Se coloca en un nivel superior del árbol de componentes y proporciona el valor del Context a todos sus descendientes. Consumer es un componente que permite consumir el valor del Context en componentes de clase, aunque con hooks es más común usar useContext. El patrón Provider/Consumer permite que múltiples componentes accedan al mismo estado sin prop drilling.",
+        "Provider y Consumer patterns": "Provider es un componente que permite a los componentes consumidores suscribirse a cambios en el Context. Se coloca en un nivel superior del árbol de componentes y proporciona el valor del Context a todos sus descendientes. Consumer es un componente que permite consumir el valor del Context en componentes de clase, aunque con hooks es más común usar useContext. El patrón Provider/Consumer permite que múltiples componentes accedan al mismo estado sin prop drilling.\n\n**Ejemplos prácticos:**\n\n**1. Provider básico con useState:**\n```javascript\nimport React, { createContext, useContext, useState } from 'react';\n\n// Crear el contexto\nexport const ThemeContext = createContext();\n\n// Provider con estado\nexport function ThemeProvider({ children }) {\n  const [theme, setTheme] = useState('light');\n  const [language, setLanguage] = useState('es');\n  \n  const toggleTheme = () => {\n    setTheme(prev => prev === 'light' ? 'dark' : 'light');\n  };\n  \n  const changeLanguage = (lang) => {\n    setLanguage(lang);\n  };\n  \n  const value = {\n    theme,\n    language,\n    toggleTheme,\n    changeLanguage\n  };\n  \n  return (\n    <ThemeContext.Provider value={value}>\n      {children}\n    </ThemeContext.Provider>\n  );\n}\n\n// Hook personalizado para usar el contexto\nexport function useTheme() {\n  const context = useContext(ThemeContext);\n  if (!context) {\n    throw new Error('useTheme debe usarse dentro de ThemeProvider');\n  }\n  return context;\n}\n\n// Uso en componentes\nfunction Header() {\n  const { theme, toggleTheme } = useTheme();\n  \n  return (\n    <header className={`header ${theme}`}>\n      <h1>Mi Aplicación</h1>\n      <button onClick={toggleTheme}>\n        Cambiar a {theme === 'light' ? 'oscuro' : 'claro'}\n      </button>\n    </header>\n  );\n}\n\nfunction Footer() {\n  const { language, changeLanguage } = useTheme();\n  \n  return (\n    <footer>\n      <p>Idioma actual: {language}</p>\n      <button onClick={() => changeLanguage('en')}>English</button>\n      <button onClick={() => changeLanguage('es')}>Español</button>\n    </footer>\n  );\n}\n\n// App principal\nfunction App() {\n  return (\n    <ThemeProvider>\n      <div className=\"app\">\n        <Header />\n        <main>Contenido principal</main>\n        <Footer />\n      </div>\n    </ThemeProvider>\n  );\n}\n```\n\n**2. Provider con useReducer para estado complejo:**\n```javascript\nimport React, { createContext, useContext, useReducer } from 'react';\n\n// Estado inicial\nconst initialState = {\n  user: null,\n  isAuthenticated: false,\n  loading: false,\n  error: null\n};\n\n// Reducer para manejar acciones\nauthReducer(state, action) {\n  switch (action.type) {\n    case 'LOGIN_START':\n      return { ...state, loading: true, error: null };\n    case 'LOGIN_SUCCESS':\n      return {\n        ...state,\n        user: action.payload,\n        isAuthenticated: true,\n        loading: false,\n        error: null\n      };\n    case 'LOGIN_ERROR':\n      return {\n        ...state,\n        loading: false,\n        error: action.payload\n      };\n    case 'LOGOUT':\n      return {\n        ...state,\n        user: null,\n        isAuthenticated: false\n      };\n    default:\n      return state;\n  }\n}\n\n// Crear contexto\nexport const AuthContext = createContext();\n\n// Provider con useReducer\nexport function AuthProvider({ children }) {\n  const [state, dispatch] = useReducer(authReducer, initialState);\n  \n  const login = async (credentials) => {\n    dispatch({ type: 'LOGIN_START' });\n    try {\n      // Simular llamada a API\n      const response = await fetch('/api/login', {\n        method: 'POST',\n        body: JSON.stringify(credentials)\n      });\n      const user = await response.json();\n      dispatch({ type: 'LOGIN_SUCCESS', payload: user });\n    } catch (error) {\n      dispatch({ type: 'LOGIN_ERROR', payload: error.message });\n    }\n  };\n  \n  const logout = () => {\n    dispatch({ type: 'LOGOUT' });\n  };\n  \n  const value = {\n    ...state,\n    login,\n    logout\n  };\n  \n  return (\n    <AuthContext.Provider value={value}>\n      {children}\n    </AuthContext.Provider>\n  );\n}\n\n// Hook personalizado\nexport function useAuth() {\n  const context = useContext(AuthContext);\n  if (!context) {\n    throw new Error('useAuth debe usarse dentro de AuthProvider');\n  }\n  return context;\n}\n```\n\n**3. Consumer pattern (para componentes de clase):**\n```javascript\nimport React, { Component } from 'react';\nimport { ThemeContext } from './ThemeContext';\n\n// Componente de clase usando Consumer\nclass ThemeDisplay extends Component {\n  render() {\n    return (\n      <ThemeContext.Consumer>\n        {({ theme, toggleTheme }) => (\n          <div className={`theme-display ${theme}`}>\n            <p>Tema actual: {theme}</p>\n            <button onClick={toggleTheme}>\n              Cambiar tema\n            </button>\n          </div>\n        )}\n      </ThemeContext.Consumer>\n    );\n  }\n}\n\n// Equivalente con hooks (más moderno)\nfunction ThemeDisplayHook() {\n  const { theme, toggleTheme } = useTheme();\n  \n  return (\n    <div className={`theme-display ${theme}`}>\n      <p>Tema actual: {theme}</p>\n      <button onClick={toggleTheme}>\n        Cambiar tema\n      </button>\n    </div>\n  );\n}\n```",
         
-        "Estado global vs props drilling": "Props drilling ocurre cuando se pasa la misma prop a través de múltiples niveles de componentes, incluso cuando algunos componentes intermedios no necesitan esa prop. Esto hace el código más difícil de mantener y entender. El estado global con Context resuelve este problema permitiendo que cualquier componente acceda directamente a los datos que necesita, sin pasar por componentes intermedios. Sin embargo, es importante usar Context solo cuando sea necesario, ya que puede causar re-renders innecesarios.",
+        "Estado global vs props drilling": "Props drilling ocurre cuando se pasa la misma prop a través de múltiples niveles de componentes, incluso cuando algunos componentes intermedios no necesitan esa prop. Esto hace el código más difícil de mantener y entender. El estado global con Context resuelve este problema permitiendo que cualquier componente acceda directamente a los datos que necesita, sin pasar por componentes intermedios. Sin embargo, es importante usar Context solo cuando sea necesario, ya que puede causar re-renders innecesarios.\n\n**Ejemplos prácticos:**\n\n**1. Problema de Props Drilling (ANTES):**\n```javascript\n// ❌ PROBLEMA: Props drilling\n// App.js - Estado en el componente raíz\nfunction App() {\n  const [user, setUser] = useState(null);\n  const [theme, setTheme] = useState('light');\n  \n  return (\n    <div>\n      <Header user={user} theme={theme} setTheme={setTheme} />\n      <MainContent user={user} theme={theme} />\n      <Sidebar user={user} />\n    </div>\n  );\n}\n\n// Header.js - No necesita user, pero debe pasarlo\nfunction Header({ user, theme, setTheme }) {\n  return (\n    <header className={theme}>\n      <h1>Mi App</h1>\n      <ThemeToggle theme={theme} setTheme={setTheme} />\n      {/* user no se usa aquí, pero debe pasarse */}\n    </header>\n  );\n}\n\n// ThemeToggle.js - No necesita user\nfunction ThemeToggle({ theme, setTheme }) {\n  return (\n    <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>\n      {theme === 'light' ? '🌙' : '☀️'}\n    </button>\n  );\n}\n\n// MainContent.js - Pasa user a componentes hijos\nfunction MainContent({ user, theme }) {\n  return (\n    <main className={theme}>\n      <WelcomeMessage user={user} />\n      <UserProfile user={user} />\n    </main>\n  );\n}\n\n// WelcomeMessage.js - Finalmente usa user\nfunction WelcomeMessage({ user }) {\n  return <h2>¡Hola, {user?.name || 'Invitado'}!</h2>;\n}\n\n// UserProfile.js - También usa user\nfunction UserProfile({ user }) {\n  if (!user) return <p>No hay usuario logueado</p>;\n  \n  return (\n    <div>\n      <p>Email: {user.email}</p>\n      <p>Rol: {user.role}</p>\n    </div>\n  );\n}\n\n// Sidebar.js - También necesita user\nfunction Sidebar({ user }) {\n  return (\n    <aside>\n      <h3>Menú</h3>\n      {user ? (\n        <ul>\n          <li>Dashboard</li>\n          <li>Perfil</li>\n          <li>Configuración</li>\n        </ul>\n      ) : (\n        <ul>\n          <li>Iniciar Sesión</li>\n          <li>Registrarse</li>\n        </ul>\n      )}\n    </aside>\n  );\n}\n```\n\n**2. Solución con Context (DESPUÉS):**\n```javascript\n// ✅ SOLUCIÓN: Context API\n// contexts/AppContext.js\nimport { createContext, useContext, useState } from 'react';\n\nconst AppContext = createContext();\n\nexport function AppProvider({ children }) {\n  const [user, setUser] = useState(null);\n  const [theme, setTheme] = useState('light');\n  \n  const login = (userData) => setUser(userData);\n  const logout = () => setUser(null);\n  const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');\n  \n  const value = {\n    user,\n    theme,\n    login,\n    logout,\n    toggleTheme\n  };\n  \n  return (\n    <AppContext.Provider value={value}>\n      {children}\n    </AppContext.Provider>\n  );\n}\n\nexport function useApp() {\n  const context = useContext(AppContext);\n  if (!context) {\n    throw new Error('useApp debe usarse dentro de AppProvider');\n  }\n  return context;\n}\n\n// App.js - Mucho más limpio\nfunction App() {\n  return (\n    <AppProvider>\n      <div>\n        <Header />\n        <MainContent />\n        <Sidebar />\n      </div>\n    </AppProvider>\n  );\n}\n\n// Header.js - Solo usa lo que necesita\nfunction Header() {\n  const { theme, toggleTheme } = useApp();\n  \n  return (\n    <header className={theme}>\n      <h1>Mi App</h1>\n      <ThemeToggle />\n    </header>\n  );\n}\n\n// ThemeToggle.js - Acceso directo al contexto\nfunction ThemeToggle() {\n  const { theme, toggleTheme } = useApp();\n  \n  return (\n    <button onClick={toggleTheme}>\n      {theme === 'light' ? '🌙' : '☀️'}\n    </button>\n  );\n}\n\n// MainContent.js - No necesita pasar props\nfunction MainContent() {\n  const { theme } = useApp();\n  \n  return (\n    <main className={theme}>\n      <WelcomeMessage />\n      <UserProfile />\n    </main>\n  );\n}\n\n// WelcomeMessage.js - Acceso directo a user\nfunction WelcomeMessage() {\n  const { user } = useApp();\n  \n  return <h2>¡Hola, {user?.name || 'Invitado'}!</h2>;\n}\n\n// UserProfile.js - Acceso directo a user\nfunction UserProfile() {\n  const { user } = useApp();\n  \n  if (!user) return <p>No hay usuario logueado</p>;\n  \n  return (\n    <div>\n      <p>Email: {user.email}</p>\n      <p>Rol: {user.role}</p>\n    </div>\n  );\n}\n\n// Sidebar.js - Acceso directo a user\nfunction Sidebar() {\n  const { user } = useApp();\n  \n  return (\n    <aside>\n      <h3>Menú</h3>\n      {user ? (\n        <ul>\n          <li>Dashboard</li>\n          <li>Perfil</li>\n          <li>Configuración</li>\n        </ul>\n      ) : (\n        <ul>\n          <li>Iniciar Sesión</li>\n          <li>Registrarse</li>\n        </ul>\n      )}\n    </aside>\n  );\n}\n```\n\n**3. Comparación de complejidad:**\n```javascript\n// ❌ CON PROPS DRILLING (Complejo)\n// Cada componente intermedio debe recibir y pasar props\nfunction App() {\n  const [user, setUser] = useState(null);\n  return <Header user={user} setUser={setUser} />;\n}\n\nfunction Header({ user, setUser }) {\n  return <Navigation user={user} setUser={setUser} />;\n}\n\nfunction Navigation({ user, setUser }) {\n  return <UserMenu user={user} setUser={setUser} />;\n}\n\nfunction UserMenu({ user, setUser }) {\n  // Finalmente usa user\n  return user ? <LogoutButton setUser={setUser} /> : <LoginButton />;\n}\n\n// ✅ CON CONTEXT (Simple)\nfunction App() {\n  return (\n    <UserProvider>\n      <Header />\n    </UserProvider>\n  );\n}\n\nfunction Header() {\n  return <Navigation />;\n}\n\nfunction Navigation() {\n  return <UserMenu />;\n}\n\nfunction UserMenu() {\n  const { user, setUser } = useUser();\n  return user ? <LogoutButton /> : <LoginButton />;\n}\n```\n\n**4. Cuándo usar cada enfoque:**\n```javascript\n// ✅ USAR PROPS cuando:\n// - Solo 1-2 niveles de profundidad\n// - Datos específicos del componente padre\n// - No se comparte entre muchos componentes\n\nfunction ProductCard({ product, onAddToCart }) {\n  return (\n    <div>\n      <h3>{product.name}</h3>\n      <p>${product.price}</p>\n      <button onClick={() => onAddToCart(product)}>\n        Agregar al carrito\n      </button>\n    </div>\n  );\n}\n\n// ✅ USAR CONTEXT cuando:\n// - 3+ niveles de profundidad\n// - Datos compartidos globalmente\n// - Estado de autenticación, temas, configuración\n\n// Ejemplo: Sistema de notificaciones global\nconst NotificationContext = createContext();\n\nexport function NotificationProvider({ children }) {\n  const [notifications, setNotifications] = useState([]);\n  \n  const addNotification = (message, type = 'info') => {\n    const id = Date.now();\n    setNotifications(prev => [...prev, { id, message, type }]);\n    \n    // Auto-remove after 5 seconds\n    setTimeout(() => {\n      setNotifications(prev => prev.filter(n => n.id !== id));\n    }, 5000);\n  };\n  \n  const removeNotification = (id) => {\n    setNotifications(prev => prev.filter(n => n.id !== id));\n  };\n  \n  return (\n    <NotificationContext.Provider value={{\n      notifications,\n      addNotification,\n      removeNotification\n    }}>\n      {children}\n    </NotificationContext.Provider>\n  );\n}\n\n// Cualquier componente puede mostrar notificaciones\nexport function useNotifications() {\n  const context = useContext(NotificationContext);\n  if (!context) {\n    throw new Error('useNotifications debe usarse dentro de NotificationProvider');\n  }\n  return context;\n}\n\n// Uso en cualquier componente\nfunction ProductCard({ product }) {\n  const { addNotification } = useNotifications();\n  \n  const handleAddToCart = () => {\n    // Lógica para agregar al carrito\n    addNotification(`${product.name} agregado al carrito`, 'success');\n  };\n  \n  return (\n    <div>\n      <h3>{product.name}</h3>\n      <button onClick={handleAddToCart}>\n        Agregar al carrito\n      </button>\n    </div>\n  );\n}\n```",
         
-        "Optimización de Context": "Context puede causar re-renders de todos los componentes consumidores cuando el valor cambia, incluso si solo necesitan una parte del estado. Para optimizar, se pueden crear múltiples Contexts para diferentes tipos de datos, usar useMemo para valores calculados, o implementar patrones como Context + useReducer para manejar estado complejo. También es importante evitar crear el objeto Context dentro del render, ya que esto crea un nuevo objeto en cada renderizado.",
+        "Optimización de Context": "Context puede causar re-renders de todos los componentes consumidores cuando el valor cambia, incluso si solo necesitan una parte del estado. Para optimizar, se pueden crear múltiples Contexts para diferentes tipos de datos, usar useMemo para valores calculados, o implementar patrones como Context + useReducer para manejar estado complejo. También es importante evitar crear el objeto Context dentro del render, ya que esto crea un nuevo objeto en cada renderizado.\n\n**Ejemplos prácticos:**\n\n**1. Problema: Re-renders innecesarios:**\n```javascript\n// ❌ PROBLEMA: Todos los componentes se re-renderizan\nconst AppContext = createContext();\n\nfunction AppProvider({ children }) {\n  const [user, setUser] = useState(null);\n  const [theme, setTheme] = useState('light');\n  const [notifications, setNotifications] = useState([]);\n  \n  // ❌ PROBLEMA: Nuevo objeto en cada render\n  const value = {\n    user,\n    theme,\n    notifications,\n    setUser,\n    setTheme,\n    setNotifications\n  };\n  \n  return (\n    <AppContext.Provider value={value}>\n      {children}\n    </AppContext.Provider>\n  );\n}\n\n// ❌ PROBLEMA: Se re-renderiza cuando cambia cualquier valor\nfunction Header() {\n  const { theme, setTheme } = useContext(AppContext);\n  console.log('Header re-renderizado'); // Se ejecuta siempre\n  \n  return (\n    <header className={theme}>\n      <h1>Mi App</h1>\n      <button onClick={() => setTheme('dark')}>\n        Cambiar tema\n      </button>\n    </header>\n  );\n}\n\n// ❌ PROBLEMA: Se re-renderiza cuando cambia user o theme\nfunction NotificationList() {\n  const { notifications } = useContext(AppContext);\n  console.log('NotificationList re-renderizado'); // Se ejecuta innecesariamente\n  \n  return (\n    <div>\n      {notifications.map(notification => (\n        <div key={notification.id}>{notification.message}</div>\n      ))}\n    </div>\n  );\n}\n```\n\n**2. Solución: Múltiples Contexts:**\n```javascript\n// ✅ SOLUCIÓN: Separar en múltiples contextos\n// contexts/UserContext.js\nexport const UserContext = createContext();\n\nexport function UserProvider({ children }) {\n  const [user, setUser] = useState(null);\n  \n  // ✅ Memoizar el valor para evitar re-renders\n  const value = useMemo(() => ({\n    user,\n    setUser\n  }), [user]);\n  \n  return (\n    <UserContext.Provider value={value}>\n      {children}\n    </UserContext.Provider>\n  );\n}\n\n// contexts/ThemeContext.js\nexport const ThemeContext = createContext();\n\nexport function ThemeProvider({ children }) {\n  const [theme, setTheme] = useState('light');\n  \n  const value = useMemo(() => ({\n    theme,\n    setTheme\n  }), [theme]);\n  \n  return (\n    <ThemeContext.Provider value={value}>\n      {children}\n    </ThemeContext.Provider>\n  );\n}\n\n// contexts/NotificationContext.js\nexport const NotificationContext = createContext();\n\nexport function NotificationProvider({ children }) {\n  const [notifications, setNotifications] = useState([]);\n  \n  const addNotification = useCallback((message) => {\n    const id = Date.now();\n    setNotifications(prev => [...prev, { id, message }]);\n  }, []);\n  \n  const removeNotification = useCallback((id) => {\n    setNotifications(prev => prev.filter(n => n.id !== id));\n  }, []);\n  \n  const value = useMemo(() => ({\n    notifications,\n    addNotification,\n    removeNotification\n  }), [notifications, addNotification, removeNotification]);\n  \n  return (\n    <NotificationContext.Provider value={value}>\n      {children}\n    </NotificationContext.Provider>\n  );\n}\n\n// App.js - Combinar providers\nfunction App() {\n  return (\n    <UserProvider>\n      <ThemeProvider>\n        <NotificationProvider>\n          <Header />\n          <MainContent />\n          <NotificationList />\n        </NotificationProvider>\n      </ThemeProvider>\n    </UserProvider>\n  );\n}\n\n// ✅ SOLUCIÓN: Solo se re-renderiza cuando cambia theme\nfunction Header() {\n  const { theme, setTheme } = useContext(ThemeContext);\n  console.log('Header re-renderizado'); // Solo cuando cambia theme\n  \n  return (\n    <header className={theme}>\n      <h1>Mi App</h1>\n      <button onClick={() => setTheme('dark')}>\n        Cambiar tema\n      </button>\n    </header>\n  );\n}\n\n// ✅ SOLUCIÓN: Solo se re-renderiza cuando cambian notifications\nfunction NotificationList() {\n  const { notifications } = useContext(NotificationContext);\n  console.log('NotificationList re-renderizado'); // Solo cuando cambian notifications\n  \n  return (\n    <div>\n      {notifications.map(notification => (\n        <div key={notification.id}>{notification.message}</div>\n      ))}\n    </div>\n  );\n}\n```\n\n**3. Optimización con useMemo y useCallback:**\n```javascript\n// ✅ OPTIMIZACIÓN: useMemo para valores calculados\nfunction ExpensiveProvider({ children }) {\n  const [data, setData] = useState([]);\n  const [filter, setFilter] = useState('');\n  \n  // ✅ Memoizar cálculos costosos\n  const filteredData = useMemo(() => {\n    console.log('Filtrando datos...'); // Solo se ejecuta cuando cambia data o filter\n    return data.filter(item => \n      item.name.toLowerCase().includes(filter.toLowerCase())\n    );\n  }, [data, filter]);\n  \n  // ✅ Memoizar funciones para evitar re-renders\n  const handleFilterChange = useCallback((newFilter) => {\n    setFilter(newFilter);\n  }, []);\n  \n  const handleDataUpdate = useCallback((newData) => {\n    setData(newData);\n  }, []);\n  \n  // ✅ Memoizar el valor del contexto\n  const value = useMemo(() => ({\n    data: filteredData,\n    filter,\n    onFilterChange: handleFilterChange,\n    onDataUpdate: handleDataUpdate\n  }), [filteredData, filter, handleFilterChange, handleDataUpdate]);\n  \n  return (\n    <ExpensiveContext.Provider value={value}>\n      {children}\n    </ExpensiveContext.Provider>\n  );\n}\n\n// ✅ OPTIMIZACIÓN: useCallback para funciones estables\nfunction SearchProvider({ children }) {\n  const [query, setQuery] = useState('');\n  const [results, setResults] = useState([]);\n  \n  // ✅ Función estable que no cambia en cada render\n  const search = useCallback(async (searchQuery) => {\n    if (!searchQuery.trim()) {\n      setResults([]);\n      return;\n    }\n    \n    try {\n      const response = await fetch(`/api/search?q=${searchQuery}`);\n      const data = await response.json();\n      setResults(data.results);\n    } catch (error) {\n      console.error('Error en búsqueda:', error);\n      setResults([]);\n    }\n  }, []);\n  \n  // ✅ Debounced search para evitar muchas llamadas\n  const debouncedSearch = useMemo(() => {\n    return debounce(search, 300);\n  }, [search]);\n  \n  const value = useMemo(() => ({\n    query,\n    results,\n    search: debouncedSearch,\n    setQuery\n  }), [query, results, debouncedSearch]);\n  \n  return (\n    <SearchContext.Provider value={value}>\n      {children}\n    </SearchContext.Provider>\n  );\n}\n\n// Función debounce helper\nfunction debounce(func, wait) {\n  let timeout;\n  return function executedFunction(...args) {\n    const later = () => {\n      clearTimeout(timeout);\n      func(...args);\n    };\n    clearTimeout(timeout);\n    timeout = setTimeout(later, wait);\n  };\n}\n```\n\n**4. Context + useReducer para estado complejo:**\n```javascript\n// ✅ OPTIMIZACIÓN: useReducer para estado complejo\nconst initialState = {\n  user: null,\n  isAuthenticated: false,\n  loading: false,\n  error: null,\n  preferences: {\n    theme: 'light',\n    language: 'es',\n    notifications: true\n  }\n};\n\nfunction authReducer(state, action) {\n  switch (action.type) {\n    case 'LOGIN_START':\n      return { ...state, loading: true, error: null };\n    case 'LOGIN_SUCCESS':\n      return {\n        ...state,\n        user: action.payload,\n        isAuthenticated: true,\n        loading: false,\n        error: null\n      };\n    case 'LOGIN_ERROR':\n      return {\n        ...state,\n        loading: false,\n        error: action.payload\n      };\n    case 'UPDATE_PREFERENCES':\n      return {\n        ...state,\n        preferences: { ...state.preferences, ...action.payload }\n      };\n    case 'LOGOUT':\n      return {\n        ...state,\n        user: null,\n        isAuthenticated: false,\n        preferences: initialState.preferences\n      };\n    default:\n      return state;\n  }\n}\n\nexport function AuthProvider({ children }) {\n  const [state, dispatch] = useReducer(authReducer, initialState);\n  \n  // ✅ Funciones estables con useCallback\n  const login = useCallback(async (credentials) => {\n    dispatch({ type: 'LOGIN_START' });\n    try {\n      const response = await fetch('/api/login', {\n        method: 'POST',\n        body: JSON.stringify(credentials)\n      });\n      const user = await response.json();\n      dispatch({ type: 'LOGIN_SUCCESS', payload: user });\n    } catch (error) {\n      dispatch({ type: 'LOGIN_ERROR', payload: error.message });\n    }\n  }, []);\n  \n  const logout = useCallback(() => {\n    dispatch({ type: 'LOGOUT' });\n  }, []);\n  \n  const updatePreferences = useCallback((preferences) => {\n    dispatch({ type: 'UPDATE_PREFERENCES', payload: preferences });\n  }, []);\n  \n  // ✅ Memoizar el valor del contexto\n  const value = useMemo(() => ({\n    ...state,\n    login,\n    logout,\n    updatePreferences\n  }), [state, login, logout, updatePreferences]);\n  \n  return (\n    <AuthContext.Provider value={value}>\n      {children}\n    </AuthContext.Provider>\n  );\n}\n```\n\n**5. Patrón de Context Selector personalizado:**\n```javascript\n// ✅ OPTIMIZACIÓN: Selector personalizado para evitar re-renders\nfunction createContextSelector(context) {\n  return function useContextSelector(selector) {\n    const contextValue = useContext(context);\n    \n    return useMemo(() => {\n      return selector(contextValue);\n    }, [contextValue, selector]);\n  };\n}\n\n// Usar el selector personalizado\nconst useUserSelector = createContextSelector(UserContext);\nconst useThemeSelector = createContextSelector(ThemeContext);\n\n// ✅ Solo se re-renderiza cuando cambia user.name\nfunction UserName() {\n  const userName = useUserSelector(useCallback(\n    (state) => state.user?.name,\n    []\n  ));\n  \n  console.log('UserName re-renderizado'); // Solo cuando cambia user.name\n  \n  return <h2>{userName || 'Invitado'}</h2>;\n}\n\n// ✅ Solo se re-renderiza cuando cambia theme\nfunction ThemeButton() {\n  const theme = useThemeSelector(useCallback(\n    (state) => state.theme,\n    []\n  ));\n  \n  console.log('ThemeButton re-renderizado'); // Solo cuando cambia theme\n  \n  return (\n    <button className={theme}>\n      Tema: {theme}\n    </button>\n  );\n}\n```\n\n**6. Mejores prácticas de optimización:**\n```javascript\n// ✅ MEJORES PRÁCTICAS\n\n// 1. Evitar crear objetos en el render\n// ❌ MALO\nfunction BadProvider({ children }) {\n  const [count, setCount] = useState(0);\n  \n  return (\n    <Context.Provider value={{ count, setCount }}> {/* Nuevo objeto cada render */}\n      {children}\n    </Context.Provider>\n  );\n}\n\n// ✅ BUENO\nfunction GoodProvider({ children }) {\n  const [count, setCount] = useState(0);\n  \n  const value = useMemo(() => ({ count, setCount }), [count]);\n  \n  return (\n    <Context.Provider value={value}>\n      {children}\n    </Context.Provider>\n  );\n}\n\n// 2. Separar contextos por responsabilidad\n// ❌ MALO: Un contexto gigante\nconst EverythingContext = createContext();\n\n// ✅ BUENO: Múltiples contextos específicos\nconst UserContext = createContext();\nconst ThemeContext = createContext();\nconst NotificationContext = createContext();\n\n// 3. Usar useCallback para funciones\n// ❌ MALO\nfunction BadProvider({ children }) {\n  const [data, setData] = useState([]);\n  \n  const addItem = (item) => { // Nueva función cada render\n    setData(prev => [...prev, item]);\n  };\n  \n  return (\n    <Context.Provider value={{ data, addItem }}>\n      {children}\n    </Context.Provider>\n  );\n}\n\n// ✅ BUENO\nfunction GoodProvider({ children }) {\n  const [data, setData] = useState([]);\n  \n  const addItem = useCallback((item) => {\n    setData(prev => [...prev, item]);\n  }, []);\n  \n  const value = useMemo(() => ({ data, addItem }), [data, addItem]);\n  \n  return (\n    <Context.Provider value={value}>\n      {children}\n    </Context.Provider>\n  );\n}\n\n// 4. Lazy loading de contextos\nfunction LazyProvider({ children }) {\n  const [isLoaded, setIsLoaded] = useState(false);\n  const [data, setData] = useState(null);\n  \n  useEffect(() => {\n    // Cargar datos pesados de forma asíncrona\n    loadHeavyData().then(result => {\n      setData(result);\n      setIsLoaded(true);\n    });\n  }, []);\n  \n  if (!isLoaded) {\n    return <div>Cargando...</div>;\n  }\n  \n  return (\n    <HeavyDataContext.Provider value={data}>\n      {children}\n    </HeavyDataContext.Provider>\n  );\n}\n```",
         
-        "Alternativas: Redux, Zustand": "Redux es una librería de manejo de estado que proporciona un store global predecible usando principios de programación funcional. Es más complejo que Context pero ofrece herramientas poderosas para debugging y manejo de estado complejo. Zustand es una librería más ligera que Redux, con menos boilerplate y una API más simple. Ambas son alternativas cuando Context no es suficiente para manejar estado complejo o cuando se necesita mejor rendimiento y herramientas de desarrollo."
+        "Alternativas: Redux, Zustand": "Redux es una librería de manejo de estado que proporciona un store global predecible usando principios de programación funcional. Es más complejo que Context pero ofrece herramientas poderosas para debugging y manejo de estado complejo. Zustand es una librería más ligera que Redux, con menos boilerplate y una API más simple. Ambas son alternativas cuando Context no es suficiente para manejar estado complejo o cuando se necesita mejor rendimiento y herramientas de desarrollo.\n\n**Ejemplos prácticos:**\n\n**1. Redux Toolkit - Configuración básica:**\n```javascript\n// store/index.js\nimport { configureStore } from '@reduxjs/toolkit';\nimport userSlice from './slices/userSlice';\nimport themeSlice from './slices/themeSlice';\nimport cartSlice from './slices/cartSlice';\n\nexport const store = configureStore({\n  reducer: {\n    user: userSlice,\n    theme: themeSlice,\n    cart: cartSlice\n  },\n  middleware: (getDefaultMiddleware) =>\n    getDefaultMiddleware({\n      serializableCheck: {\n        ignoredActions: ['persist/PERSIST']\n      }\n    })\n});\n\nexport type RootState = ReturnType<typeof store.getState>;\nexport type AppDispatch = typeof store.dispatch;\n\n// App.js\nimport { Provider } from 'react-redux';\nimport { store } from './store';\n\nfunction App() {\n  return (\n    <Provider store={store}>\n      <div className=\"app\">\n        <Header />\n        <MainContent />\n        <Sidebar />\n      </div>\n    </Provider>\n  );\n}\n```\n\n**2. Redux Toolkit - Slices (Reducers):**\n```javascript\n// store/slices/userSlice.js\nimport { createSlice, createAsyncThunk } from '@reduxjs/toolkit';\n\n// Async thunk para login\nconst loginUser = createAsyncThunk(\n  'user/login',\n  async (credentials, { rejectWithValue }) => {\n    try {\n      const response = await fetch('/api/login', {\n        method: 'POST',\n        body: JSON.stringify(credentials)\n      });\n      \n      if (!response.ok) {\n        throw new Error('Login failed');\n      }\n      \n      return await response.json();\n    } catch (error) {\n      return rejectWithValue(error.message);\n    }\n  }\n);\n\nconst userSlice = createSlice({\n  name: 'user',\n  initialState: {\n    data: null,\n    isAuthenticated: false,\n    loading: false,\n    error: null\n  },\n  reducers: {\n    logout: (state) => {\n      state.data = null;\n      state.isAuthenticated = false;\n      state.error = null;\n    },\n    clearError: (state) => {\n      state.error = null;\n    }\n  },\n  extraReducers: (builder) => {\n    builder\n      .addCase(loginUser.pending, (state) => {\n        state.loading = true;\n        state.error = null;\n      })\n      .addCase(loginUser.fulfilled, (state, action) => {\n        state.loading = false;\n        state.data = action.payload;\n        state.isAuthenticated = true;\n      })\n      .addCase(loginUser.rejected, (state, action) => {\n        state.loading = false;\n        state.error = action.payload;\n      });\n  }\n});\n\nexport const { logout, clearError } = userSlice.actions;\nexport { loginUser };\nexport default userSlice.reducer;\n\n// store/slices/themeSlice.js\nimport { createSlice } from '@reduxjs/toolkit';\n\nconst themeSlice = createSlice({\n  name: 'theme',\n  initialState: {\n    mode: 'light',\n    primaryColor: '#007bff',\n    fontSize: 'medium'\n  },\n  reducers: {\n    toggleTheme: (state) => {\n      state.mode = state.mode === 'light' ? 'dark' : 'light';\n    },\n    setPrimaryColor: (state, action) => {\n      state.primaryColor = action.payload;\n    },\n    setFontSize: (state, action) => {\n      state.fontSize = action.payload;\n    }\n  }\n});\n\nexport const { toggleTheme, setPrimaryColor, setFontSize } = themeSlice.actions;\nexport default themeSlice.reducer;\n\n// store/slices/cartSlice.js\nimport { createSlice } from '@reduxjs/toolkit';\n\nconst cartSlice = createSlice({\n  name: 'cart',\n  initialState: {\n    items: [],\n    total: 0,\n    itemCount: 0\n  },\n  reducers: {\n    addItem: (state, action) => {\n      const existingItem = state.items.find(item => item.id === action.payload.id);\n      \n      if (existingItem) {\n        existingItem.quantity += 1;\n      } else {\n        state.items.push({ ...action.payload, quantity: 1 });\n      }\n      \n      state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);\n      state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);\n    },\n    removeItem: (state, action) => {\n      state.items = state.items.filter(item => item.id !== action.payload);\n      state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);\n      state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);\n    },\n    updateQuantity: (state, action) => {\n      const { id, quantity } = action.payload;\n      const item = state.items.find(item => item.id === id);\n      \n      if (item) {\n        item.quantity = quantity;\n        if (quantity <= 0) {\n          state.items = state.items.filter(item => item.id !== id);\n        }\n      }\n      \n      state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);\n      state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0);\n    },\n    clearCart: (state) => {\n      state.items = [];\n      state.total = 0;\n      state.itemCount = 0;\n    }\n  }\n});\n\nexport const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;\nexport default cartSlice.reducer;\n```\n\n**3. Redux - Hooks personalizados:**\n```javascript\n// hooks/useRedux.js\nimport { useSelector, useDispatch } from 'react-redux';\nimport { useCallback } from 'react';\nimport type { RootState, AppDispatch } from '../store';\n\n// Hook tipado para dispatch\nexport const useAppDispatch = () => useDispatch<AppDispatch>();\n\n// Hook tipado para selector\nexport const useAppSelector = <T>(selector: (state: RootState) => T) => \n  useSelector(selector);\n\n// Hook personalizado para user\nexport function useUser() {\n  const user = useAppSelector(state => state.user.data);\n  const isAuthenticated = useAppSelector(state => state.user.isAuthenticated);\n  const loading = useAppSelector(state => state.user.loading);\n  const error = useAppSelector(state => state.user.error);\n  \n  const dispatch = useAppDispatch();\n  \n  const login = useCallback((credentials) => {\n    dispatch(loginUser(credentials));\n  }, [dispatch]);\n  \n  const logout = useCallback(() => {\n    dispatch(logout());\n  }, [dispatch]);\n  \n  const clearError = useCallback(() => {\n    dispatch(clearError());\n  }, [dispatch]);\n  \n  return {\n    user,\n    isAuthenticated,\n    loading,\n    error,\n    login,\n    logout,\n    clearError\n  };\n}\n\n// Hook personalizado para theme\nexport function useTheme() {\n  const theme = useAppSelector(state => state.theme);\n  const dispatch = useAppDispatch();\n  \n  const toggleTheme = useCallback(() => {\n    dispatch(toggleTheme());\n  }, [dispatch]);\n  \n  const setPrimaryColor = useCallback((color) => {\n    dispatch(setPrimaryColor(color));\n  }, [dispatch]);\n  \n  const setFontSize = useCallback((size) => {\n    dispatch(setFontSize(size));\n  }, [dispatch]);\n  \n  return {\n    ...theme,\n    toggleTheme,\n    setPrimaryColor,\n    setFontSize\n  };\n}\n\n// Hook personalizado para cart\nexport function useCart() {\n  const cart = useAppSelector(state => state.cart);\n  const dispatch = useAppDispatch();\n  \n  const addItem = useCallback((item) => {\n    dispatch(addItem(item));\n  }, [dispatch]);\n  \n  const removeItem = useCallback((id) => {\n    dispatch(removeItem(id));\n  }, [dispatch]);\n  \n  const updateQuantity = useCallback((id, quantity) => {\n    dispatch(updateQuantity({ id, quantity }));\n  }, [dispatch]);\n  \n  const clearCart = useCallback(() => {\n    dispatch(clearCart());\n  }, [dispatch]);\n  \n  return {\n    ...cart,\n    addItem,\n    removeItem,\n    updateQuantity,\n    clearCart\n  };\n}\n```\n\n**4. Redux - Uso en componentes:**\n```javascript\n// components/Header.jsx\nimport React from 'react';\nimport { useTheme, useUser } from '../hooks/useRedux';\n\nfunction Header() {\n  const { mode, toggleTheme } = useTheme();\n  const { user, isAuthenticated, logout } = useUser();\n  \n  return (\n    <header className={`header ${mode}`}>\n      <h1>Mi App</h1>\n      \n      <div className=\"header-actions\">\n        <button onClick={toggleTheme}>\n          {mode === 'light' ? '🌙' : '☀️'}\n        </button>\n        \n        {isAuthenticated ? (\n          <div className=\"user-menu\">\n            <span>Hola, {user.name}</span>\n            <button onClick={logout}>Cerrar Sesión</button>\n          </div>\n        ) : (\n          <button>Iniciar Sesión</button>\n        )}\n      </div>\n    </header>\n  );\n}\n\n// components/ProductCard.jsx\nimport React from 'react';\nimport { useCart } from '../hooks/useRedux';\n\nfunction ProductCard({ product }) {\n  const { addItem } = useCart();\n  \n  const handleAddToCart = () => {\n    addItem(product);\n  };\n  \n  return (\n    <div className=\"product-card\">\n      <h3>{product.name}</h3>\n      <p>${product.price}</p>\n      <button onClick={handleAddToCart}>\n        Agregar al carrito\n      </button>\n    </div>\n  );\n}\n\n// components/Cart.jsx\nimport React from 'react';\nimport { useCart } from '../hooks/useRedux';\n\nfunction Cart() {\n  const { items, total, itemCount, removeItem, updateQuantity, clearCart } = useCart();\n  \n  if (itemCount === 0) {\n    return <div>El carrito está vacío</div>;\n  }\n  \n  return (\n    <div className=\"cart\">\n      <h2>Carrito ({itemCount} items)</h2>\n      \n      {items.map(item => (\n        <div key={item.id} className=\"cart-item\">\n          <h4>{item.name}</h4>\n          <p>${item.price}</p>\n          \n          <div className=\"quantity-controls\">\n            <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>\n              -\n            </button>\n            <span>{item.quantity}</span>\n            <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>\n              +\n            </button>\n          </div>\n          \n          <button onClick={() => removeItem(item.id)}>\n            Eliminar\n          </button>\n        </div>\n      ))}\n      \n      <div className=\"cart-total\">\n        <strong>Total: ${total.toFixed(2)}</strong>\n      </div>\n      \n      <button onClick={clearCart}>\n        Vaciar carrito\n      </button>\n    </div>\n  );\n}\n```\n\n**5. Zustand - Configuración básica:**\n```javascript\n// store/useUserStore.js\nimport { create } from 'zustand';\nimport { persist } from 'zustand/middleware';\n\nconst useUserStore = create(\n  persist(\n    (set, get) => ({\n      // Estado\n      user: null,\n      isAuthenticated: false,\n      loading: false,\n      error: null,\n      \n      // Acciones\n      login: async (credentials) => {\n        set({ loading: true, error: null });\n        \n        try {\n          const response = await fetch('/api/login', {\n            method: 'POST',\n            body: JSON.stringify(credentials)\n          });\n          \n          if (!response.ok) {\n            throw new Error('Login failed');\n          }\n          \n          const user = await response.json();\n          set({ \n            user, \n            isAuthenticated: true, \n            loading: false, \n            error: null \n          });\n        } catch (error) {\n          set({ \n            loading: false, \n            error: error.message \n          });\n        }\n      },\n      \n      logout: () => {\n        set({ \n          user: null, \n          isAuthenticated: false, \n          error: null \n        });\n      },\n      \n      clearError: () => {\n        set({ error: null });\n      },\n      \n      // Selectores computados\n      getUserName: () => {\n        const { user } = get();\n        return user?.name || 'Invitado';\n      }\n    }),\n    {\n      name: 'user-storage', // Clave para localStorage\n      partialize: (state) => ({ \n        user: state.user, \n        isAuthenticated: state.isAuthenticated \n      }) // Solo persistir user e isAuthenticated\n    }\n  )\n);\n\nexport default useUserStore;\n\n// store/useThemeStore.js\nimport { create } from 'zustand';\nimport { persist } from 'zustand/middleware';\n\nconst useThemeStore = create(\n  persist(\n    (set, get) => ({\n      // Estado\n      mode: 'light',\n      primaryColor: '#007bff',\n      fontSize: 'medium',\n      \n      // Acciones\n      toggleTheme: () => {\n        set((state) => ({ \n          mode: state.mode === 'light' ? 'dark' : 'light' \n        }));\n      },\n      \n      setPrimaryColor: (color) => {\n        set({ primaryColor: color });\n      },\n      \n      setFontSize: (size) => {\n        set({ fontSize: size });\n      },\n      \n      // Selectores computados\n      getThemeClasses: () => {\n        const { mode, fontSize } = get();\n        return `theme-${mode} font-${fontSize}`;\n      }\n    }),\n    {\n      name: 'theme-storage'\n    }\n  )\n);\n\nexport default useThemeStore;\n\n// store/useCartStore.js\nimport { create } from 'zustand';\nimport { persist } from 'zustand/middleware';\n\nconst useCartStore = create(\n  persist(\n    (set, get) => ({\n      // Estado\n      items: [],\n      \n      // Acciones\n      addItem: (product) => {\n        set((state) => {\n          const existingItem = state.items.find(item => item.id === product.id);\n          \n          if (existingItem) {\n            return {\n              items: state.items.map(item =>\n                item.id === product.id\n                  ? { ...item, quantity: item.quantity + 1 }\n                  : item\n              )\n            };\n          } else {\n            return {\n              items: [...state.items, { ...product, quantity: 1 }]\n            };\n          }\n        });\n      },\n      \n      removeItem: (id) => {\n        set((state) => ({\n          items: state.items.filter(item => item.id !== id)\n        }));\n      },\n      \n      updateQuantity: (id, quantity) => {\n        set((state) => {\n          if (quantity <= 0) {\n            return {\n              items: state.items.filter(item => item.id !== id)\n            };\n          }\n          \n          return {\n            items: state.items.map(item =>\n              item.id === id ? { ...item, quantity } : item\n            )\n          };\n        });\n      },\n      \n      clearCart: () => {\n        set({ items: [] });\n      },\n      \n      // Selectores computados\n      getTotal: () => {\n        const { items } = get();\n        return items.reduce((total, item) => total + (item.price * item.quantity), 0);\n      },\n      \n      getItemCount: () => {\n        const { items } = get();\n        return items.reduce((total, item) => total + item.quantity, 0);\n      },\n      \n      getItemById: (id) => {\n        const { items } = get();\n        return items.find(item => item.id === id);\n      }\n    }),\n    {\n      name: 'cart-storage'\n    }\n  )\n);\n\nexport default useCartStore;\n```\n\n**6. Zustand - Uso en componentes:**\n```javascript\n// components/Header.jsx\nimport React from 'react';\nimport useThemeStore from '../store/useThemeStore';\nimport useUserStore from '../store/useUserStore';\n\nfunction Header() {\n  const { mode, toggleTheme, getThemeClasses } = useThemeStore();\n  const { user, isAuthenticated, logout, getUserName } = useUserStore();\n  \n  return (\n    <header className={getThemeClasses()}>\n      <h1>Mi App</h1>\n      \n      <div className=\"header-actions\">\n        <button onClick={toggleTheme}>\n          {mode === 'light' ? '🌙' : '☀️'}\n        </button>\n        \n        {isAuthenticated ? (\n          <div className=\"user-menu\">\n            <span>Hola, {getUserName()}</span>\n            <button onClick={logout}>Cerrar Sesión</button>\n          </div>\n        ) : (\n          <button>Iniciar Sesión</button>\n        )}\n      </div>\n    </header>\n  );\n}\n\n// components/ProductCard.jsx\nimport React from 'react';\nimport useCartStore from '../store/useCartStore';\n\nfunction ProductCard({ product }) {\n  const addItem = useCartStore(state => state.addItem);\n  \n  const handleAddToCart = () => {\n    addItem(product);\n  };\n  \n  return (\n    <div className=\"product-card\">\n      <h3>{product.name}</h3>\n      <p>${product.price}</p>\n      <button onClick={handleAddToCart}>\n        Agregar al carrito\n      </button>\n    </div>\n  );\n}\n\n// components/Cart.jsx\nimport React from 'react';\nimport useCartStore from '../store/useCartStore';\n\nfunction Cart() {\n  const {\n    items,\n    getTotal,\n    getItemCount,\n    removeItem,\n    updateQuantity,\n    clearCart\n  } = useCartStore();\n  \n  const total = getTotal();\n  const itemCount = getItemCount();\n  \n  if (itemCount === 0) {\n    return <div>El carrito está vacío</div>;\n  }\n  \n  return (\n    <div className=\"cart\">\n      <h2>Carrito ({itemCount} items)</h2>\n      \n      {items.map(item => (\n        <div key={item.id} className=\"cart-item\">\n          <h4>{item.name}</h4>\n          <p>${item.price}</p>\n          \n          <div className=\"quantity-controls\">\n            <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>\n              -\n            </button>\n            <span>{item.quantity}</span>\n            <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>\n              +\n            </button>\n          </div>\n          \n          <button onClick={() => removeItem(item.id)}>\n            Eliminar\n          </button>\n        </div>\n      ))}\n      \n      <div className=\"cart-total\">\n        <strong>Total: ${total.toFixed(2)}</strong>\n      </div>\n      \n      <button onClick={clearCart}>\n        Vaciar carrito\n      </button>\n    </div>\n  );\n}\n```\n\n**7. Comparación: Context vs Redux vs Zustand:**\n```javascript\n// 📊 COMPARACIÓN DE ENFOQUES\n\n// ✅ CONTEXT API - Para casos simples\n// Ventajas:\n// - Nativo de React\n// - Sin dependencias externas\n// - Ideal para temas, autenticación básica\n\n// Desventajas:\n// - Re-renders innecesarios\n// - No hay DevTools avanzadas\n// - Difícil de escalar\n\n// ✅ REDUX - Para aplicaciones complejas\n// Ventajas:\n// - DevTools poderosas\n// - Time-travel debugging\n// - Patrones predecibles\n// - Gran ecosistema\n\n// Desventajas:\n// - Mucho boilerplate\n// - Curva de aprendizaje empinada\n// - Overkill para casos simples\n\n// ✅ ZUSTAND - Balance perfecto\n// Ventajas:\n// - API simple\n// - Menos boilerplate\n// - DevTools incluidas\n// - TypeScript friendly\n// - Persistencia fácil\n\n// Desventajas:\n// - Menos maduro que Redux\n// - Ecosistema más pequeño\n\n// 🎯 CUÁNDO USAR CADA UNO\n\n// Context API:\n// - Aplicaciones pequeñas-medianas\n// - Estado simple (tema, usuario actual)\n// - Equipos nuevos en React\n\n// Redux:\n// - Aplicaciones grandes y complejas\n// - Estado complejo con muchas interacciones\n// - Necesidad de DevTools avanzadas\n// - Equipos experimentados\n\n// Zustand:\n// - Aplicaciones medianas-grandes\n// - Quieres simplicidad pero con poder\n// - Migración desde Redux\n// - Proyectos con TypeScript\n\n// 📝 INSTALACIÓN\n\n// Context API (nativo)\n// No requiere instalación\n\n// Redux Toolkit\n// npm install @reduxjs/toolkit react-redux\n\n// Zustand\n// npm install zustand\n```",
       },
       practical: [
-        "Crear Context para estado global",
-        "Implementar Provider",
-        "Usar useContext en componentes",
-        "Proyecto: aplicación con Context",
-        "Optimizar re-renders"
+        "Crear Context API: createContext, useContext y patrones de implementación",
+        "Implementar Provider y Consumer: gestión de estado global",
+        "Resolver prop drilling: comunicación entre componentes distantes",
+        "Optimizar rendimiento: evitar re-renders innecesarios",
+        "Crear sistemas de autenticación y temas con Context",
+        "Implementar Context + useReducer para estado complejo",
+        "Proyecto: Aplicación con estado global y Context API avanzado"
       ]
     },
     activities: [
       {
-        title: "Creación de Context",
+        title: "Context API básico",
         duration: "45 min",
-        description: "Crear Context y Provider para estado global"
+        description: "Crear Context, Provider y usar useContext en componentes"
       },
       {
-        title: "Implementación de Consumer",
+        title: "Estado global y prop drilling",
         duration: "60 min",
-        description: "Usar useContext en componentes"
+        description: "Resolver prop drilling con Context y crear estado global"
       },
       {
-        title: "Optimización",
+        title: "Optimización de Context",
         duration: "45 min",
-        description: "Optimizar rendimiento y evitar re-renders innecesarios"
+        description: "Evitar re-renders innecesarios y mejorar rendimiento"
+      },
+      {
+        title: "Context + useReducer",
+        duration: "45 min",
+        description: "Manejar estado complejo con Context y useReducer"
+      },
+      {
+        title: "Sistemas de autenticación y temas",
+        duration: "45 min",
+        description: "Crear sistemas completos con Context para autenticación y temas"
       }
     ],
     homework: [
-      "Crear aplicación con Context",
-      "Implementar autenticación global",
-      "Agregar tema global"
+      "Crear aplicación completa con Context API: múltiples contextos y estado global",
+      "Implementar sistema de autenticación global con Context y rutas protegidas",
+      "Crear sistema de temas con Context: modo claro/oscuro y persistencia",
+      "Implementar Context + useReducer para manejo de estado complejo",
+      "Crear hooks personalizados para Context: useAuth, useTheme, useSettings",
+      "Optimizar rendimiento: evitar re-renders innecesarios con useMemo y useCallback"
     ],
     materials: [
       "Node.js instalado",
@@ -4496,62 +6743,85 @@ export default Contact;`
     level: "Intermedio",
     completed: false,
     objectives: [
-      "Crear aplicación React completa",
-      "Implementar formularios y validación",
-      "Desarrollar rutas y navegación",
-      "Aplicar hooks y estado"
+      "Desarrollar aplicación React completa: arquitectura, estructura y organización",
+      "Implementar formularios avanzados: validación, manejo de errores y UX",
+      "Crear sistema de routing completo: navegación, rutas protegidas y layouts",
+      "Aplicar hooks avanzados: useState, useEffect, useReducer y hooks personalizados",
+      "Implementar estado global: Context API, autenticación y gestión de datos",
+      "Proyecto: Aplicación de gestión de tareas con todas las funcionalidades React"
     ],
     content: {
       theoretical: [
-        "Arquitectura de aplicaciones React",
-        "Formularios controlados y no controlados",
-        "Validación de formularios",
-        "Manejo de estado con hooks",
-        "Routing y navegación",
-        "Buenas prácticas de React"
+        "Arquitectura de aplicaciones React: estructura, organización y mejores prácticas",
+        "Formularios avanzados: controlados, no controlados y validación en tiempo real",
+        "Validación de formularios: client-side, server-side y UX de validación",
+        "Hooks avanzados: useState, useEffect, useReducer y hooks personalizados",
+        "Routing y navegación: React Router, rutas protegidas y layouts",
+        "Estado global: Context API, autenticación y gestión de datos",
+        "Optimización de rendimiento: React.memo, useMemo, useCallback",
+        "Buenas prácticas: testing, debugging y mantenimiento de código"
       ],
       theoreticalDetails: {
-        "Arquitectura de aplicaciones React": "Una buena arquitectura de aplicación React se basa en la separación de responsabilidades y la organización modular. Los componentes deben ser pequeños, enfocados en una sola responsabilidad, y reutilizables. La estructura de carpetas típica incluye separación por features o páginas, con carpetas para componentes, hooks, servicios, y utilidades. Los datos deben fluir hacia abajo a través de props y hacia arriba a través de callbacks. Es importante mantener la lógica de negocio separada de los componentes de presentación.",
+        "Arquitectura de aplicaciones React: estructura, organización y mejores prácticas": "Una buena arquitectura de aplicación React se basa en la separación de responsabilidades, organización modular y escalabilidad. Los principios fundamentales incluyen componentes pequeños y enfocados, reutilización de código, flujo de datos claro, y separación entre lógica de negocio y presentación. La estructura de carpetas recomendada organiza el código por funcionalidad con carpetas para components, pages, hooks, context, services, utils y styles. Los patrones de arquitectura incluyen Container/Presentational, Custom Hooks para lógica, y Context para estado global. Las mejores prácticas incluyen naming descriptivo, interfaces claras, error boundaries, testing, optimización de rendimiento y accesibilidad.",
         
-        "Formularios controlados y no controlados": "Los formularios controlados tienen su valor controlado por React a través del estado del componente. Cada input tiene una prop value que refleja el estado y un onChange que actualiza el estado. Esto permite validación en tiempo real y control total sobre los datos. Los formularios no controlados permiten que el DOM maneje el estado del formulario, usando refs para acceder a los valores cuando sea necesario. Los formularios controlados son más predecibles y fáciles de testear, mientras que los no controlados pueden ser más eficientes para formularios simples.",
+        "Formularios avanzados: controlados, no controlados y validación en tiempo real": "Los formularios controlados tienen su valor controlado por React a través del estado del componente, permitiendo validación en tiempo real y control total sobre los datos. Los formularios no controlados permiten que el DOM maneje el estado del formulario, usando refs para acceder a los valores cuando sea necesario. Los formularios controlados son más predecibles y fáciles de testear, mientras que los no controlados pueden ser más eficientes para formularios simples. La validación puede ocurrir en tiempo real mientras el usuario escribe, al perder el foco del campo, o al enviar el formulario.",
         
-        "Validación de formularios": "La validación de formularios puede ser realizada en el lado del cliente usando JavaScript, en el servidor, o ambos. En React, la validación puede ocurrir en tiempo real mientras el usuario escribe, al perder el foco del campo, o al enviar el formulario. Las librerías como Formik, React Hook Form, o Yup proporcionan herramientas para manejar formularios complejos con validación. Es importante proporcionar feedback claro al usuario sobre errores y validaciones, usando estados de error y mensajes descriptivos.",
+        "Validación de formularios: client-side, server-side y UX de validación": "La validación de formularios puede ser realizada en el lado del cliente usando JavaScript, en el servidor, o ambos. En React, la validación puede ocurrir en tiempo real mientras el usuario escribe, al perder el foco del campo, o al enviar el formulario. Las librerías como Formik, React Hook Form, o Yup proporcionan herramientas para manejar formularios complejos con validación. Es importante proporcionar feedback claro al usuario sobre errores y validaciones, usando estados de error y mensajes descriptivos.",
         
-        "Manejo de estado con hooks": "Los hooks useState y useEffect son fundamentales para manejar estado en componentes funcionales. useState permite agregar estado local, mientras que useEffect maneja efectos secundarios como llamadas a APIs o suscripciones. Para estado más complejo, useReducer proporciona un patrón similar a Redux para manejar múltiples valores de estado relacionados. Los hooks personalizados permiten extraer lógica de estado reutilizable y hacer que los componentes sean más limpios y enfocados.",
+        "Hooks avanzados: useState, useEffect, useReducer y hooks personalizados": "Los hooks useState y useEffect son fundamentales para manejar estado en componentes funcionales. useState permite agregar estado local, mientras que useEffect maneja efectos secundarios como llamadas a APIs o suscripciones. Para estado más complejo, useReducer proporciona un patrón similar a Redux para manejar múltiples valores de estado relacionados. Los hooks personalizados permiten extraer lógica de estado reutilizable y hacer que los componentes sean más limpios y enfocados.",
         
-        "Routing y navegación": "React Router proporciona navegación declarativa y programática en aplicaciones de una sola página. Las rutas pueden ser estáticas o dinámicas con parámetros, y pueden incluir rutas protegidas que requieren autenticación. La navegación puede ser declarativa usando componentes Link o programática usando el hook useNavigate. Es importante manejar estados de carga, errores de navegación, y proporcionar una experiencia de usuario fluida durante las transiciones entre páginas.",
+        "Routing y navegación: React Router, rutas protegidas y layouts": "React Router proporciona navegación declarativa y programática en aplicaciones de una sola página. Las rutas pueden ser estáticas o dinámicas con parámetros, y pueden incluir rutas protegidas que requieren autenticación. La navegación puede ser declarativa usando componentes Link o programática usando el hook useNavigate. Es importante manejar estados de carga, errores de navegación, y proporcionar una experiencia de usuario fluida durante las transiciones entre páginas.",
         
-        "Buenas prácticas de React": "Las buenas prácticas incluyen mantener componentes pequeños y enfocados, usar nombres descriptivos para componentes y props, evitar mutaciones directas del estado, usar keys apropiadas en listas, y optimizar el rendimiento con React.memo, useMemo, y useCallback cuando sea necesario. También es importante manejar errores apropiadamente, usar PropTypes o TypeScript para validación de tipos, y seguir convenciones de naming consistentes. El código debe ser legible, mantenible, y seguir principios SOLID."
+        "Estado global: Context API, autenticación y gestión de datos": "Context API permite compartir datos entre componentes sin necesidad de pasar props manualmente a través de cada nivel del árbol de componentes. Es especialmente útil para datos que son considerados 'globales' para un árbol de componentes, como temas, idioma preferido, o información de autenticación. Context proporciona una forma de pasar datos a través del árbol de componentes sin tener que pasar props hacia abajo manualmente en cada nivel.",
+        
+        "Optimización de rendimiento: React.memo, useMemo, useCallback": "React.memo, useMemo y useCallback son herramientas de optimización que ayudan a prevenir cálculos innecesarios y re-renderizados. React.memo memoriza el resultado del renderizado de un componente. useMemo memoriza el resultado de un cálculo costoso. useCallback memoriza una función para evitar recrearla en cada render. Es importante usar estas herramientas solo cuando hay problemas de rendimiento reales y medir antes de optimizar.",
+        
+        "Buenas prácticas: testing, debugging y mantenimiento de código": "Las buenas prácticas incluyen mantener componentes pequeños y enfocados, usar nombres descriptivos para componentes y props, evitar mutaciones directas del estado, usar keys apropiadas en listas, y optimizar el rendimiento con React.memo, useMemo, y useCallback cuando sea necesario. También es importante manejar errores apropiadamente, usar PropTypes o TypeScript para validación de tipos, y seguir convenciones de naming consistentes. El código debe ser legible, mantenible, y seguir principios SOLID."
       },
       practical: [
-        "Crear aplicación React completa",
-        "Implementar formularios con validación",
-        "Desarrollar sistema de rutas",
-        "Aplicar hooks para estado",
-        "Optimizar rendimiento"
+        "Crear aplicación React completa: arquitectura, estructura y organización",
+        "Implementar formularios avanzados: validación, manejo de errores y UX",
+        "Desarrollar sistema de routing completo: navegación, rutas protegidas y layouts",
+        "Aplicar hooks avanzados: useState, useEffect, useReducer y hooks personalizados",
+        "Implementar estado global: Context API, autenticación y gestión de datos",
+        "Optimizar rendimiento: React.memo, useMemo, useCallback y mejores prácticas",
+        "Proyecto: Aplicación de gestión de tareas con todas las funcionalidades React"
       ]
     },
     activities: [
       {
-        title: "Estructura del proyecto",
+        title: "Arquitectura y estructura del proyecto",
         duration: "30 min",
-        description: "Crear estructura de proyecto React y configurar dependencias"
+        description: "Crear estructura de proyecto React, configurar dependencias y organizar carpetas"
       },
       {
-        title: "Desarrollo de componentes",
-        duration: "120 min",
-        description: "Implementar componentes principales y funcionalidades"
+        title: "Desarrollo de componentes y hooks",
+        duration: "90 min",
+        description: "Implementar componentes principales, hooks personalizados y lógica de negocio"
       },
       {
-        title: "Testing y optimización",
+        title: "Formularios y validación",
+        duration: "45 min",
+        description: "Crear formularios avanzados con validación en tiempo real y manejo de errores"
+      },
+      {
+        title: "Routing y navegación",
+        duration: "45 min",
+        description: "Implementar sistema de routing completo con rutas protegidas y layouts"
+      },
+      {
+        title: "Estado global y optimización",
         duration: "30 min",
-        description: "Probar la aplicación y optimizar el rendimiento"
+        description: "Implementar Context API, autenticación y optimizar rendimiento"
       }
     ],
     homework: [
-      "Mejorar la interfaz de usuario",
-      "Agregar más funcionalidades",
-      "Implementar tests unitarios"
+      "Completar aplicación de gestión de tareas: todas las funcionalidades y optimizaciones",
+      "Implementar sistema de autenticación completo: login, registro, rutas protegidas",
+      "Agregar funcionalidades avanzadas: filtros, búsqueda, categorías y prioridades",
+      "Implementar tests unitarios: componentes, hooks y funciones utilitarias",
+      "Optimizar rendimiento: React.memo, useMemo, useCallback y lazy loading",
+      "Mejorar UX: loading states, error handling, notificaciones y feedback visual"
     ],
     materials: [
       "Todas las tecnologías aprendidas",
